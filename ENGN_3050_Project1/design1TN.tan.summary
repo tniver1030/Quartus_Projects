@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 18.300 ns
+From           : lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6]
+To             : A
+From Clock     : XTAL_Y
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'XTAL_Y'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 58.82 MHz ( period = 17.000 ns )
+From           : lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[0]
+To             : lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[0]
+From Clock     : XTAL_Y
+To Clock       : XTAL_Y
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

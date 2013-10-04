@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.629 ns
+From           : RESET_Y
+To             : lpm_counter8:State_Selector|lpm_counter:lpm_counter_component|cntr_5vk:auto_generated|safe_q[2]
+From Clock     : --
+To Clock       : XTAL_Y
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 16.317 ns
+From           : lpm_counter8:State_Selector|lpm_counter:lpm_counter_component|cntr_5vk:auto_generated|safe_q[0]
+To             : STATE011
+From Clock     : XTAL_Y
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.000 ns
+From           : RESET_Y
+To             : STATE111
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.114 ns
+From           : RESET_Y
+To             : lpm_counter3:inst48|lpm_counter:lpm_counter_component|cntr_kqj:auto_generated|safe_q[0]
+From Clock     : --
+To Clock       : XTAL_Y
+Failed Paths   : 0
+
+Type           : Clock Setup: 'XTAL_Y'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 121.02 MHz ( period = 8.263 ns )
+From           : lpm_counter6:inst|lpm_counter:lpm_counter_component|cntr_d3j:auto_generated|safe_q[20]
+To             : lpm_counter6:inst|lpm_counter:lpm_counter_component|cntr_d3j:auto_generated|safe_q[1]
+From Clock     : XTAL_Y
+To Clock       : XTAL_Y
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

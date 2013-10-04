@@ -1,0 +1,57 @@
+--lpm_mux CASCADE_CHAIN="MANUAL" DEVICE_FAMILY="FLEX10K" IGNORE_CASCADE_BUFFERS="OFF" LPM_PIPELINE=0 LPM_SIZE=5 LPM_WIDTH=1 LPM_WIDTHS=3 data result sel
+--VERSION_BEGIN 9.0SP2 cbx_lpm_mux 2009:03:31:01:01:28:SJ cbx_mgl 2009:02:26:16:06:21:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2009 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION cascade (in)
+RETURNS ( out);
+
+--synthesis_resources = lut 4 
+SUBDESIGN mux_1od
+( 
+	data[4..0]	:	input;
+	result[0..0]	:	output;
+	sel[2..0]	:	input;
+) 
+VARIABLE 
+	csc1 : cascade;
+	muxlut_data0w[4..0]	: WIRE;
+	muxlut_result0w	: WIRE;
+	muxlut_select0w[2..0]	: WIRE;
+	result_node[0..0]	: WIRE;
+	sel_ffs_wire[2..0]	: WIRE;
+	sel_node[2..0]	: WIRE;
+	w29w[3..0]	: WIRE;
+	w31w[1..0]	: WIRE;
+	w54w[0..0]	: WIRE;
+	w_mux_outputs27w[1..0]	: WIRE;
+
+BEGIN 
+	csc1.in = ((w31w[1..1] # (w31w[0..0] & w29w[1..1])) # ((! w31w[0..0]) & w29w[0..0]));
+	muxlut_data0w[] = ( data[4..0]);
+	muxlut_result0w = ((w_mux_outputs27w[0..0] & (! w54w[0..0])) # (w_mux_outputs27w[1..1] & w54w[0..0]));
+	muxlut_select0w[] = sel_node[];
+	result[] = result_node[];
+	result_node[] = ( muxlut_result0w);
+	sel_ffs_wire[] = ( sel[2..0]);
+	sel_node[] = ( sel_ffs_wire[2..2], sel[1..0]);
+	w29w[3..0] = muxlut_data0w[3..0];
+	w31w[1..0] = muxlut_select0w[1..0];
+	w54w[0..0] = muxlut_select0w[2..2];
+	w_mux_outputs27w[] = ( muxlut_data0w[4..4], ((((! w31w[1..1]) # (w31w[0..0] & w29w[3..3])) # ((! w31w[0..0]) & w29w[2..2])) & csc1.out));
+END;
+--VALID FILE

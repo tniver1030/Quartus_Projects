@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="design1TN">
+		<CBX_INST_ENTRY INSTANCE_NAME="|design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014" CBX_FILE_NAME="cmpr_fvf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_constant:$00012" CBX_FILE_NAME="lpm_constant_o84.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

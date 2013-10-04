@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="tjn_design3">
+		<CBX_INST_ENTRY INSTANCE_NAME="|tjn_design3|ClockBlock:inst1|lpm_add_sub0:inst66|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_sth.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|tjn_design3|ClockBlock:inst1|lpm_counter0:inst65|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00019" CBX_FILE_NAME="cmpr_r0g.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|tjn_design3|ClockBlock:inst1|lpm_counter0:inst65|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_constant:$00017" CBX_FILE_NAME="lpm_constant_me4.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

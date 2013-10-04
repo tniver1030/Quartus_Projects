@@ -1,0 +1,62 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+18
+1161
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+design4TJN
+# storage
+db|design4TJN.(0).cnf
+db|design4TJN.(0).cnf
+# case_insensitive
+# source_file
+design4TJN.bdf
+47e335b0eaca055193b263815d3bff
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+Delay_Function
+# storage
+db|design4TJN.(1).cnf
+db|design4TJN.(1).cnf
+# case_insensitive
+# source_file
+Delay_Function.bdf
+acefe3b47b741132108c124d0faa879
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Delay_Function:inst15
+}
+# macro_sequence
+
+# end
+# complete
+

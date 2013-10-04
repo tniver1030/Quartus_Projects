@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="design2TN">
+		<CBX_INST_ENTRY INSTANCE_NAME="|design2TN|lpm_compare1:inst79|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_tvi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design2TN|lpm_counter6:inst|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_d3j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design2TN|lpm_mux0:inst40|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_rrd.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design2TN|lpm_add_sub0:inst3|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_q1i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design2TN|lpm_compare0:inst77|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_tvi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design2TN|lpm_constant0:inst5|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_ce6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_kqj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_kqj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design2TN|lpm_counter8:State_Selector|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_5vk.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design2TN|lpm_mux2:inst75|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_mrd.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

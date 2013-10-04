@@ -1,0 +1,237 @@
+Simulator report for design2TN
+Tue Sep 24 12:45:18 2013
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------+
+; Simulator Summary                             ;
++-----------------------------+-----------------+
+; Type                        ; Value           ;
++-----------------------------+-----------------+
+; Simulation Start Time       ; 0 ps            ;
+; Simulation End Time         ; 1.0 s           ;
+; Simulation Netlist Size     ; 65 nodes        ;
+; Simulation Coverage         ;      97.14 %    ;
+; Total Number of Transitions ; 1378            ;
+; Simulation Breakpoints      ; 0               ;
+; Family                      ; FLEX10K         ;
+; Device                      ; EPF10K70RC240-4 ;
++-----------------------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                         ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Option                                                                                     ; Setting       ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+; Simulation mode                                                                            ; Timing        ; Timing        ;
+; Start time                                                                                 ; 0 ns          ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF          ;               ;
+; Vector input source                                                                        ; design2TN.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On            ; On            ;
+; Check outputs                                                                              ; Off           ; Off           ;
+; Report simulation coverage                                                                 ; On            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On            ; On            ;
+; Display missing 1-value coverage report                                                    ; On            ; On            ;
+; Display missing 0-value coverage report                                                    ; On            ; On            ;
+; Detect setup and hold time violations                                                      ; Off           ; Off           ;
+; Detect glitches                                                                            ; Off           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off           ; Off           ;
+; Generate Signal Activity File                                                              ; Off           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On            ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto          ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      97.14 % ;
+; Total nodes checked                                 ; 65           ;
+; Total output ports checked                          ; 70           ;
+; Total output ports with complete 1/0-value coverage ; 68           ;
+; Total output ports with no 1/0-value coverage       ; 2            ;
+; Total output ports with no 1-value coverage         ; 2            ;
+; Total output ports with no 0-value coverage         ; 2            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                                                                                                                                          ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                                                                       ; Output Port Name                                                                                                                                                ; Output Port Type ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; |design2TN|inst54                                                                                                                                               ; |design2TN|inst54                                                                                                                                               ; data_out0        ;
+; |design2TN|inst91                                                                                                                                               ; |design2TN|inst91                                                                                                                                               ; data_out0        ;
+; |design2TN|inst55                                                                                                                                               ; |design2TN|inst55                                                                                                                                               ; data_out0        ;
+; |design2TN|inst56                                                                                                                                               ; |design2TN|inst56                                                                                                                                               ; data_out0        ;
+; |design2TN|inst59                                                                                                                                               ; |design2TN|inst59                                                                                                                                               ; data_out0        ;
+; |design2TN|inst58                                                                                                                                               ; |design2TN|inst58                                                                                                                                               ; data_out0        ;
+; |design2TN|inst57                                                                                                                                               ; |design2TN|inst57                                                                                                                                               ; data_out0        ;
+; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]                                                 ; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[0]                                                            ; data_out0        ;
+; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]                                                 ; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT                                            ; cout             ;
+; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]                                                 ; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[1]                                                            ; data_out0        ;
+; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]                                                 ; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT                                            ; cout             ;
+; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[2]                                                 ; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[2]                                                            ; data_out0        ;
+; |design2TN|16dmux:inst68|33~0                                                                                                                                   ; |design2TN|16dmux:inst68|33~0                                                                                                                                   ; data_out0        ;
+; |design2TN|inst88~0                                                                                                                                             ; |design2TN|inst88~0                                                                                                                                             ; data_out0        ;
+; |design2TN|16dmux:inst68|33~1                                                                                                                                   ; |design2TN|16dmux:inst68|33~1                                                                                                                                   ; data_out0        ;
+; |design2TN|inst6~0                                                                                                                                              ; |design2TN|inst6~0                                                                                                                                              ; data_out0        ;
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00020|muxlut:$00016|result_node~2                                                                  ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00020|muxlut:$00016|result_node~2                                                                  ; data_out0        ;
+; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]                                                 ; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[0]                                                            ; data_out0        ;
+; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]                                                 ; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT                                            ; cout             ;
+; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[2]                                                 ; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[2]                                                            ; data_out0        ;
+; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]                                                 ; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[1]                                                            ; data_out0        ;
+; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]                                                 ; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT                                            ; cout             ;
+; |design2TN|lpm_compare1:inst79|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out                                                   ; |design2TN|lpm_compare1:inst79|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out                                                   ; data_out0        ;
+; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]                                                  ; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[0]                                                             ; data_out0        ;
+; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]                                                  ; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT                                             ; cout             ;
+; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[2]                                                  ; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[2]                                                             ; data_out0        ;
+; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]                                                  ; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[1]                                                             ; data_out0        ;
+; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]                                                  ; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT                                             ; cout             ;
+; |design2TN|lpm_compare0:inst77|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out                                                   ; |design2TN|lpm_compare0:inst77|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|aeb_out                                                   ; data_out0        ;
+; |design2TN|lpm_mux2:inst75|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00016|result_node~2                                                                  ; |design2TN|lpm_mux2:inst75|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00016|result_node~2                                                                  ; data_out0        ;
+; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|sclr_node~0                                                     ; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|sclr_node~0                                                     ; data_out0        ;
+; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|sclr_node                                                       ; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|sclr_node                                                       ; data_out0        ;
+; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|sclr_node                                                        ; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|sclr_node                                                        ; data_out0        ;
+; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00010|comptree:comparator|cmpchain:cmp_end|aeb_out ; |design2TN|lpm_counter8:inst45|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00010|comptree:comparator|cmpchain:cmp_end|aeb_out ; data_out0        ;
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00016|muxlut:$00016|result_node~5                                                                  ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00016|muxlut:$00016|result_node~5                                                                  ; data_out0        ;
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00018|muxlut:$00016|result_node~8                                                                  ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00018|muxlut:$00016|result_node~8                                                                  ; data_out0        ;
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00012|muxlut:$00012|$00012~0                                                                       ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00012|muxlut:$00012|$00012~3                                                                       ; cascout          ;
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00014|muxlut:$00012|$00012~0                                                                       ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00014|muxlut:$00012|$00012~3                                                                       ; cascout          ;
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00020|muxlut:$00012|$00012~0                                                                       ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00020|muxlut:$00012|$00012~3                                                                       ; cascout          ;
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00018|muxlut:$00012|$00012~0                                                                       ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00018|muxlut:$00012|$00012~3                                                                       ; cascout          ;
+; |design2TN|lpm_mux2:inst75|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00014|result_node~2                                                                  ; |design2TN|lpm_mux2:inst75|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00014|result_node~2                                                                  ; data_out0        ;
+; |design2TN|lpm_mux2:inst75|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00012|result_node~4                                                                  ; |design2TN|lpm_mux2:inst75|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00012|result_node~4                                                                  ; data_out0        ;
+; |design2TN|lpm_mux2:inst75|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00012|$00012~0                                                                       ; |design2TN|lpm_mux2:inst75|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00012|$00012~3                                                                       ; cascout          ;
+; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00010|comptree:comparator|cmpchain:cmp_end|aeb_out ; |design2TN|lpm_counter3:inst48|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00010|comptree:comparator|cmpchain:cmp_end|aeb_out ; data_out0        ;
+; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00010|comptree:comparator|cmpchain:cmp_end|aeb_out  ; |design2TN|lpm_counter1:inst8|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00010|comptree:comparator|cmpchain:cmp_end|aeb_out  ; data_out0        ;
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00016|result_node~8                                                                  ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00016|result_node~8                                                                  ; data_out0        ;
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00012|muxlut:$00016|result_node~5                                                                  ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00012|muxlut:$00016|result_node~5                                                                  ; data_out0        ;
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00014|muxlut:$00016|result_node~5                                                                  ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00014|muxlut:$00016|result_node~5                                                                  ; data_out0        ;
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00020|muxlut:$00016|result_node~6                                                                  ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00020|muxlut:$00016|result_node~6                                                                  ; data_out0        ;
+; |design2TN|lpm_mux2:inst75|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00014|$00012~1                                                                       ; |design2TN|lpm_mux2:inst75|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00014|$00012~4                                                                       ; cascout          ;
+; |design2TN|RESET                                                                                                                                                ; |design2TN|RESET~corein                                                                                                                                         ; dataout          ;
+; |design2TN|CLOCK                                                                                                                                                ; |design2TN|CLOCK~corein                                                                                                                                         ; dataout          ;
+; |design2TN|NSRed                                                                                                                                                ; |design2TN|NSRed                                                                                                                                                ; padio            ;
+; |design2TN|tc1                                                                                                                                                  ; |design2TN|tc1                                                                                                                                                  ; padio            ;
+; |design2TN|tc2                                                                                                                                                  ; |design2TN|tc2                                                                                                                                                  ; padio            ;
+; |design2TN|tc0                                                                                                                                                  ; |design2TN|tc0                                                                                                                                                  ; padio            ;
+; |design2TN|NSYellow                                                                                                                                             ; |design2TN|NSYellow                                                                                                                                             ; padio            ;
+; |design2TN|NSGreen                                                                                                                                              ; |design2TN|NSGreen                                                                                                                                              ; padio            ;
+; |design2TN|EWRed                                                                                                                                                ; |design2TN|EWRed                                                                                                                                                ; padio            ;
+; |design2TN|EWYellow                                                                                                                                             ; |design2TN|EWYellow                                                                                                                                             ; padio            ;
+; |design2TN|EWGreen                                                                                                                                              ; |design2TN|EWGreen                                                                                                                                              ; padio            ;
+; |design2TN|STATE001                                                                                                                                             ; |design2TN|STATE001                                                                                                                                             ; padio            ;
+; |design2TN|STATE010                                                                                                                                             ; |design2TN|STATE010                                                                                                                                             ; padio            ;
+; |design2TN|STATE011                                                                                                                                             ; |design2TN|STATE011                                                                                                                                             ; padio            ;
+; |design2TN|Sel1                                                                                                                                                 ; |design2TN|Sel1                                                                                                                                                 ; padio            ;
+; |design2TN|Sel0                                                                                                                                                 ; |design2TN|Sel0                                                                                                                                                 ; padio            ;
+; |design2TN|Sel2                                                                                                                                                 ; |design2TN|Sel2                                                                                                                                                 ; padio            ;
+; |design2TN|STATE111                                                                                                                                             ; |design2TN|STATE111                                                                                                                                             ; padio            ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                 ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                 ; Output Port Name                                                                          ; Output Port Type ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00012|$00012~0 ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00012|$00012~3 ; cascout          ;
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00016|muxlut:$00012|$00012~0 ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00016|muxlut:$00012|$00012~3 ; cascout          ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                 ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                 ; Output Port Name                                                                          ; Output Port Type ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00012|$00012~0 ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00012|$00012~3 ; cascout          ;
+; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00016|muxlut:$00012|$00012~0 ; |design2TN|lpm_mux0:inst40|lpm_mux:lpm_mux_component|muxlut:$00016|muxlut:$00012|$00012~3 ; cascout          ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Sep 24 12:45:18 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off design2TN -c design2TN
+Info: Using vector source file "C:/altera/90sp2/ENGN_3050_Project2/design2TN.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of design2TN.vwf called design2TN.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      97.14 %
+Info: Number of transitions in simulation is 1378
+Info: Vector file design2TN.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 151 megabytes
+    Info: Processing ended: Tue Sep 24 12:45:18 2013
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

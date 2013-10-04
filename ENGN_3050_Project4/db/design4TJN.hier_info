@@ -1,0 +1,45 @@
+|design4TJN
+Output_UN0 <= <GND>
+Output_UN2 <= <GND>
+Output_UN3 <= <GND>
+Output_UN1 <= <GND>
+Output_LN0 <= <GND>
+Output_LN1 <= <GND>
+Output_LN2 <= <GND>
+Output_LN3 <= <GND>
+Status_Light <= <GND>
+Start_Bit <= <GND>
+Stop_Bit <= <GND>
+Clock => Delay_Function:inst15.CLOCK
+UART_RX => inst20.IN0
+UART_RX => inst18.DATAIN
+
+
+|design4TJN|Delay_Function:inst15
+32 <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst47.CLK
+CLOCK => inst43.CLK
+CLOCK => inst39.CLK
+CLOCK => inst35.CLK
+CLOCK => inst31.CLK
+CLOCK => inst27.CLK
+CLOCK => inst23.CLK
+CLOCK => inst19.CLK
+CLOCK => inst46.CLK
+CLOCK => inst42.CLK
+CLOCK => inst38.CLK
+CLOCK => inst34.CLK
+CLOCK => inst30.CLK
+CLOCK => inst26.CLK
+CLOCK => inst22.CLK
+CLOCK => inst18.CLK
+CLOCK => inst45.CLK
+CLOCK => inst41.CLK
+CLOCK => inst37.CLK
+CLOCK => inst33.CLK
+CLOCK => inst29.CLK
+CLOCK => inst25.CLK
+16 <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+Input_Pulse => ~NO_FANOUT~
+
+

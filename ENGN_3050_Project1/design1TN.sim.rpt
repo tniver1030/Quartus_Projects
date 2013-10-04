@@ -1,0 +1,193 @@
+Simulator report for design1TN
+Tue Sep 17 15:46:10 2013
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------+
+; Simulator Summary                             ;
++-----------------------------+-----------------+
+; Type                        ; Value           ;
++-----------------------------+-----------------+
+; Simulation Start Time       ; 0 ps            ;
+; Simulation End Time         ; 1.0 us          ;
+; Simulation Netlist Size     ; 22 nodes        ;
+; Simulation Coverage         ;      96.43 %    ;
+; Total Number of Transitions ; 998             ;
+; Simulation Breakpoints      ; 0               ;
+; Family                      ; FLEX10K         ;
+; Device                      ; EPF10K70RC240-4 ;
++-----------------------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      96.43 % ;
+; Total nodes checked                                 ; 22           ;
+; Total output ports checked                          ; 28           ;
+; Total output ports with complete 1/0-value coverage ; 27           ;
+; Total output ports with no 1/0-value coverage       ; 1            ;
+; Total output ports with no 1-value coverage         ; 1            ;
+; Total output ports with no 0-value coverage         ; 1            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                                                                                                                                                                                                                                                ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                                                                                                                          ; Output Port Name                                                                                                                                                                                                   ; Output Port Type ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[6]                                                                                                      ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6]                                                                                                                 ; data_out0        ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[5]                                                                                                      ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[5]                                                                                                                 ; data_out0        ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[5]                                                                                                      ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[5]~COUT                                                                                                 ; cout             ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[4]                                                                                                      ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[4]                                                                                                                 ; data_out0        ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[4]                                                                                                      ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[4]~COUT                                                                                                 ; cout             ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[3]                                                                                                      ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[3]                                                                                                                 ; data_out0        ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[3]                                                                                                      ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[3]~COUT                                                                                                 ; cout             ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[2]                                                                                                      ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[2]                                                                                                                 ; data_out0        ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[2]                                                                                                      ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[2]~COUT                                                                                                 ; cout             ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]                                                                                                      ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[1]                                                                                                                 ; data_out0        ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]                                                                                                      ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT                                                                                                 ; cout             ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]                                                                                                      ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[0]                                                                                                                 ; data_out0        ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]                                                                                                      ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT                                                                                                 ; cout             ;
+; |design1TN|inst8                                                                                                                                                                                                   ; |design1TN|inst8                                                                                                                                                                                                   ; data_out0        ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out ; data_out0        ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]|aeb_out                        ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]|aeb_out                        ; data_out0        ;
+; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end|aeb_out                       ; |design1TN|lpm_counter0:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end|aeb_out                       ; data_out0        ;
+; |design1TN|inst13~3                                                                                                                                                                                                ; |design1TN|inst13~3                                                                                                                                                                                                ; data_out0        ;
+; |design1TN|XTAL_Y                                                                                                                                                                                                  ; |design1TN|XTAL_Y~corein                                                                                                                                                                                           ; dataout          ;
+; |design1TN|A                                                                                                                                                                                                       ; |design1TN|A                                                                                                                                                                                                       ; padio            ;
+; |design1TN|B                                                                                                                                                                                                       ; |design1TN|B                                                                                                                                                                                                       ; padio            ;
+; |design1TN|C                                                                                                                                                                                                       ; |design1TN|C                                                                                                                                                                                                       ; padio            ;
+; |design1TN|D                                                                                                                                                                                                       ; |design1TN|D                                                                                                                                                                                                       ; padio            ;
+; |design1TN|E                                                                                                                                                                                                       ; |design1TN|E                                                                                                                                                                                                       ; padio            ;
+; |design1TN|F                                                                                                                                                                                                       ; |design1TN|F                                                                                                                                                                                                       ; padio            ;
+; |design1TN|G                                                                                                                                                                                                       ; |design1TN|G                                                                                                                                                                                                       ; padio            ;
+; |design1TN|CLK_Z                                                                                                                                                                                                   ; |design1TN|CLK_Z                                                                                                                                                                                                   ; padio            ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------+
+; Missing 1-Value Coverage                              ;
++-----------------+------------------+------------------+
+; Node Name       ; Output Port Name ; Output Port Type ;
++-----------------+------------------+------------------+
+; |design1TN|~GND ; |design1TN|~GND  ; data_out0        ;
++-----------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------+
+; Missing 0-Value Coverage                              ;
++-----------------+------------------+------------------+
+; Node Name       ; Output Port Name ; Output Port Type ;
++-----------------+------------------+------------------+
+; |design1TN|~GND ; |design1TN|~GND  ; data_out0        ;
++-----------------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Sep 17 15:46:09 2013
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off design1TN -c design1TN
+Info: Using vector source file "C:/altera/90sp2/ENGN_3050_Project1/design1TN.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of design1TN.vwf called design1TN.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      96.43 %
+Info: Number of transitions in simulation is 998
+Info: Vector file design1TN.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 151 megabytes
+    Info: Processing ended: Tue Sep 17 15:46:10 2013
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

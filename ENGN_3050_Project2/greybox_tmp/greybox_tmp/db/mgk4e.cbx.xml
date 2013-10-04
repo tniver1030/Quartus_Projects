@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="mgk4e">
+		<CBX_INST_ENTRY INSTANCE_NAME="|mgk4e|lpm_counter:mgl_prim1|alt_counter_f10ke:wysi_counter|lpm_compare:$00033" CBX_FILE_NAME="cmpr_01g.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|mgk4e|lpm_counter:mgl_prim1|alt_counter_f10ke:wysi_counter|lpm_constant:$00031" CBX_FILE_NAME="lpm_constant_fo4.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

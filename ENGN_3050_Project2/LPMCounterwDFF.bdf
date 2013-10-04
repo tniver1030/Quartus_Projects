@@ -1,0 +1,306 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+//#pragma file_not_in_maxplusii_format
+(header "graphic" (version "1.3"))
+(pin
+	(input)
+	(rect 192 312 360 328)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "clock" (rect 5 0 30 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 192 296 360 312)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "value" (rect 5 0 32 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 336 360 504 376)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "reset" (rect 5 0 29 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(output)
+	(rect 816 192 992 208)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "q0" (rect 90 0 101 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
+(pin
+	(output)
+	(rect 816 232 992 248)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "q1" (rect 90 0 101 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
+(pin
+	(output)
+	(rect 816 272 992 288)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "q2" (rect 90 0 101 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8)(line_width 1))
+		(line (pt 52 4)(pt 78 4)(line_width 1))
+		(line (pt 52 12)(pt 78 12)(line_width 1))
+		(line (pt 52 12)(pt 52 4)(line_width 1))
+		(line (pt 78 4)(pt 82 8)(line_width 1))
+		(line (pt 82 8)(pt 78 12)(line_width 1))
+		(line (pt 78 12)(pt 82 8)(line_width 1))
+	)
+)
+(symbol
+	(rect 362 232 458 280)
+	(text "lpm_constant0" (rect 6 1 106 17)(font "Arial" (font_size 10)))
+	(text "inst5" (rect 8 32 31 44)(font "Arial" ))
+	(port
+		(pt 96 24)
+		(output)
+		(text "result[2..0]" (rect 0 0 60 14)(font "Arial" (font_size 8)))
+		(text "result[2..0]" (rect 93 -25 153 -11)(font "Arial" (font_size 8))(invisible))
+		(line (pt 96 24)(pt 80 24)(line_width 3))
+	)
+	(drawing
+		(text "7" (rect 75 18 80 30)(font "Arial" ))
+		(text "3" (rect 87 25 92 37)(font "Arial" ))
+		(line (pt 16 16)(pt 80 16)(line_width 1))
+		(line (pt 80 16)(pt 80 32)(line_width 1))
+		(line (pt 80 32)(pt 16 32)(line_width 1))
+		(line (pt 16 32)(pt 16 16)(line_width 1))
+		(line (pt 82 28)(pt 90 20)(line_width 1))
+	)
+)
+(symbol
+	(rect 530 224 674 336)
+	(text "lpm_counter0" (rect 33 1 125 17)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 96 25 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "data[2..0]" (rect 0 0 53 14)(font "Arial" (font_size 8)))
+		(text "data[2..0]" (rect 20 26 73 40)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 96 112)
+		(input)
+		(text "aload" (rect 0 0 14 30)(font "Arial" (font_size 8))(vertical))
+		(text "aload" (rect 89 65 103 95)(font "Arial" (font_size 8))(vertical))
+		(line (pt 96 112)(pt 96 96)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clock" (rect 0 0 29 14)(font "Arial" (font_size 8)))
+		(text "clock" (rect 26 58 55 72)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 144 56)
+		(output)
+		(text "q[2..0]" (rect 0 0 35 14)(font "Arial" (font_size 8)))
+		(text "q[2..0]" (rect 95 50 130 64)(font "Arial" (font_size 8)))
+		(line (pt 144 56)(pt 128 56)(line_width 3))
+	)
+	(drawing
+		(text "up counter" (rect 84 17 135 29)(font "Arial" ))
+		(text "modulus 4" (rect 85 27 135 39)(font "Arial" ))
+		(line (pt 16 16)(pt 128 16)(line_width 1))
+		(line (pt 128 16)(pt 128 96)(line_width 1))
+		(line (pt 128 96)(pt 16 96)(line_width 1))
+		(line (pt 16 96)(pt 16 16)(line_width 1))
+		(line (pt 16 58)(pt 22 64)(line_width 1))
+		(line (pt 22 64)(pt 16 70)(line_width 1))
+	)
+)
+(symbol
+	(rect 434 280 498 360)
+	(text "DFF" (rect 1 0 19 10)(font "Arial" (font_size 6)))
+	(text "inst1" (rect 3 68 26 80)(font "Arial" ))
+	(port
+		(pt 32 80)
+		(input)
+		(text "CLRN" (rect 21 59 44 71)(font "Courier New" (bold)))
+		(text "CLRN" (rect 21 58 44 70)(font "Courier New" (bold)))
+		(line (pt 32 80)(pt 32 76)(line_width 1))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "CLK" (rect 3 29 20 41)(font "Courier New" (bold))(invisible))
+		(text "CLK" (rect 3 29 20 41)(font "Courier New" (bold))(invisible))
+		(line (pt 0 40)(pt 12 40)(line_width 1))
+	)
+	(port
+		(pt 0 24)
+		(input)
+		(text "D" (rect 14 20 19 32)(font "Courier New" (bold)))
+		(text "D" (rect 14 20 19 32)(font "Courier New" (bold)))
+		(line (pt 0 24)(pt 12 24)(line_width 1))
+	)
+	(port
+		(pt 32 0)
+		(input)
+		(text "PRN" (rect 24 13 41 25)(font "Courier New" (bold)))
+		(text "PRN" (rect 24 11 41 23)(font "Courier New" (bold)))
+		(line (pt 32 4)(pt 32 0)(line_width 1))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "Q" (rect 45 20 50 32)(font "Courier New" (bold)))
+		(text "Q" (rect 45 20 50 32)(font "Courier New" (bold)))
+		(line (pt 52 24)(pt 64 24)(line_width 1))
+	)
+	(drawing
+		(line (pt 12 12)(pt 52 12)(line_width 1))
+		(line (pt 12 68)(pt 52 68)(line_width 1))
+		(line (pt 52 68)(pt 52 12)(line_width 1))
+		(line (pt 12 68)(pt 12 12)(line_width 1))
+		(line (pt 19 40)(pt 12 47)(line_width 1))
+		(line (pt 12 32)(pt 20 40)(line_width 1))
+		(circle (rect 28 4 36 12)(line_width 1))
+		(circle (rect 28 68 36 76)(line_width 1))
+	)
+)
+(connector
+	(pt 530 256)
+	(pt 458 256)
+	(bus)
+)
+(connector
+	(pt 506 288)
+	(pt 506 304)
+)
+(connector
+	(pt 530 288)
+	(pt 506 288)
+)
+(connector
+	(pt 506 304)
+	(pt 498 304)
+)
+(connector
+	(pt 360 304)
+	(pt 434 304)
+)
+(connector
+	(pt 360 320)
+	(pt 434 320)
+)
+(connector
+	(pt 626 336)
+	(pt 626 368)
+)
+(connector
+	(text "rst" (rect 508 352 520 364)(font "Arial" ))
+	(pt 626 368)
+	(pt 504 368)
+)
+(connector
+	(pt 672 280)
+	(pt 674 280)
+	(bus)
+)
+(connector
+	(text "q[0]" (rect 738 184 756 196)(font "Arial" ))
+	(pt 728 200)
+	(pt 816 200)
+)
+(connector
+	(text "q[1]" (rect 738 224 756 236)(font "Arial" ))
+	(pt 728 240)
+	(pt 816 240)
+)
+(connector
+	(text "q[2]" (rect 738 264 756 276)(font "Arial" ))
+	(pt 728 280)
+	(pt 816 280)
+)
+(connector
+	(pt 674 280)
+	(pt 728 280)
+	(bus)
+)
+(connector
+	(pt 728 280)
+	(pt 728 240)
+	(bus)
+)
+(connector
+	(text "q[2..0]" (rect 712 203 724 234)(font "Arial" )(vertical))
+	(pt 728 240)
+	(pt 728 200)
+	(bus)
+)
+(junction (pt 674 280))
+(junction (pt 728 240))
+(junction (pt 728 280))
+(text "LPM UP Counter" (rect 530 248 620 262)(font "Arial" (font_size 8)))
