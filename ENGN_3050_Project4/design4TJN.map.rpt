@@ -1,5 +1,5 @@
 Analysis & Synthesis report for design4TJN
-Thu Oct 03 13:27:08 2013
+Sat Oct 05 19:19:27 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -12,8 +12,12 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. General Register Statistics
-  8. Analysis & Synthesis Messages
+  7. User-Specified and Inferred Latches
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: lpm_latch0:inst54|lpm_latch:lpm_latch_component
+ 10. Parameter Settings for User Entity Instance: lpm_mux0:inst40|LPM_MUX:lpm_mux_component
+ 11. Parameter Settings for User Entity Instance: lpm_latch1:inst55|lpm_latch:lpm_latch_component
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -39,13 +43,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Oct 03 13:27:08 2013        ;
+; Analysis & Synthesis Status ; Successful - Sat Oct 05 19:19:27 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; design4TJN                                   ;
 ; Top-level Entity Name       ; design4TJN                                   ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 0                                            ;
-; Total pins                  ; 13                                           ;
+; Total logic elements        ; 328                                          ;
+; Total pins                  ; 14                                           ;
 ; Total memory bits           ; 0                                            ;
 +-----------------------------+----------------------------------------------+
 
@@ -112,14 +116,26 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-----------------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                            ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------+
-; design4TJN.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/altera/90sp2/ENGN_3050_Project4.1/design4TJN.bdf     ;
-; Delay_Function.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/90sp2/ENGN_3050_Project4.1/Delay_Function.bdf ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                     ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+
+; design4TJN.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/Github/Quartus_Projects/ENGN_3050_Project4/design4TJN.bdf     ;
+; lpm_mux0.vhd                     ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project4/lpm_mux0.vhd       ;
+; lpm_latch0.vhd                   ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project4/lpm_latch0.vhd     ;
+; lpm_latch1.vhd                   ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project4/lpm_latch1.vhd     ;
+; lpm_latch.tdf                    ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_latch.tdf    ;
+; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_constant.inc ;
+; Delay_Function.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Github/Quartus_Projects/ENGN_3050_Project4/Delay_Function.bdf ;
+; LPM_MUX.tdf                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/LPM_MUX.tdf      ;
+; aglobal90.inc                    ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc    ;
+; muxlut.inc                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.inc       ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/bypassff.inc     ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.inc     ;
+; altshift.tdf                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.tdf     ;
+; muxlut.tdf                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.tdf       ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+
 
 
 +---------------------------------------------+
@@ -127,26 +143,70 @@ applicable agreement for further details.
 +--------------------------------+------------+
 ; Resource                       ; Usage      ;
 +--------------------------------+------------+
-; Total logic elements           ; 0          ;
-; Total combinational functions  ; 0          ;
-;     -- Total 4-input functions ; 0          ;
-;     -- Total 3-input functions ; 0          ;
-;     -- Total 2-input functions ; 0          ;
-;     -- Total 1-input functions ; 0          ;
+; Total logic elements           ; 328        ;
+; Total combinational functions  ; 26         ;
+;     -- Total 4-input functions ; 2          ;
+;     -- Total 3-input functions ; 19         ;
+;     -- Total 2-input functions ; 4          ;
+;     -- Total 1-input functions ; 1          ;
 ;     -- Total 0-input functions ; 0          ;
-; Total registers                ; 0          ;
-; I/O pins                       ; 13         ;
+; Total registers                ; 307        ;
+; I/O pins                       ; 14         ;
+; Maximum fan-out node           ; Clock      ;
+; Maximum fan-out                ; 307        ;
+; Total fan-out                  ; 695        ;
+; Average fan-out                ; 2.03       ;
 +--------------------------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |design4TJN                ; 0 (0)       ; 0            ; 0           ; 13   ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN         ; work         ;
-+----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                       ;
++---------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node            ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                         ; Library Name ;
++---------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
+; |design4TJN                           ; 328 (16)    ; 307          ; 0           ; 14   ; 21 (13)      ; 302 (0)           ; 5 (3)            ; 0 (0)           ; 0 (0)      ; |design4TJN                                                 ; work         ;
+;    |Delay_Function:inst10|            ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst10                           ; work         ;
+;    |Delay_Function:inst15|            ; 16 (16)     ; 16           ; 0           ; 0    ; 0 (0)        ; 15 (15)           ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst15                           ; work         ;
+;    |Delay_Function:inst16|            ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst16                           ; work         ;
+;    |Delay_Function:inst23|            ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst23                           ; work         ;
+;    |Delay_Function:inst25|            ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst25                           ; work         ;
+;    |Delay_Function:inst27|            ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst27                           ; work         ;
+;    |Delay_Function:inst28|            ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst28                           ; work         ;
+;    |Delay_Function:inst6|             ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst6                            ; work         ;
+;    |Delay_Function:inst8|             ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst8                            ; work         ;
+;    |Delay_Function:inst|              ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 31 (31)           ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst                             ; work         ;
+;    |lpm_latch0:inst54|                ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_latch0:inst54                               ; work         ;
+;       |lpm_latch:lpm_latch_component| ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_latch0:inst54|lpm_latch:lpm_latch_component ; work         ;
+;    |lpm_latch1:inst55|                ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_latch1:inst55                               ; work         ;
+;       |lpm_latch:lpm_latch_component| ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_latch1:inst55|lpm_latch:lpm_latch_component ; work         ;
++---------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                ;
++------------------------------------------------------------+------------------------------+------------------------+
+; Latch Name                                                 ; Latch Enable Signal          ; Free of Timing Hazards ;
++------------------------------------------------------------+------------------------------+------------------------+
+; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; inst53                       ; yes                    ;
+; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; inst53                       ; yes                    ;
+; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; inst53                       ; yes                    ;
+; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; inst53                       ; yes                    ;
+; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; inst53                       ; yes                    ;
+; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; inst53                       ; yes                    ;
+; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; inst53                       ; yes                    ;
+; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; inst53                       ; yes                    ;
+; inst32                                                     ; Delay_Function:inst|inst47   ; yes                    ;
+; inst30                                                     ; Delay_Function:inst8|inst47  ; yes                    ;
+; inst29                                                     ; Delay_Function:inst10|inst47 ; yes                    ;
+; inst31                                                     ; Delay_Function:inst6|inst47  ; yes                    ;
+; inst33                                                     ; Delay_Function:inst16|inst47 ; yes                    ;
+; inst36                                                     ; Delay_Function:inst23|inst47 ; yes                    ;
+; inst34                                                     ; Delay_Function:inst25|inst47 ; yes                    ;
+; inst37                                                     ; Delay_Function:inst27|inst47 ; yes                    ;
+; Number of user-specified and inferred latches = 16         ;                              ;                        ;
++------------------------------------------------------------+------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -154,14 +214,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 307   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 1     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_latch0:inst54|lpm_latch:lpm_latch_component ;
++----------------+--------+--------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                               ;
++----------------+--------+--------------------------------------------------------------------+
+; LPM_WIDTH      ; 4      ; Signed Integer                                                     ;
+; LPM_AVALUE     ; UNUSED ; Untyped                                                            ;
++----------------+--------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux0:inst40|LPM_MUX:lpm_mux_component ;
++------------------------+---------+-----------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                ;
++------------------------+---------+-----------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                      ;
+; LPM_WIDTH              ; 1       ; Signed Integer                                      ;
+; LPM_SIZE               ; 2       ; Signed Integer                                      ;
+; LPM_WIDTHS             ; 1       ; Signed Integer                                      ;
+; LPM_PIPELINE           ; 0       ; Signed Integer                                      ;
+; CBXI_PARAMETER         ; mux_snd ; Untyped                                             ;
+; DEVICE_FAMILY          ; FLEX10K ; Untyped                                             ;
++------------------------+---------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_latch1:inst55|lpm_latch:lpm_latch_component ;
++----------------+--------+--------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                               ;
++----------------+--------+--------------------------------------------------------------------+
+; LPM_WIDTH      ; 4      ; Signed Integer                                                     ;
+; LPM_AVALUE     ; UNUSED ; Untyped                                                            ;
++----------------+--------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -170,51 +271,63 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Oct 03 13:27:08 2013
+    Info: Processing started: Sat Oct 05 19:19:26 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off design4TJN -c design4TJN
 Info: Found 1 design units, including 1 entities, in source file design4TJN.bdf
     Info: Found entity 1: design4TJN
+Info: Found 2 design units, including 1 entities, in source file lpm_mux0.vhd
+    Info: Found design unit 1: lpm_mux0-SYN
+    Info: Found entity 1: lpm_mux0
+Info: Found 2 design units, including 1 entities, in source file lpm_latch0.vhd
+    Info: Found design unit 1: lpm_latch0-SYN
+    Info: Found entity 1: lpm_latch0
+Info: Found 2 design units, including 1 entities, in source file lpm_latch1.vhd
+    Info: Found design unit 1: lpm_latch1-SYN
+    Info: Found entity 1: lpm_latch1
 Info: Elaborating entity "design4TJN" for the top level hierarchy
-Warning: Pin "Start_Bit" is missing source
-Warning: Pin "Stop_Bit" is missing source
-Warning: Port "CLK" of type DFF and instance "inst18" is missing source signal
-Warning: Primitive "AND2" of instance "inst17" not used
+Warning: Block or symbol "Delay_Function" of instance "inst" overlaps another block or symbol
+Warning: Block or symbol "Delay_Function" of instance "inst6" overlaps another block or symbol
+Warning: Block or symbol "Delay_Function" of instance "inst8" overlaps another block or symbol
+Warning: Block or symbol "Delay_Function" of instance "inst10" overlaps another block or symbol
+Warning: Block or symbol "Delay_Function" of instance "inst16" overlaps another block or symbol
+Warning: Block or symbol "Delay_Function" of instance "inst23" overlaps another block or symbol
+Warning: Block or symbol "Delay_Function" of instance "inst25" overlaps another block or symbol
+Warning: Block or symbol "Delay_Function" of instance "inst27" overlaps another block or symbol
+Warning: Pin "UART_Clock" not connected
+Info: Elaborating entity "lpm_latch0" for hierarchy "lpm_latch0:inst54"
+Info: Elaborating entity "lpm_latch" for hierarchy "lpm_latch0:inst54|lpm_latch:lpm_latch_component"
+Info: Elaborated megafunction instantiation "lpm_latch0:inst54|lpm_latch:lpm_latch_component"
+Info: Instantiated megafunction "lpm_latch0:inst54|lpm_latch:lpm_latch_component" with the following parameter:
+    Info: Parameter "lpm_type" = "LPM_LATCH"
+    Info: Parameter "lpm_width" = "4"
 Warning: Using design file Delay_Function.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info: Found entity 1: Delay_Function
-Info: Elaborating entity "Delay_Function" for hierarchy "Delay_Function:inst15"
-Warning: Pin "Input_Pulse" not connected
-Warning: Primitive "DFF" of instance "inst" not used
-Warning: Primitive "DFF" of instance "inst17" not used
-Warning: Primitive "DFF" of instance "inst20" not used
-Warning: Primitive "DFF" of instance "inst21" not used
-Warning: Primitive "DFF" of instance "inst24" not used
-Warning: Primitive "DFF" of instance "inst28" not used
-Warning: Primitive "DFF" of instance "inst32" not used
-Warning: Primitive "DFF" of instance "inst36" not used
-Warning: Primitive "DFF" of instance "inst40" not used
-Warning: Primitive "DFF" of instance "inst44" not used
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Output_UN0" is stuck at GND
-    Warning (13410): Pin "Output_UN2" is stuck at GND
-    Warning (13410): Pin "Output_UN3" is stuck at GND
-    Warning (13410): Pin "Output_UN1" is stuck at GND
-    Warning (13410): Pin "Output_LN0" is stuck at GND
-    Warning (13410): Pin "Output_LN1" is stuck at GND
-    Warning (13410): Pin "Output_LN2" is stuck at GND
-    Warning (13410): Pin "Output_LN3" is stuck at GND
-    Warning (13410): Pin "Status_Light" is stuck at GND
-    Warning (13410): Pin "Start_Bit" is stuck at GND
-    Warning (13410): Pin "Stop_Bit" is stuck at GND
-Warning: Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Clock"
-    Warning (15610): No output dependent on input pin "UART_RX"
-Info: Implemented 13 device resources after synthesis - the final resource count might be different
-    Info: Implemented 2 input pins
+Info: Elaborating entity "Delay_Function" for hierarchy "Delay_Function:inst28"
+Info: Elaborating entity "lpm_mux0" for hierarchy "lpm_mux0:inst40"
+Info: Elaborating entity "LPM_MUX" for hierarchy "lpm_mux0:inst40|LPM_MUX:lpm_mux_component"
+Info: Elaborated megafunction instantiation "lpm_mux0:inst40|LPM_MUX:lpm_mux_component"
+Info: Instantiated megafunction "lpm_mux0:inst40|LPM_MUX:lpm_mux_component" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "1"
+    Info: Parameter "LPM_SIZE" = "2"
+    Info: Parameter "LPM_WIDTHS" = "1"
+    Info: Parameter "LPM_PIPELINE" = "0"
+    Info: Parameter "LPM_TYPE" = "LPM_MUX"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Elaborating entity "altshift" for hierarchy "lpm_mux0:inst40|LPM_MUX:lpm_mux_component|altshift:external_latency_ffs"
+Info: Elaborated megafunction instantiation "lpm_mux0:inst40|LPM_MUX:lpm_mux_component|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mux0:inst40|LPM_MUX:lpm_mux_component"
+Info: Elaborating entity "muxlut" for hierarchy "lpm_mux0:inst40|LPM_MUX:lpm_mux_component|muxlut:$00009"
+Info: Elaborated megafunction instantiation "lpm_mux0:inst40|LPM_MUX:lpm_mux_component|muxlut:$00009", which is child of megafunction instantiation "lpm_mux0:inst40|LPM_MUX:lpm_mux_component"
+Info: Elaborating entity "lpm_latch1" for hierarchy "lpm_latch1:inst55"
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "UART_Clock"
+Info: Implemented 342 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
     Info: Implemented 11 output pins
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 218 megabytes
-    Info: Processing ended: Thu Oct 03 13:27:08 2013
-    Info: Elapsed time: 00:00:00
+    Info: Implemented 328 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 241 megabytes
+    Info: Processing ended: Sat Oct 05 19:19:27 2013
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

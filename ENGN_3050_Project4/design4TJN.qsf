@@ -46,3 +46,7 @@ set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id e
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name BDF_FILE design4TJN.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE design4TJN.vwf
+set_global_assignment -name QIP_FILE lpm_mux0.qip
+set_global_assignment -name QIP_FILE lpm_latch0.qip
+set_global_assignment -name QIP_FILE lpm_latch1.qip

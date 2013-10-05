@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="design4TJN">
+		<CBX_INST_ENTRY INSTANCE_NAME="|design4TJN|lpm_mux0:inst40|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_snd.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

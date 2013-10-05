@@ -1,18 +1,412 @@
 |design4TJN
-Output_UN0 <= <GND>
-Output_UN2 <= <GND>
-Output_UN3 <= <GND>
-Output_UN1 <= <GND>
-Output_LN0 <= <GND>
-Output_LN1 <= <GND>
-Output_LN2 <= <GND>
-Output_LN3 <= <GND>
-Status_Light <= <GND>
-Start_Bit <= <GND>
-Stop_Bit <= <GND>
+Output_UN0 <= UN[0].DB_MAX_OUTPUT_PORT_TYPE
+Stop_Bit <= inst53.DB_MAX_OUTPUT_PORT_TYPE
+UART_RX => inst53.IN0
+UART_RX => lpm_mux0:inst40.data0
+UART_RX => inst21.IN0
+UART_RX => inst32.DATAIN
+UART_RX => inst31.DATAIN
+UART_RX => inst30.DATAIN
+UART_RX => inst29.DATAIN
+UART_RX => inst33.DATAIN
+UART_RX => inst36.DATAIN
+UART_RX => inst34.DATAIN
+UART_RX => inst37.DATAIN
+Clock => Delay_Function:inst28.CLOCK
+Clock => Delay_Function:inst27.CLOCK
+Clock => Delay_Function:inst25.CLOCK
+Clock => Delay_Function:inst23.CLOCK
+Clock => Delay_Function:inst16.CLOCK
+Clock => Delay_Function:inst10.CLOCK
+Clock => Delay_Function:inst8.CLOCK
+Clock => Delay_Function:inst6.CLOCK
+Clock => Delay_Function:inst.CLOCK
 Clock => Delay_Function:inst15.CLOCK
-UART_RX => inst20.IN0
-UART_RX => inst18.DATAIN
+Clock => inst49.CLK
+Clock => inst42.CLK
+Clock => inst18.CLK
+Start_Bit <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+Output_UN2 <= UN[2].DB_MAX_OUTPUT_PORT_TYPE
+Output_UN3 <= UN[3].DB_MAX_OUTPUT_PORT_TYPE
+Output_UN1 <= UN[1].DB_MAX_OUTPUT_PORT_TYPE
+Output_LN0 <= LN[0].DB_MAX_OUTPUT_PORT_TYPE
+Output_LN1 <= LN[1].DB_MAX_OUTPUT_PORT_TYPE
+Output_LN2 <= LN[2].DB_MAX_OUTPUT_PORT_TYPE
+Output_LN3 <= LN[3].DB_MAX_OUTPUT_PORT_TYPE
+Status_Light <= inst51.DB_MAX_OUTPUT_PORT_TYPE
+UART_Clock => ~NO_FANOUT~
+
+
+|design4TJN|lpm_latch0:inst54
+data[0] => lpm_latch:lpm_latch_component.data[0]
+data[1] => lpm_latch:lpm_latch_component.data[1]
+data[2] => lpm_latch:lpm_latch_component.data[2]
+data[3] => lpm_latch:lpm_latch_component.data[3]
+gate => lpm_latch:lpm_latch_component.gate
+q[0] <= lpm_latch:lpm_latch_component.q[0]
+q[1] <= lpm_latch:lpm_latch_component.q[1]
+q[2] <= lpm_latch:lpm_latch_component.q[2]
+q[3] <= lpm_latch:lpm_latch_component.q[3]
+
+
+|design4TJN|lpm_latch0:inst54|lpm_latch:lpm_latch_component
+data[0] => latches[0].DATAIN
+data[1] => latches[1].DATAIN
+data[2] => latches[2].DATAIN
+data[3] => latches[3].DATAIN
+gate => latches[3].LATCH_ENABLE
+gate => latches[2].LATCH_ENABLE
+gate => latches[1].LATCH_ENABLE
+gate => latches[0].LATCH_ENABLE
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+q[0] <= latches[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= latches[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= latches[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= latches[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|design4TJN|Delay_Function:inst28
+32 <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst47.CLK
+CLOCK => inst43.CLK
+CLOCK => inst39.CLK
+CLOCK => inst35.CLK
+CLOCK => inst31.CLK
+CLOCK => inst27.CLK
+CLOCK => inst23.CLK
+CLOCK => inst19.CLK
+CLOCK => inst46.CLK
+CLOCK => inst42.CLK
+CLOCK => inst38.CLK
+CLOCK => inst34.CLK
+CLOCK => inst30.CLK
+CLOCK => inst26.CLK
+CLOCK => inst22.CLK
+CLOCK => inst18.CLK
+CLOCK => inst45.CLK
+CLOCK => inst41.CLK
+CLOCK => inst37.CLK
+CLOCK => inst33.CLK
+CLOCK => inst29.CLK
+CLOCK => inst25.CLK
+CLOCK => inst21.CLK
+CLOCK => inst17.CLK
+CLOCK => inst44.CLK
+CLOCK => inst40.CLK
+CLOCK => inst36.CLK
+CLOCK => inst32.CLK
+CLOCK => inst28.CLK
+CLOCK => inst24.CLK
+CLOCK => inst20.CLK
+CLOCK => inst.CLK
+Input_Pulse => inst.DATAIN
+16 <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|design4TJN|Delay_Function:inst27
+32 <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst47.CLK
+CLOCK => inst43.CLK
+CLOCK => inst39.CLK
+CLOCK => inst35.CLK
+CLOCK => inst31.CLK
+CLOCK => inst27.CLK
+CLOCK => inst23.CLK
+CLOCK => inst19.CLK
+CLOCK => inst46.CLK
+CLOCK => inst42.CLK
+CLOCK => inst38.CLK
+CLOCK => inst34.CLK
+CLOCK => inst30.CLK
+CLOCK => inst26.CLK
+CLOCK => inst22.CLK
+CLOCK => inst18.CLK
+CLOCK => inst45.CLK
+CLOCK => inst41.CLK
+CLOCK => inst37.CLK
+CLOCK => inst33.CLK
+CLOCK => inst29.CLK
+CLOCK => inst25.CLK
+CLOCK => inst21.CLK
+CLOCK => inst17.CLK
+CLOCK => inst44.CLK
+CLOCK => inst40.CLK
+CLOCK => inst36.CLK
+CLOCK => inst32.CLK
+CLOCK => inst28.CLK
+CLOCK => inst24.CLK
+CLOCK => inst20.CLK
+CLOCK => inst.CLK
+Input_Pulse => inst.DATAIN
+16 <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|design4TJN|Delay_Function:inst25
+32 <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst47.CLK
+CLOCK => inst43.CLK
+CLOCK => inst39.CLK
+CLOCK => inst35.CLK
+CLOCK => inst31.CLK
+CLOCK => inst27.CLK
+CLOCK => inst23.CLK
+CLOCK => inst19.CLK
+CLOCK => inst46.CLK
+CLOCK => inst42.CLK
+CLOCK => inst38.CLK
+CLOCK => inst34.CLK
+CLOCK => inst30.CLK
+CLOCK => inst26.CLK
+CLOCK => inst22.CLK
+CLOCK => inst18.CLK
+CLOCK => inst45.CLK
+CLOCK => inst41.CLK
+CLOCK => inst37.CLK
+CLOCK => inst33.CLK
+CLOCK => inst29.CLK
+CLOCK => inst25.CLK
+CLOCK => inst21.CLK
+CLOCK => inst17.CLK
+CLOCK => inst44.CLK
+CLOCK => inst40.CLK
+CLOCK => inst36.CLK
+CLOCK => inst32.CLK
+CLOCK => inst28.CLK
+CLOCK => inst24.CLK
+CLOCK => inst20.CLK
+CLOCK => inst.CLK
+Input_Pulse => inst.DATAIN
+16 <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|design4TJN|Delay_Function:inst23
+32 <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst47.CLK
+CLOCK => inst43.CLK
+CLOCK => inst39.CLK
+CLOCK => inst35.CLK
+CLOCK => inst31.CLK
+CLOCK => inst27.CLK
+CLOCK => inst23.CLK
+CLOCK => inst19.CLK
+CLOCK => inst46.CLK
+CLOCK => inst42.CLK
+CLOCK => inst38.CLK
+CLOCK => inst34.CLK
+CLOCK => inst30.CLK
+CLOCK => inst26.CLK
+CLOCK => inst22.CLK
+CLOCK => inst18.CLK
+CLOCK => inst45.CLK
+CLOCK => inst41.CLK
+CLOCK => inst37.CLK
+CLOCK => inst33.CLK
+CLOCK => inst29.CLK
+CLOCK => inst25.CLK
+CLOCK => inst21.CLK
+CLOCK => inst17.CLK
+CLOCK => inst44.CLK
+CLOCK => inst40.CLK
+CLOCK => inst36.CLK
+CLOCK => inst32.CLK
+CLOCK => inst28.CLK
+CLOCK => inst24.CLK
+CLOCK => inst20.CLK
+CLOCK => inst.CLK
+Input_Pulse => inst.DATAIN
+16 <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|design4TJN|Delay_Function:inst16
+32 <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst47.CLK
+CLOCK => inst43.CLK
+CLOCK => inst39.CLK
+CLOCK => inst35.CLK
+CLOCK => inst31.CLK
+CLOCK => inst27.CLK
+CLOCK => inst23.CLK
+CLOCK => inst19.CLK
+CLOCK => inst46.CLK
+CLOCK => inst42.CLK
+CLOCK => inst38.CLK
+CLOCK => inst34.CLK
+CLOCK => inst30.CLK
+CLOCK => inst26.CLK
+CLOCK => inst22.CLK
+CLOCK => inst18.CLK
+CLOCK => inst45.CLK
+CLOCK => inst41.CLK
+CLOCK => inst37.CLK
+CLOCK => inst33.CLK
+CLOCK => inst29.CLK
+CLOCK => inst25.CLK
+CLOCK => inst21.CLK
+CLOCK => inst17.CLK
+CLOCK => inst44.CLK
+CLOCK => inst40.CLK
+CLOCK => inst36.CLK
+CLOCK => inst32.CLK
+CLOCK => inst28.CLK
+CLOCK => inst24.CLK
+CLOCK => inst20.CLK
+CLOCK => inst.CLK
+Input_Pulse => inst.DATAIN
+16 <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|design4TJN|Delay_Function:inst10
+32 <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst47.CLK
+CLOCK => inst43.CLK
+CLOCK => inst39.CLK
+CLOCK => inst35.CLK
+CLOCK => inst31.CLK
+CLOCK => inst27.CLK
+CLOCK => inst23.CLK
+CLOCK => inst19.CLK
+CLOCK => inst46.CLK
+CLOCK => inst42.CLK
+CLOCK => inst38.CLK
+CLOCK => inst34.CLK
+CLOCK => inst30.CLK
+CLOCK => inst26.CLK
+CLOCK => inst22.CLK
+CLOCK => inst18.CLK
+CLOCK => inst45.CLK
+CLOCK => inst41.CLK
+CLOCK => inst37.CLK
+CLOCK => inst33.CLK
+CLOCK => inst29.CLK
+CLOCK => inst25.CLK
+CLOCK => inst21.CLK
+CLOCK => inst17.CLK
+CLOCK => inst44.CLK
+CLOCK => inst40.CLK
+CLOCK => inst36.CLK
+CLOCK => inst32.CLK
+CLOCK => inst28.CLK
+CLOCK => inst24.CLK
+CLOCK => inst20.CLK
+CLOCK => inst.CLK
+Input_Pulse => inst.DATAIN
+16 <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|design4TJN|Delay_Function:inst8
+32 <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst47.CLK
+CLOCK => inst43.CLK
+CLOCK => inst39.CLK
+CLOCK => inst35.CLK
+CLOCK => inst31.CLK
+CLOCK => inst27.CLK
+CLOCK => inst23.CLK
+CLOCK => inst19.CLK
+CLOCK => inst46.CLK
+CLOCK => inst42.CLK
+CLOCK => inst38.CLK
+CLOCK => inst34.CLK
+CLOCK => inst30.CLK
+CLOCK => inst26.CLK
+CLOCK => inst22.CLK
+CLOCK => inst18.CLK
+CLOCK => inst45.CLK
+CLOCK => inst41.CLK
+CLOCK => inst37.CLK
+CLOCK => inst33.CLK
+CLOCK => inst29.CLK
+CLOCK => inst25.CLK
+CLOCK => inst21.CLK
+CLOCK => inst17.CLK
+CLOCK => inst44.CLK
+CLOCK => inst40.CLK
+CLOCK => inst36.CLK
+CLOCK => inst32.CLK
+CLOCK => inst28.CLK
+CLOCK => inst24.CLK
+CLOCK => inst20.CLK
+CLOCK => inst.CLK
+Input_Pulse => inst.DATAIN
+16 <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|design4TJN|Delay_Function:inst6
+32 <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst47.CLK
+CLOCK => inst43.CLK
+CLOCK => inst39.CLK
+CLOCK => inst35.CLK
+CLOCK => inst31.CLK
+CLOCK => inst27.CLK
+CLOCK => inst23.CLK
+CLOCK => inst19.CLK
+CLOCK => inst46.CLK
+CLOCK => inst42.CLK
+CLOCK => inst38.CLK
+CLOCK => inst34.CLK
+CLOCK => inst30.CLK
+CLOCK => inst26.CLK
+CLOCK => inst22.CLK
+CLOCK => inst18.CLK
+CLOCK => inst45.CLK
+CLOCK => inst41.CLK
+CLOCK => inst37.CLK
+CLOCK => inst33.CLK
+CLOCK => inst29.CLK
+CLOCK => inst25.CLK
+CLOCK => inst21.CLK
+CLOCK => inst17.CLK
+CLOCK => inst44.CLK
+CLOCK => inst40.CLK
+CLOCK => inst36.CLK
+CLOCK => inst32.CLK
+CLOCK => inst28.CLK
+CLOCK => inst24.CLK
+CLOCK => inst20.CLK
+CLOCK => inst.CLK
+Input_Pulse => inst.DATAIN
+16 <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|design4TJN|Delay_Function:inst
+32 <= inst47.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst47.CLK
+CLOCK => inst43.CLK
+CLOCK => inst39.CLK
+CLOCK => inst35.CLK
+CLOCK => inst31.CLK
+CLOCK => inst27.CLK
+CLOCK => inst23.CLK
+CLOCK => inst19.CLK
+CLOCK => inst46.CLK
+CLOCK => inst42.CLK
+CLOCK => inst38.CLK
+CLOCK => inst34.CLK
+CLOCK => inst30.CLK
+CLOCK => inst26.CLK
+CLOCK => inst22.CLK
+CLOCK => inst18.CLK
+CLOCK => inst45.CLK
+CLOCK => inst41.CLK
+CLOCK => inst37.CLK
+CLOCK => inst33.CLK
+CLOCK => inst29.CLK
+CLOCK => inst25.CLK
+CLOCK => inst21.CLK
+CLOCK => inst17.CLK
+CLOCK => inst44.CLK
+CLOCK => inst40.CLK
+CLOCK => inst36.CLK
+CLOCK => inst32.CLK
+CLOCK => inst28.CLK
+CLOCK => inst24.CLK
+CLOCK => inst20.CLK
+CLOCK => inst.CLK
+Input_Pulse => inst.DATAIN
+16 <= inst45.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |design4TJN|Delay_Function:inst15
@@ -39,7 +433,82 @@ CLOCK => inst37.CLK
 CLOCK => inst33.CLK
 CLOCK => inst29.CLK
 CLOCK => inst25.CLK
+CLOCK => inst21.CLK
+CLOCK => inst17.CLK
+CLOCK => inst44.CLK
+CLOCK => inst40.CLK
+CLOCK => inst36.CLK
+CLOCK => inst32.CLK
+CLOCK => inst28.CLK
+CLOCK => inst24.CLK
+CLOCK => inst20.CLK
+CLOCK => inst.CLK
+Input_Pulse => inst.DATAIN
 16 <= inst45.DB_MAX_OUTPUT_PORT_TYPE
-Input_Pulse => ~NO_FANOUT~
+
+
+|design4TJN|lpm_mux0:inst40
+data0 => LPM_MUX:lpm_mux_component.DATA[0][0]
+data1 => LPM_MUX:lpm_mux_component.DATA[1][0]
+sel => LPM_MUX:lpm_mux_component.SEL[0]
+result <= LPM_MUX:lpm_mux_component.RESULT[0]
+
+
+|design4TJN|lpm_mux0:inst40|LPM_MUX:lpm_mux_component
+data[0][0] => muxlut:$00009.data[0]
+data[1][0] => muxlut:$00009.data[1]
+sel[0] => muxlut:$00009.select[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= altshift:external_latency_ffs.result[0]
+
+
+|design4TJN|lpm_mux0:inst40|LPM_MUX:lpm_mux_component|altshift:external_latency_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|design4TJN|lpm_mux0:inst40|LPM_MUX:lpm_mux_component|muxlut:$00009
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|design4TJN|lpm_latch1:inst55
+data[0] => lpm_latch:lpm_latch_component.data[0]
+data[1] => lpm_latch:lpm_latch_component.data[1]
+data[2] => lpm_latch:lpm_latch_component.data[2]
+data[3] => lpm_latch:lpm_latch_component.data[3]
+gate => lpm_latch:lpm_latch_component.gate
+q[0] <= lpm_latch:lpm_latch_component.q[0]
+q[1] <= lpm_latch:lpm_latch_component.q[1]
+q[2] <= lpm_latch:lpm_latch_component.q[2]
+q[3] <= lpm_latch:lpm_latch_component.q[3]
+
+
+|design4TJN|lpm_latch1:inst55|lpm_latch:lpm_latch_component
+data[0] => latches[0].DATAIN
+data[1] => latches[1].DATAIN
+data[2] => latches[2].DATAIN
+data[3] => latches[3].DATAIN
+gate => latches[3].LATCH_ENABLE
+gate => latches[2].LATCH_ENABLE
+gate => latches[1].LATCH_ENABLE
+gate => latches[0].LATCH_ENABLE
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+q[0] <= latches[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= latches[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= latches[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= latches[3].DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -2025,10 +2025,6 @@ applicable agreement for further details.
 	(pt 472 224)
 )
 (connector
-	(pt 536 224)
-	(pt 560 224)
-)
-(connector
 	(pt 632 224)
 	(pt 664 224)
 )
@@ -2160,5 +2156,9 @@ applicable agreement for further details.
 (connector
 	(pt 280 128)
 	(pt 376 128)
+)
+(connector
+	(pt 568 224)
+	(pt 536 224)
 )
 (junction (pt 1112 288))
