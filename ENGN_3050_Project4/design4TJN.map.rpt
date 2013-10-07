@@ -1,5 +1,5 @@
 Analysis & Synthesis report for design4TJN
-Sat Oct 05 19:19:27 2013
+Sun Oct 06 17:07:51 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -14,10 +14,14 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   6. Analysis & Synthesis Resource Utilization by Entity
   7. User-Specified and Inferred Latches
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: lpm_latch0:inst54|lpm_latch:lpm_latch_component
- 10. Parameter Settings for User Entity Instance: lpm_mux0:inst40|LPM_MUX:lpm_mux_component
- 11. Parameter Settings for User Entity Instance: lpm_latch1:inst55|lpm_latch:lpm_latch_component
- 12. Analysis & Synthesis Messages
+  9. Source assignments for lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder
+ 10. Source assignments for lpm_counter0:inst1|lpm_counter:lpm_counter_component
+ 11. Parameter Settings for User Entity Instance: lpm_latch0:inst54|lpm_latch:lpm_latch_component
+ 12. Parameter Settings for User Entity Instance: lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component
+ 13. Parameter Settings for User Entity Instance: lpm_counter0:inst1|lpm_counter:lpm_counter_component
+ 14. Parameter Settings for User Entity Instance: lpm_mux0:inst40|LPM_MUX:lpm_mux_component
+ 15. Parameter Settings for User Entity Instance: lpm_latch1:inst55|lpm_latch:lpm_latch_component
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -43,13 +47,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Oct 05 19:19:27 2013        ;
+; Analysis & Synthesis Status ; Successful - Sun Oct 06 17:07:51 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; design4TJN                                   ;
 ; Top-level Entity Name       ; design4TJN                                   ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 328                                          ;
-; Total pins                  ; 14                                           ;
+; Total logic elements        ; 361                                          ;
+; Total pins                  ; 28                                           ;
 ; Total memory bits           ; 0                                            ;
 +-----------------------------+----------------------------------------------+
 
@@ -116,70 +120,118 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-----------------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                     ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+
-; design4TJN.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/Github/Quartus_Projects/ENGN_3050_Project4/design4TJN.bdf     ;
-; lpm_mux0.vhd                     ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project4/lpm_mux0.vhd       ;
-; lpm_latch0.vhd                   ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project4/lpm_latch0.vhd     ;
-; lpm_latch1.vhd                   ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project4/lpm_latch1.vhd     ;
-; lpm_latch.tdf                    ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_latch.tdf    ;
-; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_constant.inc ;
-; Delay_Function.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Github/Quartus_Projects/ENGN_3050_Project4/Delay_Function.bdf ;
-; LPM_MUX.tdf                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/LPM_MUX.tdf      ;
-; aglobal90.inc                    ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc    ;
-; muxlut.inc                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.inc       ;
-; bypassff.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/bypassff.inc     ;
-; altshift.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.inc     ;
-; altshift.tdf                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.tdf     ;
-; muxlut.tdf                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.tdf       ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                            ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+
+; design4TJN.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/Github/Quartus_Projects/ENGN_3050_Project4/design4TJN.bdf            ;
+; lpm_mux0.vhd                     ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project4/lpm_mux0.vhd              ;
+; lpm_latch0.vhd                   ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project4/lpm_latch0.vhd            ;
+; lpm_latch1.vhd                   ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project4/lpm_latch1.vhd            ;
+; lpm_counter0.vhd                 ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project4/lpm_counter0.vhd          ;
+; lpm_add_sub0.vhd                 ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project4/lpm_add_sub0.vhd          ;
+; lpm_latch.tdf                    ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_latch.tdf           ;
+; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_constant.inc        ;
+; Delay_Function.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Github/Quartus_Projects/ENGN_3050_Project4/Delay_Function.bdf        ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;
+; addcore.inc                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.inc             ;
+; look_add.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/look_add.inc            ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/bypassff.inc            ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.inc            ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;
+; alt_mercury_add_sub.inc          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_mercury_add_sub.inc ;
+; aglobal90.inc                    ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc           ;
+; addcore.tdf                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/addcore.tdf             ;
+; a_csnbuffer.inc                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.inc         ;
+; a_csnbuffer.tdf                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/a_csnbuffer.tdf         ;
+; altshift.tdf                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.tdf            ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.tdf         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_decode.inc          ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_add_sub.inc         ;
+; cmpconst.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/cmpconst.inc            ;
+; lpm_compare.inc                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_compare.inc         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.inc         ;
+; dffeea.inc                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/dffeea.inc              ;
+; alt_synch_counter.inc            ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_synch_counter.inc   ;
+; alt_synch_counter_f.inc          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_synch_counter_f.inc ;
+; alt_counter_f10ke.inc            ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_f10ke.inc   ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_stratix.inc ;
+; alt_counter_f10ke.tdf            ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/alt_counter_f10ke.tdf   ;
+; flex10ke_lcell.inc               ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/flex10ke_lcell.inc      ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_constant.tdf        ;
+; lpm_compare.tdf                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_compare.tdf         ;
+; comptree.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/comptree.inc            ;
+; comptree.tdf                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/comptree.tdf            ;
+; cmpchain.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/cmpchain.inc            ;
+; cmpchain.tdf                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/cmpchain.tdf            ;
+; LPM_MUX.tdf                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/LPM_MUX.tdf             ;
+; muxlut.inc                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.inc              ;
+; muxlut.tdf                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.tdf              ;
+; 7_Segment_Decoder.bdf            ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Github/Quartus_Projects/ENGN_3050_Project4/7_Segment_Decoder.bdf     ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+
 
 
 +---------------------------------------------+
 ; Analysis & Synthesis Resource Usage Summary ;
-+--------------------------------+------------+
-; Resource                       ; Usage      ;
-+--------------------------------+------------+
-; Total logic elements           ; 328        ;
-; Total combinational functions  ; 26         ;
-;     -- Total 4-input functions ; 2          ;
-;     -- Total 3-input functions ; 19         ;
-;     -- Total 2-input functions ; 4          ;
-;     -- Total 1-input functions ; 1          ;
-;     -- Total 0-input functions ; 0          ;
-; Total registers                ; 307        ;
-; I/O pins                       ; 14         ;
-; Maximum fan-out node           ; Clock      ;
-; Maximum fan-out                ; 307        ;
-; Total fan-out                  ; 695        ;
-; Average fan-out                ; 2.03       ;
-+--------------------------------+------------+
++-----------------------------------+---------+
+; Resource                          ; Usage   ;
++-----------------------------------+---------+
+; Total logic elements              ; 361     ;
+; Total combinational functions     ; 59      ;
+;     -- Total 4-input functions    ; 17      ;
+;     -- Total 3-input functions    ; 20      ;
+;     -- Total 2-input functions    ; 5       ;
+;     -- Total 1-input functions    ; 8       ;
+;     -- Total 0-input functions    ; 9       ;
+; Total registers                   ; 315     ;
+; Total logic cells in carry chains ; 15      ;
+; I/O pins                          ; 28      ;
+; Maximum fan-out node              ; inst3   ;
+; Maximum fan-out                   ; 307     ;
+; Total fan-out                     ; 816     ;
+; Average fan-out                   ; 2.10    ;
++-----------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                       ;
-+---------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node            ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                         ; Library Name ;
-+---------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
-; |design4TJN                           ; 328 (16)    ; 307          ; 0           ; 14   ; 21 (13)      ; 302 (0)           ; 5 (3)            ; 0 (0)           ; 0 (0)      ; |design4TJN                                                 ; work         ;
-;    |Delay_Function:inst10|            ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst10                           ; work         ;
-;    |Delay_Function:inst15|            ; 16 (16)     ; 16           ; 0           ; 0    ; 0 (0)        ; 15 (15)           ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst15                           ; work         ;
-;    |Delay_Function:inst16|            ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst16                           ; work         ;
-;    |Delay_Function:inst23|            ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst23                           ; work         ;
-;    |Delay_Function:inst25|            ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst25                           ; work         ;
-;    |Delay_Function:inst27|            ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst27                           ; work         ;
-;    |Delay_Function:inst28|            ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst28                           ; work         ;
-;    |Delay_Function:inst6|             ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst6                            ; work         ;
-;    |Delay_Function:inst8|             ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst8                            ; work         ;
-;    |Delay_Function:inst|              ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 31 (31)           ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst                             ; work         ;
-;    |lpm_latch0:inst54|                ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_latch0:inst54                               ; work         ;
-;       |lpm_latch:lpm_latch_component| ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_latch0:inst54|lpm_latch:lpm_latch_component ; work         ;
-;    |lpm_latch1:inst55|                ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_latch1:inst55                               ; work         ;
-;       |lpm_latch:lpm_latch_component| ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_latch1:inst55|lpm_latch:lpm_latch_component ; work         ;
-+---------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                  ;
++-------------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                                                                                          ; Library Name ;
++-------------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |design4TJN                                     ; 361 (18)    ; 315          ; 0           ; 28   ; 46 (14)      ; 302 (0)           ; 13 (4)           ; 15 (1)          ; 0 (0)      ; |design4TJN                                                                                                                                                                                                  ; work         ;
+;    |7_Segment_Decoder:inst24|                   ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|7_Segment_Decoder:inst24                                                                                                                                                                         ; work         ;
+;    |7_Segment_Decoder:inst26|                   ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|7_Segment_Decoder:inst26                                                                                                                                                                         ; work         ;
+;    |Delay_Function:inst10|                      ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst10                                                                                                                                                                            ; work         ;
+;    |Delay_Function:inst15|                      ; 16 (16)     ; 16           ; 0           ; 0    ; 0 (0)        ; 15 (15)           ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst15                                                                                                                                                                            ; work         ;
+;    |Delay_Function:inst16|                      ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst16                                                                                                                                                                            ; work         ;
+;    |Delay_Function:inst23|                      ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst23                                                                                                                                                                            ; work         ;
+;    |Delay_Function:inst25|                      ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst25                                                                                                                                                                            ; work         ;
+;    |Delay_Function:inst27|                      ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst27                                                                                                                                                                            ; work         ;
+;    |Delay_Function:inst28|                      ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst28                                                                                                                                                                            ; work         ;
+;    |Delay_Function:inst6|                       ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst6                                                                                                                                                                             ; work         ;
+;    |Delay_Function:inst8|                       ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst8                                                                                                                                                                             ; work         ;
+;    |Delay_Function:inst|                        ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 31 (31)           ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst                                                                                                                                                                              ; work         ;
+;    |lpm_add_sub0:inst2|                         ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 7 (0)           ; 0 (0)      ; |design4TJN|lpm_add_sub0:inst2                                                                                                                                                                               ; work         ;
+;       |lpm_add_sub:lpm_add_sub_component|       ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 7 (0)           ; 0 (0)      ; |design4TJN|lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component                                                                                                                                             ; work         ;
+;          |addcore:adder|                        ; 7 (0)       ; 0            ; 0           ; 0    ; 7 (0)        ; 0 (0)             ; 0 (0)            ; 7 (0)           ; 0 (0)      ; |design4TJN|lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder                                                                                                                               ; work         ;
+;             |a_csnbuffer:result_node|           ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |design4TJN|lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node                                                                                                       ; work         ;
+;    |lpm_counter0:inst1|                         ; 10 (0)      ; 7            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 7 (0)            ; 7 (0)           ; 0 (0)      ; |design4TJN|lpm_counter0:inst1                                                                                                                                                                               ; work         ;
+;       |lpm_counter:lpm_counter_component|       ; 10 (0)      ; 7            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 7 (0)            ; 7 (0)           ; 0 (0)      ; |design4TJN|lpm_counter0:inst1|lpm_counter:lpm_counter_component                                                                                                                                             ; work         ;
+;          |alt_counter_f10ke:wysi_counter|       ; 10 (7)      ; 7            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 7 (7)            ; 7 (7)           ; 0 (0)      ; |design4TJN|lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter                                                                                                              ; work         ;
+;             |lpm_compare:$00014|                ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014                                                                                           ; work         ;
+;                |comptree:comparator|            ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator                                                                       ; work         ;
+;                   |cmpchain:cmp_end|            ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end                                                      ; work         ;
+;                      |comptree:comp|            ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp                                        ; work         ;
+;                         |cmpchain:cmp[0]|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]                        ; work         ;
+;                         |cmpchain:cmp_end|      ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end                       ; work         ;
+;                         |comptree:sub_comptree| ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                  ; work         ;
+;                            |cmpchain:cmp_end|   ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end ; work         ;
+;    |lpm_latch0:inst54|                          ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_latch0:inst54                                                                                                                                                                                ; work         ;
+;       |lpm_latch:lpm_latch_component|           ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_latch0:inst54|lpm_latch:lpm_latch_component                                                                                                                                                  ; work         ;
+;    |lpm_latch1:inst55|                          ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_latch1:inst55                                                                                                                                                                                ; work         ;
+;       |lpm_latch:lpm_latch_component|           ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|lpm_latch1:inst55|lpm_latch:lpm_latch_component                                                                                                                                                  ; work         ;
++-------------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -214,14 +266,34 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 307   ;
+; Total registers                              ; 315   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 7     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------+
+; Source assignments for lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder ;
++---------------------------+-------+------+------------------------------------------------+
+; Assignment                ; Value ; From ; To                                             ;
++---------------------------+-------+------+------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                              ;
++---------------------------+-------+------+------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Source assignments for lpm_counter0:inst1|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+----------------------------------+
+; Assignment                ; Value ; From ; To                               ;
++---------------------------+-------+------+----------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                ;
++---------------------------+-------+------+----------------------------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -232,6 +304,61 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; LPM_WIDTH      ; 4      ; Signed Integer                                                     ;
 ; LPM_AVALUE     ; UNUSED ; Untyped                                                            ;
 +----------------+--------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                       ;
++------------------------+-------------+------------------------------------------------------------+
+; LPM_WIDTH              ; 7           ; Signed Integer                                             ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                    ;
+; LPM_DIRECTION          ; SUB         ; Untyped                                                    ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                    ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                    ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                    ;
+; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                                                    ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                         ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                                                    ;
+; USE_WYS                ; OFF         ; Untyped                                                    ;
+; STYLE                  ; FAST        ; Untyped                                                    ;
+; CBXI_PARAMETER         ; add_sub_gsh ; Untyped                                                    ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                             ;
++------------------------+-------------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_counter0:inst1|lpm_counter:lpm_counter_component ;
++------------------------+-------------+------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                       ;
++------------------------+-------------+------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                             ;
+; LPM_WIDTH              ; 7           ; Signed Integer                                             ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                    ;
+; LPM_MODULUS            ; 82          ; Signed Integer                                             ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                    ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                    ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                    ;
+; DEVICE_FAMILY          ; FLEX10K     ; Untyped                                                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                         ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                         ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                    ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                    ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                    ;
+; CBXI_PARAMETER         ; NOTHING     ; Untyped                                                    ;
++------------------------+-------------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -271,7 +398,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sat Oct 05 19:19:26 2013
+    Info: Processing started: Sun Oct 06 17:07:50 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off design4TJN -c design4TJN
 Info: Found 1 design units, including 1 entities, in source file design4TJN.bdf
     Info: Found entity 1: design4TJN
@@ -284,6 +411,12 @@ Info: Found 2 design units, including 1 entities, in source file lpm_latch0.vhd
 Info: Found 2 design units, including 1 entities, in source file lpm_latch1.vhd
     Info: Found design unit 1: lpm_latch1-SYN
     Info: Found entity 1: lpm_latch1
+Info: Found 2 design units, including 1 entities, in source file lpm_counter0.vhd
+    Info: Found design unit 1: lpm_counter0-SYN
+    Info: Found entity 1: lpm_counter0
+Info: Found 2 design units, including 1 entities, in source file lpm_add_sub0.vhd
+    Info: Found design unit 1: lpm_add_sub0-SYN
+    Info: Found entity 1: lpm_add_sub0
 Info: Elaborating entity "design4TJN" for the top level hierarchy
 Warning: Block or symbol "Delay_Function" of instance "inst" overlaps another block or symbol
 Warning: Block or symbol "Delay_Function" of instance "inst6" overlaps another block or symbol
@@ -293,6 +426,10 @@ Warning: Block or symbol "Delay_Function" of instance "inst16" overlaps another 
 Warning: Block or symbol "Delay_Function" of instance "inst23" overlaps another block or symbol
 Warning: Block or symbol "Delay_Function" of instance "inst25" overlaps another block or symbol
 Warning: Block or symbol "Delay_Function" of instance "inst27" overlaps another block or symbol
+Warning: Block or symbol "NOT" of instance "inst4" overlaps another block or symbol
+Warning: Block or symbol "NOT" of instance "inst5" overlaps another block or symbol
+Warning: Block or symbol "NOT" of instance "inst11" overlaps another block or symbol
+Warning: Block or symbol "NOT" of instance "inst12" overlaps another block or symbol
 Warning: Pin "UART_Clock" not connected
 Info: Elaborating entity "lpm_latch0" for hierarchy "lpm_latch0:inst54"
 Info: Elaborating entity "lpm_latch" for hierarchy "lpm_latch0:inst54|lpm_latch:lpm_latch_component"
@@ -303,6 +440,54 @@ Info: Instantiated megafunction "lpm_latch0:inst54|lpm_latch:lpm_latch_component
 Warning: Using design file Delay_Function.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info: Found entity 1: Delay_Function
 Info: Elaborating entity "Delay_Function" for hierarchy "Delay_Function:inst28"
+Info: Elaborating entity "lpm_add_sub0" for hierarchy "lpm_add_sub0:inst2"
+Info: Elaborating entity "lpm_add_sub" for hierarchy "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborated megafunction instantiation "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Instantiated megafunction "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "SUB"
+    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES,CIN_USED=NO"
+    Info: Parameter "lpm_representation" = "UNSIGNED"
+    Info: Parameter "lpm_type" = "LPM_ADD_SUB"
+    Info: Parameter "lpm_width" = "7"
+Info: Elaborating entity "addcore" for hierarchy "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder"
+Info: Elaborated megafunction instantiation "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder", which is child of megafunction instantiation "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborating entity "a_csnbuffer" for hierarchy "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node"
+Info: Elaborated megafunction instantiation "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborating entity "a_csnbuffer" for hierarchy "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node"
+Info: Elaborated megafunction instantiation "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborating entity "altshift" for hierarchy "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs"
+Info: Elaborated megafunction instantiation "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborating entity "altshift" for hierarchy "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs"
+Info: Elaborated megafunction instantiation "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborating entity "lpm_counter0" for hierarchy "lpm_counter0:inst1"
+Info: Elaborating entity "lpm_counter" for hierarchy "lpm_counter0:inst1|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "lpm_counter0:inst1|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_modulus" = "82"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "7"
+Info: Elaborating entity "alt_counter_f10ke" for hierarchy "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter"
+Info: Elaborated megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter", which is child of megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component"
+Info: Elaborating entity "lpm_constant" for hierarchy "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_constant:$00012"
+Info: Elaborated megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_constant:$00012", which is child of megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component"
+Info: Elaborating entity "lpm_compare" for hierarchy "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014"
+Info: Elaborated megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014", which is child of megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component"
+Info: Elaborating entity "comptree" for hierarchy "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator"
+Info: Elaborated megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator", which is child of megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component"
+Info: Elaborating entity "cmpchain" for hierarchy "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end"
+Info: Elaborated megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end", which is child of megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component"
+Info: Elaborating entity "comptree" for hierarchy "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp"
+Info: Elaborated megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp", which is child of megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component"
+Info: Elaborating entity "cmpchain" for hierarchy "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]"
+Info: Elaborated megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]", which is child of megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component"
+Info: Elaborating entity "cmpchain" for hierarchy "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end"
+Info: Elaborated megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end", which is child of megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component"
+Info: Elaborating entity "comptree" for hierarchy "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree"
+Info: Elaborated megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree", which is child of megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component"
+Info: Elaborating entity "cmpchain" for hierarchy "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end"
+Info: Elaborated megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end", which is child of megafunction instantiation "lpm_counter0:inst1|lpm_counter:lpm_counter_component"
 Info: Elaborating entity "lpm_mux0" for hierarchy "lpm_mux0:inst40"
 Info: Elaborating entity "LPM_MUX" for hierarchy "lpm_mux0:inst40|LPM_MUX:lpm_mux_component"
 Info: Elaborated megafunction instantiation "lpm_mux0:inst40|LPM_MUX:lpm_mux_component"
@@ -313,21 +498,27 @@ Info: Instantiated megafunction "lpm_mux0:inst40|LPM_MUX:lpm_mux_component" with
     Info: Parameter "LPM_PIPELINE" = "0"
     Info: Parameter "LPM_TYPE" = "LPM_MUX"
     Info: Parameter "LPM_HINT" = "UNUSED"
-Info: Elaborating entity "altshift" for hierarchy "lpm_mux0:inst40|LPM_MUX:lpm_mux_component|altshift:external_latency_ffs"
-Info: Elaborated megafunction instantiation "lpm_mux0:inst40|LPM_MUX:lpm_mux_component|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mux0:inst40|LPM_MUX:lpm_mux_component"
 Info: Elaborating entity "muxlut" for hierarchy "lpm_mux0:inst40|LPM_MUX:lpm_mux_component|muxlut:$00009"
 Info: Elaborated megafunction instantiation "lpm_mux0:inst40|LPM_MUX:lpm_mux_component|muxlut:$00009", which is child of megafunction instantiation "lpm_mux0:inst40|LPM_MUX:lpm_mux_component"
 Info: Elaborating entity "lpm_latch1" for hierarchy "lpm_latch1:inst55"
+Warning: Using design file 7_Segment_Decoder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: 7_Segment_Decoder
+Info: Elaborating entity "7_Segment_Decoder" for hierarchy "7_Segment_Decoder:inst24"
+Warning: Block or symbol "NOT" of instance "inst9" overlaps another block or symbol
+Warning: Block or symbol "NOT" of instance "inst39" overlaps another block or symbol
+Warning: Block or symbol "NOT" of instance "inst40" overlaps another block or symbol
+Info: Ignored 1 buffer(s)
+    Info: Ignored 1 SOFT buffer(s)
 Warning: Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "UART_Clock"
-Info: Implemented 342 device resources after synthesis - the final resource count might be different
+Info: Implemented 389 device resources after synthesis - the final resource count might be different
     Info: Implemented 3 input pins
-    Info: Implemented 11 output pins
-    Info: Implemented 328 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 241 megabytes
-    Info: Processing ended: Sat Oct 05 19:19:27 2013
+    Info: Implemented 25 output pins
+    Info: Implemented 361 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 246 megabytes
+    Info: Processing ended: Sun Oct 06 17:07:51 2013
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 

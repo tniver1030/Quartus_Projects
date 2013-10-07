@@ -1,6 +1,9 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="design4TJN">
+		<CBX_INST_ENTRY INSTANCE_NAME="|design4TJN|lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_gsh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design4TJN|lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014" CBX_FILE_NAME="cmpr_fvf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|design4TJN|lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_constant:$00012" CBX_FILE_NAME="lpm_constant_o84.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|design4TJN|lpm_mux0:inst40|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_snd.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
