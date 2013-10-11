@@ -36,7 +36,7 @@
  ------------------------------------------------------------------------------
 
 
-File Generation Date & Time: Sun Oct 06 17:07:55 2013
+File Generation Date & Time: Tue Oct 08 17:46:02 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 CHIP  "design4TJN"  ASSIGNED TO AN: EPF10K70RC240-4
 
@@ -70,7 +70,7 @@ GND*                         : 25        :        :                   :         
 GND*                         : 26        :        :                   :         :           :                
 VCC_INT                      : 27        : power  :                   : 5.0V    :           :                
 GND*                         : 28        :        :                   :         :           :                
-GND*                         : 29        :        :                   :         :           :                
+Reset                        : 29        : input  : TTL               :         :           : Y              
 GND*                         : 30        :        :                   :         :           :                
 GND*                         : 31        :        :                   :         :           :                
 GND_INT                      : 32        : gnd    :                   :         :           :                
@@ -188,8 +188,8 @@ GND*                         : 143       :        :                   :         
 GND*                         : 144       :        :                   :         :           :                
 GND_INT                      : 145       : gnd    :                   :         :           :                
 GND*                         : 146       :        :                   :         :           :                
-GND*                         : 147       :        :                   :         :           :                
-Stop_Bit                     : 148       : output : TTL               :         :           : N              
+Status_Light                 : 147       : output : TTL               :         :           : N              
+Start_Bit                    : 148       : output : TTL               :         :           : N              
 GND*                         : 149       :        :                   :         :           :                
 VCC_INT                      : 150       : power  :                   : 5.0V    :           :                
 GND*                         : 151       :        :                   :         :           :                
@@ -209,13 +209,13 @@ GND*                         : 164       :        :                   :         
 GND_INT                      : 165       : gnd    :                   :         :           :                
 GND*                         : 166       :        :                   :         :           :                
 GND*                         : 167       :        :                   :         :           :                
-Status_Light                 : 168       : output : TTL               :         :           : N              
-Start_Bit                    : 169       : output : TTL               :         :           : N              
+GND*                         : 168       :        :                   :         :           :                
+GND*                         : 169       :        :                   :         :           :                
 VCC_INT                      : 170       : power  :                   : 5.0V    :           :                
 GND*                         : 171       :        :                   :         :           :                
 GND*                         : 172       :        :                   :         :           :                
 GND*                         : 173       :        :                   :         :           :                
-GND*                         : 174       :        :                   :         :           :                
+Stop_Bit                     : 174       : output : TTL               :         :           : N              
 GND*                         : 175       :        :                   :         :           :                
 GND_INT                      : 176       : gnd    :                   :         :           :                
 TDI                          : 177       : input  :                   :         :           :                

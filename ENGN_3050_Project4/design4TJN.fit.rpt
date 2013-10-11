@@ -1,5 +1,5 @@
 Fitter report for design4TJN
-Sun Oct 06 17:07:55 2013
+Tue Oct 08 17:46:03 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -55,15 +55,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Fitter Summary                                                       ;
 +-----------------------+----------------------------------------------+
-; Fitter Status         ; Successful - Sun Oct 06 17:07:55 2013        ;
+; Fitter Status         ; Successful - Tue Oct 08 17:46:02 2013        ;
 ; Quartus II Version    ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name         ; design4TJN                                   ;
 ; Top-level Entity Name ; design4TJN                                   ;
 ; Family                ; FLEX10K                                      ;
 ; Device                ; EPF10K70RC240-4                              ;
 ; Timing Models         ; Final                                        ;
-; Total logic elements  ; 361 / 3,744 ( 10 % )                         ;
-; Total pins            ; 28 / 189 ( 15 % )                            ;
+; Total logic elements  ; 362 / 3,744 ( 10 % )                         ;
+; Total pins            ; 29 / 189 ( 15 % )                            ;
 ; Total memory bits     ; 0 / 18,432 ( 0 % )                           ;
 +-----------------------+----------------------------------------------+
 
@@ -133,8 +133,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
 ; Name       ; Pin # ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; Single-Pin CE ; I/O Standard ;
 +------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
-; UART_RX    ; 45    ;  G  ; --   ; 15      ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; UART_RX    ; 45    ;  G  ; --   ; 8       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 ; Clock      ; 91    ; --  ; --   ; 8       ; yes    ; no           ; no                      ; no            ; no            ; TTL          ;
+; Reset      ; 29    ;  D  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 ; UART_Clock ; 210   ; --  ; --   ; 0       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
 +------------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
 
@@ -145,8 +146,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Name         ; Pin # ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ; I/O Standard ;
 +--------------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
 ; Output_UN0   ; 49    ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; Stop_Bit     ; 148   ;  F  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; Start_Bit    ; 169   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; Stop_Bit     ; 174   ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; Start_Bit    ; 148   ;  F  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 ; Output_UN2   ; 54    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 ; Output_UN3   ; 56    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 ; Output_UN1   ; 51    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
@@ -154,7 +155,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Output_LN1   ; 50    ;  H  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 ; Output_LN2   ; 53    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 ; Output_LN3   ; 55    ;  I  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
-; Status_Light ; 168   ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; Status_Light ; 147   ;  F  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 ; uA           ; 17    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 ; uB           ; 18    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
 ; uC           ; 19    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
@@ -205,7 +206,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 26    ; GND*         ;              ;
 ; 27    ; VCC_INT      ;              ;
 ; 28    ; GND*         ;              ;
-; 29    ; GND*         ;              ;
+; 29    ; Reset        ; TTL          ;
 ; 30    ; GND*         ;              ;
 ; 31    ; GND*         ;              ;
 ; 32    ; GND_INT      ;              ;
@@ -323,8 +324,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 144   ; GND*         ;              ;
 ; 145   ; GND_INT      ;              ;
 ; 146   ; GND*         ;              ;
-; 147   ; GND*         ;              ;
-; 148   ; Stop_Bit     ; TTL          ;
+; 147   ; Status_Light ; TTL          ;
+; 148   ; Start_Bit    ; TTL          ;
 ; 149   ; GND*         ;              ;
 ; 150   ; VCC_INT      ;              ;
 ; 151   ; GND*         ;              ;
@@ -344,13 +345,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 165   ; GND_INT      ;              ;
 ; 166   ; GND*         ;              ;
 ; 167   ; GND*         ;              ;
-; 168   ; Status_Light ; TTL          ;
-; 169   ; Start_Bit    ; TTL          ;
+; 168   ; GND*         ;              ;
+; 169   ; GND*         ;              ;
 ; 170   ; VCC_INT      ;              ;
 ; 171   ; GND*         ;              ;
 ; 172   ; GND*         ;              ;
 ; 173   ; GND*         ;              ;
-; 174   ; GND*         ;              ;
+; 174   ; Stop_Bit     ; TTL          ;
 ; 175   ; GND*         ;              ;
 ; 176   ; GND_INT      ;              ;
 ; 177   ; #TDI         ;              ;
@@ -425,10 +426,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------+--------------+--------------+
 ; Name                                                                                                                                                                                                     ; Pin #   ; Fan-Out ; Usage        ; Global Usage ;
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------+--------------+--------------+
-; inst43                                                                                                                                                                                                   ; LC8_B27 ; 1       ; Clock enable ; Non-global   ;
+; inst43                                                                                                                                                                                                   ; LC8_F21 ; 1       ; Clock enable ; Non-global   ;
 ; Clock                                                                                                                                                                                                    ; 91      ; 8       ; Clock        ; Pin          ;
-; inst3                                                                                                                                                                                                    ; LC1_C29 ; 307     ; Clock        ; Internal     ;
-; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out ; LC8_C30 ; 7       ; Sync. load   ; Non-global   ;
+; inst3                                                                                                                                                                                                    ; LC1_C30 ; 308     ; Clock        ; Internal     ;
+; Reset                                                                                                                                                                                                    ; 29      ; 1       ; Async. clear ; Non-global   ;
+; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out ; LC8_C27 ; 7       ; Sync. load   ; Non-global   ;
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------+--------------+--------------+
 
 
@@ -438,7 +440,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Name  ; Pin #   ; Fan-Out ; Global ;
 +-------+---------+---------+--------+
 ; Clock ; 91      ; 8       ; yes    ;
-; inst3 ; LC1_C29 ; 307     ; yes    ;
+; inst3 ; LC1_C30 ; 308     ; yes    ;
 +-------+---------+---------+--------+
 
 
@@ -464,56 +466,56 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                                                                                                       ; Fan-Out ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; UART_RX                                                                                                                                                                                                    ; 15      ;
 ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0]~4                                                                                                                                               ; 9       ;
-; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2]~6                                                                                                                                               ; 9       ;
-; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3]~6                                                                                                                                               ; 9       ;
-; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1]~7                                                                                                                                               ; 9       ;
 ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3]~7                                                                                                                                               ; 9       ;
+; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2]~6                                                                                                                                               ; 9       ;
+; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1]~5                                                                                                                                               ; 9       ;
 ; inst53~0                                                                                                                                                                                                   ; 9       ;
 ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2]~5                                                                                                                                               ; 9       ;
 ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0]~4                                                                                                                                               ; 9       ;
-; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1]~5                                                                                                                                               ; 9       ;
+; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3]~6                                                                                                                                               ; 9       ;
+; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1]~7                                                                                                                                               ; 9       ;
+; UART_RX                                                                                                                                                                                                    ; 8       ;
+; inst56~1                                                                                                                                                                                                   ; 8       ;
 ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~1 ; 7       ;
 ; ~GND~0                                                                                                                                                                                                     ; 7       ;
 ; inst49~2                                                                                                                                                                                                   ; 5       ;
 ; inst42~2                                                                                                                                                                                                   ; 5       ;
 ; Delay_Function:inst15|inst45~1                                                                                                                                                                             ; 4       ;
-; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT                                                                                                   ; 3       ;
+; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT                                                                                                   ; 3       ;
 ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[2]~COUT                                                                                                   ; 3       ;
+; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT                                                                                                   ; 3       ;
 ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[3]~COUT                                                                                                   ; 3       ;
 ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[5]~COUT                                                                                                   ; 3       ;
 ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[4]~COUT                                                                                                   ; 3       ;
-; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT                                                                                                   ; 3       ;
-; Delay_Function:inst|inst47~1                                                                                                                                                                               ; 2       ;
-; Delay_Function:inst6|inst47~1                                                                                                                                                                              ; 2       ;
 ; inst18~0                                                                                                                                                                                                   ; 2       ;
+; Delay_Function:inst|inst47~1                                                                                                                                                                               ; 2       ;
 ; Delay_Function:inst27|inst47~1                                                                                                                                                                             ; 2       ;
 ; Delay_Function:inst25|inst47~1                                                                                                                                                                             ; 2       ;
-; Delay_Function:inst28|inst47~1                                                                                                                                                                             ; 2       ;
 ; Delay_Function:inst23|inst47~1                                                                                                                                                                             ; 2       ;
-; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6]~0                                                                                                                 ; 2       ;
-; Delay_Function:inst16|inst47~1                                                                                                                                                                             ; 2       ;
-; inst36~1                                                                                                                                                                                                   ; 2       ;
-; inst32~1                                                                                                                                                                                                   ; 2       ;
-; inst33~1                                                                                                                                                                                                   ; 2       ;
-; inst29~1                                                                                                                                                                                                   ; 2       ;
-; Delay_Function:inst10|inst47~1                                                                                                                                                                             ; 2       ;
-; inst30~1                                                                                                                                                                                                   ; 2       ;
-; Delay_Function:inst8|inst47~1                                                                                                                                                                              ; 2       ;
-; inst37~1                                                                                                                                                                                                   ; 2       ;
-; inst31~1                                                                                                                                                                                                   ; 2       ;
 ; inst34~1                                                                                                                                                                                                   ; 2       ;
-; Delay_Function:inst|inst~0                                                                                                                                                                                 ; 1       ;
-; Delay_Function:inst|inst39~1                                                                                                                                                                               ; 1       ;
-; Delay_Function:inst23|inst35~1                                                                                                                                                                             ; 1       ;
-; Delay_Function:inst10|inst41~1                                                                                                                                                                             ; 1       ;
-; Delay_Function:inst27|inst26~1                                                                                                                                                                             ; 1       ;
-; Delay_Function:inst|inst32~1                                                                                                                                                                               ; 1       ;
-; Delay_Function:inst23|inst28~1                                                                                                                                                                             ; 1       ;
-; Delay_Function:inst28|inst32~1                                                                                                                                                                             ; 1       ;
-; Delay_Function:inst28|inst36~1                                                                                                                                                                             ; 1       ;
-; Delay_Function:inst27|inst32~1                                                                                                                                                                             ; 1       ;
+; Delay_Function:inst28|inst47~1                                                                                                                                                                             ; 2       ;
+; Delay_Function:inst16|inst47~1                                                                                                                                                                             ; 2       ;
+; inst32~1                                                                                                                                                                                                   ; 2       ;
+; inst36~1                                                                                                                                                                                                   ; 2       ;
+; inst29~1                                                                                                                                                                                                   ; 2       ;
+; inst30~1                                                                                                                                                                                                   ; 2       ;
+; inst33~1                                                                                                                                                                                                   ; 2       ;
+; Delay_Function:inst6|inst47~1                                                                                                                                                                              ; 2       ;
+; inst31~1                                                                                                                                                                                                   ; 2       ;
+; inst37~1                                                                                                                                                                                                   ; 2       ;
+; Delay_Function:inst10|inst47~1                                                                                                                                                                             ; 2       ;
+; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6]~0                                                                                                                 ; 2       ;
+; Delay_Function:inst8|inst47~1                                                                                                                                                                              ; 2       ;
+; inst17~1                                                                                                                                                                                                   ; 1       ;
+; inst43~0                                                                                                                                                                                                   ; 1       ;
+; Delay_Function:inst|inst31~1                                                                                                                                                                               ; 1       ;
+; Delay_Function:inst|inst19~1                                                                                                                                                                               ; 1       ;
+; Delay_Function:inst10|inst25~1                                                                                                                                                                             ; 1       ;
+; Delay_Function:inst|inst28~1                                                                                                                                                                               ; 1       ;
+; Delay_Function:inst6|inst24~1                                                                                                                                                                              ; 1       ;
+; Delay_Function:inst27|inst20~1                                                                                                                                                                             ; 1       ;
+; Delay_Function:inst27|inst24~1                                                                                                                                                                             ; 1       ;
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -522,7 +524,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------+---------+-------+-----------------+---------------------------+----------+
 ; Peripheral Signal ; Source  ; Usage ; Dedicated Clock ; Peripheral Control Signal ; Polarity ;
 +-------------------+---------+-------+-----------------+---------------------------+----------+
-; inst3             ; LC1_C29 ; Clock ; no              ; yes                       ; +ve      ;
+; inst3             ; LC1_C30 ; Clock ; no              ; yes                       ; +ve      ;
 +-------------------+---------+-------+-----------------+---------------------------+----------+
 
 
@@ -531,15 +533,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------+----------------+
 ; Number of Logic Elements ; Number of LABs ;
 +--------------------------+----------------+
-; 0                        ; 410            ;
-; 1                        ; 4              ;
+; 0                        ; 407            ;
+; 1                        ; 6              ;
 ; 2                        ; 0              ;
-; 3                        ; 1              ;
+; 3                        ; 2              ;
 ; 4                        ; 2              ;
-; 5                        ; 1              ;
-; 6                        ; 21             ;
+; 5                        ; 7              ;
+; 6                        ; 14             ;
 ; 7                        ; 17             ;
-; 8                        ; 12             ;
+; 8                        ; 13             ;
 +--------------------------+----------------+
 
 
@@ -548,14 +550,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------+----------------+
 ; Local Routing Interconnects ; Number of LABs ;
 +-----------------------------+----------------+
-; 0                           ; 418            ;
+; 0                           ; 416            ;
 ; 1                           ; 1              ;
-; 2                           ; 0              ;
-; 3                           ; 0              ;
-; 4                           ; 1              ;
-; 5                           ; 22             ;
-; 6                           ; 18             ;
-; 7                           ; 8              ;
+; 2                           ; 1              ;
+; 3                           ; 1              ;
+; 4                           ; 7              ;
+; 5                           ; 15             ;
+; 6                           ; 17             ;
+; 7                           ; 10             ;
 +-----------------------------+----------------+
 
 
@@ -564,14 +566,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+----------------+
 ; LAB External Interconnects ; Number of LABs ;
 +----------------------------+----------------+
-; 0                          ; 411            ;
-; 1                          ; 40             ;
+; 0                          ; 409            ;
+; 1                          ; 45             ;
 ; 2                          ; 2              ;
-; 3                          ; 7              ;
+; 3                          ; 3              ;
 ; 4                          ; 4              ;
-; 5                          ; 0              ;
-; 6                          ; 2              ;
-; 7                          ; 2              ;
+; 5                          ; 1              ;
+; 6                          ; 3              ;
+; 7                          ; 1              ;
 +----------------------------+----------------+
 
 
@@ -580,16 +582,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------------+-----------------------------+------------------------------+
 ; Row   ; Interconnect Used  ; Left Half Interconnect Used ; Right Half Interconnect Used ;
 +-------+--------------------+-----------------------------+------------------------------+
-;  A    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  9 / 104 ( 9 % )             ;
-;  B    ;  9 / 208 ( 4 % )   ;  3 / 104 ( 3 % )            ;  12 / 104 ( 12 % )           ;
-;  C    ;  3 / 208 ( 1 % )   ;  0 / 104 ( 0 % )            ;  18 / 104 ( 17 % )           ;
-;  D    ;  5 / 208 ( 2 % )   ;  2 / 104 ( 2 % )            ;  20 / 104 ( 19 % )           ;
-;  E    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
-;  F    ;  2 / 208 ( < 1 % ) ;  2 / 104 ( 2 % )            ;  4 / 104 ( 4 % )             ;
-;  G    ;  1 / 208 ( < 1 % ) ;  0 / 104 ( 0 % )            ;  4 / 104 ( 4 % )             ;
-;  H    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  13 / 104 ( 13 % )           ;
+;  A    ;  10 / 208 ( 5 % )  ;  4 / 104 ( 4 % )            ;  23 / 104 ( 22 % )           ;
+;  B    ;  5 / 208 ( 2 % )   ;  0 / 104 ( 0 % )            ;  3 / 104 ( 3 % )             ;
+;  C    ;  1 / 208 ( < 1 % ) ;  5 / 104 ( 5 % )            ;  19 / 104 ( 18 % )           ;
+;  D    ;  1 / 208 ( < 1 % ) ;  0 / 104 ( 0 % )            ;  0 / 104 ( 0 % )             ;
+;  E    ;  1 / 208 ( < 1 % ) ;  3 / 104 ( 3 % )            ;  3 / 104 ( 3 % )             ;
+;  F    ;  2 / 208 ( < 1 % ) ;  8 / 104 ( 8 % )            ;  3 / 104 ( 3 % )             ;
+;  G    ;  1 / 208 ( < 1 % ) ;  2 / 104 ( 2 % )            ;  0 / 104 ( 0 % )             ;
+;  H    ;  2 / 208 ( < 1 % ) ;  2 / 104 ( 2 % )            ;  8 / 104 ( 8 % )             ;
 ;  I    ;  0 / 208 ( 0 % )   ;  0 / 104 ( 0 % )            ;  5 / 104 ( 5 % )             ;
-; Total ;  20 / 1872 ( 1 % ) ;  7 / 936 ( < 1 % )          ;  85 / 936 ( 9 % )            ;
+; Total ;  23 / 1872 ( 1 % ) ;  24 / 936 ( 3 % )           ;  64 / 936 ( 7 % )            ;
 +-------+--------------------+-----------------------------+------------------------------+
 
 
@@ -601,11 +603,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 1     ;  0 / 24 ( 0 % )    ;
 ; 2     ;  0 / 24 ( 0 % )    ;
 ; 3     ;  0 / 24 ( 0 % )    ;
-; 4     ;  1 / 24 ( 4 % )    ;
+; 4     ;  0 / 24 ( 0 % )    ;
 ; 5     ;  0 / 24 ( 0 % )    ;
-; 6     ;  0 / 24 ( 0 % )    ;
-; 7     ;  0 / 24 ( 0 % )    ;
-; 8     ;  0 / 24 ( 0 % )    ;
+; 6     ;  1 / 24 ( 4 % )    ;
+; 7     ;  1 / 24 ( 4 % )    ;
+; 8     ;  1 / 24 ( 4 % )    ;
 ; 9     ;  0 / 24 ( 0 % )    ;
 ; 10    ;  0 / 24 ( 0 % )    ;
 ; 11    ;  0 / 24 ( 0 % )    ;
@@ -615,34 +617,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 15    ;  0 / 24 ( 0 % )    ;
 ; 16    ;  0 / 24 ( 0 % )    ;
 ; 17    ;  0 / 24 ( 0 % )    ;
-; 18    ;  0 / 24 ( 0 % )    ;
+; 18    ;  1 / 24 ( 4 % )    ;
 ; 19    ;  0 / 24 ( 0 % )    ;
-; 20    ;  0 / 24 ( 0 % )    ;
-; 21    ;  0 / 24 ( 0 % )    ;
-; 22    ;  0 / 24 ( 0 % )    ;
+; 20    ;  1 / 24 ( 4 % )    ;
+; 21    ;  1 / 24 ( 4 % )    ;
+; 22    ;  1 / 24 ( 4 % )    ;
 ; 23    ;  0 / 24 ( 0 % )    ;
 ; 24    ;  0 / 24 ( 0 % )    ;
 ; 25    ;  0 / 24 ( 0 % )    ;
 ; 26    ;  0 / 24 ( 0 % )    ;
-; 27    ;  0 / 24 ( 0 % )    ;
-; 28    ;  2 / 24 ( 8 % )    ;
-; 29    ;  0 / 24 ( 0 % )    ;
-; 30    ;  1 / 24 ( 4 % )    ;
+; 27    ;  2 / 24 ( 8 % )    ;
+; 28    ;  3 / 24 ( 13 % )   ;
+; 29    ;  3 / 24 ( 13 % )   ;
+; 30    ;  2 / 24 ( 8 % )    ;
 ; 31    ;  0 / 24 ( 0 % )    ;
 ; 32    ;  1 / 24 ( 4 % )    ;
-; 33    ;  0 / 24 ( 0 % )    ;
-; 34    ;  0 / 24 ( 0 % )    ;
-; 35    ;  1 / 24 ( 4 % )    ;
+; 33    ;  1 / 24 ( 4 % )    ;
+; 34    ;  1 / 24 ( 4 % )    ;
+; 35    ;  0 / 24 ( 0 % )    ;
 ; 36    ;  1 / 24 ( 4 % )    ;
-; 37    ;  1 / 24 ( 4 % )    ;
-; 38    ;  0 / 24 ( 0 % )    ;
+; 37    ;  0 / 24 ( 0 % )    ;
+; 38    ;  1 / 24 ( 4 % )    ;
 ; 39    ;  1 / 24 ( 4 % )    ;
-; 40    ;  1 / 24 ( 4 % )    ;
-; 41    ;  1 / 24 ( 4 % )    ;
-; 42    ;  0 / 24 ( 0 % )    ;
-; 43    ;  5 / 24 ( 21 % )   ;
-; 44    ;  0 / 24 ( 0 % )    ;
-; 45    ;  1 / 24 ( 4 % )    ;
+; 40    ;  0 / 24 ( 0 % )    ;
+; 41    ;  0 / 24 ( 0 % )    ;
+; 42    ;  1 / 24 ( 4 % )    ;
+; 43    ;  0 / 24 ( 0 % )    ;
+; 44    ;  1 / 24 ( 4 % )    ;
+; 45    ;  0 / 24 ( 0 % )    ;
 ; 46    ;  0 / 24 ( 0 % )    ;
 ; 47    ;  1 / 24 ( 4 % )    ;
 ; 48    ;  1 / 24 ( 4 % )    ;
@@ -650,7 +652,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; 50    ;  0 / 24 ( 0 % )    ;
 ; 51    ;  0 / 24 ( 0 % )    ;
 ; 52    ;  0 / 24 ( 0 % )    ;
-; Total ;  19 / 1248 ( 2 % ) ;
+; Total ;  27 / 1248 ( 2 % ) ;
 +-------+--------------------+
 
 
@@ -669,11 +671,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------+----------------------+
 ; Resource                          ; Usage                ;
 +-----------------------------------+----------------------+
-; Total logic elements              ; 361 / 3,744 ( 10 % ) ;
-; Registers                         ; 315 / 3,744 ( 8 % )  ;
+; Total logic elements              ; 362 / 3,744 ( 10 % ) ;
+; Registers                         ; 316 / 3,744 ( 8 % )  ;
 ; Logic elements in carry chains    ; 15                   ;
 ; User inserted logic elements      ; 0                    ;
-; I/O pins                          ; 28 / 189 ( 15 % )    ;
+; I/O pins                          ; 29 / 189 ( 15 % )    ;
 ;     -- Clock pins                 ; 2 / 2 ( 100 % )      ;
 ;     -- Dedicated input pins       ; 3 / 4 ( 75 % )       ;
 ; Global signals                    ; 2                    ;
@@ -681,11 +683,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Total memory bits                 ; 0 / 18,432 ( 0 % )   ;
 ; Total RAM block bits              ; 0 / 18,432 ( 0 % )   ;
 ; Maximum fan-out node              ; inst3                ;
-; Maximum fan-out                   ; 307                  ;
-; Highest non-global fan-out signal ; UART_RX              ;
-; Highest non-global fan-out        ; 15                   ;
-; Total fan-out                     ; 816                  ;
-; Average fan-out                   ; 2.10                 ;
+; Maximum fan-out                   ; 308                  ;
+; Highest non-global fan-out signal ; inst53               ;
+; Highest non-global fan-out        ; 9                    ;
+; Total fan-out                     ; 819                  ;
+; Average fan-out                   ; 2.09                 ;
 +-----------------------------------+----------------------+
 
 
@@ -694,7 +696,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                                                                                          ; Library Name ;
 +-------------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |design4TJN                                     ; 361 (18)    ; 315          ; 0           ; 28   ; 46 (14)      ; 302 (0)           ; 13 (4)           ; 15 (1)          ; 0 (0)      ; |design4TJN                                                                                                                                                                                                  ; work         ;
+; |design4TJN                                     ; 362 (19)    ; 316          ; 0           ; 29   ; 46 (14)      ; 303 (1)           ; 13 (4)           ; 15 (1)          ; 0 (0)      ; |design4TJN                                                                                                                                                                                                  ; work         ;
 ;    |7_Segment_Decoder:inst24|                   ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|7_Segment_Decoder:inst24                                                                                                                                                                         ; work         ;
 ;    |7_Segment_Decoder:inst26|                   ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|7_Segment_Decoder:inst26                                                                                                                                                                         ; work         ;
 ;    |Delay_Function:inst10|                      ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst10                                                                                                                                                                            ; work         ;
@@ -738,6 +740,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; UART_Clock   ; Input    ; OFF         ;
 ; UART_RX      ; Input    ; OFF         ;
 ; Clock        ; Input    ; OFF         ;
+; Reset        ; Input    ; OFF         ;
 ; Output_UN0   ; Output   ; OFF         ;
 ; Stop_Bit     ; Output   ; OFF         ;
 ; Start_Bit    ; Output   ; OFF         ;
@@ -778,7 +781,7 @@ The pin-out file can be found in C:/Github/Quartus_Projects/ENGN_3050_Project4/d
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun Oct 06 17:07:52 2013
+    Info: Processing started: Tue Oct 08 17:46:00 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off design4TJN -c design4TJN
 Info: Selected device EPF10K70RC240-4 for design "design4TJN"
 Warning: Feature SignalProbe is not available with your current license
@@ -789,7 +792,7 @@ Info: Timing requirements not specified -- optimizing circuit to achieve the fol
     Info: Not setting a global tco requirement
     Info: Not setting a global tpd requirement
 Info: Inserted 0 logic cells in first fitting attempt
-Info: Started fitting attempt 1 on Sun Oct 06 2013 at 17:07:52
+Info: Started fitting attempt 1 on Tue Oct 08 2013 at 17:46:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -798,7 +801,7 @@ Info: Fitter routing operations beginning
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: Quartus II Fitter was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 211 megabytes
-    Info: Processing ended: Sun Oct 06 17:07:55 2013
+    Info: Processing ended: Tue Oct 08 17:46:03 2013
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

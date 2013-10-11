@@ -78,3 +78,5 @@ set_location_assignment PIN_20 -to uD
 set_location_assignment PIN_21 -to uE
 set_location_assignment PIN_23 -to uF
 set_location_assignment PIN_24 -to uG
+set_global_assignment -name QIP_FILE lpm_latch2.qip
+set_location_assignment PIN_29 -to Reset

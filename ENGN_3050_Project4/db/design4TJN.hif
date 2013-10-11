@@ -2128,26 +2128,6 @@ lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_coun
 
 # end
 # entity
-design4TJN
-# storage
-db|design4TJN.(0).cnf
-db|design4TJN.(0).cnf
-# case_insensitive
-# source_file
-design4TJN.bdf
-1e38d9917a907f1059efb28c9aee9d9
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 7_Segment_Decoder
 # storage
 db|design4TJN.(27).cnf
@@ -2164,6 +2144,97 @@ AUTO
 # hierarchies {
 7_Segment_Decoder:inst24
 7_Segment_Decoder:inst26
+}
+# macro_sequence
+
+# end
+# entity
+lpm_latch2
+# storage
+db|design4TJN.(28).cnf
+db|design4TJN.(28).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_latch2.vhd
+d8e61e134bce6b75a25afa17d9eeb4ef
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+lpm_latch
+# storage
+db|design4TJN.(29).cnf
+db|design4TJN.(29).cnf
+# case_insensitive
+# source_file
+..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_latch.tdf
+8f66b58db6d02432a43ad59fc9937be0
+7
+# user_parameter {
+LPM_WIDTH
+1
+PARAMETER_SIGNED_DEC
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+}
+# used_port {
+q0
+-1
+3
+gate
+-1
+3
+data0
+-1
+3
+aclr
+-1
+3
+}
+# include_file {
+..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_constant.inc
+dcde44eee59335c1e2fe75d574f9646
+}
+# macro_sequence
+
+# end
+# entity
+design4TJN
+# storage
+db|design4TJN.(0).cnf
+db|design4TJN.(0).cnf
+# case_insensitive
+# source_file
+design4TJN.bdf
+2b26775accc4f2aaee85c29613a647ea
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
 }
 # macro_sequence
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for design4TJN
-Sun Oct 06 17:07:51 2013
+Tue Oct 08 17:45:59 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -13,15 +13,16 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
   7. User-Specified and Inferred Latches
-  8. General Register Statistics
-  9. Source assignments for lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder
- 10. Source assignments for lpm_counter0:inst1|lpm_counter:lpm_counter_component
- 11. Parameter Settings for User Entity Instance: lpm_latch0:inst54|lpm_latch:lpm_latch_component
- 12. Parameter Settings for User Entity Instance: lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component
- 13. Parameter Settings for User Entity Instance: lpm_counter0:inst1|lpm_counter:lpm_counter_component
- 14. Parameter Settings for User Entity Instance: lpm_mux0:inst40|LPM_MUX:lpm_mux_component
- 15. Parameter Settings for User Entity Instance: lpm_latch1:inst55|lpm_latch:lpm_latch_component
- 16. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Source assignments for lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder
+ 11. Source assignments for lpm_counter0:inst1|lpm_counter:lpm_counter_component
+ 12. Parameter Settings for User Entity Instance: lpm_latch0:inst54|lpm_latch:lpm_latch_component
+ 13. Parameter Settings for User Entity Instance: lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component
+ 14. Parameter Settings for User Entity Instance: lpm_counter0:inst1|lpm_counter:lpm_counter_component
+ 15. Parameter Settings for User Entity Instance: lpm_mux0:inst40|LPM_MUX:lpm_mux_component
+ 16. Parameter Settings for User Entity Instance: lpm_latch1:inst55|lpm_latch:lpm_latch_component
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -47,13 +48,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Oct 06 17:07:51 2013        ;
+; Analysis & Synthesis Status ; Successful - Tue Oct 08 17:45:59 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; design4TJN                                   ;
 ; Top-level Entity Name       ; design4TJN                                   ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 361                                          ;
-; Total pins                  ; 28                                           ;
+; Total logic elements        ; 362                                          ;
+; Total pins                  ; 29                                           ;
 ; Total memory bits           ; 0                                            ;
 +-----------------------------+----------------------------------------------+
 
@@ -177,20 +178,20 @@ applicable agreement for further details.
 +-----------------------------------+---------+
 ; Resource                          ; Usage   ;
 +-----------------------------------+---------+
-; Total logic elements              ; 361     ;
+; Total logic elements              ; 362     ;
 ; Total combinational functions     ; 59      ;
 ;     -- Total 4-input functions    ; 17      ;
 ;     -- Total 3-input functions    ; 20      ;
 ;     -- Total 2-input functions    ; 5       ;
 ;     -- Total 1-input functions    ; 8       ;
 ;     -- Total 0-input functions    ; 9       ;
-; Total registers                   ; 315     ;
+; Total registers                   ; 316     ;
 ; Total logic cells in carry chains ; 15      ;
-; I/O pins                          ; 28      ;
+; I/O pins                          ; 29      ;
 ; Maximum fan-out node              ; inst3   ;
-; Maximum fan-out                   ; 307     ;
-; Total fan-out                     ; 816     ;
-; Average fan-out                   ; 2.10    ;
+; Maximum fan-out                   ; 308     ;
+; Total fan-out                     ; 819     ;
+; Average fan-out                   ; 2.09    ;
 +-----------------------------------+---------+
 
 
@@ -199,7 +200,7 @@ applicable agreement for further details.
 +-------------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                                                                                          ; Library Name ;
 +-------------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |design4TJN                                     ; 361 (18)    ; 315          ; 0           ; 28   ; 46 (14)      ; 302 (0)           ; 13 (4)           ; 15 (1)          ; 0 (0)      ; |design4TJN                                                                                                                                                                                                  ; work         ;
+; |design4TJN                                     ; 362 (19)    ; 316          ; 0           ; 29   ; 46 (14)      ; 303 (1)           ; 13 (4)           ; 15 (1)          ; 0 (0)      ; |design4TJN                                                                                                                                                                                                  ; work         ;
 ;    |7_Segment_Decoder:inst24|                   ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|7_Segment_Decoder:inst24                                                                                                                                                                         ; work         ;
 ;    |7_Segment_Decoder:inst26|                   ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|7_Segment_Decoder:inst26                                                                                                                                                                         ; work         ;
 ;    |Delay_Function:inst10|                      ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |design4TJN|Delay_Function:inst10                                                                                                                                                                            ; work         ;
@@ -261,15 +262,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; inst48                                ; Merged with inst56 ;
+; inst52                                ; Merged with inst56 ;
+; inst47                                ; Merged with inst56 ;
+; inst57                                ; Merged with inst56 ;
+; inst58                                ; Merged with inst56 ;
+; inst59                                ; Merged with inst56 ;
+; inst60                                ; Merged with inst56 ;
+; Total Number of Removed Registers = 7 ;                    ;
++---------------------------------------+--------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 315   ;
+; Total registers                              ; 316   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 7     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 1     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 1     ;
 ; Number of registers using Preset             ; 0     ;
@@ -398,7 +415,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun Oct 06 17:07:50 2013
+    Info: Processing started: Tue Oct 08 17:45:57 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off design4TJN -c design4TJN
 Info: Found 1 design units, including 1 entities, in source file design4TJN.bdf
     Info: Found entity 1: design4TJN
@@ -417,19 +434,12 @@ Info: Found 2 design units, including 1 entities, in source file lpm_counter0.vh
 Info: Found 2 design units, including 1 entities, in source file lpm_add_sub0.vhd
     Info: Found design unit 1: lpm_add_sub0-SYN
     Info: Found entity 1: lpm_add_sub0
+Info: Found 2 design units, including 1 entities, in source file lpm_latch2.vhd
+    Info: Found design unit 1: lpm_latch2-SYN
+    Info: Found entity 1: lpm_latch2
 Info: Elaborating entity "design4TJN" for the top level hierarchy
-Warning: Block or symbol "Delay_Function" of instance "inst" overlaps another block or symbol
-Warning: Block or symbol "Delay_Function" of instance "inst6" overlaps another block or symbol
-Warning: Block or symbol "Delay_Function" of instance "inst8" overlaps another block or symbol
-Warning: Block or symbol "Delay_Function" of instance "inst10" overlaps another block or symbol
-Warning: Block or symbol "Delay_Function" of instance "inst16" overlaps another block or symbol
-Warning: Block or symbol "Delay_Function" of instance "inst23" overlaps another block or symbol
-Warning: Block or symbol "Delay_Function" of instance "inst25" overlaps another block or symbol
-Warning: Block or symbol "Delay_Function" of instance "inst27" overlaps another block or symbol
 Warning: Block or symbol "NOT" of instance "inst4" overlaps another block or symbol
 Warning: Block or symbol "NOT" of instance "inst5" overlaps another block or symbol
-Warning: Block or symbol "NOT" of instance "inst11" overlaps another block or symbol
-Warning: Block or symbol "NOT" of instance "inst12" overlaps another block or symbol
 Warning: Pin "UART_Clock" not connected
 Info: Elaborating entity "lpm_latch0" for hierarchy "lpm_latch0:inst54"
 Info: Elaborating entity "lpm_latch" for hierarchy "lpm_latch0:inst54|lpm_latch:lpm_latch_component"
@@ -511,14 +521,14 @@ Info: Ignored 1 buffer(s)
     Info: Ignored 1 SOFT buffer(s)
 Warning: Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "UART_Clock"
-Info: Implemented 389 device resources after synthesis - the final resource count might be different
-    Info: Implemented 3 input pins
+Info: Implemented 391 device resources after synthesis - the final resource count might be different
+    Info: Implemented 4 input pins
     Info: Implemented 25 output pins
-    Info: Implemented 361 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Implemented 362 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 246 megabytes
-    Info: Processing ended: Sun Oct 06 17:07:51 2013
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Tue Oct 08 17:45:59 2013
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
