@@ -1,17 +1,21 @@
 |MultiPlexed7Seg
 LED0 <= o[0].DB_MAX_OUTPUT_PORT_TYPE
+Seg0Enable => lpm_mux2:inst9.sel
 Seg0[0] => 7_Segment_Decoder_TREX:inst43.in[0]
 Seg0[1] => 7_Segment_Decoder_TREX:inst43.in[1]
 Seg0[2] => 7_Segment_Decoder_TREX:inst43.in[2]
 Seg0[3] => 7_Segment_Decoder_TREX:inst43.in[3]
+Seg1Enable => lpm_mux2:inst8.sel
 Seg1[0] => 7_Segment_Decoder_TREX:inst46.in[0]
 Seg1[1] => 7_Segment_Decoder_TREX:inst46.in[1]
 Seg1[2] => 7_Segment_Decoder_TREX:inst46.in[2]
 Seg1[3] => 7_Segment_Decoder_TREX:inst46.in[3]
+Seg2Enable => lpm_mux2:inst7.sel
 Seg2[0] => 7_Segment_Decoder_TREX:inst49.in[0]
 Seg2[1] => 7_Segment_Decoder_TREX:inst49.in[1]
 Seg2[2] => 7_Segment_Decoder_TREX:inst49.in[2]
 Seg2[3] => 7_Segment_Decoder_TREX:inst49.in[3]
+Seg3Enable => lpm_mux2:inst6.sel
 Seg3[0] => 7_Segment_Decoder_TREX:inst52.in[0]
 Seg3[1] => 7_Segment_Decoder_TREX:inst52.in[1]
 Seg3[2] => 7_Segment_Decoder_TREX:inst52.in[2]
@@ -135,6 +139,76 @@ result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
 result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
+|MultiPlexed7Seg|lpm_mux2:inst9
+data0x[0] => LPM_MUX:lpm_mux_component.DATA[0][0]
+data0x[1] => LPM_MUX:lpm_mux_component.DATA[0][1]
+data0x[2] => LPM_MUX:lpm_mux_component.DATA[0][2]
+data0x[3] => LPM_MUX:lpm_mux_component.DATA[0][3]
+data0x[4] => LPM_MUX:lpm_mux_component.DATA[0][4]
+data0x[5] => LPM_MUX:lpm_mux_component.DATA[0][5]
+data0x[6] => LPM_MUX:lpm_mux_component.DATA[0][6]
+data0x[7] => LPM_MUX:lpm_mux_component.DATA[0][7]
+data1x[0] => LPM_MUX:lpm_mux_component.DATA[1][0]
+data1x[1] => LPM_MUX:lpm_mux_component.DATA[1][1]
+data1x[2] => LPM_MUX:lpm_mux_component.DATA[1][2]
+data1x[3] => LPM_MUX:lpm_mux_component.DATA[1][3]
+data1x[4] => LPM_MUX:lpm_mux_component.DATA[1][4]
+data1x[5] => LPM_MUX:lpm_mux_component.DATA[1][5]
+data1x[6] => LPM_MUX:lpm_mux_component.DATA[1][6]
+data1x[7] => LPM_MUX:lpm_mux_component.DATA[1][7]
+sel => LPM_MUX:lpm_mux_component.SEL[0]
+result[0] <= LPM_MUX:lpm_mux_component.RESULT[0]
+result[1] <= LPM_MUX:lpm_mux_component.RESULT[1]
+result[2] <= LPM_MUX:lpm_mux_component.RESULT[2]
+result[3] <= LPM_MUX:lpm_mux_component.RESULT[3]
+result[4] <= LPM_MUX:lpm_mux_component.RESULT[4]
+result[5] <= LPM_MUX:lpm_mux_component.RESULT[5]
+result[6] <= LPM_MUX:lpm_mux_component.RESULT[6]
+result[7] <= LPM_MUX:lpm_mux_component.RESULT[7]
+
+
+|MultiPlexed7Seg|lpm_mux2:inst9|LPM_MUX:lpm_mux_component
+data[0][0] => mux_lrd:auto_generated.data[0]
+data[0][1] => mux_lrd:auto_generated.data[1]
+data[0][2] => mux_lrd:auto_generated.data[2]
+data[0][3] => mux_lrd:auto_generated.data[3]
+data[0][4] => mux_lrd:auto_generated.data[4]
+data[0][5] => mux_lrd:auto_generated.data[5]
+data[0][6] => mux_lrd:auto_generated.data[6]
+data[0][7] => mux_lrd:auto_generated.data[7]
+data[1][0] => mux_lrd:auto_generated.data[8]
+data[1][1] => mux_lrd:auto_generated.data[9]
+data[1][2] => mux_lrd:auto_generated.data[10]
+data[1][3] => mux_lrd:auto_generated.data[11]
+data[1][4] => mux_lrd:auto_generated.data[12]
+data[1][5] => mux_lrd:auto_generated.data[13]
+data[1][6] => mux_lrd:auto_generated.data[14]
+data[1][7] => mux_lrd:auto_generated.data[15]
+sel[0] => mux_lrd:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_lrd:auto_generated.result[0]
+result[1] <= mux_lrd:auto_generated.result[1]
+result[2] <= mux_lrd:auto_generated.result[2]
+result[3] <= mux_lrd:auto_generated.result[3]
+result[4] <= mux_lrd:auto_generated.result[4]
+result[5] <= mux_lrd:auto_generated.result[5]
+result[6] <= mux_lrd:auto_generated.result[6]
+result[7] <= mux_lrd:auto_generated.result[7]
+
+
+|MultiPlexed7Seg|lpm_mux2:inst9|LPM_MUX:lpm_mux_component|mux_lrd:auto_generated
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
 |MultiPlexed7Seg|7_Segment_Decoder_TREX:inst43
 out[0] <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst37.DB_MAX_OUTPUT_PORT_TYPE
@@ -199,6 +273,76 @@ in[3] => inst24.IN0
 in[3] => inst1.IN0
 in[3] => inst39.IN0
 in[3] => inst8.IN0
+
+
+|MultiPlexed7Seg|lpm_mux2:inst8
+data0x[0] => LPM_MUX:lpm_mux_component.DATA[0][0]
+data0x[1] => LPM_MUX:lpm_mux_component.DATA[0][1]
+data0x[2] => LPM_MUX:lpm_mux_component.DATA[0][2]
+data0x[3] => LPM_MUX:lpm_mux_component.DATA[0][3]
+data0x[4] => LPM_MUX:lpm_mux_component.DATA[0][4]
+data0x[5] => LPM_MUX:lpm_mux_component.DATA[0][5]
+data0x[6] => LPM_MUX:lpm_mux_component.DATA[0][6]
+data0x[7] => LPM_MUX:lpm_mux_component.DATA[0][7]
+data1x[0] => LPM_MUX:lpm_mux_component.DATA[1][0]
+data1x[1] => LPM_MUX:lpm_mux_component.DATA[1][1]
+data1x[2] => LPM_MUX:lpm_mux_component.DATA[1][2]
+data1x[3] => LPM_MUX:lpm_mux_component.DATA[1][3]
+data1x[4] => LPM_MUX:lpm_mux_component.DATA[1][4]
+data1x[5] => LPM_MUX:lpm_mux_component.DATA[1][5]
+data1x[6] => LPM_MUX:lpm_mux_component.DATA[1][6]
+data1x[7] => LPM_MUX:lpm_mux_component.DATA[1][7]
+sel => LPM_MUX:lpm_mux_component.SEL[0]
+result[0] <= LPM_MUX:lpm_mux_component.RESULT[0]
+result[1] <= LPM_MUX:lpm_mux_component.RESULT[1]
+result[2] <= LPM_MUX:lpm_mux_component.RESULT[2]
+result[3] <= LPM_MUX:lpm_mux_component.RESULT[3]
+result[4] <= LPM_MUX:lpm_mux_component.RESULT[4]
+result[5] <= LPM_MUX:lpm_mux_component.RESULT[5]
+result[6] <= LPM_MUX:lpm_mux_component.RESULT[6]
+result[7] <= LPM_MUX:lpm_mux_component.RESULT[7]
+
+
+|MultiPlexed7Seg|lpm_mux2:inst8|LPM_MUX:lpm_mux_component
+data[0][0] => mux_lrd:auto_generated.data[0]
+data[0][1] => mux_lrd:auto_generated.data[1]
+data[0][2] => mux_lrd:auto_generated.data[2]
+data[0][3] => mux_lrd:auto_generated.data[3]
+data[0][4] => mux_lrd:auto_generated.data[4]
+data[0][5] => mux_lrd:auto_generated.data[5]
+data[0][6] => mux_lrd:auto_generated.data[6]
+data[0][7] => mux_lrd:auto_generated.data[7]
+data[1][0] => mux_lrd:auto_generated.data[8]
+data[1][1] => mux_lrd:auto_generated.data[9]
+data[1][2] => mux_lrd:auto_generated.data[10]
+data[1][3] => mux_lrd:auto_generated.data[11]
+data[1][4] => mux_lrd:auto_generated.data[12]
+data[1][5] => mux_lrd:auto_generated.data[13]
+data[1][6] => mux_lrd:auto_generated.data[14]
+data[1][7] => mux_lrd:auto_generated.data[15]
+sel[0] => mux_lrd:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_lrd:auto_generated.result[0]
+result[1] <= mux_lrd:auto_generated.result[1]
+result[2] <= mux_lrd:auto_generated.result[2]
+result[3] <= mux_lrd:auto_generated.result[3]
+result[4] <= mux_lrd:auto_generated.result[4]
+result[5] <= mux_lrd:auto_generated.result[5]
+result[6] <= mux_lrd:auto_generated.result[6]
+result[7] <= mux_lrd:auto_generated.result[7]
+
+
+|MultiPlexed7Seg|lpm_mux2:inst8|LPM_MUX:lpm_mux_component|mux_lrd:auto_generated
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MultiPlexed7Seg|7_Segment_Decoder_TREX:inst46
@@ -267,6 +411,76 @@ in[3] => inst39.IN0
 in[3] => inst8.IN0
 
 
+|MultiPlexed7Seg|lpm_mux2:inst7
+data0x[0] => LPM_MUX:lpm_mux_component.DATA[0][0]
+data0x[1] => LPM_MUX:lpm_mux_component.DATA[0][1]
+data0x[2] => LPM_MUX:lpm_mux_component.DATA[0][2]
+data0x[3] => LPM_MUX:lpm_mux_component.DATA[0][3]
+data0x[4] => LPM_MUX:lpm_mux_component.DATA[0][4]
+data0x[5] => LPM_MUX:lpm_mux_component.DATA[0][5]
+data0x[6] => LPM_MUX:lpm_mux_component.DATA[0][6]
+data0x[7] => LPM_MUX:lpm_mux_component.DATA[0][7]
+data1x[0] => LPM_MUX:lpm_mux_component.DATA[1][0]
+data1x[1] => LPM_MUX:lpm_mux_component.DATA[1][1]
+data1x[2] => LPM_MUX:lpm_mux_component.DATA[1][2]
+data1x[3] => LPM_MUX:lpm_mux_component.DATA[1][3]
+data1x[4] => LPM_MUX:lpm_mux_component.DATA[1][4]
+data1x[5] => LPM_MUX:lpm_mux_component.DATA[1][5]
+data1x[6] => LPM_MUX:lpm_mux_component.DATA[1][6]
+data1x[7] => LPM_MUX:lpm_mux_component.DATA[1][7]
+sel => LPM_MUX:lpm_mux_component.SEL[0]
+result[0] <= LPM_MUX:lpm_mux_component.RESULT[0]
+result[1] <= LPM_MUX:lpm_mux_component.RESULT[1]
+result[2] <= LPM_MUX:lpm_mux_component.RESULT[2]
+result[3] <= LPM_MUX:lpm_mux_component.RESULT[3]
+result[4] <= LPM_MUX:lpm_mux_component.RESULT[4]
+result[5] <= LPM_MUX:lpm_mux_component.RESULT[5]
+result[6] <= LPM_MUX:lpm_mux_component.RESULT[6]
+result[7] <= LPM_MUX:lpm_mux_component.RESULT[7]
+
+
+|MultiPlexed7Seg|lpm_mux2:inst7|LPM_MUX:lpm_mux_component
+data[0][0] => mux_lrd:auto_generated.data[0]
+data[0][1] => mux_lrd:auto_generated.data[1]
+data[0][2] => mux_lrd:auto_generated.data[2]
+data[0][3] => mux_lrd:auto_generated.data[3]
+data[0][4] => mux_lrd:auto_generated.data[4]
+data[0][5] => mux_lrd:auto_generated.data[5]
+data[0][6] => mux_lrd:auto_generated.data[6]
+data[0][7] => mux_lrd:auto_generated.data[7]
+data[1][0] => mux_lrd:auto_generated.data[8]
+data[1][1] => mux_lrd:auto_generated.data[9]
+data[1][2] => mux_lrd:auto_generated.data[10]
+data[1][3] => mux_lrd:auto_generated.data[11]
+data[1][4] => mux_lrd:auto_generated.data[12]
+data[1][5] => mux_lrd:auto_generated.data[13]
+data[1][6] => mux_lrd:auto_generated.data[14]
+data[1][7] => mux_lrd:auto_generated.data[15]
+sel[0] => mux_lrd:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_lrd:auto_generated.result[0]
+result[1] <= mux_lrd:auto_generated.result[1]
+result[2] <= mux_lrd:auto_generated.result[2]
+result[3] <= mux_lrd:auto_generated.result[3]
+result[4] <= mux_lrd:auto_generated.result[4]
+result[5] <= mux_lrd:auto_generated.result[5]
+result[6] <= mux_lrd:auto_generated.result[6]
+result[7] <= mux_lrd:auto_generated.result[7]
+
+
+|MultiPlexed7Seg|lpm_mux2:inst7|LPM_MUX:lpm_mux_component|mux_lrd:auto_generated
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
 |MultiPlexed7Seg|7_Segment_Decoder_TREX:inst49
 out[0] <= inst18.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= inst37.DB_MAX_OUTPUT_PORT_TYPE
@@ -331,6 +545,76 @@ in[3] => inst24.IN0
 in[3] => inst1.IN0
 in[3] => inst39.IN0
 in[3] => inst8.IN0
+
+
+|MultiPlexed7Seg|lpm_mux2:inst6
+data0x[0] => LPM_MUX:lpm_mux_component.DATA[0][0]
+data0x[1] => LPM_MUX:lpm_mux_component.DATA[0][1]
+data0x[2] => LPM_MUX:lpm_mux_component.DATA[0][2]
+data0x[3] => LPM_MUX:lpm_mux_component.DATA[0][3]
+data0x[4] => LPM_MUX:lpm_mux_component.DATA[0][4]
+data0x[5] => LPM_MUX:lpm_mux_component.DATA[0][5]
+data0x[6] => LPM_MUX:lpm_mux_component.DATA[0][6]
+data0x[7] => LPM_MUX:lpm_mux_component.DATA[0][7]
+data1x[0] => LPM_MUX:lpm_mux_component.DATA[1][0]
+data1x[1] => LPM_MUX:lpm_mux_component.DATA[1][1]
+data1x[2] => LPM_MUX:lpm_mux_component.DATA[1][2]
+data1x[3] => LPM_MUX:lpm_mux_component.DATA[1][3]
+data1x[4] => LPM_MUX:lpm_mux_component.DATA[1][4]
+data1x[5] => LPM_MUX:lpm_mux_component.DATA[1][5]
+data1x[6] => LPM_MUX:lpm_mux_component.DATA[1][6]
+data1x[7] => LPM_MUX:lpm_mux_component.DATA[1][7]
+sel => LPM_MUX:lpm_mux_component.SEL[0]
+result[0] <= LPM_MUX:lpm_mux_component.RESULT[0]
+result[1] <= LPM_MUX:lpm_mux_component.RESULT[1]
+result[2] <= LPM_MUX:lpm_mux_component.RESULT[2]
+result[3] <= LPM_MUX:lpm_mux_component.RESULT[3]
+result[4] <= LPM_MUX:lpm_mux_component.RESULT[4]
+result[5] <= LPM_MUX:lpm_mux_component.RESULT[5]
+result[6] <= LPM_MUX:lpm_mux_component.RESULT[6]
+result[7] <= LPM_MUX:lpm_mux_component.RESULT[7]
+
+
+|MultiPlexed7Seg|lpm_mux2:inst6|LPM_MUX:lpm_mux_component
+data[0][0] => mux_lrd:auto_generated.data[0]
+data[0][1] => mux_lrd:auto_generated.data[1]
+data[0][2] => mux_lrd:auto_generated.data[2]
+data[0][3] => mux_lrd:auto_generated.data[3]
+data[0][4] => mux_lrd:auto_generated.data[4]
+data[0][5] => mux_lrd:auto_generated.data[5]
+data[0][6] => mux_lrd:auto_generated.data[6]
+data[0][7] => mux_lrd:auto_generated.data[7]
+data[1][0] => mux_lrd:auto_generated.data[8]
+data[1][1] => mux_lrd:auto_generated.data[9]
+data[1][2] => mux_lrd:auto_generated.data[10]
+data[1][3] => mux_lrd:auto_generated.data[11]
+data[1][4] => mux_lrd:auto_generated.data[12]
+data[1][5] => mux_lrd:auto_generated.data[13]
+data[1][6] => mux_lrd:auto_generated.data[14]
+data[1][7] => mux_lrd:auto_generated.data[15]
+sel[0] => mux_lrd:auto_generated.sel[0]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= mux_lrd:auto_generated.result[0]
+result[1] <= mux_lrd:auto_generated.result[1]
+result[2] <= mux_lrd:auto_generated.result[2]
+result[3] <= mux_lrd:auto_generated.result[3]
+result[4] <= mux_lrd:auto_generated.result[4]
+result[5] <= mux_lrd:auto_generated.result[5]
+result[6] <= mux_lrd:auto_generated.result[6]
+result[7] <= mux_lrd:auto_generated.result[7]
+
+
+|MultiPlexed7Seg|lpm_mux2:inst6|LPM_MUX:lpm_mux_component|mux_lrd:auto_generated
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result_node[4].DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result_node[5].DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result_node[6].DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result_node[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |MultiPlexed7Seg|7_Segment_Decoder_TREX:inst52

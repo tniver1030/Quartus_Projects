@@ -2169,6 +2169,286 @@ AUTO
 
 # end
 # entity
+lpm_mux2
+# storage
+db|MultiPlexed7Seg.(23).cnf
+db|MultiPlexed7Seg.(23).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_mux2.vhd
+ea62ccd2ffa4db5d7a767fe3cd55c1ff
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_mux2:inst9
+lpm_mux2:inst8
+lpm_mux2:inst7
+lpm_mux2:inst6
+}
+# lmf
+..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+LPM_MUX
+# storage
+db|MultiPlexed7Seg.(24).cnf
+db|MultiPlexed7Seg.(24).cnf
+# case_insensitive
+# source_file
+..|..|..|altera|90sp2|quartus|libraries|megafunctions|LPM_MUX.tdf
+7a4b3384f258c5ff904f89fe97f91077
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_SIZE
+2
+PARAMETER_SIGNED_DEC
+USR
+LPM_WIDTHS
+1
+PARAMETER_SIGNED_DEC
+USR
+LPM_PIPELINE
+0
+PARAMETER_SIGNED_DEC
+USR
+CBXI_PARAMETER
+mux_lrd
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+SEL0
+-1
+3
+RESULT7
+-1
+3
+RESULT6
+-1
+3
+RESULT5
+-1
+3
+RESULT4
+-1
+3
+RESULT3
+-1
+3
+RESULT2
+-1
+3
+RESULT1
+-1
+3
+RESULT0
+-1
+3
+DATA1_7
+-1
+3
+DATA1_6
+-1
+3
+DATA1_5
+-1
+3
+DATA1_4
+-1
+3
+DATA1_3
+-1
+3
+DATA1_2
+-1
+3
+DATA1_1
+-1
+3
+DATA1_0
+-1
+3
+DATA0_7
+-1
+3
+DATA0_6
+-1
+3
+DATA0_5
+-1
+3
+DATA0_4
+-1
+3
+DATA0_3
+-1
+3
+DATA0_2
+-1
+3
+DATA0_1
+-1
+3
+DATA0_0
+-1
+3
+}
+# include_file {
+..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+..|..|..|altera|90sp2|quartus|libraries|megafunctions|altshift.inc
+70fa13aee7d6d160ef20b2de32813a
+..|..|..|altera|90sp2|quartus|libraries|megafunctions|bypassff.inc
+8e8df160d449a63ec15dc86ecf2b373f
+..|..|..|altera|90sp2|quartus|libraries|megafunctions|muxlut.inc
+f172666ca13e5e31e17e3f6cb35af52
+}
+# hierarchies {
+lpm_mux2:inst9|lpm_mux:lpm_mux_component
+lpm_mux2:inst8|lpm_mux:lpm_mux_component
+lpm_mux2:inst7|lpm_mux:lpm_mux_component
+lpm_mux2:inst6|lpm_mux:lpm_mux_component
+}
+# macro_sequence
+
+# end
+# entity
+mux_lrd
+# storage
+db|MultiPlexed7Seg.(25).cnf
+db|MultiPlexed7Seg.(25).cnf
+# case_insensitive
+# source_file
+db|mux_lrd.tdf
+ef5bfb225e379cb734e50d717e677e5
+7
+# used_port {
+sel0
+-1
+3
+result7
+-1
+3
+result6
+-1
+3
+result5
+-1
+3
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+data9
+-1
+3
+data8
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data15
+-1
+3
+data14
+-1
+3
+data13
+-1
+3
+data12
+-1
+3
+data11
+-1
+3
+data10
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# hierarchies {
+lpm_mux2:inst9|lpm_mux:lpm_mux_component|mux_lrd:auto_generated
+lpm_mux2:inst8|lpm_mux:lpm_mux_component|mux_lrd:auto_generated
+lpm_mux2:inst7|lpm_mux:lpm_mux_component|mux_lrd:auto_generated
+lpm_mux2:inst6|lpm_mux:lpm_mux_component|mux_lrd:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
 MultiPlexed7Seg
 # storage
 db|MultiPlexed7Seg.(0).cnf
@@ -2176,7 +2456,7 @@ db|MultiPlexed7Seg.(0).cnf
 # case_insensitive
 # source_file
 MultiPlexed7Seg.bdf
-3a2dace6bbe85ee9b0750f46ff59767
+beda55f5117cbad8854cab3667ab37c2
 26
 # internal_option {
 BLOCK_DESIGN_NAMING

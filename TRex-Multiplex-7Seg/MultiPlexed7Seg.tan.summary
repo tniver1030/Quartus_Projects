@@ -5,8 +5,8 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 16.208 ns
-From           : lpm_counter0:inst2|lpm_counter:lpm_counter_component|cntr_4dh:auto_generated|safe_q[1]
+Actual Time    : 18.393 ns
+From           : lpm_counter0:inst2|lpm_counter:lpm_counter_component|cntr_4dh:auto_generated|safe_q[0]
 To             : LED7
 From Clock     : CLK
 To Clock       : --
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 15.979 ns
-From           : Seg1[1]
-To             : LED1
+Actual Time    : 18.042 ns
+From           : Seg2[0]
+To             : LED7
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -25,7 +25,7 @@ Failed Paths   : 0
 Type           : Clock Setup: 'CLK'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 138.01 MHz ( period = 7.246 ns )
+Actual Time    : 128.12 MHz ( period = 7.805 ns )
 From           : lpm_counter1:inst16|lpm_counter:lpm_counter_component|cntr_90j:auto_generated|safe_q[9]
 To             : lpm_counter1:inst16|lpm_counter:lpm_counter_component|cntr_90j:auto_generated|safe_q[0]
 From Clock     : CLK
