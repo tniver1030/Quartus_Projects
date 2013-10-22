@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MultiPlexed7Seg">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MultiPlexed7Seg|lpm_mux0:inst30|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_ord.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MultiPlexed7Seg|lpm_mux2:inst7|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_lrd.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MultiPlexed7Seg|lpm_mux2:inst9|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_lrd.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MultiPlexed7Seg|lpm_add_sub0:inst17|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_q1i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MultiPlexed7Seg|lpm_counter0:inst2|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_4dh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MultiPlexed7Seg|lpm_counter1:inst16|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_90j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MultiPlexed7Seg|lpm_mux2:inst6|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_lrd.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MultiPlexed7Seg|lpm_mux2:inst8|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_lrd.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

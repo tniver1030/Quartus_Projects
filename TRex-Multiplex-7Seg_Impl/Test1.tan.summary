@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.686 ns
+From           : MultiPlexed7Seg:inst|lpm_counter0:inst2|lpm_counter:lpm_counter_component|cntr_4dh:auto_generated|safe_q[0]
+To             : LED7
+From Clock     : CLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.722 ns
+From           : s1
+To             : LED7
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 138.06 MHz ( period = 7.243 ns )
+From           : MultiPlexed7Seg:inst|lpm_counter1:inst16|lpm_counter:lpm_counter_component|cntr_90j:auto_generated|safe_q[9]
+To             : MultiPlexed7Seg:inst|lpm_counter1:inst16|lpm_counter:lpm_counter_component|cntr_90j:auto_generated|safe_q[0]
+From Clock     : CLK
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

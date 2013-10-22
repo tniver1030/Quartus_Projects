@@ -1,0 +1,84 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+# Date created = 00:31:29  October 11, 2013
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		MultiPlexed7Seg_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name DEVICE EP1C6Q240C8
+set_global_assignment -name TOP_LEVEL_ENTITY MultiPlexed7Seg
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:31:29  OCTOBER 11, 2013"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name CYCLONE_OPTIMIZATION_TECHNIQUE AREA
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name BDF_FILE MultiPlexed7Seg.bdf
+set_global_assignment -name QIP_FILE lpm_mux0.qip
+set_global_assignment -name QIP_FILE lpm_counter0.qip
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name QIP_FILE lpm_mux1.qip
+set_global_assignment -name BDF_FILE 4OutDMux.bdf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_28 -to CLK
+set_location_assignment PIN_198 -to LED0
+set_location_assignment PIN_197 -to LED1
+set_location_assignment PIN_196 -to LED2
+set_location_assignment PIN_195 -to LED3
+set_location_assignment PIN_188 -to LED4
+set_location_assignment PIN_187 -to LED5
+set_location_assignment PIN_186 -to LED6
+set_location_assignment PIN_185 -to LED7
+set_location_assignment PIN_203 -to oCom0
+set_location_assignment PIN_202 -to oCom1
+set_location_assignment PIN_201 -to oCom2
+set_location_assignment PIN_200 -to oCom3
+set_global_assignment -name MISC_FILE "C:/Github/Quartus_Projects/TRex-Multiplex-7Seg/MultiPlexed7Seg.dpf"
+set_global_assignment -name QIP_FILE lpm_counter1.qip
+set_global_assignment -name QIP_FILE lpm_add_sub0.qip
+set_location_assignment PIN_14 -to Button
+set_location_assignment PIN_50 -to lead1
+set_location_assignment PIN_11 -to lead2
+set_global_assignment -name BDF_FILE 7_Segment_Decoder_TREX.bdf
+set_location_assignment PIN_184 -to Seg0[3]
+set_location_assignment PIN_183 -to Seg0[2]
+set_location_assignment PIN_182 -to Seg0[1]
+set_location_assignment PIN_181 -to Seg0[0]
+set_global_assignment -name QIP_FILE lpm_mux2.qip

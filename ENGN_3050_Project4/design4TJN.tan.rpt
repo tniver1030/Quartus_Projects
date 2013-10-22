@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for design4TJN
-Tue Oct 08 17:46:04 2013
+Tue Oct 22 17:49:14 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -40,19 +40,19 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                                                                                                                                                                                                                                                 ;
-+------------------------------+------------------------------------------+---------------+----------------------------------+------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------+----------+--------------+
-; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                                                                     ; To                                                                                       ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+------------------------------------------+---------------+----------------------------------+------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A                                      ; None          ; 12.000 ns                        ; UART_RX                                                                                  ; inst49                                                                                   ; --         ; Clock    ; 0            ;
-; Worst-case tco               ; N/A                                      ; None          ; 46.700 ns                        ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2]                               ; uB                                                                                       ; Clock      ; --       ; 0            ;
-; Worst-case tpd               ; N/A                                      ; None          ; 30.500 ns                        ; UART_RX                                                                                  ; Start_Bit                                                                                ; --         ; --       ; 0            ;
-; Worst-case th                ; N/A                                      ; None          ; -3.100 ns                        ; UART_RX                                                                                  ; Delay_Function:inst15|inst                                                               ; --         ; Clock    ; 0            ;
-; Clock Setup: 'Clock'         ; N/A                                      ; None          ; 58.14 MHz ( period = 17.200 ns ) ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[4] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[0] ; Clock      ; Clock    ; 0            ;
-; Clock Hold: 'Clock'          ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; inst56                                                                                   ; inst32                                                                                   ; Clock      ; Clock    ; 12           ;
-; Total number of failed paths ;                                          ;               ;                                  ;                                                                                          ;                                                                                          ;            ;          ; 12           ;
-+------------------------------+------------------------------------------+---------------+----------------------------------+------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------+----------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                     ;
++------------------------------+------------------------------------------+---------------+----------------------------------+------------------------------------------------------------+------------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                                       ; To                                                         ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+------------------------------------------------------------+------------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 13.000 ns                        ; Reset                                                      ; inst42                                                     ; --         ; Clock    ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 49.900 ns                        ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lG                                                         ; Clock      ; --       ; 0            ;
+; Worst-case tpd               ; N/A                                      ; None          ; 29.000 ns                        ; Reset                                                      ; Start_Bit                                                  ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; 0.900 ns                         ; UART_RX                                                    ; Delay_Function:inst15|inst                                 ; --         ; Clock    ; 0            ;
+; Clock Setup: 'Clock'         ; N/A                                      ; None          ; 57.47 MHz ( period = 17.400 ns ) ; inst56                                                     ; inst32                                                     ; Clock      ; Clock    ; 0            ;
+; Clock Hold: 'Clock'          ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; inst33                                                     ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; Clock      ; Clock    ; 11           ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                                            ;                                                            ;            ;          ; 11           ;
++------------------------------+------------------------------------------+---------------+----------------------------------+------------------------------------------------------------+------------------------------------------------------------+------------+----------+--------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -113,6 +113,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------+-----------------------------------------------------+------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 ; Slack                                   ; Actual fmax (period)                                ; From                                                                                     ; To                                                                                       ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
 +-----------------------------------------+-----------------------------------------------------+------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; inst56                                                                                   ; inst29                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 6.000 ns                ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; inst56                                                                                   ; inst32                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 6.000 ns                ;
 ; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6] ; Clock      ; Clock    ; None                        ; None                      ; 13.200 ns               ;
 ; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[4] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6] ; Clock      ; Clock    ; None                        ; None                      ; 13.200 ns               ;
 ; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[5] ; Clock      ; Clock    ; None                        ; None                      ; 13.200 ns               ;
@@ -127,6 +129,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[4] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[1] ; Clock      ; Clock    ; None                        ; None                      ; 13.200 ns               ;
 ; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[0] ; Clock      ; Clock    ; None                        ; None                      ; 13.200 ns               ;
 ; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[4] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[0] ; Clock      ; Clock    ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; inst56                                                                                   ; inst30                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 5.900 ns                ;
+; N/A                                     ; 58.82 MHz ( period = 17.000 ns )                    ; inst56                                                                                   ; inst33                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 5.800 ns                ;
 ; N/A                                     ; 59.17 MHz ( period = 16.900 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[5] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6] ; Clock      ; Clock    ; None                        ; None                      ; 12.900 ns               ;
 ; N/A                                     ; 59.17 MHz ( period = 16.900 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[5] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[5] ; Clock      ; Clock    ; None                        ; None                      ; 12.900 ns               ;
 ; N/A                                     ; 59.17 MHz ( period = 16.900 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[5] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[4] ; Clock      ; Clock    ; None                        ; None                      ; 12.900 ns               ;
@@ -162,99 +166,92 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; N/A                                     ; 60.98 MHz ( period = 16.400 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[1] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[2] ; Clock      ; Clock    ; None                        ; None                      ; 12.400 ns               ;
 ; N/A                                     ; 60.98 MHz ( period = 16.400 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[1] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[1] ; Clock      ; Clock    ; None                        ; None                      ; 12.400 ns               ;
 ; N/A                                     ; 60.98 MHz ( period = 16.400 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[1] ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[0] ; Clock      ; Clock    ; None                        ; None                      ; 12.400 ns               ;
-; N/A                                     ; 80.65 MHz ( period = 12.400 ns )                    ; Delay_Function:inst6|inst47                                                              ; Delay_Function:inst8|inst                                                                ; Clock      ; Clock    ; None                        ; None                      ; 8.400 ns                ;
-; N/A                                     ; 83.33 MHz ( period = 12.000 ns )                    ; Delay_Function:inst10|inst27                                                             ; Delay_Function:inst10|inst31                                                             ; Clock      ; Clock    ; None                        ; None                      ; 8.000 ns                ;
-; N/A                                     ; 84.75 MHz ( period = 11.800 ns )                    ; Delay_Function:inst27|inst40                                                             ; Delay_Function:inst27|inst44                                                             ; Clock      ; Clock    ; None                        ; None                      ; 7.800 ns                ;
-; N/A                                     ; 84.75 MHz ( period = 11.800 ns )                    ; inst56                                                                                   ; inst30                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 5.700 ns                ;
-; N/A                                     ; 85.47 MHz ( period = 11.700 ns )                    ; Delay_Function:inst28|inst21                                                             ; Delay_Function:inst28|inst25                                                             ; Clock      ; Clock    ; None                        ; None                      ; 7.700 ns                ;
+; N/A                                     ; 69.93 MHz ( period = 14.300 ns )                    ; inst39                                                                                   ; inst42                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 10.300 ns               ;
+; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; Delay_Function:inst28|inst43                                                             ; Delay_Function:inst28|inst47                                                             ; Clock      ; Clock    ; None                        ; None                      ; 7.500 ns                ;
 ; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[0] ; inst3                                                                                    ; Clock      ; Clock    ; None                        ; None                      ; 7.500 ns                ;
-; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; Delay_Function:inst15|inst45                                                             ; inst42                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 7.500 ns                ;
-; N/A                                     ; 87.72 MHz ( period = 11.400 ns )                    ; inst56                                                                                   ; inst37                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 5.600 ns                ;
 ; N/A                                     ; 89.29 MHz ( period = 11.200 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[1] ; inst3                                                                                    ; Clock      ; Clock    ; None                        ; None                      ; 7.200 ns                ;
+; N/A                                     ; 90.09 MHz ( period = 11.100 ns )                    ; Delay_Function:inst28|inst47                                                             ; inst42                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 7.100 ns                ;
+; N/A                                     ; 90.09 MHz ( period = 11.100 ns )                    ; Delay_Function:inst15|inst45                                                             ; inst42                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 7.100 ns                ;
 ; N/A                                     ; 91.74 MHz ( period = 10.900 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[2] ; inst3                                                                                    ; Clock      ; Clock    ; None                        ; None                      ; 6.900 ns                ;
-; N/A                                     ; 91.74 MHz ( period = 10.900 ns )                    ; Delay_Function:inst16|inst18                                                             ; Delay_Function:inst16|inst22                                                             ; Clock      ; Clock    ; None                        ; None                      ; 6.900 ns                ;
-; N/A                                     ; 93.46 MHz ( period = 10.700 ns )                    ; Delay_Function:inst23|inst47                                                             ; Delay_Function:inst25|inst                                                               ; Clock      ; Clock    ; None                        ; None                      ; 6.700 ns                ;
-; N/A                                     ; 93.46 MHz ( period = 10.700 ns )                    ; Delay_Function:inst25|inst47                                                             ; Delay_Function:inst27|inst                                                               ; Clock      ; Clock    ; None                        ; None                      ; 6.700 ns                ;
+; N/A                                     ; 93.46 MHz ( period = 10.700 ns )                    ; Delay_Function:inst|inst34                                                               ; Delay_Function:inst|inst38                                                               ; Clock      ; Clock    ; None                        ; None                      ; 6.700 ns                ;
 ; N/A                                     ; 94.34 MHz ( period = 10.600 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[3] ; inst3                                                                                    ; Clock      ; Clock    ; None                        ; None                      ; 6.600 ns                ;
-; N/A                                     ; 96.15 MHz ( period = 10.400 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[4] ; inst3                                                                                    ; Clock      ; Clock    ; None                        ; None                      ; 6.400 ns                ;
-; N/A                                     ; 96.15 MHz ( period = 10.400 ns )                    ; Delay_Function:inst16|inst39                                                             ; Delay_Function:inst16|inst43                                                             ; Clock      ; Clock    ; None                        ; None                      ; 6.400 ns                ;
+; N/A                                     ; 95.24 MHz ( period = 10.500 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[4] ; inst3                                                                                    ; Clock      ; Clock    ; None                        ; None                      ; 6.500 ns                ;
+; N/A                                     ; 95.24 MHz ( period = 10.500 ns )                    ; Delay_Function:inst16|inst41                                                             ; Delay_Function:inst16|inst45                                                             ; Clock      ; Clock    ; None                        ; None                      ; 6.500 ns                ;
+; N/A                                     ; 96.15 MHz ( period = 10.400 ns )                    ; Delay_Function:inst16|inst40                                                             ; Delay_Function:inst16|inst44                                                             ; Clock      ; Clock    ; None                        ; None                      ; 6.400 ns                ;
 ; N/A                                     ; 98.04 MHz ( period = 10.200 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[5] ; inst3                                                                                    ; Clock      ; Clock    ; None                        ; None                      ; 6.200 ns                ;
-; N/A                                     ; 99.01 MHz ( period = 10.100 ns )                    ; Delay_Function:inst|inst34                                                               ; Delay_Function:inst|inst38                                                               ; Clock      ; Clock    ; None                        ; None                      ; 6.100 ns                ;
-; N/A                                     ; 101.01 MHz ( period = 9.900 ns )                    ; Delay_Function:inst|inst47                                                               ; Delay_Function:inst6|inst                                                                ; Clock      ; Clock    ; None                        ; None                      ; 5.900 ns                ;
-; N/A                                     ; 102.04 MHz ( period = 9.800 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6] ; inst3                                                                                    ; Clock      ; Clock    ; None                        ; None                      ; 5.800 ns                ;
-; N/A                                     ; 102.04 MHz ( period = 9.800 ns )                    ; Delay_Function:inst16|inst24                                                             ; Delay_Function:inst16|inst28                                                             ; Clock      ; Clock    ; None                        ; None                      ; 5.800 ns                ;
+; N/A                                     ; 99.01 MHz ( period = 10.100 ns )                    ; Delay_Function:inst25|inst22                                                             ; Delay_Function:inst25|inst26                                                             ; Clock      ; Clock    ; None                        ; None                      ; 6.100 ns                ;
+; N/A                                     ; 99.01 MHz ( period = 10.100 ns )                    ; Delay_Function:inst|inst                                                                 ; Delay_Function:inst|inst20                                                               ; Clock      ; Clock    ; None                        ; None                      ; 6.100 ns                ;
+; N/A                                     ; 100.00 MHz ( period = 10.000 ns )                   ; Delay_Function:inst27|inst47                                                             ; Delay_Function:inst28|inst                                                               ; Clock      ; Clock    ; None                        ; None                      ; 6.000 ns                ;
+; N/A                                     ; 101.01 MHz ( period = 9.900 ns )                    ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6] ; inst3                                                                                    ; Clock      ; Clock    ; None                        ; None                      ; 5.900 ns                ;
 ; N/A                                     ; 103.09 MHz ( period = 9.700 ns )                    ; inst49                                                                                   ; inst49                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 5.700 ns                ;
 ; N/A                                     ; 103.09 MHz ( period = 9.700 ns )                    ; inst42                                                                                   ; inst49                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 5.700 ns                ;
 ; N/A                                     ; 103.09 MHz ( period = 9.700 ns )                    ; inst18                                                                                   ; inst49                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 5.700 ns                ;
-; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; Delay_Function:inst28|inst43                                                             ; Delay_Function:inst28|inst47                                                             ; Clock      ; Clock    ; None                        ; None                      ; 5.500 ns                ;
-; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; Delay_Function:inst8|inst47                                                              ; Delay_Function:inst10|inst                                                               ; Clock      ; Clock    ; None                        ; None                      ; 5.500 ns                ;
-; N/A                                     ; 109.89 MHz ( period = 9.100 ns )                    ; Delay_Function:inst15|inst45                                                             ; inst49                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 5.100 ns                ;
-; N/A                                     ; 109.89 MHz ( period = 9.100 ns )                    ; Delay_Function:inst27|inst34                                                             ; Delay_Function:inst27|inst38                                                             ; Clock      ; Clock    ; None                        ; None                      ; 5.100 ns                ;
-; N/A                                     ; 111.11 MHz ( period = 9.000 ns )                    ; Delay_Function:inst8|inst26                                                              ; Delay_Function:inst8|inst30                                                              ; Clock      ; Clock    ; None                        ; None                      ; 5.000 ns                ;
-; N/A                                     ; 111.11 MHz ( period = 9.000 ns )                    ; Delay_Function:inst27|inst33                                                             ; Delay_Function:inst27|inst37                                                             ; Clock      ; Clock    ; None                        ; None                      ; 5.000 ns                ;
-; N/A                                     ; 111.11 MHz ( period = 9.000 ns )                    ; Delay_Function:inst25|inst40                                                             ; Delay_Function:inst25|inst44                                                             ; Clock      ; Clock    ; None                        ; None                      ; 5.000 ns                ;
-; N/A                                     ; 111.11 MHz ( period = 9.000 ns )                    ; Delay_Function:inst6|inst32                                                              ; Delay_Function:inst6|inst36                                                              ; Clock      ; Clock    ; None                        ; None                      ; 5.000 ns                ;
-; N/A                                     ; 111.11 MHz ( period = 9.000 ns )                    ; Delay_Function:inst15|inst45                                                             ; Delay_Function:inst|inst                                                                 ; Clock      ; Clock    ; None                        ; None                      ; 5.000 ns                ;
-; N/A                                     ; 112.36 MHz ( period = 8.900 ns )                    ; Delay_Function:inst28|inst47                                                             ; inst42                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 4.900 ns                ;
-; N/A                                     ; 112.36 MHz ( period = 8.900 ns )                    ; Delay_Function:inst|inst45                                                               ; Delay_Function:inst|inst18                                                               ; Clock      ; Clock    ; None                        ; None                      ; 4.900 ns                ;
-; N/A                                     ; 113.64 MHz ( period = 8.800 ns )                    ; Delay_Function:inst10|inst30                                                             ; Delay_Function:inst10|inst34                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.800 ns                ;
-; N/A                                     ; 113.64 MHz ( period = 8.800 ns )                    ; Delay_Function:inst25|inst26                                                             ; Delay_Function:inst25|inst30                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.800 ns                ;
-; N/A                                     ; 113.64 MHz ( period = 8.800 ns )                    ; Delay_Function:inst8|inst36                                                              ; Delay_Function:inst8|inst40                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.800 ns                ;
-; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; Delay_Function:inst27|inst31                                                             ; Delay_Function:inst27|inst35                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.700 ns                ;
-; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; Delay_Function:inst23|inst27                                                             ; Delay_Function:inst23|inst31                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.700 ns                ;
-; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; Delay_Function:inst25|inst23                                                             ; Delay_Function:inst25|inst27                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.700 ns                ;
-; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; Delay_Function:inst25|inst33                                                             ; Delay_Function:inst25|inst37                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.700 ns                ;
-; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; Delay_Function:inst23|inst29                                                             ; Delay_Function:inst23|inst33                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.700 ns                ;
-; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; Delay_Function:inst28|inst28                                                             ; Delay_Function:inst28|inst32                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.700 ns                ;
-; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; Delay_Function:inst23|inst32                                                             ; Delay_Function:inst23|inst36                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.700 ns                ;
-; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst|inst27                                                               ; Delay_Function:inst|inst31                                                               ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
-; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst15|inst44                                                             ; Delay_Function:inst15|inst17                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
-; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst10|inst37                                                             ; Delay_Function:inst10|inst41                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
-; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst28|inst46                                                             ; Delay_Function:inst28|inst19                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
-; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst6|inst19                                                              ; Delay_Function:inst6|inst23                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
-; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst16|inst19                                                             ; Delay_Function:inst16|inst23                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
-; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst8|inst46                                                              ; Delay_Function:inst8|inst19                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; Delay_Function:inst16|inst                                                               ; Delay_Function:inst16|inst20                                                             ; Clock      ; Clock    ; None                        ; None                      ; 5.500 ns                ;
+; N/A                                     ; 106.38 MHz ( period = 9.400 ns )                    ; Delay_Function:inst27|inst28                                                             ; Delay_Function:inst27|inst32                                                             ; Clock      ; Clock    ; None                        ; None                      ; 5.400 ns                ;
+; N/A                                     ; 108.70 MHz ( period = 9.200 ns )                    ; Delay_Function:inst|inst31                                                               ; Delay_Function:inst|inst35                                                               ; Clock      ; Clock    ; None                        ; None                      ; 5.200 ns                ;
+; N/A                                     ; 109.89 MHz ( period = 9.100 ns )                    ; Delay_Function:inst8|inst31                                                              ; Delay_Function:inst8|inst35                                                              ; Clock      ; Clock    ; None                        ; None                      ; 5.100 ns                ;
+; N/A                                     ; 109.89 MHz ( period = 9.100 ns )                    ; Delay_Function:inst16|inst42                                                             ; Delay_Function:inst16|inst46                                                             ; Clock      ; Clock    ; None                        ; None                      ; 5.100 ns                ;
+; N/A                                     ; 109.89 MHz ( period = 9.100 ns )                    ; Delay_Function:inst28|inst40                                                             ; Delay_Function:inst28|inst44                                                             ; Clock      ; Clock    ; None                        ; None                      ; 5.100 ns                ;
+; N/A                                     ; 109.89 MHz ( period = 9.100 ns )                    ; inst37                                                                                   ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3]                               ; Clock      ; Clock    ; None                        ; None                      ; 8.000 ns                ;
+; N/A                                     ; 112.36 MHz ( period = 8.900 ns )                    ; Delay_Function:inst8|inst44                                                              ; Delay_Function:inst8|inst17                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.900 ns                ;
+; N/A                                     ; 112.36 MHz ( period = 8.900 ns )                    ; Delay_Function:inst6|inst20                                                              ; Delay_Function:inst6|inst24                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.900 ns                ;
+; N/A                                     ; 113.64 MHz ( period = 8.800 ns )                    ; Delay_Function:inst6|inst44                                                              ; Delay_Function:inst6|inst17                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.800 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; Delay_Function:inst15|inst45                                                             ; inst49                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; Delay_Function:inst6|inst19                                                              ; Delay_Function:inst6|inst23                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; Delay_Function:inst8|inst41                                                              ; Delay_Function:inst8|inst45                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst10|inst35                                                             ; Delay_Function:inst10|inst39                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst28|inst23                                                             ; Delay_Function:inst28|inst27                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst27|inst23                                                             ; Delay_Function:inst27|inst27                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst25|inst46                                                             ; Delay_Function:inst25|inst19                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst28|inst30                                                             ; Delay_Function:inst28|inst34                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst27|inst30                                                             ; Delay_Function:inst27|inst34                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst6|inst26                                                              ; Delay_Function:inst6|inst30                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst23|inst25                                                             ; Delay_Function:inst23|inst29                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst27|inst17                                                             ; Delay_Function:inst27|inst21                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst25|inst36                                                             ; Delay_Function:inst25|inst40                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; Delay_Function:inst23|inst28                                                             ; Delay_Function:inst23|inst32                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst16|inst39                                                             ; Delay_Function:inst16|inst43                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst15|inst44                                                             ; Delay_Function:inst15|inst17                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst23|inst19                                                             ; Delay_Function:inst23|inst23                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst10|inst38                                                             ; Delay_Function:inst10|inst42                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
 ; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst15|inst                                                               ; Delay_Function:inst15|inst20                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
-; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst23|inst26                                                             ; Delay_Function:inst23|inst30                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
-; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst6|inst22                                                              ; Delay_Function:inst6|inst26                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
-; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst6|inst25                                                              ; Delay_Function:inst6|inst29                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
-; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst16|inst21                                                             ; Delay_Function:inst16|inst25                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
-; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst10|inst36                                                             ; Delay_Function:inst10|inst40                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
-; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst|inst28                                                               ; Delay_Function:inst|inst32                                                               ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
-; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; Delay_Function:inst28|inst45                                                             ; Delay_Function:inst28|inst18                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.400 ns                ;
-; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; Delay_Function:inst8|inst33                                                              ; Delay_Function:inst8|inst37                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.400 ns                ;
-; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; Delay_Function:inst|inst21                                                               ; Delay_Function:inst|inst25                                                               ; Clock      ; Clock    ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst23|inst18                                                             ; Delay_Function:inst23|inst22                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst10|inst41                                                             ; Delay_Function:inst10|inst45                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst27|inst41                                                             ; Delay_Function:inst27|inst45                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst6|inst37                                                              ; Delay_Function:inst6|inst41                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst25|inst29                                                             ; Delay_Function:inst25|inst33                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; Delay_Function:inst10|inst                                                               ; Delay_Function:inst10|inst20                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; Delay_Function:inst15|inst41                                                             ; Delay_Function:inst15|inst45                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; Delay_Function:inst25|inst39                                                             ; Delay_Function:inst25|inst43                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; Delay_Function:inst8|inst38                                                              ; Delay_Function:inst8|inst42                                                              ; Clock      ; Clock    ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; Delay_Function:inst28|inst37                                                             ; Delay_Function:inst28|inst41                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; Delay_Function:inst|inst41                                                               ; Delay_Function:inst|inst45                                                               ; Clock      ; Clock    ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; Delay_Function:inst|inst44                                                               ; Delay_Function:inst|inst17                                                               ; Clock      ; Clock    ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; Delay_Function:inst10|inst44                                                             ; Delay_Function:inst10|inst17                                                             ; Clock      ; Clock    ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 121.95 MHz ( period = 8.200 ns )                    ; Delay_Function:inst6|inst47                                                              ; Delay_Function:inst8|inst                                                                ; Clock      ; Clock    ; None                        ; None                      ; 4.200 ns                ;
+; N/A                                     ; 121.95 MHz ( period = 8.200 ns )                    ; Delay_Function:inst23|inst47                                                             ; Delay_Function:inst25|inst                                                               ; Clock      ; Clock    ; None                        ; None                      ; 4.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; inst49                                                                                   ; inst18                                                                                   ; Clock      ; Clock    ; None                        ; None                      ; 2.500 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; inst49                                                                                   ; Delay_Function:inst15|inst                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.500 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; inst42                                                                                   ; Delay_Function:inst15|inst                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.500 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; inst18                                                                                   ; Delay_Function:inst15|inst                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.500 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst8|inst25                                                              ; Delay_Function:inst8|inst29                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst10|inst25                                                             ; Delay_Function:inst10|inst29                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst16|inst25                                                             ; Delay_Function:inst16|inst29                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst23|inst25                                                             ; Delay_Function:inst23|inst29                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst25|inst25                                                             ; Delay_Function:inst25|inst29                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst27|inst25                                                             ; Delay_Function:inst27|inst29                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst15|inst45                                                             ; Delay_Function:inst|inst                                                                 ; Clock      ; Clock    ; None                        ; None                      ; 2.500 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; inst39                                                                                   ; Delay_Function:inst|inst                                                                 ; Clock      ; Clock    ; None                        ; None                      ; 2.500 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst28|inst44                                                             ; Delay_Function:inst28|inst17                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst8|inst21                                                              ; Delay_Function:inst8|inst25                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst10|inst21                                                             ; Delay_Function:inst10|inst25                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst6|inst21                                                              ; Delay_Function:inst6|inst25                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst16|inst21                                                             ; Delay_Function:inst16|inst25                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst23|inst21                                                             ; Delay_Function:inst23|inst25                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst25|inst21                                                             ; Delay_Function:inst25|inst25                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst27|inst21                                                             ; Delay_Function:inst27|inst25                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst|inst17                                                               ; Delay_Function:inst|inst21                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst28|inst40                                                             ; Delay_Function:inst28|inst44                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst8|inst17                                                              ; Delay_Function:inst8|inst21                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst10|inst17                                                             ; Delay_Function:inst10|inst21                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst6|inst17                                                              ; Delay_Function:inst6|inst21                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst16|inst17                                                             ; Delay_Function:inst16|inst21                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst23|inst17                                                             ; Delay_Function:inst23|inst21                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst25|inst17                                                             ; Delay_Function:inst25|inst21                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst27|inst17                                                             ; Delay_Function:inst27|inst21                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst|inst44                                                               ; Delay_Function:inst|inst17                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst28|inst36                                                             ; Delay_Function:inst28|inst40                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst8|inst44                                                              ; Delay_Function:inst8|inst17                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst10|inst44                                                             ; Delay_Function:inst10|inst17                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst6|inst44                                                              ; Delay_Function:inst6|inst17                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst16|inst44                                                             ; Delay_Function:inst16|inst17                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst23|inst44                                                             ; Delay_Function:inst23|inst17                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst25|inst44                                                             ; Delay_Function:inst25|inst17                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
@@ -264,55 +261,58 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst8|inst40                                                              ; Delay_Function:inst8|inst44                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst10|inst40                                                             ; Delay_Function:inst10|inst44                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst6|inst40                                                              ; Delay_Function:inst6|inst44                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst16|inst40                                                             ; Delay_Function:inst16|inst44                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst23|inst40                                                             ; Delay_Function:inst23|inst44                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst25|inst40                                                             ; Delay_Function:inst25|inst44                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst27|inst40                                                             ; Delay_Function:inst27|inst44                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst|inst36                                                               ; Delay_Function:inst|inst40                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst28|inst28                                                             ; Delay_Function:inst28|inst32                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst8|inst36                                                              ; Delay_Function:inst8|inst40                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst10|inst36                                                             ; Delay_Function:inst10|inst40                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst6|inst36                                                              ; Delay_Function:inst6|inst40                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst16|inst36                                                             ; Delay_Function:inst16|inst40                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst23|inst36                                                             ; Delay_Function:inst23|inst40                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst25|inst36                                                             ; Delay_Function:inst25|inst40                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst27|inst36                                                             ; Delay_Function:inst27|inst40                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst|inst32                                                               ; Delay_Function:inst|inst36                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst28|inst24                                                             ; Delay_Function:inst28|inst28                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst8|inst32                                                              ; Delay_Function:inst8|inst36                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst10|inst32                                                             ; Delay_Function:inst10|inst36                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst6|inst32                                                              ; Delay_Function:inst6|inst36                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst16|inst32                                                             ; Delay_Function:inst16|inst36                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst23|inst32                                                             ; Delay_Function:inst23|inst36                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst25|inst32                                                             ; Delay_Function:inst25|inst36                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst27|inst32                                                             ; Delay_Function:inst27|inst36                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst|inst28                                                               ; Delay_Function:inst|inst32                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst28|inst20                                                             ; Delay_Function:inst28|inst24                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst8|inst28                                                              ; Delay_Function:inst8|inst32                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst10|inst28                                                             ; Delay_Function:inst10|inst32                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst6|inst28                                                              ; Delay_Function:inst6|inst32                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst16|inst28                                                             ; Delay_Function:inst16|inst32                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst23|inst28                                                             ; Delay_Function:inst23|inst32                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst25|inst28                                                             ; Delay_Function:inst25|inst32                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst27|inst28                                                             ; Delay_Function:inst27|inst32                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst|inst24                                                               ; Delay_Function:inst|inst28                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst28|inst                                                               ; Delay_Function:inst28|inst20                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst8|inst24                                                              ; Delay_Function:inst8|inst28                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst10|inst24                                                             ; Delay_Function:inst10|inst28                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst6|inst24                                                              ; Delay_Function:inst6|inst28                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst16|inst24                                                             ; Delay_Function:inst16|inst28                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst23|inst24                                                             ; Delay_Function:inst23|inst28                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst25|inst24                                                             ; Delay_Function:inst25|inst28                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst27|inst24                                                             ; Delay_Function:inst27|inst28                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst|inst20                                                               ; Delay_Function:inst|inst24                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst27|inst47                                                             ; Delay_Function:inst28|inst                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst8|inst20                                                              ; Delay_Function:inst8|inst24                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst10|inst20                                                             ; Delay_Function:inst10|inst24                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst6|inst20                                                              ; Delay_Function:inst6|inst24                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst16|inst20                                                             ; Delay_Function:inst16|inst24                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst23|inst20                                                             ; Delay_Function:inst23|inst24                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst25|inst20                                                             ; Delay_Function:inst25|inst24                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst27|inst20                                                             ; Delay_Function:inst27|inst24                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst|inst                                                                 ; Delay_Function:inst|inst20                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst8|inst                                                                ; Delay_Function:inst8|inst20                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst10|inst                                                               ; Delay_Function:inst10|inst20                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst6|inst                                                                ; Delay_Function:inst6|inst20                                                              ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
-; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst16|inst                                                               ; Delay_Function:inst16|inst20                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst23|inst                                                               ; Delay_Function:inst23|inst20                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst25|inst                                                               ; Delay_Function:inst25|inst20                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst27|inst                                                               ; Delay_Function:inst27|inst20                                                             ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst8|inst47                                                              ; Delay_Function:inst10|inst                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst|inst47                                                               ; Delay_Function:inst6|inst                                                                ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst10|inst47                                                             ; Delay_Function:inst16|inst                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; Delay_Function:inst16|inst47                                                             ; Delay_Function:inst23|inst                                                               ; Clock      ; Clock    ; None                        ; None                      ; 2.200 ns                ;
 ; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                                                          ;                                                                                          ;            ;          ;                             ;                           ;                         ;
 +-----------------------------------------+-----------------------------------------------------+------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
@@ -322,18 +322,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+--------+------------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
 ; Minimum Slack                            ; From   ; To                                                         ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
 +------------------------------------------+--------+------------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
-; Not operational: Clock Skew > Data Delay ; inst56 ; inst32                                                     ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
-; Not operational: Clock Skew > Data Delay ; inst30 ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
-; Not operational: Clock Skew > Data Delay ; inst37 ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
-; Not operational: Clock Skew > Data Delay ; inst56 ; inst36                                                     ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
-; Not operational: Clock Skew > Data Delay ; inst56 ; inst34                                                     ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
-; Not operational: Clock Skew > Data Delay ; inst56 ; inst29                                                     ; Clock      ; Clock    ; None                       ; None                       ; 5.700 ns                 ;
-; Not operational: Clock Skew > Data Delay ; inst56 ; inst31                                                     ; Clock      ; Clock    ; None                       ; None                       ; 5.700 ns                 ;
 ; Not operational: Clock Skew > Data Delay ; inst33 ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
-; Not operational: Clock Skew > Data Delay ; inst34 ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
-; Not operational: Clock Skew > Data Delay ; inst36 ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
-; Not operational: Clock Skew > Data Delay ; inst56 ; inst33                                                     ; Clock      ; Clock    ; None                       ; None                       ; 5.600 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst30 ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst29 ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
 ; Not operational: Clock Skew > Data Delay ; inst32 ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst31 ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst56 ; inst34                                                     ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst56 ; inst37                                                     ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst36 ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst56 ; inst36                                                     ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst56 ; inst31                                                     ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst34 ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; Clock      ; Clock    ; None                       ; None                       ; 3.200 ns                 ;
 +------------------------------------------+--------+------------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
 
 
@@ -342,12 +341,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------+------------+---------+----------------------------+----------+
 ; Slack ; Required tsu ; Actual tsu ; From    ; To                         ; To Clock ;
 +-------+--------------+------------+---------+----------------------------+----------+
-; N/A   ; None         ; 12.000 ns  ; UART_RX ; inst49                     ; Clock    ;
-; N/A   ; None         ; 11.200 ns  ; UART_RX ; inst42                     ; Clock    ;
-; N/A   ; None         ; 9.600 ns   ; UART_RX ; Delay_Function:inst|inst   ; Clock    ;
-; N/A   ; None         ; 9.100 ns   ; UART_RX ; inst18                     ; Clock    ;
-; N/A   ; None         ; 8.800 ns   ; UART_RX ; inst56                     ; Clock    ;
-; N/A   ; None         ; 8.800 ns   ; UART_RX ; Delay_Function:inst15|inst ; Clock    ;
+; N/A   ; None         ; 13.000 ns  ; Reset   ; inst42                     ; Clock    ;
+; N/A   ; None         ; 9.400 ns   ; UART_RX ; inst42                     ; Clock    ;
+; N/A   ; None         ; 8.000 ns   ; UART_RX ; inst49                     ; Clock    ;
+; N/A   ; None         ; 6.500 ns   ; UART_RX ; inst56                     ; Clock    ;
+; N/A   ; None         ; 5.200 ns   ; Reset   ; inst39                     ; Clock    ;
+; N/A   ; None         ; 5.200 ns   ; Reset   ; Delay_Function:inst|inst   ; Clock    ;
+; N/A   ; None         ; 5.100 ns   ; UART_RX ; inst18                     ; Clock    ;
+; N/A   ; None         ; 5.100 ns   ; UART_RX ; Delay_Function:inst|inst   ; Clock    ;
+; N/A   ; None         ; 4.800 ns   ; UART_RX ; Delay_Function:inst15|inst ; Clock    ;
 +-------+--------------+------------+---------+----------------------------+----------+
 
 
@@ -356,138 +358,139 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------+------------+------------------------------------------------------------+--------------+------------+
 ; Slack ; Required tco ; Actual tco ; From                                                       ; To           ; From Clock ;
 +-------+--------------+------------+------------------------------------------------------------+--------------+------------+
-; N/A   ; None         ; 46.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uB           ; Clock      ;
-; N/A   ; None         ; 46.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uA           ; Clock      ;
-; N/A   ; None         ; 46.400 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uA           ; Clock      ;
-; N/A   ; None         ; 46.100 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uB           ; Clock      ;
-; N/A   ; None         ; 45.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uF           ; Clock      ;
-; N/A   ; None         ; 45.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uD           ; Clock      ;
-; N/A   ; None         ; 45.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uC           ; Clock      ;
-; N/A   ; None         ; 45.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uE           ; Clock      ;
-; N/A   ; None         ; 44.900 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uF           ; Clock      ;
-; N/A   ; None         ; 44.900 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uD           ; Clock      ;
-; N/A   ; None         ; 44.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uE           ; Clock      ;
-; N/A   ; None         ; 44.600 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uC           ; Clock      ;
-; N/A   ; None         ; 44.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uG           ; Clock      ;
-; N/A   ; None         ; 44.400 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lF           ; Clock      ;
-; N/A   ; None         ; 44.400 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lF           ; Clock      ;
-; N/A   ; None         ; 44.400 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lF           ; Clock      ;
-; N/A   ; None         ; 44.400 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uA           ; Clock      ;
-; N/A   ; None         ; 44.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uB           ; Clock      ;
-; N/A   ; None         ; 44.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uB           ; Clock      ;
-; N/A   ; None         ; 44.100 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lF           ; Clock      ;
-; N/A   ; None         ; 44.100 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uA           ; Clock      ;
-; N/A   ; None         ; 44.000 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lG           ; Clock      ;
-; N/A   ; None         ; 44.000 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lG           ; Clock      ;
-; N/A   ; None         ; 44.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uB           ; UART_RX    ;
-; N/A   ; None         ; 43.800 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uA           ; UART_RX    ;
-; N/A   ; None         ; 43.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uA           ; UART_RX    ;
-; N/A   ; None         ; 43.400 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uB           ; UART_RX    ;
-; N/A   ; None         ; 43.000 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lC           ; Clock      ;
-; N/A   ; None         ; 43.000 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lC           ; Clock      ;
-; N/A   ; None         ; 43.000 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lC           ; Clock      ;
-; N/A   ; None         ; 43.000 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lB           ; Clock      ;
-; N/A   ; None         ; 43.000 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lB           ; Clock      ;
-; N/A   ; None         ; 43.000 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lB           ; Clock      ;
-; N/A   ; None         ; 42.700 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lC           ; Clock      ;
-; N/A   ; None         ; 42.700 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lB           ; Clock      ;
-; N/A   ; None         ; 42.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uF           ; Clock      ;
-; N/A   ; None         ; 42.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uD           ; Clock      ;
-; N/A   ; None         ; 42.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uC           ; Clock      ;
-; N/A   ; None         ; 42.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uC           ; Clock      ;
-; N/A   ; None         ; 42.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lE           ; Clock      ;
-; N/A   ; None         ; 42.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lE           ; Clock      ;
-; N/A   ; None         ; 42.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lD           ; Clock      ;
-; N/A   ; None         ; 42.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lD           ; Clock      ;
-; N/A   ; None         ; 42.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lA           ; Clock      ;
-; N/A   ; None         ; 42.600 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uE           ; Clock      ;
-; N/A   ; None         ; 42.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uG           ; Clock      ;
-; N/A   ; None         ; 42.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uF           ; UART_RX    ;
-; N/A   ; None         ; 42.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uD           ; UART_RX    ;
-; N/A   ; None         ; 42.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uC           ; UART_RX    ;
-; N/A   ; None         ; 42.400 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uF           ; Clock      ;
-; N/A   ; None         ; 42.400 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uD           ; Clock      ;
-; N/A   ; None         ; 42.300 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lA           ; Clock      ;
-; N/A   ; None         ; 42.300 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uG           ; Clock      ;
-; N/A   ; None         ; 42.300 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uE           ; Clock      ;
-; N/A   ; None         ; 42.300 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uE           ; UART_RX    ;
-; N/A   ; None         ; 42.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uF           ; UART_RX    ;
-; N/A   ; None         ; 42.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uD           ; UART_RX    ;
-; N/A   ; None         ; 42.100 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uG           ; Clock      ;
-; N/A   ; None         ; 42.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uE           ; UART_RX    ;
-; N/A   ; None         ; 41.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lG           ; Clock      ;
-; N/A   ; None         ; 41.900 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uC           ; UART_RX    ;
-; N/A   ; None         ; 41.800 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uG           ; UART_RX    ;
-; N/A   ; None         ; 41.700 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lF           ; UART_RX    ;
-; N/A   ; None         ; 41.700 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lF           ; UART_RX    ;
-; N/A   ; None         ; 41.700 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lF           ; UART_RX    ;
-; N/A   ; None         ; 41.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uA           ; UART_RX    ;
-; N/A   ; None         ; 41.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lG           ; Clock      ;
-; N/A   ; None         ; 41.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uB           ; UART_RX    ;
-; N/A   ; None         ; 41.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uB           ; UART_RX    ;
-; N/A   ; None         ; 41.400 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lF           ; UART_RX    ;
-; N/A   ; None         ; 41.400 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uA           ; UART_RX    ;
-; N/A   ; None         ; 41.300 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lG           ; UART_RX    ;
-; N/A   ; None         ; 41.300 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lG           ; UART_RX    ;
-; N/A   ; None         ; 41.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; Output_UN2   ; Clock      ;
-; N/A   ; None         ; 40.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; Output_LN3   ; Clock      ;
-; N/A   ; None         ; 40.700 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; Output_LN2   ; Clock      ;
-; N/A   ; None         ; 40.700 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; Output_LN0   ; Clock      ;
-; N/A   ; None         ; 40.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; Output_UN0   ; Clock      ;
-; N/A   ; None         ; 40.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; Output_LN1   ; Clock      ;
-; N/A   ; None         ; 40.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lE           ; Clock      ;
-; N/A   ; None         ; 40.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lD           ; Clock      ;
-; N/A   ; None         ; 40.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lA           ; Clock      ;
-; N/A   ; None         ; 40.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lA           ; Clock      ;
-; N/A   ; None         ; 40.300 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lC           ; UART_RX    ;
-; N/A   ; None         ; 40.300 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lC           ; UART_RX    ;
-; N/A   ; None         ; 40.300 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lC           ; UART_RX    ;
-; N/A   ; None         ; 40.300 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lB           ; UART_RX    ;
-; N/A   ; None         ; 40.300 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lB           ; UART_RX    ;
-; N/A   ; None         ; 40.300 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lB           ; UART_RX    ;
-; N/A   ; None         ; 40.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lE           ; Clock      ;
-; N/A   ; None         ; 40.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lD           ; Clock      ;
-; N/A   ; None         ; 40.000 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lC           ; UART_RX    ;
-; N/A   ; None         ; 40.000 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lB           ; UART_RX    ;
-; N/A   ; None         ; 40.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uF           ; UART_RX    ;
-; N/A   ; None         ; 40.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uD           ; UART_RX    ;
-; N/A   ; None         ; 40.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uC           ; UART_RX    ;
-; N/A   ; None         ; 40.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uC           ; UART_RX    ;
-; N/A   ; None         ; 39.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lE           ; UART_RX    ;
-; N/A   ; None         ; 39.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lE           ; UART_RX    ;
-; N/A   ; None         ; 39.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lD           ; UART_RX    ;
-; N/A   ; None         ; 39.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lD           ; UART_RX    ;
-; N/A   ; None         ; 39.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lA           ; UART_RX    ;
-; N/A   ; None         ; 39.900 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uE           ; UART_RX    ;
-; N/A   ; None         ; 39.800 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uG           ; UART_RX    ;
-; N/A   ; None         ; 39.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uF           ; UART_RX    ;
-; N/A   ; None         ; 39.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uD           ; UART_RX    ;
-; N/A   ; None         ; 39.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lA           ; UART_RX    ;
-; N/A   ; None         ; 39.600 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uG           ; UART_RX    ;
-; N/A   ; None         ; 39.600 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uE           ; UART_RX    ;
-; N/A   ; None         ; 39.400 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uG           ; UART_RX    ;
-; N/A   ; None         ; 39.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lG           ; UART_RX    ;
-; N/A   ; None         ; 38.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lG           ; UART_RX    ;
-; N/A   ; None         ; 38.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; Output_UN1   ; Clock      ;
-; N/A   ; None         ; 38.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; Output_UN3   ; Clock      ;
-; N/A   ; None         ; 38.300 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; Output_UN2   ; UART_RX    ;
-; N/A   ; None         ; 38.100 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; Output_LN3   ; UART_RX    ;
-; N/A   ; None         ; 38.000 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; Output_LN2   ; UART_RX    ;
-; N/A   ; None         ; 38.000 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; Output_LN0   ; UART_RX    ;
-; N/A   ; None         ; 38.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; Output_UN0   ; UART_RX    ;
-; N/A   ; None         ; 37.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; Output_LN1   ; UART_RX    ;
-; N/A   ; None         ; 37.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lE           ; UART_RX    ;
-; N/A   ; None         ; 37.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lD           ; UART_RX    ;
-; N/A   ; None         ; 37.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lA           ; UART_RX    ;
-; N/A   ; None         ; 37.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lA           ; UART_RX    ;
-; N/A   ; None         ; 37.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lE           ; UART_RX    ;
-; N/A   ; None         ; 37.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lD           ; UART_RX    ;
-; N/A   ; None         ; 36.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; Output_UN1   ; UART_RX    ;
-; N/A   ; None         ; 36.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; Output_UN3   ; UART_RX    ;
-; N/A   ; None         ; 32.800 ns  ; Delay_Function:inst28|inst47                               ; Stop_Bit     ; Clock      ;
-; N/A   ; None         ; 29.700 ns  ; Delay_Function:inst15|inst45                               ; Start_Bit    ; Clock      ;
-; N/A   ; None         ; 27.100 ns  ; inst49                                                     ; Status_Light ; Clock      ;
-; N/A   ; None         ; 26.800 ns  ; inst42                                                     ; Status_Light ; Clock      ;
+; N/A   ; None         ; 49.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lG           ; Clock      ;
+; N/A   ; None         ; 49.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lG           ; Clock      ;
+; N/A   ; None         ; 49.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lG           ; Clock      ;
+; N/A   ; None         ; 49.400 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uB           ; Clock      ;
+; N/A   ; None         ; 49.300 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lF           ; Clock      ;
+; N/A   ; None         ; 49.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uB           ; Clock      ;
+; N/A   ; None         ; 49.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uB           ; Clock      ;
+; N/A   ; None         ; 48.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lF           ; Clock      ;
+; N/A   ; None         ; 48.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lF           ; Clock      ;
+; N/A   ; None         ; 48.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uB           ; Clock      ;
+; N/A   ; None         ; 48.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lG           ; UART_RX    ;
+; N/A   ; None         ; 47.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lE           ; Clock      ;
+; N/A   ; None         ; 47.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lD           ; Clock      ;
+; N/A   ; None         ; 47.900 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uF           ; Clock      ;
+; N/A   ; None         ; 47.900 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uC           ; Clock      ;
+; N/A   ; None         ; 47.900 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uA           ; Clock      ;
+; N/A   ; None         ; 47.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lG           ; UART_RX    ;
+; N/A   ; None         ; 47.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lG           ; UART_RX    ;
+; N/A   ; None         ; 47.800 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uE           ; Clock      ;
+; N/A   ; None         ; 47.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uF           ; Clock      ;
+; N/A   ; None         ; 47.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uC           ; Clock      ;
+; N/A   ; None         ; 47.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uB           ; UART_RX    ;
+; N/A   ; None         ; 47.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lF           ; UART_RX    ;
+; N/A   ; None         ; 47.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lC           ; Clock      ;
+; N/A   ; None         ; 47.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lB           ; Clock      ;
+; N/A   ; None         ; 47.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lA           ; Clock      ;
+; N/A   ; None         ; 47.600 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uE           ; Clock      ;
+; N/A   ; None         ; 47.600 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uA           ; Clock      ;
+; N/A   ; None         ; 47.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lE           ; Clock      ;
+; N/A   ; None         ; 47.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lE           ; Clock      ;
+; N/A   ; None         ; 47.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lD           ; Clock      ;
+; N/A   ; None         ; 47.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lD           ; Clock      ;
+; N/A   ; None         ; 47.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lC           ; Clock      ;
+; N/A   ; None         ; 47.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lC           ; Clock      ;
+; N/A   ; None         ; 47.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lB           ; Clock      ;
+; N/A   ; None         ; 47.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lB           ; Clock      ;
+; N/A   ; None         ; 47.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uC           ; Clock      ;
+; N/A   ; None         ; 47.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uB           ; UART_RX    ;
+; N/A   ; None         ; 47.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uA           ; Clock      ;
+; N/A   ; None         ; 47.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uA           ; Clock      ;
+; N/A   ; None         ; 47.400 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uD           ; Clock      ;
+; N/A   ; None         ; 47.300 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uF           ; Clock      ;
+; N/A   ; None         ; 47.300 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uE           ; Clock      ;
+; N/A   ; None         ; 47.300 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uB           ; UART_RX    ;
+; N/A   ; None         ; 47.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lF           ; UART_RX    ;
+; N/A   ; None         ; 47.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lF           ; UART_RX    ;
+; N/A   ; None         ; 47.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lA           ; Clock      ;
+; N/A   ; None         ; 47.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uF           ; Clock      ;
+; N/A   ; None         ; 47.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uD           ; Clock      ;
+; N/A   ; None         ; 47.100 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uE           ; Clock      ;
+; N/A   ; None         ; 47.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uC           ; Clock      ;
+; N/A   ; None         ; 46.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lA           ; Clock      ;
+; N/A   ; None         ; 46.900 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uD           ; Clock      ;
+; N/A   ; None         ; 46.800 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uG           ; Clock      ;
+; N/A   ; None         ; 46.800 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uB           ; UART_RX    ;
+; N/A   ; None         ; 46.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uD           ; Clock      ;
+; N/A   ; None         ; 46.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uG           ; Clock      ;
+; N/A   ; None         ; 46.400 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uG           ; Clock      ;
+; N/A   ; None         ; 46.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lE           ; UART_RX    ;
+; N/A   ; None         ; 46.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lD           ; UART_RX    ;
+; N/A   ; None         ; 46.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uF           ; UART_RX    ;
+; N/A   ; None         ; 46.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uC           ; UART_RX    ;
+; N/A   ; None         ; 46.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uA           ; UART_RX    ;
+; N/A   ; None         ; 46.100 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uE           ; UART_RX    ;
+; N/A   ; None         ; 46.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uF           ; UART_RX    ;
+; N/A   ; None         ; 46.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uC           ; UART_RX    ;
+; N/A   ; None         ; 45.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lC           ; UART_RX    ;
+; N/A   ; None         ; 45.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lB           ; UART_RX    ;
+; N/A   ; None         ; 45.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lA           ; UART_RX    ;
+; N/A   ; None         ; 45.900 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uE           ; UART_RX    ;
+; N/A   ; None         ; 45.900 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uA           ; UART_RX    ;
+; N/A   ; None         ; 45.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lE           ; UART_RX    ;
+; N/A   ; None         ; 45.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lE           ; UART_RX    ;
+; N/A   ; None         ; 45.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lD           ; UART_RX    ;
+; N/A   ; None         ; 45.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lD           ; UART_RX    ;
+; N/A   ; None         ; 45.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lC           ; UART_RX    ;
+; N/A   ; None         ; 45.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lC           ; UART_RX    ;
+; N/A   ; None         ; 45.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lB           ; UART_RX    ;
+; N/A   ; None         ; 45.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lB           ; UART_RX    ;
+; N/A   ; None         ; 45.800 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uC           ; UART_RX    ;
+; N/A   ; None         ; 45.800 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uA           ; UART_RX    ;
+; N/A   ; None         ; 45.800 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uA           ; UART_RX    ;
+; N/A   ; None         ; 45.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uD           ; UART_RX    ;
+; N/A   ; None         ; 45.600 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uF           ; UART_RX    ;
+; N/A   ; None         ; 45.600 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uE           ; UART_RX    ;
+; N/A   ; None         ; 45.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lA           ; UART_RX    ;
+; N/A   ; None         ; 45.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uF           ; UART_RX    ;
+; N/A   ; None         ; 45.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uD           ; UART_RX    ;
+; N/A   ; None         ; 45.400 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uE           ; UART_RX    ;
+; N/A   ; None         ; 45.300 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uC           ; UART_RX    ;
+; N/A   ; None         ; 45.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lA           ; UART_RX    ;
+; N/A   ; None         ; 45.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uD           ; UART_RX    ;
+; N/A   ; None         ; 45.100 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; uG           ; UART_RX    ;
+; N/A   ; None         ; 45.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uD           ; UART_RX    ;
+; N/A   ; None         ; 44.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lG           ; Clock      ;
+; N/A   ; None         ; 44.800 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; uG           ; UART_RX    ;
+; N/A   ; None         ; 44.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; uG           ; UART_RX    ;
+; N/A   ; None         ; 44.700 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uG           ; Clock      ;
+; N/A   ; None         ; 43.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lA           ; Clock      ;
+; N/A   ; None         ; 43.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lG           ; UART_RX    ;
+; N/A   ; None         ; 43.000 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; uG           ; UART_RX    ;
+; N/A   ; None         ; 42.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; Output_LN0   ; Clock      ;
+; N/A   ; None         ; 42.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; Output_UN2   ; Clock      ;
+; N/A   ; None         ; 42.300 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lF           ; Clock      ;
+; N/A   ; None         ; 42.300 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; Output_LN2   ; Clock      ;
+; N/A   ; None         ; 42.300 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; Output_UN1   ; Clock      ;
+; N/A   ; None         ; 42.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; Output_LN1   ; Clock      ;
+; N/A   ; None         ; 42.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; Output_UN3   ; Clock      ;
+; N/A   ; None         ; 41.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lA           ; UART_RX    ;
+; N/A   ; None         ; 41.900 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; Output_UN0   ; Clock      ;
+; N/A   ; None         ; 41.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; Output_LN3   ; Clock      ;
+; N/A   ; None         ; 41.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lC           ; Clock      ;
+; N/A   ; None         ; 41.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lB           ; Clock      ;
+; N/A   ; None         ; 40.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lE           ; Clock      ;
+; N/A   ; None         ; 40.900 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lD           ; Clock      ;
+; N/A   ; None         ; 40.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; Output_LN0   ; UART_RX    ;
+; N/A   ; None         ; 40.800 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; Output_UN2   ; UART_RX    ;
+; N/A   ; None         ; 40.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lF           ; UART_RX    ;
+; N/A   ; None         ; 40.600 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; Output_LN2   ; UART_RX    ;
+; N/A   ; None         ; 40.600 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; Output_UN1   ; UART_RX    ;
+; N/A   ; None         ; 40.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; Output_LN1   ; UART_RX    ;
+; N/A   ; None         ; 40.500 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; Output_UN3   ; UART_RX    ;
+; N/A   ; None         ; 40.200 ns  ; lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; Output_UN0   ; UART_RX    ;
+; N/A   ; None         ; 39.800 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; Output_LN3   ; UART_RX    ;
+; N/A   ; None         ; 39.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lC           ; UART_RX    ;
+; N/A   ; None         ; 39.500 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lB           ; UART_RX    ;
+; N/A   ; None         ; 39.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lE           ; UART_RX    ;
+; N/A   ; None         ; 39.200 ns  ; lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lD           ; UART_RX    ;
+; N/A   ; None         ; 30.400 ns  ; Delay_Function:inst28|inst47                               ; Stop_Bit     ; Clock      ;
+; N/A   ; None         ; 30.300 ns  ; Delay_Function:inst15|inst45                               ; Start_Bit    ; Clock      ;
+; N/A   ; None         ; 30.300 ns  ; inst39                                                     ; Start_Bit    ; Clock      ;
+; N/A   ; None         ; 28.300 ns  ; inst49                                                     ; Status_Light ; Clock      ;
+; N/A   ; None         ; 28.000 ns  ; inst42                                                     ; Status_Light ; Clock      ;
 +-------+--------------+------------+------------------------------------------------------------+--------------+------------+
 
 
@@ -496,8 +499,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+-------------------+-----------------+---------+-----------+
 ; Slack ; Required P2P Time ; Actual P2P Time ; From    ; To        ;
 +-------+-------------------+-----------------+---------+-----------+
-; N/A   ; None              ; 30.500 ns       ; UART_RX ; Start_Bit ;
-; N/A   ; None              ; 30.100 ns       ; UART_RX ; Stop_Bit  ;
+; N/A   ; None              ; 29.000 ns       ; Reset   ; Start_Bit ;
+; N/A   ; None              ; 28.900 ns       ; UART_RX ; Start_Bit ;
+; N/A   ; None              ; 28.700 ns       ; UART_RX ; Stop_Bit  ;
 +-------+-------------------+-----------------+---------+-----------+
 
 
@@ -506,12 +510,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------+-------------+-----------+---------+----------------------------+----------+
 ; Minimum Slack ; Required th ; Actual th ; From    ; To                         ; To Clock ;
 +---------------+-------------+-----------+---------+----------------------------+----------+
-; N/A           ; None        ; -3.100 ns ; UART_RX ; inst56                     ; Clock    ;
-; N/A           ; None        ; -3.100 ns ; UART_RX ; Delay_Function:inst15|inst ; Clock    ;
-; N/A           ; None        ; -3.400 ns ; UART_RX ; inst18                     ; Clock    ;
-; N/A           ; None        ; -3.900 ns ; UART_RX ; Delay_Function:inst|inst   ; Clock    ;
-; N/A           ; None        ; -5.500 ns ; UART_RX ; inst42                     ; Clock    ;
-; N/A           ; None        ; -6.300 ns ; UART_RX ; inst49                     ; Clock    ;
+; N/A           ; None        ; 0.900 ns  ; UART_RX ; Delay_Function:inst15|inst ; Clock    ;
+; N/A           ; None        ; 0.600 ns  ; UART_RX ; inst18                     ; Clock    ;
+; N/A           ; None        ; 0.600 ns  ; UART_RX ; Delay_Function:inst|inst   ; Clock    ;
+; N/A           ; None        ; 0.500 ns  ; Reset   ; inst39                     ; Clock    ;
+; N/A           ; None        ; 0.500 ns  ; Reset   ; Delay_Function:inst|inst   ; Clock    ;
+; N/A           ; None        ; -0.800 ns ; UART_RX ; inst56                     ; Clock    ;
+; N/A           ; None        ; -2.300 ns ; UART_RX ; inst49                     ; Clock    ;
+; N/A           ; None        ; -3.700 ns ; UART_RX ; inst42                     ; Clock    ;
+; N/A           ; None        ; -7.300 ns ; Reset   ; inst42                     ; Clock    ;
 +---------------+-------------+-----------+---------+----------------------------+----------+
 
 
@@ -521,7 +528,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Oct 08 17:46:04 2013
+    Info: Processing started: Tue Oct 22 17:49:14 2013
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off design4TJN -c design4TJN
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
@@ -557,103 +564,107 @@ Warning: Found 11 node(s) in clock paths which may be acting as ripple and/or ga
     Info: Detected gated clock "inst53" as buffer
     Info: Detected ripple clock "inst3" as buffer
     Info: Detected ripple clock "Delay_Function:inst28|inst47" as buffer
-Info: Clock "Clock" has Internal fmax of 58.14 MHz between source register "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6]" and destination register "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6]" (period= 17.2 ns)
-    Info: + Longest register to register delay is 13.200 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC7_C27; Fanout = 3; REG Node = 'lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6]'
-        Info: 2: + IC(2.900 ns) + CELL(2.700 ns) = 5.600 ns; Loc. = LC1_C29; Fanout = 1; COMB Node = 'lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end|aeb_out'
-        Info: 3: + IC(2.700 ns) + CELL(2.700 ns) = 11.000 ns; Loc. = LC8_C27; Fanout = 7; COMB Node = 'lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out'
-        Info: 4: + IC(0.500 ns) + CELL(1.700 ns) = 13.200 ns; Loc. = LC7_C27; Fanout = 3; REG Node = 'lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6]'
-        Info: Total cell delay = 7.100 ns ( 53.79 % )
-        Info: Total interconnect delay = 6.100 ns ( 46.21 % )
-    Info: - Smallest clock skew is 0.000 ns
-        Info: + Shortest clock path from clock "Clock" to destination register is 7.000 ns
+Info: Clock "Clock" has Internal fmax of 57.47 MHz between source register "inst56" and destination register "inst29" (period= 17.4 ns)
+    Info: + Longest register to register delay is 6.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC2_D19; Fanout = 8; REG Node = 'inst56'
+        Info: 2: + IC(3.300 ns) + CELL(2.700 ns) = 6.000 ns; Loc. = LC2_D20; Fanout = 1; REG Node = 'inst29'
+        Info: Total cell delay = 2.700 ns ( 45.00 % )
+        Info: Total interconnect delay = 3.300 ns ( 55.00 % )
+    Info: - Smallest clock skew is 4.300 ns
+        Info: + Shortest clock path from clock "Clock" to destination register is 21.800 ns
             Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 8; CLK Node = 'Clock'
-            Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC7_C27; Fanout = 3; REG Node = 'lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6]'
-            Info: Total cell delay = 2.900 ns ( 41.43 % )
-            Info: Total interconnect delay = 4.100 ns ( 58.57 % )
-        Info: - Longest clock path from clock "Clock" to source register is 7.000 ns
+            Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_B30; Fanout = 309; REG Node = 'inst3'
+            Info: 3: + IC(9.100 ns) + CELL(1.400 ns) = 18.900 ns; Loc. = LC1_D20; Fanout = 2; REG Node = 'Delay_Function:inst10|inst47'
+            Info: 4: + IC(0.500 ns) + CELL(2.400 ns) = 21.800 ns; Loc. = LC2_D20; Fanout = 1; REG Node = 'inst29'
+            Info: Total cell delay = 8.100 ns ( 37.16 % )
+            Info: Total interconnect delay = 13.700 ns ( 62.84 % )
+        Info: - Longest clock path from clock "Clock" to source register is 17.500 ns
             Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 8; CLK Node = 'Clock'
-            Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC7_C27; Fanout = 3; REG Node = 'lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6]'
-            Info: Total cell delay = 2.900 ns ( 41.43 % )
-            Info: Total interconnect delay = 4.100 ns ( 58.57 % )
+            Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_B30; Fanout = 309; REG Node = 'inst3'
+            Info: 3: + IC(9.100 ns) + CELL(0.000 ns) = 17.500 ns; Loc. = LC2_D19; Fanout = 8; REG Node = 'inst56'
+            Info: Total cell delay = 4.300 ns ( 24.57 % )
+            Info: Total interconnect delay = 13.200 ns ( 75.43 % )
     Info: + Micro clock to output delay of source is 1.400 ns
-    Info: + Micro setup delay of destination is 2.600 ns
-Warning: Circuit may not operate. Detected 12 non-operational path(s) clocked by clock "Clock" with clock skew larger than data delay. See Compilation Report for details.
-Info: Found hold time violation between source  pin or register "inst56" and destination pin or register "inst32" for clock "Clock" (Hold time is 5.0 ns)
-    Info: + Largest clock skew is 9.600 ns
-        Info: + Longest clock path from clock "Clock" to destination register is 24.500 ns
+    Info: + Micro setup delay of destination is 5.600 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Warning: Circuit may not operate. Detected 11 non-operational path(s) clocked by clock "Clock" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "inst33" and destination pin or register "lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0]" for clock "Clock" (Hold time is 6.8 ns)
+    Info: + Largest clock skew is 10.000 ns
+        Info: + Longest clock path from clock "Clock" to destination register is 31.800 ns
             Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 8; CLK Node = 'Clock'
-            Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_C30; Fanout = 308; REG Node = 'inst3'
-            Info: 3: + IC(6.500 ns) + CELL(1.400 ns) = 16.300 ns; Loc. = LC1_G22; Fanout = 2; REG Node = 'Delay_Function:inst|inst47'
-            Info: 4: + IC(5.800 ns) + CELL(2.400 ns) = 24.500 ns; Loc. = LC2_A29; Fanout = 1; REG Node = 'inst32'
-            Info: Total cell delay = 8.100 ns ( 33.06 % )
-            Info: Total interconnect delay = 16.400 ns ( 66.94 % )
-        Info: - Shortest clock path from clock "Clock" to source register is 14.900 ns
+            Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_B30; Fanout = 309; REG Node = 'inst3'
+            Info: 3: + IC(9.100 ns) + CELL(1.400 ns) = 18.900 ns; Loc. = LC4_H34; Fanout = 2; REG Node = 'Delay_Function:inst28|inst47'
+            Info: 4: + IC(0.500 ns) + CELL(2.700 ns) = 22.100 ns; Loc. = LC5_H34; Fanout = 9; COMB Node = 'inst53'
+            Info: 5: + IC(7.300 ns) + CELL(2.400 ns) = 31.800 ns; Loc. = LC5_D17; Fanout = 8; REG Node = 'lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0]'
+            Info: Total cell delay = 10.800 ns ( 33.96 % )
+            Info: Total interconnect delay = 21.000 ns ( 66.04 % )
+        Info: - Shortest clock path from clock "Clock" to source register is 21.800 ns
             Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 8; CLK Node = 'Clock'
-            Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_C30; Fanout = 308; REG Node = 'inst3'
-            Info: 3: + IC(6.500 ns) + CELL(0.000 ns) = 14.900 ns; Loc. = LC1_A29; Fanout = 8; REG Node = 'inst56'
-            Info: Total cell delay = 4.300 ns ( 28.86 % )
-            Info: Total interconnect delay = 10.600 ns ( 71.14 % )
-    Info: - Micro clock to output delay of source is 1.400 ns
+            Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_B30; Fanout = 309; REG Node = 'inst3'
+            Info: 3: + IC(9.100 ns) + CELL(1.400 ns) = 18.900 ns; Loc. = LC2_D17; Fanout = 2; REG Node = 'Delay_Function:inst16|inst47'
+            Info: 4: + IC(0.500 ns) + CELL(2.400 ns) = 21.800 ns; Loc. = LC3_D17; Fanout = 1; REG Node = 'inst33'
+            Info: Total cell delay = 8.100 ns ( 37.16 % )
+            Info: Total interconnect delay = 13.700 ns ( 62.84 % )
+    Info: - Micro clock to output delay of source is 0.000 ns
     Info: - Shortest register to register delay is 3.200 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC1_A29; Fanout = 8; REG Node = 'inst56'
-        Info: 2: + IC(0.500 ns) + CELL(2.700 ns) = 3.200 ns; Loc. = LC2_A29; Fanout = 1; REG Node = 'inst32'
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3_D17; Fanout = 1; REG Node = 'inst33'
+        Info: 2: + IC(0.500 ns) + CELL(2.700 ns) = 3.200 ns; Loc. = LC5_D17; Fanout = 8; REG Node = 'lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0]'
         Info: Total cell delay = 2.700 ns ( 84.38 % )
         Info: Total interconnect delay = 0.500 ns ( 15.63 % )
     Info: + Micro hold delay of destination is 0.000 ns
-    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
-Info: tsu for register "inst49" (data pin = "UART_RX", clock pin = "Clock") is 12.000 ns
-    Info: + Longest pin to register delay is 24.300 ns
-        Info: 1: + IC(0.000 ns) + CELL(10.300 ns) = 10.300 ns; Loc. = PIN_45; Fanout = 8; CLK Node = 'UART_RX'
-        Info: 2: + IC(9.100 ns) + CELL(2.400 ns) = 21.800 ns; Loc. = LC7_F21; Fanout = 1; COMB Node = 'inst19'
-        Info: 3: + IC(0.500 ns) + CELL(2.000 ns) = 24.300 ns; Loc. = LC4_F21; Fanout = 5; REG Node = 'inst49'
-        Info: Total cell delay = 14.700 ns ( 60.49 % )
-        Info: Total interconnect delay = 9.600 ns ( 39.51 % )
+Info: tsu for register "inst42" (data pin = "Reset", clock pin = "Clock") is 13.000 ns
+    Info: + Longest pin to register delay is 27.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(10.300 ns) = 10.300 ns; Loc. = PIN_29; Fanout = 5; PIN Node = 'Reset'
+        Info: 2: + IC(8.100 ns) + CELL(2.400 ns) = 20.800 ns; Loc. = LC8_H34; Fanout = 1; COMB Node = 'inst44'
+        Info: 3: + IC(0.500 ns) + CELL(2.700 ns) = 24.000 ns; Loc. = LC1_H34; Fanout = 1; COMB Node = 'inst43'
+        Info: 4: + IC(2.700 ns) + CELL(1.200 ns) = 27.900 ns; Loc. = LC4_H35; Fanout = 5; REG Node = 'inst42'
+        Info: Total cell delay = 16.600 ns ( 59.50 % )
+        Info: Total interconnect delay = 11.300 ns ( 40.50 % )
     Info: + Micro setup delay of destination is 2.600 ns
-    Info: - Shortest clock path from clock "Clock" to destination register is 14.900 ns
+    Info: - Shortest clock path from clock "Clock" to destination register is 17.500 ns
         Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 8; CLK Node = 'Clock'
-        Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_C30; Fanout = 308; REG Node = 'inst3'
-        Info: 3: + IC(6.500 ns) + CELL(0.000 ns) = 14.900 ns; Loc. = LC4_F21; Fanout = 5; REG Node = 'inst49'
-        Info: Total cell delay = 4.300 ns ( 28.86 % )
-        Info: Total interconnect delay = 10.600 ns ( 71.14 % )
-Info: tco from clock "Clock" to destination pin "uB" through register "lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2]" is 46.700 ns
-    Info: + Longest clock path from clock "Clock" to source register is 29.700 ns
+        Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_B30; Fanout = 309; REG Node = 'inst3'
+        Info: 3: + IC(9.100 ns) + CELL(0.000 ns) = 17.500 ns; Loc. = LC4_H35; Fanout = 5; REG Node = 'inst42'
+        Info: Total cell delay = 4.300 ns ( 24.57 % )
+        Info: Total interconnect delay = 13.200 ns ( 75.43 % )
+Info: tco from clock "Clock" to destination pin "lG" through register "lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0]" is 49.900 ns
+    Info: + Longest clock path from clock "Clock" to source register is 31.800 ns
         Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 8; CLK Node = 'Clock'
-        Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_C30; Fanout = 308; REG Node = 'inst3'
-        Info: 3: + IC(6.500 ns) + CELL(1.400 ns) = 16.300 ns; Loc. = LC2_F21; Fanout = 2; REG Node = 'Delay_Function:inst28|inst47'
-        Info: 4: + IC(5.500 ns) + CELL(2.700 ns) = 24.500 ns; Loc. = LC2_A30; Fanout = 9; COMB Node = 'inst53'
-        Info: 5: + IC(2.800 ns) + CELL(2.400 ns) = 29.700 ns; Loc. = LC5_A27; Fanout = 8; REG Node = 'lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2]'
-        Info: Total cell delay = 10.800 ns ( 36.36 % )
-        Info: Total interconnect delay = 18.900 ns ( 63.64 % )
+        Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_B30; Fanout = 309; REG Node = 'inst3'
+        Info: 3: + IC(9.100 ns) + CELL(1.400 ns) = 18.900 ns; Loc. = LC4_H34; Fanout = 2; REG Node = 'Delay_Function:inst28|inst47'
+        Info: 4: + IC(0.500 ns) + CELL(2.700 ns) = 22.100 ns; Loc. = LC5_H34; Fanout = 9; COMB Node = 'inst53'
+        Info: 5: + IC(7.300 ns) + CELL(2.400 ns) = 31.800 ns; Loc. = LC5_D17; Fanout = 8; REG Node = 'lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0]'
+        Info: Total cell delay = 10.800 ns ( 33.96 % )
+        Info: Total interconnect delay = 21.000 ns ( 66.04 % )
     Info: + Micro clock to output delay of source is 0.000 ns
-    Info: + Longest register to pin delay is 17.000 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC5_A27; Fanout = 8; REG Node = 'lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2]'
-        Info: 2: + IC(5.200 ns) + CELL(2.700 ns) = 7.900 ns; Loc. = LC8_C38; Fanout = 1; COMB Node = '7_Segment_Decoder:inst24|inst32~0'
-        Info: 3: + IC(4.100 ns) + CELL(5.000 ns) = 17.000 ns; Loc. = PIN_18; Fanout = 0; PIN Node = 'uB'
-        Info: Total cell delay = 7.700 ns ( 45.29 % )
-        Info: Total interconnect delay = 9.300 ns ( 54.71 % )
-Info: Longest tpd from source pin "UART_RX" to destination pin "Start_Bit" is 30.500 ns
-    Info: 1: + IC(0.000 ns) + CELL(10.300 ns) = 10.300 ns; Loc. = PIN_45; Fanout = 8; CLK Node = 'UART_RX'
-    Info: 2: + IC(10.400 ns) + CELL(2.400 ns) = 23.100 ns; Loc. = LC2_F2; Fanout = 1; COMB Node = 'inst17'
-    Info: 3: + IC(2.400 ns) + CELL(5.000 ns) = 30.500 ns; Loc. = PIN_148; Fanout = 0; PIN Node = 'Start_Bit'
-    Info: Total cell delay = 17.700 ns ( 58.03 % )
-    Info: Total interconnect delay = 12.800 ns ( 41.97 % )
-Info: th for register "inst56" (data pin = "UART_RX", clock pin = "Clock") is -3.100 ns
-    Info: + Longest clock path from clock "Clock" to destination register is 14.900 ns
+    Info: + Longest register to pin delay is 18.100 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC5_D17; Fanout = 8; REG Node = 'lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0]'
+        Info: 2: + IC(6.500 ns) + CELL(2.700 ns) = 9.200 ns; Loc. = LC3_A47; Fanout = 1; COMB Node = '7_Segment_Decoder:inst26|inst7~0'
+        Info: 3: + IC(3.900 ns) + CELL(5.000 ns) = 18.100 ns; Loc. = PIN_13; Fanout = 0; PIN Node = 'lG'
+        Info: Total cell delay = 7.700 ns ( 42.54 % )
+        Info: Total interconnect delay = 10.400 ns ( 57.46 % )
+Info: Longest tpd from source pin "Reset" to destination pin "Start_Bit" is 29.000 ns
+    Info: 1: + IC(0.000 ns) + CELL(10.300 ns) = 10.300 ns; Loc. = PIN_29; Fanout = 5; PIN Node = 'Reset'
+    Info: 2: + IC(8.100 ns) + CELL(2.400 ns) = 20.800 ns; Loc. = LC2_H34; Fanout = 1; COMB Node = 'inst45'
+    Info: 3: + IC(3.200 ns) + CELL(5.000 ns) = 29.000 ns; Loc. = PIN_136; Fanout = 0; PIN Node = 'Start_Bit'
+    Info: Total cell delay = 17.700 ns ( 61.03 % )
+    Info: Total interconnect delay = 11.300 ns ( 38.97 % )
+Info: th for register "Delay_Function:inst15|inst" (data pin = "UART_RX", clock pin = "Clock") is 0.900 ns
+    Info: + Longest clock path from clock "Clock" to destination register is 17.500 ns
         Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_91; Fanout = 8; CLK Node = 'Clock'
-        Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_C30; Fanout = 308; REG Node = 'inst3'
-        Info: 3: + IC(6.500 ns) + CELL(0.000 ns) = 14.900 ns; Loc. = LC1_A29; Fanout = 8; REG Node = 'inst56'
-        Info: Total cell delay = 4.300 ns ( 28.86 % )
-        Info: Total interconnect delay = 10.600 ns ( 71.14 % )
+        Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_B30; Fanout = 309; REG Node = 'inst3'
+        Info: 3: + IC(9.100 ns) + CELL(0.000 ns) = 17.500 ns; Loc. = LC1_H35; Fanout = 1; REG Node = 'Delay_Function:inst15|inst'
+        Info: Total cell delay = 4.300 ns ( 24.57 % )
+        Info: Total interconnect delay = 13.200 ns ( 75.43 % )
     Info: + Micro hold delay of destination is 3.100 ns
-    Info: - Shortest pin to register delay is 21.100 ns
+    Info: - Shortest pin to register delay is 19.700 ns
         Info: 1: + IC(0.000 ns) + CELL(10.300 ns) = 10.300 ns; Loc. = PIN_45; Fanout = 8; CLK Node = 'UART_RX'
-        Info: 2: + IC(9.100 ns) + CELL(1.700 ns) = 21.100 ns; Loc. = LC1_A29; Fanout = 8; REG Node = 'inst56'
-        Info: Total cell delay = 12.000 ns ( 56.87 % )
-        Info: Total interconnect delay = 9.100 ns ( 43.13 % )
+        Info: 2: + IC(7.700 ns) + CELL(1.700 ns) = 19.700 ns; Loc. = LC1_H35; Fanout = 1; REG Node = 'Delay_Function:inst15|inst'
+        Info: Total cell delay = 12.000 ns ( 60.91 % )
+        Info: Total interconnect delay = 7.700 ns ( 39.09 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 20 warnings
     Info: Peak virtual memory: 174 megabytes
-    Info: Processing ended: Tue Oct 08 17:46:04 2013
+    Info: Processing ended: Tue Oct 22 17:49:14 2013
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
