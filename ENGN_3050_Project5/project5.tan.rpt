@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for project5
-Thu Oct 24 12:55:38 2013
+Tue Oct 29 20:04:05 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -9,9 +9,14 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   1. Legal Notice
   2. Timing Analyzer Summary
   3. Timing Analyzer Settings
-  4. Parallel Compilation
-  5. tpd
-  6. Timing Analyzer Messages
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'Sim_CLK'
+  7. Clock Hold: 'Sim_CLK'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
 
 
 
@@ -34,14 +39,18 @@ applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                               ;
-+------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time ; From ; To ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
-; Worst-case tpd               ; N/A   ; None          ; 20.700 ns   ; GO   ; 1  ; --         ; --       ; 0            ;
-; Total number of failed paths ;       ;               ;             ;      ;    ;            ;          ; 0            ;
-+------------------------------+-------+---------------+-------------+------+----+------------+----------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                                                     ;
++------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                                                       ; To                                                                         ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 13.000 ns                        ; UART_Recieve                                                               ; design4TJN:inst|inst42                                                     ; --         ; Sim_CLK  ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 37.400 ns                        ; design4TJN:inst|inst4                                                      ; q0                                                                         ; Sim_CLK    ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; -0.800 ns                        ; UART_Recieve                                                               ; design4TJN:inst|Delay_Function:inst15|inst                                 ; --         ; Sim_CLK  ; 0            ;
+; Clock Setup: 'Sim_CLK'       ; N/A                                      ; None          ; 26.74 MHz ( period = 37.400 ns ) ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; design4TJN:inst|inst2                                                      ; Sim_CLK    ; Sim_CLK  ; 0            ;
+; Clock Hold: 'Sim_CLK'        ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; design4TJN:inst|inst31                                                     ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; Sim_CLK    ; Sim_CLK  ; 9            ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                                                            ;                                                                            ;            ;          ; 9            ;
++------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------+----------+--------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -76,6 +85,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------+--------------------+------+----+-------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Sim_CLK         ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; UART_Recieve    ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
 Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
 +-------------------------------------+
 ; Parallel Compilation                ;
@@ -87,20 +106,450 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------+
-; tpd                                                     ;
-+-------+-------------------+-----------------+------+----+
-; Slack ; Required P2P Time ; Actual P2P Time ; From ; To ;
-+-------+-------------------+-----------------+------+----+
-; N/A   ; None              ; 20.700 ns       ; STOP ; 3  ;
-; N/A   ; None              ; 20.700 ns       ; GO   ; 2  ;
-; N/A   ; None              ; 20.700 ns       ; GO   ; 1  ;
-; N/A   ; None              ; 20.600 ns       ; STOP ; 4  ;
-; N/A   ; None              ; 20.400 ns       ; GO   ; 3  ;
-; N/A   ; None              ; 20.400 ns       ; STOP ; 2  ;
-; N/A   ; None              ; 20.400 ns       ; STOP ; 1  ;
-; N/A   ; None              ; 20.300 ns       ; GO   ; 4  ;
-+-------+-------------------+-----------------+------+----+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'Sim_CLK'                                                                                                                                                                                                                                                                                                                ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------------------------------------+----------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                                                       ; To                                           ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------------------------------------+----------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 26.74 MHz ( period = 37.400 ns )                    ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; design4TJN:inst|inst2                        ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; 26.88 MHz ( period = 37.200 ns )                    ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; design4TJN:inst|inst7                        ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; 26.88 MHz ( period = 37.200 ns )                    ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; design4TJN:inst|inst4                        ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; 27.03 MHz ( period = 37.000 ns )                    ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; design4TJN:inst|inst3                        ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; 27.32 MHz ( period = 36.600 ns )                    ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; design4TJN:inst|inst1                        ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; 28.25 MHz ( period = 35.400 ns )                    ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; design4TJN:inst|inst9                        ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; 28.57 MHz ( period = 35.000 ns )                    ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; design4TJN:inst|inst11                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; 29.24 MHz ( period = 34.200 ns )                    ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; design4TJN:inst|inst5                        ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; 49.50 MHz ( period = 20.200 ns )                    ; design4TJN:inst|inst47                                                     ; design4TJN:inst|inst30                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 50.51 MHz ( period = 19.800 ns )                    ; design4TJN:inst|inst47                                                     ; design4TJN:inst|inst32                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 7.200 ns                ;
+; N/A                                     ; 50.51 MHz ( period = 19.800 ns )                    ; design4TJN:inst|inst47                                                     ; design4TJN:inst|inst31                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 7.200 ns                ;
+; N/A                                     ; 54.35 MHz ( period = 18.400 ns )                    ; design4TJN:inst|inst47                                                     ; design4TJN:inst|inst34                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 6.500 ns                ;
+; N/A                                     ; 54.95 MHz ( period = 18.200 ns )                    ; design4TJN:inst|inst47                                                     ; design4TJN:inst|inst37                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 6.400 ns                ;
+; N/A                                     ; 56.82 MHz ( period = 17.600 ns )                    ; design4TJN:inst|inst47                                                     ; design4TJN:inst|inst33                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 6.100 ns                ;
+; N/A                                     ; 75.19 MHz ( period = 13.300 ns )                    ; design4TJN:inst|Delay_Function:inst28|inst47                               ; inst37                                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 9.300 ns                ;
+; N/A                                     ; 84.75 MHz ( period = 11.800 ns )                    ; design4TJN:inst|inst39                                                     ; design4TJN:inst|inst42                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 7.800 ns                ;
+; N/A                                     ; 84.75 MHz ( period = 11.800 ns )                    ; design4TJN:inst|Delay_Function:inst15|inst45                               ; design4TJN:inst|inst42                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 7.800 ns                ;
+; N/A                                     ; 86.96 MHz ( period = 11.500 ns )                    ; design4TJN:inst|Delay_Function:inst10|inst23                               ; design4TJN:inst|Delay_Function:inst10|inst27 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 7.500 ns                ;
+; N/A                                     ; 87.72 MHz ( period = 11.400 ns )                    ; design4TJN:inst|Delay_Function:inst28|inst47                               ; design4TJN:inst|inst42                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 7.400 ns                ;
+; N/A                                     ; 87.72 MHz ( period = 11.400 ns )                    ; design4TJN:inst|inst47                                                     ; design4TJN:inst|inst36                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 7.300 ns                ;
+; N/A                                     ; 90.09 MHz ( period = 11.100 ns )                    ; inst24                                                                     ; inst37                                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 7.100 ns                ;
+; N/A                                     ; 93.46 MHz ( period = 10.700 ns )                    ; design4TJN:inst|Delay_Function:inst16|inst39                               ; design4TJN:inst|Delay_Function:inst16|inst43 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 6.700 ns                ;
+; N/A                                     ; 94.34 MHz ( period = 10.600 ns )                    ; design4TJN:inst|Delay_Function:inst23|inst47                               ; design4TJN:inst|Delay_Function:inst25|inst   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 6.600 ns                ;
+; N/A                                     ; 98.04 MHz ( period = 10.200 ns )                    ; design4TJN:inst|Delay_Function:inst23|inst22                               ; design4TJN:inst|Delay_Function:inst23|inst26 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 6.200 ns                ;
+; N/A                                     ; 98.04 MHz ( period = 10.200 ns )                    ; design4TJN:inst|Delay_Function:inst25|inst33                               ; design4TJN:inst|Delay_Function:inst25|inst37 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 6.200 ns                ;
+; N/A                                     ; 98.04 MHz ( period = 10.200 ns )                    ; design4TJN:inst|Delay_Function:inst10|inst44                               ; design4TJN:inst|Delay_Function:inst10|inst17 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 6.200 ns                ;
+; N/A                                     ; 99.01 MHz ( period = 10.100 ns )                    ; design4TJN:inst|Delay_Function:inst|inst33                                 ; design4TJN:inst|Delay_Function:inst|inst37   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 6.100 ns                ;
+; N/A                                     ; 101.01 MHz ( period = 9.900 ns )                    ; design4TJN:inst|Delay_Function:inst8|inst43                                ; design4TJN:inst|Delay_Function:inst8|inst47  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 5.900 ns                ;
+; N/A                                     ; 103.09 MHz ( period = 9.700 ns )                    ; design4TJN:inst|inst49                                                     ; design4TJN:inst|inst49                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 5.700 ns                ;
+; N/A                                     ; 104.17 MHz ( period = 9.600 ns )                    ; design4TJN:inst|Delay_Function:inst25|inst39                               ; design4TJN:inst|Delay_Function:inst25|inst43 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 5.600 ns                ;
+; N/A                                     ; 104.17 MHz ( period = 9.600 ns )                    ; design4TJN:inst|Delay_Function:inst23|inst25                               ; design4TJN:inst|Delay_Function:inst23|inst29 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 5.600 ns                ;
+; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; design4TJN:inst|Delay_Function:inst28|inst19                               ; design4TJN:inst|Delay_Function:inst28|inst23 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 5.500 ns                ;
+; N/A                                     ; 105.26 MHz ( period = 9.500 ns )                    ; design4TJN:inst|Delay_Function:inst25|inst36                               ; design4TJN:inst|Delay_Function:inst25|inst40 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 5.500 ns                ;
+; N/A                                     ; 106.38 MHz ( period = 9.400 ns )                    ; design4TJN:inst|inst42                                                     ; design4TJN:inst|inst49                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 5.400 ns                ;
+; N/A                                     ; 106.38 MHz ( period = 9.400 ns )                    ; design4TJN:inst|inst47                                                     ; design4TJN:inst|inst29                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 7.300 ns                ;
+; N/A                                     ; 107.53 MHz ( period = 9.300 ns )                    ; design4TJN:inst|Delay_Function:inst28|inst                                 ; design4TJN:inst|Delay_Function:inst28|inst20 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 5.300 ns                ;
+; N/A                                     ; 111.11 MHz ( period = 9.000 ns )                    ; design4TJN:inst|inst42                                                     ; design4TJN:inst|Delay_Function:inst15|inst   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 5.000 ns                ;
+; N/A                                     ; 111.11 MHz ( period = 9.000 ns )                    ; design4TJN:inst|inst49                                                     ; design4TJN:inst|Delay_Function:inst15|inst   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 5.000 ns                ;
+; N/A                                     ; 111.11 MHz ( period = 9.000 ns )                    ; design4TJN:inst|inst18                                                     ; design4TJN:inst|inst49                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 5.000 ns                ;
+; N/A                                     ; 111.11 MHz ( period = 9.000 ns )                    ; design4TJN:inst|inst49                                                     ; design4TJN:inst|inst18                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 5.000 ns                ;
+; N/A                                     ; 113.64 MHz ( period = 8.800 ns )                    ; design4TJN:inst|Delay_Function:inst23|inst19                               ; design4TJN:inst|Delay_Function:inst23|inst23 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.800 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; design4TJN:inst|Delay_Function:inst28|inst47                               ; inst22                                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; design4TJN:inst|Delay_Function:inst10|inst33                               ; design4TJN:inst|Delay_Function:inst10|inst37 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; design4TJN:inst|Delay_Function:inst28|inst40                               ; design4TJN:inst|Delay_Function:inst28|inst44 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; design4TJN:inst|Delay_Function:inst8|inst24                                ; design4TJN:inst|Delay_Function:inst8|inst28  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; design4TJN:inst|Delay_Function:inst|inst                                   ; design4TJN:inst|Delay_Function:inst|inst20   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; design4TJN:inst|Delay_Function:inst6|inst                                  ; design4TJN:inst|Delay_Function:inst6|inst20  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; design4TJN:inst|Delay_Function:inst15|inst41                               ; design4TJN:inst|Delay_Function:inst15|inst45 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 114.94 MHz ( period = 8.700 ns )                    ; design4TJN:inst|inst42                                                     ; design4TJN:inst|inst18                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.700 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; design4TJN:inst|Delay_Function:inst|inst31                                 ; design4TJN:inst|Delay_Function:inst|inst35   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; design4TJN:inst|Delay_Function:inst28|inst26                               ; design4TJN:inst|Delay_Function:inst28|inst30 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; design4TJN:inst|Delay_Function:inst25|inst30                               ; design4TJN:inst|Delay_Function:inst25|inst34 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; design4TJN:inst|Delay_Function:inst16|inst18                               ; design4TJN:inst|Delay_Function:inst16|inst22 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 116.28 MHz ( period = 8.600 ns )                    ; design4TJN:inst|Delay_Function:inst6|inst40                                ; design4TJN:inst|Delay_Function:inst6|inst44  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.600 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst6|inst39                                ; design4TJN:inst|Delay_Function:inst6|inst43  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst27|inst39                               ; design4TJN:inst|Delay_Function:inst27|inst43 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst8|inst46                                ; design4TJN:inst|Delay_Function:inst8|inst19  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst27|inst38                               ; design4TJN:inst|Delay_Function:inst27|inst42 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst|inst30                                 ; design4TJN:inst|Delay_Function:inst|inst34   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst8|inst18                                ; design4TJN:inst|Delay_Function:inst8|inst22  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst28|inst33                               ; design4TJN:inst|Delay_Function:inst28|inst37 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst27|inst37                               ; design4TJN:inst|Delay_Function:inst27|inst41 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst16|inst29                               ; design4TJN:inst|Delay_Function:inst16|inst33 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst27|inst25                               ; design4TJN:inst|Delay_Function:inst27|inst29 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst16|inst40                               ; design4TJN:inst|Delay_Function:inst16|inst44 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst27|inst24                               ; design4TJN:inst|Delay_Function:inst27|inst28 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst23|inst24                               ; design4TJN:inst|Delay_Function:inst23|inst28 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 117.65 MHz ( period = 8.500 ns )                    ; design4TJN:inst|Delay_Function:inst10|inst20                               ; design4TJN:inst|Delay_Function:inst10|inst24 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; design4TJN:inst|Delay_Function:inst6|inst19                                ; design4TJN:inst|Delay_Function:inst6|inst23  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; design4TJN:inst|Delay_Function:inst25|inst19                               ; design4TJN:inst|Delay_Function:inst25|inst23 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; design4TJN:inst|Delay_Function:inst16|inst38                               ; design4TJN:inst|Delay_Function:inst16|inst42 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; design4TJN:inst|Delay_Function:inst6|inst34                                ; design4TJN:inst|Delay_Function:inst6|inst38  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; design4TJN:inst|Delay_Function:inst10|inst26                               ; design4TJN:inst|Delay_Function:inst10|inst30 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; design4TJN:inst|Delay_Function:inst6|inst37                                ; design4TJN:inst|Delay_Function:inst6|inst41  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; design4TJN:inst|Delay_Function:inst8|inst17                                ; design4TJN:inst|Delay_Function:inst8|inst21  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; design4TJN:inst|Delay_Function:inst|inst44                                 ; design4TJN:inst|Delay_Function:inst|inst17   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; design4TJN:inst|Delay_Function:inst10|inst47                               ; design4TJN:inst|Delay_Function:inst16|inst   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; 119.05 MHz ( period = 8.400 ns )                    ; design4TJN:inst|Delay_Function:inst15|inst40                               ; design4TJN:inst|Delay_Function:inst15|inst44 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 4.400 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|inst39                                                     ; design4TJN:inst|Delay_Function:inst|inst     ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.500 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst45                               ; design4TJN:inst|Delay_Function:inst|inst     ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.500 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|inst18                                                     ; design4TJN:inst|Delay_Function:inst15|inst   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.500 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst45                               ; design4TJN:inst|inst49                       ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.500 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst16|inst37                               ; design4TJN:inst|Delay_Function:inst16|inst41 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst25|inst37                               ; design4TJN:inst|Delay_Function:inst25|inst41 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst23|inst37                               ; design4TJN:inst|Delay_Function:inst23|inst41 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst28|inst29                               ; design4TJN:inst|Delay_Function:inst28|inst33 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst8|inst33                                ; design4TJN:inst|Delay_Function:inst8|inst37  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst6|inst33                                ; design4TJN:inst|Delay_Function:inst6|inst37  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst16|inst33                               ; design4TJN:inst|Delay_Function:inst16|inst37 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst27|inst33                               ; design4TJN:inst|Delay_Function:inst27|inst37 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst23|inst33                               ; design4TJN:inst|Delay_Function:inst23|inst37 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst28|inst25                               ; design4TJN:inst|Delay_Function:inst28|inst29 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst|inst29                                 ; design4TJN:inst|Delay_Function:inst|inst33   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst10|inst29                               ; design4TJN:inst|Delay_Function:inst10|inst33 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst8|inst29                                ; design4TJN:inst|Delay_Function:inst8|inst33  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst6|inst29                                ; design4TJN:inst|Delay_Function:inst6|inst33  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst27|inst29                               ; design4TJN:inst|Delay_Function:inst27|inst33 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst25|inst29                               ; design4TJN:inst|Delay_Function:inst25|inst33 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst23|inst29                               ; design4TJN:inst|Delay_Function:inst23|inst33 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst28|inst21                               ; design4TJN:inst|Delay_Function:inst28|inst25 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst|inst25                                 ; design4TJN:inst|Delay_Function:inst|inst29   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst10|inst25                               ; design4TJN:inst|Delay_Function:inst10|inst29 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst8|inst25                                ; design4TJN:inst|Delay_Function:inst8|inst29  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst6|inst25                                ; design4TJN:inst|Delay_Function:inst6|inst29  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst16|inst25                               ; design4TJN:inst|Delay_Function:inst16|inst29 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst25|inst25                               ; design4TJN:inst|Delay_Function:inst25|inst29 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst28|inst17                               ; design4TJN:inst|Delay_Function:inst28|inst21 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst|inst21                                 ; design4TJN:inst|Delay_Function:inst|inst25   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst10|inst21                               ; design4TJN:inst|Delay_Function:inst10|inst25 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst8|inst21                                ; design4TJN:inst|Delay_Function:inst8|inst25  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst6|inst21                                ; design4TJN:inst|Delay_Function:inst6|inst25  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst16|inst21                               ; design4TJN:inst|Delay_Function:inst16|inst25 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst27|inst21                               ; design4TJN:inst|Delay_Function:inst27|inst25 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst25|inst21                               ; design4TJN:inst|Delay_Function:inst25|inst25 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst23|inst21                               ; design4TJN:inst|Delay_Function:inst23|inst25 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst28|inst44                               ; design4TJN:inst|Delay_Function:inst28|inst17 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst|inst17                                 ; design4TJN:inst|Delay_Function:inst|inst21   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst10|inst17                               ; design4TJN:inst|Delay_Function:inst10|inst21 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst6|inst17                                ; design4TJN:inst|Delay_Function:inst6|inst21  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst16|inst17                               ; design4TJN:inst|Delay_Function:inst16|inst21 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst27|inst17                               ; design4TJN:inst|Delay_Function:inst27|inst21 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst25|inst17                               ; design4TJN:inst|Delay_Function:inst25|inst21 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst23|inst17                               ; design4TJN:inst|Delay_Function:inst23|inst21 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst8|inst44                                ; design4TJN:inst|Delay_Function:inst8|inst17  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst6|inst44                                ; design4TJN:inst|Delay_Function:inst6|inst17  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst16|inst44                               ; design4TJN:inst|Delay_Function:inst16|inst17 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst27|inst44                               ; design4TJN:inst|Delay_Function:inst27|inst17 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst25|inst44                               ; design4TJN:inst|Delay_Function:inst25|inst17 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst23|inst44                               ; design4TJN:inst|Delay_Function:inst23|inst17 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst28|inst36                               ; design4TJN:inst|Delay_Function:inst28|inst40 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst|inst40                                 ; design4TJN:inst|Delay_Function:inst|inst44   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst10|inst40                               ; design4TJN:inst|Delay_Function:inst10|inst44 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst8|inst40                                ; design4TJN:inst|Delay_Function:inst8|inst44  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst27|inst40                               ; design4TJN:inst|Delay_Function:inst27|inst44 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst25|inst40                               ; design4TJN:inst|Delay_Function:inst25|inst44 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst23|inst40                               ; design4TJN:inst|Delay_Function:inst23|inst44 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst28|inst32                               ; design4TJN:inst|Delay_Function:inst28|inst36 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst|inst36                                 ; design4TJN:inst|Delay_Function:inst|inst40   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst10|inst36                               ; design4TJN:inst|Delay_Function:inst10|inst40 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst8|inst36                                ; design4TJN:inst|Delay_Function:inst8|inst40  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst6|inst36                                ; design4TJN:inst|Delay_Function:inst6|inst40  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst16|inst36                               ; design4TJN:inst|Delay_Function:inst16|inst40 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst27|inst36                               ; design4TJN:inst|Delay_Function:inst27|inst40 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst23|inst36                               ; design4TJN:inst|Delay_Function:inst23|inst40 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst28|inst28                               ; design4TJN:inst|Delay_Function:inst28|inst32 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst|inst32                                 ; design4TJN:inst|Delay_Function:inst|inst36   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst10|inst32                               ; design4TJN:inst|Delay_Function:inst10|inst36 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst8|inst32                                ; design4TJN:inst|Delay_Function:inst8|inst36  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst6|inst32                                ; design4TJN:inst|Delay_Function:inst6|inst36  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst16|inst32                               ; design4TJN:inst|Delay_Function:inst16|inst36 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst27|inst32                               ; design4TJN:inst|Delay_Function:inst27|inst36 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst25|inst32                               ; design4TJN:inst|Delay_Function:inst25|inst36 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst23|inst32                               ; design4TJN:inst|Delay_Function:inst23|inst36 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst28|inst24                               ; design4TJN:inst|Delay_Function:inst28|inst28 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst|inst28                                 ; design4TJN:inst|Delay_Function:inst|inst32   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst10|inst28                               ; design4TJN:inst|Delay_Function:inst10|inst32 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst8|inst28                                ; design4TJN:inst|Delay_Function:inst8|inst32  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst6|inst28                                ; design4TJN:inst|Delay_Function:inst6|inst32  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst16|inst28                               ; design4TJN:inst|Delay_Function:inst16|inst32 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst27|inst28                               ; design4TJN:inst|Delay_Function:inst27|inst32 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst25|inst28                               ; design4TJN:inst|Delay_Function:inst25|inst32 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst23|inst28                               ; design4TJN:inst|Delay_Function:inst23|inst32 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst28|inst20                               ; design4TJN:inst|Delay_Function:inst28|inst24 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst|inst24                                 ; design4TJN:inst|Delay_Function:inst|inst28   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst10|inst24                               ; design4TJN:inst|Delay_Function:inst10|inst28 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst6|inst24                                ; design4TJN:inst|Delay_Function:inst6|inst28  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst16|inst24                               ; design4TJN:inst|Delay_Function:inst16|inst28 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst25|inst24                               ; design4TJN:inst|Delay_Function:inst25|inst28 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst|inst20                                 ; design4TJN:inst|Delay_Function:inst|inst24   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst8|inst20                                ; design4TJN:inst|Delay_Function:inst8|inst24  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst6|inst20                                ; design4TJN:inst|Delay_Function:inst6|inst24  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst16|inst20                               ; design4TJN:inst|Delay_Function:inst16|inst24 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst27|inst20                               ; design4TJN:inst|Delay_Function:inst27|inst24 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst25|inst20                               ; design4TJN:inst|Delay_Function:inst25|inst24 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst23|inst20                               ; design4TJN:inst|Delay_Function:inst23|inst24 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst27|inst47                               ; design4TJN:inst|Delay_Function:inst28|inst   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst10|inst                                 ; design4TJN:inst|Delay_Function:inst10|inst20 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst8|inst                                  ; design4TJN:inst|Delay_Function:inst8|inst20  ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst16|inst                                 ; design4TJN:inst|Delay_Function:inst16|inst20 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst27|inst                                 ; design4TJN:inst|Delay_Function:inst27|inst20 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst25|inst                                 ; design4TJN:inst|Delay_Function:inst25|inst20 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst23|inst                                 ; design4TJN:inst|Delay_Function:inst23|inst20 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst8|inst47                                ; design4TJN:inst|Delay_Function:inst10|inst   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst6|inst47                                ; design4TJN:inst|Delay_Function:inst8|inst    ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst|inst47                                 ; design4TJN:inst|Delay_Function:inst6|inst    ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst25|inst47                               ; design4TJN:inst|Delay_Function:inst27|inst   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst16|inst47                               ; design4TJN:inst|Delay_Function:inst23|inst   ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst37                               ; design4TJN:inst|Delay_Function:inst15|inst41 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst33                               ; design4TJN:inst|Delay_Function:inst15|inst37 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst29                               ; design4TJN:inst|Delay_Function:inst15|inst33 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst25                               ; design4TJN:inst|Delay_Function:inst15|inst29 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst21                               ; design4TJN:inst|Delay_Function:inst15|inst25 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst17                               ; design4TJN:inst|Delay_Function:inst15|inst21 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst44                               ; design4TJN:inst|Delay_Function:inst15|inst17 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst36                               ; design4TJN:inst|Delay_Function:inst15|inst40 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst32                               ; design4TJN:inst|Delay_Function:inst15|inst36 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst28                               ; design4TJN:inst|Delay_Function:inst15|inst32 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst24                               ; design4TJN:inst|Delay_Function:inst15|inst28 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst20                               ; design4TJN:inst|Delay_Function:inst15|inst24 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; N/A                                     ; Restricted to 125.00 MHz ( period = 8.000 ns )      ; design4TJN:inst|Delay_Function:inst15|inst                                 ; design4TJN:inst|Delay_Function:inst15|inst20 ; Sim_CLK    ; Sim_CLK  ; None                        ; None                      ; 2.200 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                                            ;                                              ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------------------------------------+----------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'Sim_CLK'                                                                                                                                                                                                                                       ;
++------------------------------------------+------------------------+----------------------------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                   ; To                                                                         ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+------------------------+----------------------------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; design4TJN:inst|inst31 ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; Sim_CLK    ; Sim_CLK  ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; design4TJN:inst|inst30 ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; Sim_CLK    ; Sim_CLK  ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; design4TJN:inst|inst32 ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; Sim_CLK    ; Sim_CLK  ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; design4TJN:inst|inst34 ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; Sim_CLK    ; Sim_CLK  ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; design4TJN:inst|inst37 ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; Sim_CLK    ; Sim_CLK  ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; design4TJN:inst|inst33 ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; Sim_CLK    ; Sim_CLK  ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; design4TJN:inst|inst36 ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; Sim_CLK    ; Sim_CLK  ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; design4TJN:inst|inst29 ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; Sim_CLK    ; Sim_CLK  ; None                       ; None                       ; 3.200 ns                 ;
+; Not operational: Clock Skew > Data Delay ; design4TJN:inst|inst47 ; design4TJN:inst|inst29                                                     ; Sim_CLK    ; Sim_CLK  ; None                       ; None                       ; 7.300 ns                 ;
++------------------------------------------+------------------------+----------------------------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                      ;
++-------+--------------+------------+--------------+--------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From         ; To                                         ; To Clock ;
++-------+--------------+------------+--------------+--------------------------------------------+----------+
+; N/A   ; None         ; 13.000 ns  ; UART_Recieve ; design4TJN:inst|inst42                     ; Sim_CLK  ;
+; N/A   ; None         ; 12.400 ns  ; UART_Recieve ; inst37                                     ; Sim_CLK  ;
+; N/A   ; None         ; 12.400 ns  ; Rst_UART     ; design4TJN:inst|inst42                     ; Sim_CLK  ;
+; N/A   ; None         ; 10.900 ns  ; UART_Recieve ; design4TJN:inst|inst49                     ; Sim_CLK  ;
+; N/A   ; None         ; 7.800 ns   ; UART_Recieve ; inst22                                     ; Sim_CLK  ;
+; N/A   ; None         ; 7.800 ns   ; UART_Recieve ; design4TJN:inst|inst47                     ; Sim_CLK  ;
+; N/A   ; None         ; 7.700 ns   ; UART_Recieve ; design4TJN:inst|Delay_Function:inst|inst   ; Sim_CLK  ;
+; N/A   ; None         ; 7.100 ns   ; Rst_UART     ; design4TJN:inst|Delay_Function:inst|inst   ; Sim_CLK  ;
+; N/A   ; None         ; 7.100 ns   ; Rst_UART     ; design4TJN:inst|inst39                     ; Sim_CLK  ;
+; N/A   ; None         ; 6.800 ns   ; UART_Recieve ; design4TJN:inst|inst18                     ; Sim_CLK  ;
+; N/A   ; None         ; 6.500 ns   ; UART_Recieve ; design4TJN:inst|Delay_Function:inst15|inst ; Sim_CLK  ;
++-------+--------------+------------+--------------+--------------------------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                    ;
++-------+--------------+------------+----------------------------------------------------------------------------+--------+--------------+
+; Slack ; Required tco ; Actual tco ; From                                                                       ; To     ; From Clock   ;
++-------+--------------+------------+----------------------------------------------------------------------------+--------+--------------+
+; N/A   ; None         ; 37.400 ns  ; design4TJN:inst|inst4                                                      ; q0     ; Sim_CLK      ;
+; N/A   ; None         ; 37.300 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UB     ; Sim_CLK      ;
+; N/A   ; None         ; 37.300 ns  ; design4TJN:inst|inst7                                                      ; q0     ; Sim_CLK      ;
+; N/A   ; None         ; 37.300 ns  ; design4TJN:inst|inst2                                                      ; q0     ; Sim_CLK      ;
+; N/A   ; None         ; 37.200 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UA     ; Sim_CLK      ;
+; N/A   ; None         ; 37.200 ns  ; design4TJN:inst|inst1                                                      ; q0     ; Sim_CLK      ;
+; N/A   ; None         ; 36.900 ns  ; design4TJN:inst|inst3                                                      ; q0     ; Sim_CLK      ;
+; N/A   ; None         ; 36.400 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UB     ; UART_Recieve ;
+; N/A   ; None         ; 36.300 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UB     ; Sim_CLK      ;
+; N/A   ; None         ; 36.300 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UA     ; UART_Recieve ;
+; N/A   ; None         ; 35.600 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UG     ; Sim_CLK      ;
+; N/A   ; None         ; 35.600 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UF     ; Sim_CLK      ;
+; N/A   ; None         ; 35.600 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UE     ; Sim_CLK      ;
+; N/A   ; None         ; 35.600 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UA     ; Sim_CLK      ;
+; N/A   ; None         ; 35.600 ns  ; design4TJN:inst|inst11                                                     ; q0     ; Sim_CLK      ;
+; N/A   ; None         ; 35.600 ns  ; design4TJN:inst|inst9                                                      ; q0     ; Sim_CLK      ;
+; N/A   ; None         ; 35.500 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UC     ; Sim_CLK      ;
+; N/A   ; None         ; 35.400 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UB     ; UART_Recieve ;
+; N/A   ; None         ; 35.300 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lG     ; Sim_CLK      ;
+; N/A   ; None         ; 35.300 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lF     ; Sim_CLK      ;
+; N/A   ; None         ; 35.300 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lE     ; Sim_CLK      ;
+; N/A   ; None         ; 35.300 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lD     ; Sim_CLK      ;
+; N/A   ; None         ; 35.300 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lC     ; Sim_CLK      ;
+; N/A   ; None         ; 35.300 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lB     ; Sim_CLK      ;
+; N/A   ; None         ; 35.300 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UB     ; Sim_CLK      ;
+; N/A   ; None         ; 35.300 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UA     ; Sim_CLK      ;
+; N/A   ; None         ; 35.300 ns  ; design4TJN:inst|inst4                                                      ; 3      ; Sim_CLK      ;
+; N/A   ; None         ; 35.200 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UD     ; Sim_CLK      ;
+; N/A   ; None         ; 35.200 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UB     ; Sim_CLK      ;
+; N/A   ; None         ; 35.200 ns  ; design4TJN:inst|inst7                                                      ; 3      ; Sim_CLK      ;
+; N/A   ; None         ; 35.200 ns  ; design4TJN:inst|inst2                                                      ; 3      ; Sim_CLK      ;
+; N/A   ; None         ; 35.100 ns  ; design4TJN:inst|inst1                                                      ; 3      ; Sim_CLK      ;
+; N/A   ; None         ; 35.000 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lA     ; Sim_CLK      ;
+; N/A   ; None         ; 34.900 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UG     ; Sim_CLK      ;
+; N/A   ; None         ; 34.900 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UF     ; Sim_CLK      ;
+; N/A   ; None         ; 34.900 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UE     ; Sim_CLK      ;
+; N/A   ; None         ; 34.800 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lE     ; Sim_CLK      ;
+; N/A   ; None         ; 34.800 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lD     ; Sim_CLK      ;
+; N/A   ; None         ; 34.800 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lC     ; Sim_CLK      ;
+; N/A   ; None         ; 34.800 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lB     ; Sim_CLK      ;
+; N/A   ; None         ; 34.800 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lA     ; Sim_CLK      ;
+; N/A   ; None         ; 34.800 ns  ; design4TJN:inst|inst3                                                      ; 3      ; Sim_CLK      ;
+; N/A   ; None         ; 34.700 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lG     ; Sim_CLK      ;
+; N/A   ; None         ; 34.700 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lF     ; Sim_CLK      ;
+; N/A   ; None         ; 34.700 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UG     ; UART_Recieve ;
+; N/A   ; None         ; 34.700 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UF     ; UART_Recieve ;
+; N/A   ; None         ; 34.700 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UE     ; UART_Recieve ;
+; N/A   ; None         ; 34.700 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UA     ; UART_Recieve ;
+; N/A   ; None         ; 34.600 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lG     ; Sim_CLK      ;
+; N/A   ; None         ; 34.600 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lF     ; Sim_CLK      ;
+; N/A   ; None         ; 34.600 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lC     ; Sim_CLK      ;
+; N/A   ; None         ; 34.600 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lB     ; Sim_CLK      ;
+; N/A   ; None         ; 34.600 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lA     ; Sim_CLK      ;
+; N/A   ; None         ; 34.600 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UC     ; UART_Recieve ;
+; N/A   ; None         ; 34.500 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UD     ; Sim_CLK      ;
+; N/A   ; None         ; 34.500 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UC     ; Sim_CLK      ;
+; N/A   ; None         ; 34.400 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lG     ; UART_Recieve ;
+; N/A   ; None         ; 34.400 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lF     ; UART_Recieve ;
+; N/A   ; None         ; 34.400 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lE     ; UART_Recieve ;
+; N/A   ; None         ; 34.400 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lE     ; Sim_CLK      ;
+; N/A   ; None         ; 34.400 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lD     ; UART_Recieve ;
+; N/A   ; None         ; 34.400 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lD     ; Sim_CLK      ;
+; N/A   ; None         ; 34.400 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lC     ; UART_Recieve ;
+; N/A   ; None         ; 34.400 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lB     ; UART_Recieve ;
+; N/A   ; None         ; 34.400 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lA     ; Sim_CLK      ;
+; N/A   ; None         ; 34.400 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UB     ; UART_Recieve ;
+; N/A   ; None         ; 34.400 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UA     ; UART_Recieve ;
+; N/A   ; None         ; 34.400 ns  ; design4TJN:inst|inst7                                                      ; q1     ; Sim_CLK      ;
+; N/A   ; None         ; 34.300 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lE     ; Sim_CLK      ;
+; N/A   ; None         ; 34.300 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lD     ; Sim_CLK      ;
+; N/A   ; None         ; 34.300 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3] ; UD     ; UART_Recieve ;
+; N/A   ; None         ; 34.300 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UB     ; UART_Recieve ;
+; N/A   ; None         ; 34.100 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lC     ; Sim_CLK      ;
+; N/A   ; None         ; 34.100 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lB     ; Sim_CLK      ;
+; N/A   ; None         ; 34.100 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lA     ; UART_Recieve ;
+; N/A   ; None         ; 34.100 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UG     ; Sim_CLK      ;
+; N/A   ; None         ; 34.100 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UF     ; Sim_CLK      ;
+; N/A   ; None         ; 34.100 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UE     ; Sim_CLK      ;
+; N/A   ; None         ; 34.000 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UG     ; UART_Recieve ;
+; N/A   ; None         ; 34.000 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UF     ; UART_Recieve ;
+; N/A   ; None         ; 34.000 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UE     ; UART_Recieve ;
+; N/A   ; None         ; 34.000 ns  ; design4TJN:inst|inst4                                                      ; 1      ; Sim_CLK      ;
+; N/A   ; None         ; 33.900 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lE     ; UART_Recieve ;
+; N/A   ; None         ; 33.900 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lD     ; UART_Recieve ;
+; N/A   ; None         ; 33.900 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lC     ; UART_Recieve ;
+; N/A   ; None         ; 33.900 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lB     ; UART_Recieve ;
+; N/A   ; None         ; 33.900 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; lA     ; UART_Recieve ;
+; N/A   ; None         ; 33.900 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UG     ; Sim_CLK      ;
+; N/A   ; None         ; 33.900 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UF     ; Sim_CLK      ;
+; N/A   ; None         ; 33.900 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UE     ; Sim_CLK      ;
+; N/A   ; None         ; 33.900 ns  ; design4TJN:inst|inst7                                                      ; 1      ; Sim_CLK      ;
+; N/A   ; None         ; 33.900 ns  ; design4TJN:inst|inst2                                                      ; 1      ; Sim_CLK      ;
+; N/A   ; None         ; 33.800 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lG     ; UART_Recieve ;
+; N/A   ; None         ; 33.800 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lF     ; UART_Recieve ;
+; N/A   ; None         ; 33.800 ns  ; design4TJN:inst|inst1                                                      ; 1      ; Sim_CLK      ;
+; N/A   ; None         ; 33.700 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lG     ; UART_Recieve ;
+; N/A   ; None         ; 33.700 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lF     ; UART_Recieve ;
+; N/A   ; None         ; 33.700 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lC     ; UART_Recieve ;
+; N/A   ; None         ; 33.700 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lB     ; UART_Recieve ;
+; N/A   ; None         ; 33.700 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lA     ; UART_Recieve ;
+; N/A   ; None         ; 33.700 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UD     ; Sim_CLK      ;
+; N/A   ; None         ; 33.600 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UD     ; UART_Recieve ;
+; N/A   ; None         ; 33.600 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1] ; UC     ; UART_Recieve ;
+; N/A   ; None         ; 33.500 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lE     ; UART_Recieve ;
+; N/A   ; None         ; 33.500 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lD     ; UART_Recieve ;
+; N/A   ; None         ; 33.500 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lA     ; UART_Recieve ;
+; N/A   ; None         ; 33.500 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UD     ; Sim_CLK      ;
+; N/A   ; None         ; 33.500 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UC     ; Sim_CLK      ;
+; N/A   ; None         ; 33.500 ns  ; design4TJN:inst|inst11                                                     ; 3      ; Sim_CLK      ;
+; N/A   ; None         ; 33.500 ns  ; design4TJN:inst|inst9                                                      ; 3      ; Sim_CLK      ;
+; N/A   ; None         ; 33.500 ns  ; design4TJN:inst|inst3                                                      ; 1      ; Sim_CLK      ;
+; N/A   ; None         ; 33.400 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lE     ; UART_Recieve ;
+; N/A   ; None         ; 33.400 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3] ; lD     ; UART_Recieve ;
+; N/A   ; None         ; 33.400 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UC     ; Sim_CLK      ;
+; N/A   ; None         ; 33.200 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lC     ; UART_Recieve ;
+; N/A   ; None         ; 33.200 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; lB     ; UART_Recieve ;
+; N/A   ; None         ; 33.200 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UG     ; UART_Recieve ;
+; N/A   ; None         ; 33.200 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UF     ; UART_Recieve ;
+; N/A   ; None         ; 33.200 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UE     ; UART_Recieve ;
+; N/A   ; None         ; 33.000 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UG     ; UART_Recieve ;
+; N/A   ; None         ; 33.000 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UF     ; UART_Recieve ;
+; N/A   ; None         ; 33.000 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UE     ; UART_Recieve ;
+; N/A   ; None         ; 33.000 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UA     ; Sim_CLK      ;
+; N/A   ; None         ; 32.800 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UD     ; UART_Recieve ;
+; N/A   ; None         ; 32.700 ns  ; design4TJN:inst|inst11                                                     ; q1     ; Sim_CLK      ;
+; N/A   ; None         ; 32.700 ns  ; design4TJN:inst|inst9                                                      ; q1     ; Sim_CLK      ;
+; N/A   ; None         ; 32.600 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UD     ; UART_Recieve ;
+; N/A   ; None         ; 32.600 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UC     ; UART_Recieve ;
+; N/A   ; None         ; 32.500 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0] ; UC     ; UART_Recieve ;
+; N/A   ; None         ; 32.500 ns  ; design4TJN:inst|inst4                                                      ; q1     ; Sim_CLK      ;
+; N/A   ; None         ; 32.500 ns  ; design4TJN:inst|inst3                                                      ; q1     ; Sim_CLK      ;
+; N/A   ; None         ; 32.200 ns  ; design4TJN:inst|inst2                                                      ; q1     ; Sim_CLK      ;
+; N/A   ; None         ; 32.200 ns  ; design4TJN:inst|inst11                                                     ; 1      ; Sim_CLK      ;
+; N/A   ; None         ; 32.200 ns  ; design4TJN:inst|inst9                                                      ; 1      ; Sim_CLK      ;
+; N/A   ; None         ; 32.100 ns  ; design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2] ; UA     ; UART_Recieve ;
+; N/A   ; None         ; 32.000 ns  ; design4TJN:inst|inst1                                                      ; q1     ; Sim_CLK      ;
+; N/A   ; None         ; 31.700 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lG     ; Sim_CLK      ;
+; N/A   ; None         ; 31.700 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lF     ; Sim_CLK      ;
+; N/A   ; None         ; 30.800 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lG     ; UART_Recieve ;
+; N/A   ; None         ; 30.800 ns  ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; lF     ; UART_Recieve ;
+; N/A   ; None         ; 28.900 ns  ; design4TJN:inst|inst7                                                      ; sel1   ; Sim_CLK      ;
+; N/A   ; None         ; 27.200 ns  ; design4TJN:inst|inst11                                                     ; sel1   ; Sim_CLK      ;
+; N/A   ; None         ; 27.200 ns  ; design4TJN:inst|inst9                                                      ; sel1   ; Sim_CLK      ;
+; N/A   ; None         ; 27.000 ns  ; design4TJN:inst|inst4                                                      ; sel1   ; Sim_CLK      ;
+; N/A   ; None         ; 27.000 ns  ; design4TJN:inst|inst3                                                      ; sel1   ; Sim_CLK      ;
+; N/A   ; None         ; 26.900 ns  ; design4TJN:inst|inst4                                                      ; sel2   ; Sim_CLK      ;
+; N/A   ; None         ; 26.900 ns  ; design4TJN:inst|inst4                                                      ; sel0   ; Sim_CLK      ;
+; N/A   ; None         ; 26.800 ns  ; design4TJN:inst|inst2                                                      ; sel2   ; Sim_CLK      ;
+; N/A   ; None         ; 26.800 ns  ; design4TJN:inst|inst2                                                      ; sel0   ; Sim_CLK      ;
+; N/A   ; None         ; 26.700 ns  ; design4TJN:inst|inst1                                                      ; sel2   ; Sim_CLK      ;
+; N/A   ; None         ; 26.700 ns  ; design4TJN:inst|inst2                                                      ; sel1   ; Sim_CLK      ;
+; N/A   ; None         ; 26.700 ns  ; design4TJN:inst|inst1                                                      ; sel0   ; Sim_CLK      ;
+; N/A   ; None         ; 26.500 ns  ; design4TJN:inst|inst1                                                      ; sel1   ; Sim_CLK      ;
+; N/A   ; None         ; 26.400 ns  ; design4TJN:inst|inst7                                                      ; sel2   ; Sim_CLK      ;
+; N/A   ; None         ; 26.400 ns  ; design4TJN:inst|inst3                                                      ; sel2   ; Sim_CLK      ;
+; N/A   ; None         ; 26.400 ns  ; design4TJN:inst|inst7                                                      ; sel0   ; Sim_CLK      ;
+; N/A   ; None         ; 26.400 ns  ; design4TJN:inst|inst3                                                      ; sel0   ; Sim_CLK      ;
+; N/A   ; None         ; 24.700 ns  ; design4TJN:inst|inst11                                                     ; sel2   ; Sim_CLK      ;
+; N/A   ; None         ; 24.700 ns  ; design4TJN:inst|inst9                                                      ; sel2   ; Sim_CLK      ;
+; N/A   ; None         ; 24.700 ns  ; design4TJN:inst|inst11                                                     ; sel0   ; Sim_CLK      ;
+; N/A   ; None         ; 24.700 ns  ; design4TJN:inst|inst9                                                      ; sel0   ; Sim_CLK      ;
+; N/A   ; None         ; 21.900 ns  ; inst37                                                                     ; q1     ; Sim_CLK      ;
+; N/A   ; None         ; 21.600 ns  ; inst37                                                                     ; q0     ; Sim_CLK      ;
+; N/A   ; None         ; 19.500 ns  ; inst37                                                                     ; 3      ; Sim_CLK      ;
+; N/A   ; None         ; 18.800 ns  ; design4TJN:inst|inst4                                                      ; UP3    ; Sim_CLK      ;
+; N/A   ; None         ; 18.700 ns  ; design4TJN:inst|inst1                                                      ; UP0    ; Sim_CLK      ;
+; N/A   ; None         ; 18.700 ns  ; design4TJN:inst|inst2                                                      ; UP1    ; Sim_CLK      ;
+; N/A   ; None         ; 18.500 ns  ; design4TJN:inst|inst7                                                      ; LN1    ; Sim_CLK      ;
+; N/A   ; None         ; 18.500 ns  ; inst37                                                                     ; 1      ; Sim_CLK      ;
+; N/A   ; None         ; 18.100 ns  ; design4TJN:inst|inst3                                                      ; UP2    ; Sim_CLK      ;
+; N/A   ; None         ; 16.400 ns  ; inst37                                                                     ; enable ; Sim_CLK      ;
+; N/A   ; None         ; 16.000 ns  ; design4TJN:inst|inst5                                                      ; LN0    ; Sim_CLK      ;
+; N/A   ; None         ; 16.000 ns  ; design4TJN:inst|inst11                                                     ; LN3    ; Sim_CLK      ;
+; N/A   ; None         ; 15.900 ns  ; design4TJN:inst|inst9                                                      ; LN2    ; Sim_CLK      ;
++-------+--------------+------------+----------------------------------------------------------------------------+--------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; th                                                                                                             ;
++---------------+-------------+-----------+--------------+--------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From         ; To                                         ; To Clock ;
++---------------+-------------+-----------+--------------+--------------------------------------------+----------+
+; N/A           ; None        ; -0.800 ns ; UART_Recieve ; design4TJN:inst|Delay_Function:inst15|inst ; Sim_CLK  ;
+; N/A           ; None        ; -1.100 ns ; UART_Recieve ; design4TJN:inst|inst18                     ; Sim_CLK  ;
+; N/A           ; None        ; -1.400 ns ; Rst_UART     ; design4TJN:inst|Delay_Function:inst|inst   ; Sim_CLK  ;
+; N/A           ; None        ; -1.400 ns ; Rst_UART     ; design4TJN:inst|inst39                     ; Sim_CLK  ;
+; N/A           ; None        ; -2.000 ns ; UART_Recieve ; design4TJN:inst|Delay_Function:inst|inst   ; Sim_CLK  ;
+; N/A           ; None        ; -2.100 ns ; UART_Recieve ; inst22                                     ; Sim_CLK  ;
+; N/A           ; None        ; -2.100 ns ; UART_Recieve ; design4TJN:inst|inst47                     ; Sim_CLK  ;
+; N/A           ; None        ; -5.200 ns ; UART_Recieve ; design4TJN:inst|inst49                     ; Sim_CLK  ;
+; N/A           ; None        ; -6.700 ns ; UART_Recieve ; inst37                                     ; Sim_CLK  ;
+; N/A           ; None        ; -6.700 ns ; Rst_UART     ; design4TJN:inst|inst42                     ; Sim_CLK  ;
+; N/A           ; None        ; -7.300 ns ; UART_Recieve ; design4TJN:inst|inst42                     ; Sim_CLK  ;
++---------------+-------------+-----------+--------------+--------------------------------------------+----------+
 
 
 +--------------------------+
@@ -109,20 +558,132 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Oct 24 12:55:38 2013
+    Info: Processing started: Tue Oct 29 20:04:04 2013
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off project5 -c project5
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
-Info: Longest tpd from source pin "STOP" to destination pin "3" is 20.700 ns
-    Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_210; Fanout = 4; PIN Node = 'STOP'
-    Info: 2: + IC(7.400 ns) + CELL(2.700 ns) = 13.000 ns; Loc. = LC8_H30; Fanout = 1; COMB Node = 'inst19'
-    Info: 3: + IC(2.700 ns) + CELL(5.000 ns) = 20.700 ns; Loc. = PIN_50; Fanout = 0; PIN Node = '3'
-    Info: Total cell delay = 10.600 ns ( 51.21 % )
-    Info: Total interconnect delay = 10.100 ns ( 48.79 % )
-Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 173 megabytes
-    Info: Processing ended: Thu Oct 24 12:55:38 2013
-    Info: Elapsed time: 00:00:00
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[3]" is a latch
+    Warning: Node "design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2]" is a latch
+    Warning: Node "design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1]" is a latch
+    Warning: Node "design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0]" is a latch
+    Warning: Node "design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[3]" is a latch
+    Warning: Node "design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[2]" is a latch
+    Warning: Node "design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1]" is a latch
+    Warning: Node "design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[0]" is a latch
+    Warning: Node "design4TJN:inst|inst32" is a latch
+    Warning: Node "design4TJN:inst|inst29" is a latch
+    Warning: Node "design4TJN:inst|inst30" is a latch
+    Warning: Node "design4TJN:inst|inst31" is a latch
+    Warning: Node "design4TJN:inst|inst33" is a latch
+    Warning: Node "design4TJN:inst|inst37" is a latch
+    Warning: Node "design4TJN:inst|inst34" is a latch
+    Warning: Node "design4TJN:inst|inst36" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "Sim_CLK" is an undefined clock
+    Info: Assuming node "UART_Recieve" is a latch enable and/or memory write/read enable. Will not compute fmax for this pin.
+Warning: Found 10 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "design4TJN:inst|Delay_Function:inst23|inst47" as buffer
+    Info: Detected ripple clock "design4TJN:inst|Delay_Function:inst25|inst47" as buffer
+    Info: Detected ripple clock "design4TJN:inst|Delay_Function:inst27|inst47" as buffer
+    Info: Detected ripple clock "design4TJN:inst|Delay_Function:inst16|inst47" as buffer
+    Info: Detected ripple clock "design4TJN:inst|Delay_Function:inst6|inst47" as buffer
+    Info: Detected ripple clock "design4TJN:inst|Delay_Function:inst8|inst47" as buffer
+    Info: Detected ripple clock "design4TJN:inst|Delay_Function:inst10|inst47" as buffer
+    Info: Detected ripple clock "design4TJN:inst|Delay_Function:inst|inst47" as buffer
+    Info: Detected ripple clock "design4TJN:inst|Delay_Function:inst28|inst47" as buffer
+    Info: Detected gated clock "design4TJN:inst|inst53" as buffer
+Info: Clock "Sim_CLK" has Internal fmax of 26.74 MHz between source register "design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1]" and destination register "design4TJN:inst|inst2" (period= 37.4 ns)
+    Info: + Longest register to register delay is 2.200 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC2_C25; Fanout = 8; REG Node = 'design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1]'
+        Info: 2: + IC(0.500 ns) + CELL(1.700 ns) = 2.200 ns; Loc. = LC8_C25; Fanout = 4; REG Node = 'design4TJN:inst|inst2'
+        Info: Total cell delay = 1.700 ns ( 77.27 % )
+        Info: Total interconnect delay = 0.500 ns ( 22.73 % )
+    Info: - Smallest clock skew is -13.900 ns
+        Info: + Shortest clock path from clock "Sim_CLK" to destination register is 7.000 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_211; Fanout = 321; CLK Node = 'Sim_CLK'
+            Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC8_C25; Fanout = 4; REG Node = 'design4TJN:inst|inst2'
+            Info: Total cell delay = 2.900 ns ( 41.43 % )
+            Info: Total interconnect delay = 4.100 ns ( 58.57 % )
+        Info: - Longest clock path from clock "Sim_CLK" to source register is 20.900 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_211; Fanout = 321; CLK Node = 'Sim_CLK'
+            Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_D29; Fanout = 4; REG Node = 'design4TJN:inst|Delay_Function:inst28|inst47'
+            Info: 3: + IC(2.700 ns) + CELL(2.700 ns) = 13.800 ns; Loc. = LC7_D28; Fanout = 8; COMB Node = 'design4TJN:inst|inst53'
+            Info: 4: + IC(4.700 ns) + CELL(2.400 ns) = 20.900 ns; Loc. = LC2_C25; Fanout = 8; REG Node = 'design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1]'
+            Info: Total cell delay = 9.400 ns ( 44.98 % )
+            Info: Total interconnect delay = 11.500 ns ( 55.02 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Micro setup delay of destination is 2.600 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Warning: Circuit may not operate. Detected 9 non-operational path(s) clocked by clock "Sim_CLK" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "design4TJN:inst|inst31" and destination pin or register "design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1]" for clock "Sim_CLK" (Hold time is 6.4 ns)
+    Info: + Largest clock skew is 9.600 ns
+        Info: + Longest clock path from clock "Sim_CLK" to destination register is 20.900 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_211; Fanout = 321; CLK Node = 'Sim_CLK'
+            Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC1_D29; Fanout = 4; REG Node = 'design4TJN:inst|Delay_Function:inst28|inst47'
+            Info: 3: + IC(2.700 ns) + CELL(2.700 ns) = 13.800 ns; Loc. = LC7_D28; Fanout = 8; COMB Node = 'design4TJN:inst|inst53'
+            Info: 4: + IC(4.700 ns) + CELL(2.400 ns) = 20.900 ns; Loc. = LC2_C25; Fanout = 8; REG Node = 'design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1]'
+            Info: Total cell delay = 9.400 ns ( 44.98 % )
+            Info: Total interconnect delay = 11.500 ns ( 55.02 % )
+        Info: - Shortest clock path from clock "Sim_CLK" to source register is 11.300 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_211; Fanout = 321; CLK Node = 'Sim_CLK'
+            Info: 2: + IC(4.100 ns) + CELL(1.400 ns) = 8.400 ns; Loc. = LC3_C25; Fanout = 2; REG Node = 'design4TJN:inst|Delay_Function:inst6|inst47'
+            Info: 3: + IC(0.500 ns) + CELL(2.400 ns) = 11.300 ns; Loc. = LC4_C25; Fanout = 1; REG Node = 'design4TJN:inst|inst31'
+            Info: Total cell delay = 6.700 ns ( 59.29 % )
+            Info: Total interconnect delay = 4.600 ns ( 40.71 % )
+    Info: - Micro clock to output delay of source is 0.000 ns
+    Info: - Shortest register to register delay is 3.200 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC4_C25; Fanout = 1; REG Node = 'design4TJN:inst|inst31'
+        Info: 2: + IC(0.500 ns) + CELL(2.700 ns) = 3.200 ns; Loc. = LC2_C25; Fanout = 8; REG Node = 'design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1]'
+        Info: Total cell delay = 2.700 ns ( 84.38 % )
+        Info: Total interconnect delay = 0.500 ns ( 15.63 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+Info: tsu for register "design4TJN:inst|inst42" (data pin = "UART_Recieve", clock pin = "Sim_CLK") is 13.000 ns
+    Info: + Longest pin to register delay is 17.400 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_210; Fanout = 9; CLK Node = 'UART_Recieve'
+        Info: 2: + IC(7.200 ns) + CELL(2.700 ns) = 12.800 ns; Loc. = LC6_D35; Fanout = 1; COMB Node = 'design4TJN:inst|inst45'
+        Info: 3: + IC(0.500 ns) + CELL(2.400 ns) = 15.700 ns; Loc. = LC8_D35; Fanout = 1; COMB Node = 'design4TJN:inst|inst43'
+        Info: 4: + IC(0.500 ns) + CELL(1.200 ns) = 17.400 ns; Loc. = LC4_D35; Fanout = 4; REG Node = 'design4TJN:inst|inst42'
+        Info: Total cell delay = 9.200 ns ( 52.87 % )
+        Info: Total interconnect delay = 8.200 ns ( 47.13 % )
+    Info: + Micro setup delay of destination is 2.600 ns
+    Info: - Shortest clock path from clock "Sim_CLK" to destination register is 7.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_211; Fanout = 321; CLK Node = 'Sim_CLK'
+        Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC4_D35; Fanout = 4; REG Node = 'design4TJN:inst|inst42'
+        Info: Total cell delay = 2.900 ns ( 41.43 % )
+        Info: Total interconnect delay = 4.100 ns ( 58.57 % )
+Info: tco from clock "Sim_CLK" to destination pin "q0" through register "design4TJN:inst|inst4" is 37.400 ns
+    Info: + Longest clock path from clock "Sim_CLK" to source register is 7.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_211; Fanout = 321; CLK Node = 'Sim_CLK'
+        Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC7_B27; Fanout = 4; REG Node = 'design4TJN:inst|inst4'
+        Info: Total cell delay = 2.900 ns ( 41.43 % )
+        Info: Total interconnect delay = 4.100 ns ( 58.57 % )
+    Info: + Micro clock to output delay of source is 1.400 ns
+    Info: + Longest register to pin delay is 29.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC7_B27; Fanout = 4; REG Node = 'design4TJN:inst|inst4'
+        Info: 2: + IC(4.800 ns) + CELL(2.700 ns) = 7.500 ns; Loc. = LC5_D32; Fanout = 1; COMB Node = 'lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]|aeb_out'
+        Info: 3: + IC(0.500 ns) + CELL(2.700 ns) = 10.700 ns; Loc. = LC6_D32; Fanout = 4; COMB Node = 'lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out'
+        Info: 4: + IC(2.700 ns) + CELL(2.400 ns) = 15.800 ns; Loc. = LC2_D27; Fanout = 3; COMB Node = 'lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00012|result_node~3'
+        Info: 5: + IC(0.500 ns) + CELL(2.700 ns) = 19.000 ns; Loc. = LC5_D27; Fanout = 1; COMB Node = 'lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00020|result_node~1'
+        Info: 6: + IC(5.000 ns) + CELL(5.000 ns) = 29.000 ns; Loc. = PIN_44; Fanout = 0; PIN Node = 'q0'
+        Info: Total cell delay = 15.500 ns ( 53.45 % )
+        Info: Total interconnect delay = 13.500 ns ( 46.55 % )
+Info: th for register "design4TJN:inst|Delay_Function:inst15|inst" (data pin = "UART_Recieve", clock pin = "Sim_CLK") is -0.800 ns
+    Info: + Longest clock path from clock "Sim_CLK" to destination register is 7.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_211; Fanout = 321; CLK Node = 'Sim_CLK'
+        Info: 2: + IC(4.100 ns) + CELL(0.000 ns) = 7.000 ns; Loc. = LC8_D49; Fanout = 1; REG Node = 'design4TJN:inst|Delay_Function:inst15|inst'
+        Info: Total cell delay = 2.900 ns ( 41.43 % )
+        Info: Total interconnect delay = 4.100 ns ( 58.57 % )
+    Info: + Micro hold delay of destination is 3.100 ns
+    Info: - Shortest pin to register delay is 10.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.900 ns) = 2.900 ns; Loc. = PIN_210; Fanout = 9; CLK Node = 'UART_Recieve'
+        Info: 2: + IC(6.300 ns) + CELL(1.700 ns) = 10.900 ns; Loc. = LC8_D49; Fanout = 1; REG Node = 'design4TJN:inst|Delay_Function:inst15|inst'
+        Info: Total cell delay = 4.600 ns ( 42.20 % )
+        Info: Total interconnect delay = 6.300 ns ( 57.80 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 174 megabytes
+    Info: Processing ended: Tue Oct 29 20:04:05 2013
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 
