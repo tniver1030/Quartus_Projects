@@ -1,5 +1,5 @@
 Flow report for project5
-Tue Oct 29 20:04:05 2013
+Tue Nov 05 02:48:19 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Flow Summary                                                           ;
 +-------------------------+----------------------------------------------+
-; Flow Status             ; Successful - Tue Oct 29 20:04:05 2013        ;
+; Flow Status             ; Successful - Tue Nov 05 02:48:19 2013        ;
 ; Quartus II Version      ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name           ; project5                                     ;
 ; Top-level Entity Name   ; project5                                     ;
@@ -46,8 +46,8 @@ applicable agreement for further details.
 ; Device                  ; EPF10K70RC240-4                              ;
 ; Timing Models           ; Final                                        ;
 ; Met timing requirements ; No                                           ;
-; Total logic elements    ; 371 / 3,744 ( 10 % )                         ;
-; Total pins              ; 35 / 189 ( 19 % )                            ;
+; Total logic elements    ; 385 / 3,744 ( 10 % )                         ;
+; Total pins              ; 40 / 189 ( 21 % )                            ;
 ; Total memory bits       ; 0 / 18,432 ( 0 % )                           ;
 +-------------------------+----------------------------------------------+
 
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/29/2013 20:03:54 ;
+; Start date & time ; 11/05/2013 02:48:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; project5            ;
 +-------------------+---------------------+
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                      ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 105788762728902.138309143411900                            ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 105788762728902.138363768703632                            ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_COMPARE                                                ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_COMPARE                                                ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_COMPARE                                                ; --            ; --          ; --             ;
@@ -77,6 +77,10 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                       ; LPM_CONSTANT                                               ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_CONSTANT                                               ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_CONSTANT                                               ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_MUX                                                    ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_CONSTANT                                               ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                                                        ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.0                                                        ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.0                                                        ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.0                                                        ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                    ; 9.0                                                        ; --            ; --          ; --             ;
@@ -104,6 +108,10 @@ applicable agreement for further details.
 ; MISC_FILE                          ; lpm_constant1.cmp                                          ; --            ; --          ; --             ;
 ; MISC_FILE                          ; lpm_constant2.bsf                                          ; --            ; --          ; --             ;
 ; MISC_FILE                          ; lpm_constant2.cmp                                          ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux2.bsf                                               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mux2.cmp                                               ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_constant3.bsf                                          ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_constant3.cmp                                          ; --            ; --          ; --             ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                        ; --            ; --          ; eda_blast_fpga ;
 +------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
 
@@ -113,11 +121,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:03     ; 1.0                     ; 240 MB              ; 00:00:03                           ;
-; Fitter                  ; 00:00:04     ; 1.0                     ; 189 MB              ; 00:00:04                           ;
+; Analysis & Synthesis    ; 00:00:03     ; 1.0                     ; 240 MB              ; 00:00:04                           ;
+; Fitter                  ; 00:00:05     ; 1.0                     ; 189 MB              ; 00:00:05                           ;
 ; Assembler               ; 00:00:00     ; 1.0                     ; 194 MB              ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 158 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:08     ; --                      ; --                  ; 00:00:07                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 159 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -74,3 +74,6 @@ set_location_assignment PIN_11 -to lE
 set_location_assignment PIN_12 -to lF
 set_location_assignment PIN_13 -to lG
 set_location_assignment PIN_91 -to Sys_CLK
+set_global_assignment -name BDF_FILE Change_detector.bdf
+set_global_assignment -name QIP_FILE lpm_mux2.qip
+set_global_assignment -name QIP_FILE lpm_constant3.qip

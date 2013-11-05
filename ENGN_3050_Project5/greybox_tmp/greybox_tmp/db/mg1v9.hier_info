@@ -1,0 +1,285 @@
+|mg1v9
+data[0] => data[0]~31.IN1
+data[1] => data[1]~30.IN1
+data[2] => data[2]~29.IN1
+data[3] => data[3]~28.IN1
+data[4] => data[4]~27.IN1
+data[5] => data[5]~26.IN1
+data[6] => data[6]~25.IN1
+data[7] => data[7]~24.IN1
+data[8] => data[8]~23.IN1
+data[9] => data[9]~22.IN1
+data[10] => data[10]~21.IN1
+data[11] => data[11]~20.IN1
+data[12] => data[12]~19.IN1
+data[13] => data[13]~18.IN1
+data[14] => data[14]~17.IN1
+data[15] => data[15]~16.IN1
+data[16] => data[16]~15.IN1
+data[17] => data[17]~14.IN1
+data[18] => data[18]~13.IN1
+data[19] => data[19]~12.IN1
+data[20] => data[20]~11.IN1
+data[21] => data[21]~10.IN1
+data[22] => data[22]~9.IN1
+data[23] => data[23]~8.IN1
+data[24] => data[24]~7.IN1
+data[25] => data[25]~6.IN1
+data[26] => data[26]~5.IN1
+data[27] => data[27]~4.IN1
+data[28] => data[28]~3.IN1
+data[29] => data[29]~2.IN1
+data[30] => data[30]~1.IN1
+data[31] => data[31]~0.IN1
+result[0] <= lpm_mux:mgl_prim1.result
+result[1] <= lpm_mux:mgl_prim1.result
+sel[0] => sel[0]~3.IN1
+sel[1] => sel[1]~2.IN1
+sel[2] => sel[2]~1.IN1
+sel[3] => sel[3]~0.IN1
+
+
+|mg1v9|lpm_mux:mgl_prim1
+data[0][0] => muxlut:$00010.data[0]
+data[0][1] => muxlut:$00012.data[0]
+data[1][0] => muxlut:$00010.data[1]
+data[1][1] => muxlut:$00012.data[1]
+data[2][0] => muxlut:$00010.data[2]
+data[2][1] => muxlut:$00012.data[2]
+data[3][0] => muxlut:$00010.data[3]
+data[3][1] => muxlut:$00012.data[3]
+data[4][0] => muxlut:$00010.data[4]
+data[4][1] => muxlut:$00012.data[4]
+data[5][0] => muxlut:$00010.data[5]
+data[5][1] => muxlut:$00012.data[5]
+data[6][0] => muxlut:$00010.data[6]
+data[6][1] => muxlut:$00012.data[6]
+data[7][0] => muxlut:$00010.data[7]
+data[7][1] => muxlut:$00012.data[7]
+data[8][0] => muxlut:$00010.data[8]
+data[8][1] => muxlut:$00012.data[8]
+data[9][0] => muxlut:$00010.data[9]
+data[9][1] => muxlut:$00012.data[9]
+data[10][0] => muxlut:$00010.data[10]
+data[10][1] => muxlut:$00012.data[10]
+data[11][0] => muxlut:$00010.data[11]
+data[11][1] => muxlut:$00012.data[11]
+data[12][0] => muxlut:$00010.data[12]
+data[12][1] => muxlut:$00012.data[12]
+data[13][0] => muxlut:$00010.data[13]
+data[13][1] => muxlut:$00012.data[13]
+data[14][0] => muxlut:$00010.data[14]
+data[14][1] => muxlut:$00012.data[14]
+data[15][0] => muxlut:$00010.data[15]
+data[15][1] => muxlut:$00012.data[15]
+sel[0] => bypassff:sel_latency_ff[0].d[0]
+sel[0] => muxlut:$00012.select[0]
+sel[0] => muxlut:$00010.select[0]
+sel[1] => bypassff:sel_latency_ff[0].d[1]
+sel[1] => muxlut:$00012.select[1]
+sel[1] => muxlut:$00010.select[1]
+sel[2] => bypassff:sel_latency_ff[0].d[2]
+sel[3] => bypassff:sel_latency_ff[0].d[3]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= altshift:external_latency_ffs.result[0]
+result[1] <= altshift:external_latency_ffs.result[1]
+
+
+|mg1v9|lpm_mux:mgl_prim1|bypassff:sel_latency_ff[0]
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+d[3] => q[3].DATAIN
+clk => ~NO_FANOUT~
+clrn => ~NO_FANOUT~
+ena => ~NO_FANOUT~
+q[0] <= d[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= d[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mg1v9|lpm_mux:mgl_prim1|altshift:external_latency_ffs
+data[0] => result[0].DATAIN
+data[1] => result[1].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mg1v9|lpm_mux:mgl_prim1|muxlut:$00010
+data[0] => muxlut:$00012.data[0]
+data[1] => muxlut:$00012.data[1]
+data[2] => muxlut:$00012.data[2]
+data[3] => muxlut:$00012.data[3]
+data[4] => muxlut:$00014.data[0]
+data[5] => muxlut:$00014.data[1]
+data[6] => muxlut:$00014.data[2]
+data[7] => muxlut:$00014.data[3]
+data[8] => muxlut:$00016.data[0]
+data[9] => muxlut:$00016.data[1]
+data[10] => muxlut:$00016.data[2]
+data[11] => muxlut:$00016.data[3]
+data[12] => muxlut:$00018.data[0]
+data[13] => muxlut:$00018.data[1]
+data[14] => muxlut:$00018.data[2]
+data[15] => muxlut:$00018.data[3]
+select[0] => muxlut:$00018.select[0]
+select[0] => muxlut:$00016.select[0]
+select[0] => muxlut:$00014.select[0]
+select[0] => muxlut:$00012.select[0]
+select[1] => muxlut:$00018.select[1]
+select[1] => muxlut:$00016.select[1]
+select[1] => muxlut:$00014.select[1]
+select[1] => muxlut:$00012.select[1]
+select[2] => muxlut:$00020.select[0]
+select[3] => muxlut:$00020.select[1]
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mg1v9|lpm_mux:mgl_prim1|muxlut:$00010|muxlut:$00012
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mg1v9|lpm_mux:mgl_prim1|muxlut:$00010|muxlut:$00014
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mg1v9|lpm_mux:mgl_prim1|muxlut:$00010|muxlut:$00016
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mg1v9|lpm_mux:mgl_prim1|muxlut:$00010|muxlut:$00018
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mg1v9|lpm_mux:mgl_prim1|muxlut:$00010|muxlut:$00020
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mg1v9|lpm_mux:mgl_prim1|muxlut:$00012
+data[0] => muxlut:$00012.data[0]
+data[1] => muxlut:$00012.data[1]
+data[2] => muxlut:$00012.data[2]
+data[3] => muxlut:$00012.data[3]
+data[4] => muxlut:$00014.data[0]
+data[5] => muxlut:$00014.data[1]
+data[6] => muxlut:$00014.data[2]
+data[7] => muxlut:$00014.data[3]
+data[8] => muxlut:$00016.data[0]
+data[9] => muxlut:$00016.data[1]
+data[10] => muxlut:$00016.data[2]
+data[11] => muxlut:$00016.data[3]
+data[12] => muxlut:$00018.data[0]
+data[13] => muxlut:$00018.data[1]
+data[14] => muxlut:$00018.data[2]
+data[15] => muxlut:$00018.data[3]
+select[0] => muxlut:$00018.select[0]
+select[0] => muxlut:$00016.select[0]
+select[0] => muxlut:$00014.select[0]
+select[0] => muxlut:$00012.select[0]
+select[1] => muxlut:$00018.select[1]
+select[1] => muxlut:$00016.select[1]
+select[1] => muxlut:$00014.select[1]
+select[1] => muxlut:$00012.select[1]
+select[2] => muxlut:$00020.select[0]
+select[3] => muxlut:$00020.select[1]
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mg1v9|lpm_mux:mgl_prim1|muxlut:$00012|muxlut:$00012
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mg1v9|lpm_mux:mgl_prim1|muxlut:$00012|muxlut:$00014
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mg1v9|lpm_mux:mgl_prim1|muxlut:$00012|muxlut:$00016
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mg1v9|lpm_mux:mgl_prim1|muxlut:$00012|muxlut:$00018
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mg1v9|lpm_mux:mgl_prim1|muxlut:$00012|muxlut:$00020
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+

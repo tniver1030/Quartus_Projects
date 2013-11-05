@@ -5,11 +5,12 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|project5|lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_gsh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|project5|lpm_constant0:inst42|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_4e6.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|project5|lpm_constant2:inst44|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_7e6.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|project5|lpm_mux1:inst9|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_kpd.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|project5|lpm_mux1:inst9|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_lpd.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|project5|lpm_compare0:inst4|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_9si.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|project5|lpm_compare1:inst5|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_9si.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|project5|lpm_compare2:inst6|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_6li.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|project5|lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_constant:$00012" CBX_FILE_NAME="lpm_constant_o84.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|project5|lpm_mux2:inst70|LPM_MUX:lpm_mux_component" CBX_FILE_NAME="mux_snd.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|project5|lpm_constant1:inst43|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_5e6.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|project5|lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014" CBX_FILE_NAME="cmpr_fvf.tdf"/>
 	</PROJECT>

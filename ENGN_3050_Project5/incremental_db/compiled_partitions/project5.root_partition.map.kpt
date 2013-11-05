@@ -23,18 +23,24 @@
       <name>inst/inst60</name>
     </key_point>
     <key_point id="5" type="register">
-      <name>inst/inst57</name>
+      <name>inst/inst39</name>
     </key_point>
     <key_point id="6" type="register">
-      <name>inst/inst56</name>
+      <name>inst/inst57</name>
     </key_point>
     <key_point id="7" type="register">
-      <name>inst/inst59</name>
+      <name>inst/inst56</name>
     </key_point>
     <key_point id="8" type="register">
-      <name>inst/inst58</name>
+      <name>inst/inst59</name>
     </key_point>
     <key_point id="9" type="register">
+      <name>inst25</name>
+    </key_point>
+    <key_point id="10" type="register">
+      <name>inst/inst58</name>
+    </key_point>
+    <key_point id="11" type="register">
       <name>inst1/lpm_counter_component/wysi_counter/counter_cell[0]</name>
       <entity>flex10ke_lcell</entity>
       <reg_type>unknown</reg_type>
@@ -42,7 +48,7 @@
         <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
       </attributes_list>
     </key_point>
-    <key_point id="10" type="register">
+    <key_point id="12" type="register">
       <name>inst1/lpm_counter_component/wysi_counter/counter_cell[5]</name>
       <entity>flex10ke_lcell</entity>
       <reg_type>unknown</reg_type>
@@ -50,7 +56,7 @@
         <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
       </attributes_list>
     </key_point>
-    <key_point id="11" type="register">
+    <key_point id="13" type="register">
       <name>inst1/lpm_counter_component/wysi_counter/counter_cell[2]</name>
       <entity>flex10ke_lcell</entity>
       <reg_type>unknown</reg_type>
@@ -58,7 +64,7 @@
         <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
       </attributes_list>
     </key_point>
-    <key_point id="12" type="register">
+    <key_point id="14" type="register">
       <name>inst1/lpm_counter_component/wysi_counter/counter_cell[4]</name>
       <entity>flex10ke_lcell</entity>
       <reg_type>unknown</reg_type>
@@ -66,13 +72,13 @@
         <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
       </attributes_list>
     </key_point>
-    <key_point id="13" type="register">
+    <key_point id="15" type="register">
       <name>inst/inst47</name>
     </key_point>
-    <key_point id="14" type="register">
+    <key_point id="16" type="register">
       <name>inst/inst48</name>
     </key_point>
-    <key_point id="15" type="register">
+    <key_point id="17" type="register">
       <name>inst1/lpm_counter_component/wysi_counter/counter_cell[6]</name>
       <entity>flex10ke_lcell</entity>
       <reg_type>unknown</reg_type>
@@ -84,7 +90,10 @@
   <key_points_set type="transition" hier_sep="|">
   </key_points_set>
   <key_points_set type="transformed" hier_sep="|">
-    <key_point id="16" type="register">
+    <key_point id="18" type="register">
+      <name>inst25</name>
+    </key_point>
+    <key_point id="19" type="register">
       <name>design4TJN:inst|inst47</name>
     </key_point>
   </key_points_set>
@@ -92,19 +101,32 @@
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="13" type="proxy"></kp>
-          <kp id="14" type="equiv"></kp>
-          <kp id="4" type="equiv"></kp>
-          <kp id="8" type="equiv"></kp>
+          <kp id="9" type="proxy"></kp>
+          <kp id="5" type="inveq"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="18" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="15" type="proxy"></kp>
           <kp id="6" type="equiv"></kp>
-          <kp id="5" type="equiv"></kp>
+          <kp id="10" type="equiv"></kp>
+          <kp id="16" type="equiv"></kp>
+          <kp id="8" type="equiv"></kp>
           <kp id="7" type="equiv"></kp>
+          <kp id="4" type="equiv"></kp>
           <kp id="2" type="equiv"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="16" type="proxy"></kp>
+          <kp id="19" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>

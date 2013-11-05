@@ -2191,7 +2191,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 704 296 768 344)
+	(rect 704 288 768 336)
 	(text "OR2" (rect 1 0 19 10)(font "Arial" (font_size 6)))
 	(text "inst45" (rect 3 37 32 49)(font "Arial" ))
 	(port
@@ -2678,11 +2678,6 @@ applicable agreement for further details.
 	(pt 120 336)
 )
 (connector
-	(text "stop_bit" (rect 1104 200 1142 212)(font "Arial" ))
-	(pt 1160 216)
-	(pt 1088 216)
-)
-(connector
 	(text "start_bit" (rect 1101 240 1141 252)(font "Arial" ))
 	(pt 1160 256)
 	(pt 1088 256)
@@ -2750,11 +2745,6 @@ applicable agreement for further details.
 	(pt 1248 336)
 	(pt 1264 336)
 	(bus)
-)
-(connector
-	(text "input" (rect 1266 152 1289 164)(font "Arial" ))
-	(pt 1256 168)
-	(pt 1288 168)
 )
 (connector
 	(text "enable" (rect 1095 88 1126 100)(font "Arial" ))
@@ -3065,11 +3055,6 @@ applicable agreement for further details.
 (connector
 	(pt 1104 960)
 	(pt 1104 1016)
-)
-(connector
-	(text "stop_bit" (rect 1230 936 1268 948)(font "Arial" ))
-	(pt 1192 952)
-	(pt 1272 952)
 )
 (connector
 	(text "input" (rect 1094 928 1117 940)(font "Arial" ))
@@ -3582,10 +3567,6 @@ applicable agreement for further details.
 	(pt -88 424)
 )
 (connector
-	(pt 816 320)
-	(pt 816 424)
-)
-(connector
 	(pt -88 424)
 	(pt 816 424)
 )
@@ -3632,15 +3613,6 @@ applicable agreement for further details.
 	(pt 744 144)
 )
 (connector
-	(pt 768 320)
-	(pt 816 320)
-)
-(connector
-	(text "start_bit" (rect 833 304 873 316)(font "Arial" ))
-	(pt 816 320)
-	(pt 880 320)
-)
-(connector
 	(pt 832 184)
 	(pt 848 184)
 )
@@ -3651,26 +3623,6 @@ applicable agreement for further details.
 (connector
 	(pt 848 272)
 	(pt 672 272)
-)
-(connector
-	(pt 704 312)
-	(pt 672 312)
-)
-(connector
-	(pt 672 312)
-	(pt 672 272)
-)
-(connector
-	(pt 672 320)
-	(pt 592 320)
-)
-(connector
-	(pt 672 320)
-	(pt 672 328)
-)
-(connector
-	(pt 704 328)
-	(pt 672 328)
 )
 (connector
 	(text "clk" (rect 1295 120 1309 132)(font "Arial" ))
@@ -3831,6 +3783,46 @@ applicable agreement for further details.
 	(pt 1456 296)
 	(pt 1472 296)
 )
+(connector
+	(pt 672 304)
+	(pt 704 304)
+)
+(connector
+	(pt 672 272)
+	(pt 672 304)
+)
+(connector
+	(pt 592 320)
+	(pt 704 320)
+)
+(connector
+	(text "input" (rect 1266 152 1289 164)(font "Arial" ))
+	(pt 1312 168)
+	(pt 1256 168)
+)
+(connector
+	(pt 816 312)
+	(pt 816 424)
+)
+(connector
+	(pt 768 312)
+	(pt 816 312)
+)
+(connector
+	(text "start_bit" (rect 833 296 873 308)(font "Arial" ))
+	(pt 816 312)
+	(pt 880 312)
+)
+(connector
+	(text "abc" (rect 1104 200 1121 212)(font "Arial" ))
+	(pt 1160 216)
+	(pt 1088 216)
+)
+(connector
+	(text "abc" (rect 1231 936 1248 948)(font "Arial" ))
+	(pt 1192 952)
+	(pt 1240 952)
+)
 (junction (pt 88 336))
 (junction (pt 328 328))
 (junction (pt 512 312))
@@ -3860,8 +3852,8 @@ applicable agreement for further details.
 (junction (pt 608 1016))
 (junction (pt 848 1016))
 (junction (pt 1264 496))
-(junction (pt 816 320))
 (junction (pt 632 192))
+(junction (pt 816 312))
 (text "Listens for change to low, pulses when" (rect 0 264 227 278)(font "Arial" (font_size 8)))
 (text "Need logic to hold state until" (rect 360 376 518 390)(font "Arial" (font_size 8)))
 (text "Will Pulse to all, saying to expect update" (rect 184 120 410 134)(font "Arial" (font_size 8)))

@@ -48,6 +48,7 @@ ENTITY lpm_mux1 IS
 		data12x		: IN STD_LOGIC_VECTOR (1 DOWNTO 0);
 		data13x		: IN STD_LOGIC_VECTOR (1 DOWNTO 0);
 		data14x		: IN STD_LOGIC_VECTOR (1 DOWNTO 0);
+		data15x		: IN STD_LOGIC_VECTOR (1 DOWNTO 0);
 		data1x		: IN STD_LOGIC_VECTOR (1 DOWNTO 0);
 		data2x		: IN STD_LOGIC_VECTOR (1 DOWNTO 0);
 		data3x		: IN STD_LOGIC_VECTOR (1 DOWNTO 0);
@@ -69,7 +70,7 @@ ARCHITECTURE SYN OF lpm_mux1 IS
 
 	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (1 DOWNTO 0);
 	SIGNAL sub_wire1	: STD_LOGIC_VECTOR (1 DOWNTO 0);
-	SIGNAL sub_wire2	: STD_LOGIC_2D (14 DOWNTO 0, 1 DOWNTO 0);
+	SIGNAL sub_wire2	: STD_LOGIC_2D (15 DOWNTO 0, 1 DOWNTO 0);
 	SIGNAL sub_wire3	: STD_LOGIC_VECTOR (1 DOWNTO 0);
 	SIGNAL sub_wire4	: STD_LOGIC_VECTOR (1 DOWNTO 0);
 	SIGNAL sub_wire5	: STD_LOGIC_VECTOR (1 DOWNTO 0);
@@ -84,58 +85,62 @@ ARCHITECTURE SYN OF lpm_mux1 IS
 	SIGNAL sub_wire14	: STD_LOGIC_VECTOR (1 DOWNTO 0);
 	SIGNAL sub_wire15	: STD_LOGIC_VECTOR (1 DOWNTO 0);
 	SIGNAL sub_wire16	: STD_LOGIC_VECTOR (1 DOWNTO 0);
+	SIGNAL sub_wire17	: STD_LOGIC_VECTOR (1 DOWNTO 0);
 
 BEGIN
-	sub_wire16    <= data0x(1 DOWNTO 0);
-	sub_wire15    <= data1x(1 DOWNTO 0);
-	sub_wire14    <= data2x(1 DOWNTO 0);
-	sub_wire13    <= data3x(1 DOWNTO 0);
-	sub_wire12    <= data4x(1 DOWNTO 0);
-	sub_wire11    <= data5x(1 DOWNTO 0);
-	sub_wire10    <= data6x(1 DOWNTO 0);
-	sub_wire9    <= data7x(1 DOWNTO 0);
-	sub_wire8    <= data8x(1 DOWNTO 0);
-	sub_wire7    <= data9x(1 DOWNTO 0);
-	sub_wire6    <= data10x(1 DOWNTO 0);
-	sub_wire5    <= data11x(1 DOWNTO 0);
-	sub_wire4    <= data12x(1 DOWNTO 0);
-	sub_wire3    <= data13x(1 DOWNTO 0);
+	sub_wire17    <= data0x(1 DOWNTO 0);
+	sub_wire16    <= data1x(1 DOWNTO 0);
+	sub_wire15    <= data2x(1 DOWNTO 0);
+	sub_wire14    <= data3x(1 DOWNTO 0);
+	sub_wire13    <= data4x(1 DOWNTO 0);
+	sub_wire12    <= data5x(1 DOWNTO 0);
+	sub_wire11    <= data6x(1 DOWNTO 0);
+	sub_wire10    <= data7x(1 DOWNTO 0);
+	sub_wire9    <= data8x(1 DOWNTO 0);
+	sub_wire8    <= data9x(1 DOWNTO 0);
+	sub_wire7    <= data10x(1 DOWNTO 0);
+	sub_wire6    <= data11x(1 DOWNTO 0);
+	sub_wire5    <= data12x(1 DOWNTO 0);
+	sub_wire4    <= data13x(1 DOWNTO 0);
+	sub_wire3    <= data14x(1 DOWNTO 0);
 	result    <= sub_wire0(1 DOWNTO 0);
-	sub_wire1    <= data14x(1 DOWNTO 0);
-	sub_wire2(14, 0)    <= sub_wire1(0);
-	sub_wire2(14, 1)    <= sub_wire1(1);
-	sub_wire2(13, 0)    <= sub_wire3(0);
-	sub_wire2(13, 1)    <= sub_wire3(1);
-	sub_wire2(12, 0)    <= sub_wire4(0);
-	sub_wire2(12, 1)    <= sub_wire4(1);
-	sub_wire2(11, 0)    <= sub_wire5(0);
-	sub_wire2(11, 1)    <= sub_wire5(1);
-	sub_wire2(10, 0)    <= sub_wire6(0);
-	sub_wire2(10, 1)    <= sub_wire6(1);
-	sub_wire2(9, 0)    <= sub_wire7(0);
-	sub_wire2(9, 1)    <= sub_wire7(1);
-	sub_wire2(8, 0)    <= sub_wire8(0);
-	sub_wire2(8, 1)    <= sub_wire8(1);
-	sub_wire2(7, 0)    <= sub_wire9(0);
-	sub_wire2(7, 1)    <= sub_wire9(1);
-	sub_wire2(6, 0)    <= sub_wire10(0);
-	sub_wire2(6, 1)    <= sub_wire10(1);
-	sub_wire2(5, 0)    <= sub_wire11(0);
-	sub_wire2(5, 1)    <= sub_wire11(1);
-	sub_wire2(4, 0)    <= sub_wire12(0);
-	sub_wire2(4, 1)    <= sub_wire12(1);
-	sub_wire2(3, 0)    <= sub_wire13(0);
-	sub_wire2(3, 1)    <= sub_wire13(1);
-	sub_wire2(2, 0)    <= sub_wire14(0);
-	sub_wire2(2, 1)    <= sub_wire14(1);
-	sub_wire2(1, 0)    <= sub_wire15(0);
-	sub_wire2(1, 1)    <= sub_wire15(1);
-	sub_wire2(0, 0)    <= sub_wire16(0);
-	sub_wire2(0, 1)    <= sub_wire16(1);
+	sub_wire1    <= data15x(1 DOWNTO 0);
+	sub_wire2(15, 0)    <= sub_wire1(0);
+	sub_wire2(15, 1)    <= sub_wire1(1);
+	sub_wire2(14, 0)    <= sub_wire3(0);
+	sub_wire2(14, 1)    <= sub_wire3(1);
+	sub_wire2(13, 0)    <= sub_wire4(0);
+	sub_wire2(13, 1)    <= sub_wire4(1);
+	sub_wire2(12, 0)    <= sub_wire5(0);
+	sub_wire2(12, 1)    <= sub_wire5(1);
+	sub_wire2(11, 0)    <= sub_wire6(0);
+	sub_wire2(11, 1)    <= sub_wire6(1);
+	sub_wire2(10, 0)    <= sub_wire7(0);
+	sub_wire2(10, 1)    <= sub_wire7(1);
+	sub_wire2(9, 0)    <= sub_wire8(0);
+	sub_wire2(9, 1)    <= sub_wire8(1);
+	sub_wire2(8, 0)    <= sub_wire9(0);
+	sub_wire2(8, 1)    <= sub_wire9(1);
+	sub_wire2(7, 0)    <= sub_wire10(0);
+	sub_wire2(7, 1)    <= sub_wire10(1);
+	sub_wire2(6, 0)    <= sub_wire11(0);
+	sub_wire2(6, 1)    <= sub_wire11(1);
+	sub_wire2(5, 0)    <= sub_wire12(0);
+	sub_wire2(5, 1)    <= sub_wire12(1);
+	sub_wire2(4, 0)    <= sub_wire13(0);
+	sub_wire2(4, 1)    <= sub_wire13(1);
+	sub_wire2(3, 0)    <= sub_wire14(0);
+	sub_wire2(3, 1)    <= sub_wire14(1);
+	sub_wire2(2, 0)    <= sub_wire15(0);
+	sub_wire2(2, 1)    <= sub_wire15(1);
+	sub_wire2(1, 0)    <= sub_wire16(0);
+	sub_wire2(1, 1)    <= sub_wire16(1);
+	sub_wire2(0, 0)    <= sub_wire17(0);
+	sub_wire2(0, 1)    <= sub_wire17(1);
 
 	lpm_mux_component : lpm_mux
 	GENERIC MAP (
-		lpm_size => 15,
+		lpm_size => 16,
 		lpm_type => "LPM_MUX",
 		lpm_width => 2,
 		lpm_widths => 4
@@ -155,7 +160,7 @@ END SYN;
 -- ============================================================
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "FLEX10K"
 -- Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
--- Retrieval info: CONSTANT: LPM_SIZE NUMERIC "15"
+-- Retrieval info: CONSTANT: LPM_SIZE NUMERIC "16"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_MUX"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "2"
 -- Retrieval info: CONSTANT: LPM_WIDTHS NUMERIC "4"
@@ -165,6 +170,7 @@ END SYN;
 -- Retrieval info: USED_PORT: data12x 0 0 2 0 INPUT NODEFVAL data12x[1..0]
 -- Retrieval info: USED_PORT: data13x 0 0 2 0 INPUT NODEFVAL data13x[1..0]
 -- Retrieval info: USED_PORT: data14x 0 0 2 0 INPUT NODEFVAL data14x[1..0]
+-- Retrieval info: USED_PORT: data15x 0 0 2 0 INPUT NODEFVAL data15x[1..0]
 -- Retrieval info: USED_PORT: data1x 0 0 2 0 INPUT NODEFVAL data1x[1..0]
 -- Retrieval info: USED_PORT: data2x 0 0 2 0 INPUT NODEFVAL data2x[1..0]
 -- Retrieval info: USED_PORT: data3x 0 0 2 0 INPUT NODEFVAL data3x[1..0]
@@ -177,6 +183,7 @@ END SYN;
 -- Retrieval info: USED_PORT: result 0 0 2 0 OUTPUT NODEFVAL result[1..0]
 -- Retrieval info: USED_PORT: sel 0 0 4 0 INPUT NODEFVAL sel[3..0]
 -- Retrieval info: CONNECT: result 0 0 2 0 @result 0 0 2 0
+-- Retrieval info: CONNECT: @data 1 15 2 0 data15x 0 0 2 0
 -- Retrieval info: CONNECT: @data 1 14 2 0 data14x 0 0 2 0
 -- Retrieval info: CONNECT: @data 1 13 2 0 data13x 0 0 2 0
 -- Retrieval info: CONNECT: @data 1 12 2 0 data12x 0 0 2 0

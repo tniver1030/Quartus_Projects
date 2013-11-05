@@ -1,5 +1,5 @@
 Analysis & Synthesis report for project5
-Tue Oct 29 20:03:57 2013
+Tue Nov 05 02:48:10 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -19,18 +19,19 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
  11. Source assignments for lpm_counter0:inst1|lpm_counter:lpm_counter_component
  12. Source assignments for lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|addcore:adder
  13. Parameter Settings for User Entity Instance: lpm_mux1:inst9|LPM_MUX:lpm_mux_component
- 14. Parameter Settings for User Entity Instance: lpm_constant0:inst42|lpm_constant:lpm_constant_component
- 15. Parameter Settings for User Entity Instance: lpm_constant2:inst44|lpm_constant:lpm_constant_component
+ 14. Parameter Settings for User Entity Instance: lpm_constant2:inst44|lpm_constant:lpm_constant_component
+ 15. Parameter Settings for User Entity Instance: lpm_constant0:inst42|lpm_constant:lpm_constant_component
  16. Parameter Settings for User Entity Instance: lpm_constant1:inst43|lpm_constant:lpm_constant_component
- 17. Parameter Settings for User Entity Instance: design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component
- 18. Parameter Settings for User Entity Instance: design4TJN:inst|lpm_mux0:inst40|LPM_MUX:lpm_mux_component
- 19. Parameter Settings for User Entity Instance: design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component
- 20. Parameter Settings for User Entity Instance: lpm_compare2:inst6|lpm_compare:lpm_compare_component
- 21. Parameter Settings for User Entity Instance: lpm_compare0:inst4|lpm_compare:lpm_compare_component
- 22. Parameter Settings for User Entity Instance: lpm_compare1:inst5|lpm_compare:lpm_compare_component
- 23. Parameter Settings for User Entity Instance: lpm_counter0:inst1|lpm_counter:lpm_counter_component
- 24. Parameter Settings for User Entity Instance: lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component
- 25. Analysis & Synthesis Messages
+ 17. Parameter Settings for User Entity Instance: lpm_compare1:inst5|lpm_compare:lpm_compare_component
+ 18. Parameter Settings for User Entity Instance: design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component
+ 19. Parameter Settings for User Entity Instance: design4TJN:inst|lpm_mux0:inst40|LPM_MUX:lpm_mux_component
+ 20. Parameter Settings for User Entity Instance: design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component
+ 21. Parameter Settings for User Entity Instance: lpm_mux2:inst70|LPM_MUX:lpm_mux_component
+ 22. Parameter Settings for User Entity Instance: lpm_compare0:inst4|lpm_compare:lpm_compare_component
+ 23. Parameter Settings for User Entity Instance: lpm_compare2:inst6|lpm_compare:lpm_compare_component
+ 24. Parameter Settings for User Entity Instance: lpm_counter0:inst1|lpm_counter:lpm_counter_component
+ 25. Parameter Settings for User Entity Instance: lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component
+ 26. Analysis & Synthesis Messages
 
 
 
@@ -56,13 +57,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Oct 29 20:03:57 2013        ;
+; Analysis & Synthesis Status ; Successful - Tue Nov 05 02:48:10 2013        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; project5                                     ;
 ; Top-level Entity Name       ; project5                                     ;
 ; Family                      ; FLEX10K                                      ;
-; Total logic elements        ; 371                                          ;
-; Total pins                  ; 35                                           ;
+; Total logic elements        ; 384                                          ;
+; Total pins                  ; 40                                           ;
 ; Total memory bits           ; 0                                            ;
 +-----------------------------+----------------------------------------------+
 
@@ -142,6 +143,7 @@ applicable agreement for further details.
 ; lpm_constant0.vhd                ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project5/lpm_constant0.vhd         ;
 ; lpm_constant1.vhd                ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project5/lpm_constant1.vhd         ;
 ; lpm_constant2.vhd                ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project5/lpm_constant2.vhd         ;
+; lpm_mux2.vhd                     ; yes             ; User Wizard-Generated File               ; C:/Github/Quartus_Projects/ENGN_3050_Project5/lpm_mux2.vhd              ;
 ; LPM_MUX.tdf                      ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/LPM_MUX.tdf             ;
 ; aglobal90.inc                    ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc           ;
 ; muxlut.inc                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.inc              ;
@@ -151,19 +153,20 @@ applicable agreement for further details.
 ; altshift.tdf                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/altshift.tdf            ;
 ; muxlut.tdf                       ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/muxlut.tdf              ;
 ; lpm_constant.tdf                 ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_constant.tdf        ;
-; design4TJN.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Github/Quartus_Projects/ENGN_3050_Project5/design4TJN.bdf            ;
-; lpm_latch0.vhd                   ; yes             ; Auto-Found Wizard-Generated File         ; C:/Github/Quartus_Projects/ENGN_3050_Project5/lpm_latch0.vhd            ;
-; lpm_latch.tdf                    ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_latch.tdf           ;
-; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_constant.inc        ;
-; Delay_Function.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Github/Quartus_Projects/ENGN_3050_Project5/Delay_Function.bdf        ;
-; lpm_mux0.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Github/Quartus_Projects/ENGN_3050_Project5/lpm_mux0.vhd              ;
-; lpm_latch1.vhd                   ; yes             ; Auto-Found Wizard-Generated File         ; C:/Github/Quartus_Projects/ENGN_3050_Project5/lpm_latch1.vhd            ;
-; 7_Segment_Decoder.bdf            ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Github/Quartus_Projects/ENGN_3050_Project5/7_Segment_Decoder.bdf     ;
 ; lpm_compare.tdf                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_compare.tdf         ;
 ; comptree.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/comptree.inc            ;
 ; comptree.tdf                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/comptree.tdf            ;
 ; cmpchain.inc                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/cmpchain.inc            ;
+; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_constant.inc        ;
 ; cmpchain.tdf                     ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/cmpchain.tdf            ;
+; design4TJN.bdf                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Github/Quartus_Projects/ENGN_3050_Project5/design4TJN.bdf            ;
+; lpm_latch0.vhd                   ; yes             ; Auto-Found Wizard-Generated File         ; C:/Github/Quartus_Projects/ENGN_3050_Project5/lpm_latch0.vhd            ;
+; lpm_latch.tdf                    ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_latch.tdf           ;
+; Delay_Function.bdf               ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Github/Quartus_Projects/ENGN_3050_Project5/Delay_Function.bdf        ;
+; lpm_mux0.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Github/Quartus_Projects/ENGN_3050_Project5/lpm_mux0.vhd              ;
+; lpm_latch1.vhd                   ; yes             ; Auto-Found Wizard-Generated File         ; C:/Github/Quartus_Projects/ENGN_3050_Project5/lpm_latch1.vhd            ;
+; 7_Segment_Decoder.bdf            ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Github/Quartus_Projects/ENGN_3050_Project5/7_Segment_Decoder.bdf     ;
+; XOR3.bdf                         ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/others/maxplus2/XOR3.bdf              ;
 ; lpm_counter0.vhd                 ; yes             ; Auto-Found Wizard-Generated File         ; C:/Github/Quartus_Projects/ENGN_3050_Project5/lpm_counter0.vhd          ;
 ; lpm_counter.tdf                  ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_counter.tdf         ;
 ; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_decode.inc          ;
@@ -195,19 +198,19 @@ applicable agreement for further details.
 +--------------------------------+------------+
 ; Resource                       ; Usage      ;
 +--------------------------------+------------+
-; Total logic elements           ; 371        ;
-; Total combinational functions  ; 57         ;
-;     -- Total 4-input functions ; 24         ;
-;     -- Total 3-input functions ; 23         ;
-;     -- Total 2-input functions ; 8          ;
-;     -- Total 1-input functions ; 2          ;
+; Total logic elements           ; 384        ;
+; Total combinational functions  ; 68         ;
+;     -- Total 4-input functions ; 27         ;
+;     -- Total 3-input functions ; 26         ;
+;     -- Total 2-input functions ; 12         ;
+;     -- Total 1-input functions ; 3          ;
 ;     -- Total 0-input functions ; 0          ;
-; Total registers                ; 321        ;
-; I/O pins                       ; 35         ;
+; Total registers                ; 327        ;
+; I/O pins                       ; 40         ;
 ; Maximum fan-out node           ; Sim_CLK    ;
-; Maximum fan-out                ; 321        ;
-; Total fan-out                  ; 851        ;
-; Average fan-out                ; 2.10       ;
+; Maximum fan-out                ; 327        ;
+; Total fan-out                  ; 893        ;
+; Average fan-out                ; 2.11       ;
 +--------------------------------+------------+
 
 
@@ -216,8 +219,8 @@ applicable agreement for further details.
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                                      ; Library Name ;
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |project5                                 ; 371 (7)     ; 321          ; 0           ; 35   ; 50 (3)       ; 314 (2)           ; 7 (2)            ; 0 (0)           ; 0 (0)      ; |project5                                                                                                                                                ; work         ;
-;    |design4TJN:inst|                      ; 351 (24)    ; 317          ; 0           ; 0    ; 34 (11)      ; 312 (10)          ; 5 (3)            ; 0 (0)           ; 0 (0)      ; |project5|design4TJN:inst                                                                                                                                ; work         ;
+; |project5                                 ; 384 (21)    ; 327          ; 0           ; 40   ; 57 (10)      ; 316 (6)           ; 11 (5)           ; 0 (0)           ; 0 (0)      ; |project5                                                                                                                                                ; work         ;
+;    |design4TJN:inst|                      ; 350 (23)    ; 316          ; 0           ; 0    ; 34 (11)      ; 310 (8)           ; 6 (4)            ; 0 (0)           ; 0 (0)      ; |project5|design4TJN:inst                                                                                                                                ; work         ;
 ;       |7_Segment_Decoder:inst24|          ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|design4TJN:inst|7_Segment_Decoder:inst24                                                                                                       ; work         ;
 ;       |7_Segment_Decoder:inst26|          ; 7 (7)       ; 0            ; 0           ; 0    ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|design4TJN:inst|7_Segment_Decoder:inst26                                                                                                       ; work         ;
 ;       |Delay_Function:inst10|             ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|design4TJN:inst|Delay_Function:inst10                                                                                                          ; work         ;
@@ -266,11 +269,11 @@ applicable agreement for further details.
 ;                      |cmpchain:cmp_end|   ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end ; work         ;
 ;    |lpm_mux1:inst9|                       ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|lpm_mux1:inst9                                                                                                                                 ; work         ;
 ;       |lpm_mux:lpm_mux_component|         ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|lpm_mux1:inst9|lpm_mux:lpm_mux_component                                                                                                       ; work         ;
-;          |muxlut:$00010|                  ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00010                                                                                         ; work         ;
-;             |muxlut:$00012|               ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00012                                                                           ; work         ;
+;          |muxlut:$00010|                  ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00010                                                                                         ; work         ;
+;             |muxlut:$00012|               ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00012                                                                           ; work         ;
 ;             |muxlut:$00020|               ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00020                                                                           ; work         ;
-;          |muxlut:$00012|                  ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00012                                                                                         ; work         ;
-;             |muxlut:$00020|               ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00012|muxlut:$00020                                                                           ; work         ;
+;          |muxlut:$00012|                  ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00012                                                                                         ; work         ;
+;             |muxlut:$00020|               ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |project5|lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00012|muxlut:$00020                                                                           ; work         ;
 +-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -288,6 +291,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2] ; design4TJN:inst|inst53                       ; yes                    ;
 ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[1] ; design4TJN:inst|inst53                       ; yes                    ;
 ; design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0] ; design4TJN:inst|inst53                       ; yes                    ;
+; inst10                                                                     ; inst30                                       ; yes                    ;
+; inst11                                                                     ; inst30                                       ; yes                    ;
+; inst12                                                                     ; inst30                                       ; yes                    ;
 ; design4TJN:inst|inst29                                                     ; design4TJN:inst|Delay_Function:inst10|inst47 ; yes                    ;
 ; design4TJN:inst|inst30                                                     ; design4TJN:inst|Delay_Function:inst8|inst47  ; yes                    ;
 ; design4TJN:inst|inst31                                                     ; design4TJN:inst|Delay_Function:inst6|inst47  ; yes                    ;
@@ -296,7 +302,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; design4TJN:inst|inst34                                                     ; design4TJN:inst|Delay_Function:inst25|inst47 ; yes                    ;
 ; design4TJN:inst|inst36                                                     ; design4TJN:inst|Delay_Function:inst23|inst47 ; yes                    ;
 ; design4TJN:inst|inst33                                                     ; design4TJN:inst|Delay_Function:inst16|inst47 ; yes                    ;
-; Number of user-specified and inferred latches = 16                         ;                                              ;                        ;
+; Number of user-specified and inferred latches = 19                         ;                                              ;                        ;
 +----------------------------------------------------------------------------+----------------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -307,6 +313,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Register name                                                                               ; Reason for Removal                 ;
 +---------------------------------------------------------------------------------------------+------------------------------------+
 ; lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[0..6] ; Lost fanout                        ;
+; design4TJN:inst|inst39                                                                      ; Merged with inst25                 ;
 ; design4TJN:inst|inst48                                                                      ; Merged with design4TJN:inst|inst47 ;
 ; design4TJN:inst|inst52                                                                      ; Merged with design4TJN:inst|inst47 ;
 ; design4TJN:inst|inst56                                                                      ; Merged with design4TJN:inst|inst47 ;
@@ -314,7 +321,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; design4TJN:inst|inst59                                                                      ; Merged with design4TJN:inst|inst47 ;
 ; design4TJN:inst|inst58                                                                      ; Merged with design4TJN:inst|inst47 ;
 ; design4TJN:inst|inst57                                                                      ; Merged with design4TJN:inst|inst47 ;
-; Total Number of Removed Registers = 14                                                      ;                                    ;
+; Total Number of Removed Registers = 15                                                      ;                                    ;
 +---------------------------------------------------------------------------------------------+------------------------------------+
 
 
@@ -337,7 +344,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 321   ;
+; Total registers                              ; 327   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 1     ;
@@ -377,25 +384,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                       ;
 ; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                     ;
 ; LPM_WIDTH              ; 2       ; Signed Integer                                     ;
-; LPM_SIZE               ; 15      ; Signed Integer                                     ;
+; LPM_SIZE               ; 16      ; Signed Integer                                     ;
 ; LPM_WIDTHS             ; 4       ; Signed Integer                                     ;
 ; LPM_PIPELINE           ; 0       ; Signed Integer                                     ;
-; CBXI_PARAMETER         ; mux_kpd ; Untyped                                            ;
+; CBXI_PARAMETER         ; mux_lpd ; Untyped                                            ;
 ; DEVICE_FAMILY          ; FLEX10K ; Untyped                                            ;
 +------------------------+---------+----------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_constant0:inst42|lpm_constant:lpm_constant_component ;
-+--------------------+------------------+---------------------------------------------------------------+
-; Parameter Name     ; Value            ; Type                                                          ;
-+--------------------+------------------+---------------------------------------------------------------+
-; LPM_WIDTH          ; 2                ; Signed Integer                                                ;
-; LPM_CVALUE         ; 0                ; Signed Integer                                                ;
-; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                       ;
-; CBXI_PARAMETER     ; lpm_constant_4e6 ; Untyped                                                       ;
-+--------------------+------------------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -413,6 +407,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant0:inst42|lpm_constant:lpm_constant_component ;
++--------------------+------------------+---------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                          ;
++--------------------+------------------+---------------------------------------------------------------+
+; LPM_WIDTH          ; 2                ; Signed Integer                                                ;
+; LPM_CVALUE         ; 0                ; Signed Integer                                                ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                       ;
+; CBXI_PARAMETER     ; lpm_constant_4e6 ; Untyped                                                       ;
++--------------------+------------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: lpm_constant1:inst43|lpm_constant:lpm_constant_component ;
 +--------------------+------------------+---------------------------------------------------------------+
 ; Parameter Name     ; Value            ; Type                                                          ;
@@ -422,6 +429,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                       ;
 ; CBXI_PARAMETER     ; lpm_constant_5e6 ; Untyped                                                       ;
 +--------------------+------------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_compare1:inst5|lpm_compare:lpm_compare_component ;
++------------------------+----------+---------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                          ;
++------------------------+----------+---------------------------------------------------------------+
+; lpm_width              ; 8        ; Signed Integer                                                ;
+; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                       ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                       ;
+; CHAIN_SIZE             ; 8        ; Untyped                                                       ;
+; ONE_INPUT_IS_CONSTANT  ; YES      ; Untyped                                                       ;
+; CARRY_CHAIN            ; MANUAL   ; Untyped                                                       ;
+; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                       ;
+; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                            ;
+; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                          ;
+; DEVICE_FAMILY          ; FLEX10K  ; Untyped                                                       ;
+; CBXI_PARAMETER         ; cmpr_9si ; Untyped                                                       ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                ;
++------------------------+----------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -466,27 +497,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_compare2:inst6|lpm_compare:lpm_compare_component ;
-+------------------------+----------+---------------------------------------------------------------+
-; Parameter Name         ; Value    ; Type                                                          ;
-+------------------------+----------+---------------------------------------------------------------+
-; lpm_width              ; 8        ; Signed Integer                                                ;
-; LPM_REPRESENTATION     ; SIGNED   ; Untyped                                                       ;
-; LPM_PIPELINE           ; 0        ; Untyped                                                       ;
-; CHAIN_SIZE             ; 8        ; Untyped                                                       ;
-; ONE_INPUT_IS_CONSTANT  ; YES      ; Untyped                                                       ;
-; CARRY_CHAIN            ; MANUAL   ; Untyped                                                       ;
-; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                       ;
-; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                            ;
-; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                          ;
-; DEVICE_FAMILY          ; FLEX10K  ; Untyped                                                       ;
-; CBXI_PARAMETER         ; cmpr_6li ; Untyped                                                       ;
-; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                  ;
-; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                ;
-+------------------------+----------+---------------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_mux2:inst70|LPM_MUX:lpm_mux_component ;
++------------------------+---------+-----------------------------------------------------+
+; Parameter Name         ; Value   ; Type                                                ;
++------------------------+---------+-----------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE                                      ;
+; LPM_WIDTH              ; 1       ; Signed Integer                                      ;
+; LPM_SIZE               ; 2       ; Signed Integer                                      ;
+; LPM_WIDTHS             ; 1       ; Signed Integer                                      ;
+; LPM_PIPELINE           ; 0       ; Signed Integer                                      ;
+; CBXI_PARAMETER         ; mux_snd ; Untyped                                             ;
+; DEVICE_FAMILY          ; FLEX10K ; Untyped                                             ;
++------------------------+---------+-----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -515,12 +541,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_compare1:inst5|lpm_compare:lpm_compare_component ;
+; Parameter Settings for User Entity Instance: lpm_compare2:inst6|lpm_compare:lpm_compare_component ;
 +------------------------+----------+---------------------------------------------------------------+
 ; Parameter Name         ; Value    ; Type                                                          ;
 +------------------------+----------+---------------------------------------------------------------+
 ; lpm_width              ; 8        ; Signed Integer                                                ;
-; LPM_REPRESENTATION     ; UNSIGNED ; Untyped                                                       ;
+; LPM_REPRESENTATION     ; SIGNED   ; Untyped                                                       ;
 ; LPM_PIPELINE           ; 0        ; Untyped                                                       ;
 ; CHAIN_SIZE             ; 8        ; Untyped                                                       ;
 ; ONE_INPUT_IS_CONSTANT  ; YES      ; Untyped                                                       ;
@@ -529,7 +555,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                            ;
 ; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                          ;
 ; DEVICE_FAMILY          ; FLEX10K  ; Untyped                                                       ;
-; CBXI_PARAMETER         ; cmpr_9si ; Untyped                                                       ;
+; CBXI_PARAMETER         ; cmpr_6li ; Untyped                                                       ;
 ; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                    ;
 ; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                  ;
 ; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                  ;
@@ -599,7 +625,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Oct 29 20:03:54 2013
+    Info: Processing started: Tue Nov 05 02:48:07 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project5 -c project5
 Info: Found 1 design units, including 1 entities, in source file project5.bdf
     Info: Found entity 1: project5
@@ -627,7 +653,17 @@ Info: Found 2 design units, including 1 entities, in source file lpm_constant1.v
 Info: Found 2 design units, including 1 entities, in source file lpm_constant2.vhd
     Info: Found design unit 1: lpm_constant2-SYN
     Info: Found entity 1: lpm_constant2
+Info: Found 1 design units, including 1 entities, in source file Change_detector.bdf
+    Info: Found entity 1: Change_detector
+Info: Found 2 design units, including 1 entities, in source file lpm_mux2.vhd
+    Info: Found design unit 1: lpm_mux2-SYN
+    Info: Found entity 1: lpm_mux2
+Info: Found 2 design units, including 1 entities, in source file lpm_constant3.vhd
+    Info: Found design unit 1: lpm_constant3-SYN
+    Info: Found entity 1: lpm_constant3
 Info: Elaborating entity "project5" for the top level hierarchy
+Warning: Block or symbol "lpm_constant0" of instance "inst42" overlaps another block or symbol
+Warning: Pin "LN3" is missing source
 Warning: Primitive "AND2" of instance "inst15" not used
 Warning: Primitive "NOT" of instance "inst16" not used
 Warning: Primitive "NOR2" of instance "inst20" not used
@@ -637,7 +673,7 @@ Info: Elaborating entity "LPM_MUX" for hierarchy "lpm_mux1:inst9|LPM_MUX:lpm_mux
 Info: Elaborated megafunction instantiation "lpm_mux1:inst9|LPM_MUX:lpm_mux_component"
 Info: Instantiated megafunction "lpm_mux1:inst9|LPM_MUX:lpm_mux_component" with the following parameter:
     Info: Parameter "LPM_WIDTH" = "2"
-    Info: Parameter "LPM_SIZE" = "15"
+    Info: Parameter "LPM_SIZE" = "16"
     Info: Parameter "LPM_WIDTHS" = "4"
     Info: Parameter "LPM_PIPELINE" = "0"
     Info: Parameter "LPM_TYPE" = "LPM_MUX"
@@ -650,23 +686,21 @@ Info: Elaborating entity "muxlut" for hierarchy "lpm_mux1:inst9|LPM_MUX:lpm_mux_
 Info: Elaborated megafunction instantiation "lpm_mux1:inst9|LPM_MUX:lpm_mux_component|muxlut:$00010", which is child of megafunction instantiation "lpm_mux1:inst9|LPM_MUX:lpm_mux_component"
 Info: Elaborating entity "muxlut" for hierarchy "lpm_mux1:inst9|LPM_MUX:lpm_mux_component|muxlut:$00010|muxlut:$00012"
 Info: Elaborated megafunction instantiation "lpm_mux1:inst9|LPM_MUX:lpm_mux_component|muxlut:$00010|muxlut:$00012", which is child of megafunction instantiation "lpm_mux1:inst9|LPM_MUX:lpm_mux_component"
-Info: Elaborating entity "muxlut" for hierarchy "lpm_mux1:inst9|LPM_MUX:lpm_mux_component|muxlut:$00010|muxlut:$00018"
-Info: Elaborated megafunction instantiation "lpm_mux1:inst9|LPM_MUX:lpm_mux_component|muxlut:$00010|muxlut:$00018", which is child of megafunction instantiation "lpm_mux1:inst9|LPM_MUX:lpm_mux_component"
 Info: Elaborating entity "muxlut" for hierarchy "lpm_mux1:inst9|LPM_MUX:lpm_mux_component|muxlut:$00010|muxlut:$00020"
 Info: Elaborated megafunction instantiation "lpm_mux1:inst9|LPM_MUX:lpm_mux_component|muxlut:$00010|muxlut:$00020", which is child of megafunction instantiation "lpm_mux1:inst9|LPM_MUX:lpm_mux_component"
-Info: Elaborating entity "lpm_constant0" for hierarchy "lpm_constant0:inst42"
-Info: Elaborating entity "lpm_constant" for hierarchy "lpm_constant0:inst42|lpm_constant:lpm_constant_component"
-Info: Elaborated megafunction instantiation "lpm_constant0:inst42|lpm_constant:lpm_constant_component"
-Info: Instantiated megafunction "lpm_constant0:inst42|lpm_constant:lpm_constant_component" with the following parameter:
-    Info: Parameter "lpm_cvalue" = "0"
-    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info: Parameter "lpm_type" = "LPM_CONSTANT"
-    Info: Parameter "lpm_width" = "2"
 Info: Elaborating entity "lpm_constant2" for hierarchy "lpm_constant2:inst44"
 Info: Elaborating entity "lpm_constant" for hierarchy "lpm_constant2:inst44|lpm_constant:lpm_constant_component"
 Info: Elaborated megafunction instantiation "lpm_constant2:inst44|lpm_constant:lpm_constant_component"
 Info: Instantiated megafunction "lpm_constant2:inst44|lpm_constant:lpm_constant_component" with the following parameter:
     Info: Parameter "lpm_cvalue" = "3"
+    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info: Parameter "lpm_type" = "LPM_CONSTANT"
+    Info: Parameter "lpm_width" = "2"
+Info: Elaborating entity "lpm_constant0" for hierarchy "lpm_constant0:inst42"
+Info: Elaborating entity "lpm_constant" for hierarchy "lpm_constant0:inst42|lpm_constant:lpm_constant_component"
+Info: Elaborated megafunction instantiation "lpm_constant0:inst42|lpm_constant:lpm_constant_component"
+Info: Instantiated megafunction "lpm_constant0:inst42|lpm_constant:lpm_constant_component" with the following parameter:
+    Info: Parameter "lpm_cvalue" = "0"
     Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info: Parameter "lpm_type" = "LPM_CONSTANT"
     Info: Parameter "lpm_width" = "2"
@@ -678,6 +712,28 @@ Info: Instantiated megafunction "lpm_constant1:inst43|lpm_constant:lpm_constant_
     Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info: Parameter "lpm_type" = "LPM_CONSTANT"
     Info: Parameter "lpm_width" = "2"
+Info: Elaborating entity "lpm_compare1" for hierarchy "lpm_compare1:inst5"
+Info: Elaborating entity "lpm_compare" for hierarchy "lpm_compare1:inst5|lpm_compare:lpm_compare_component"
+Info: Elaborated megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component"
+Info: Instantiated megafunction "lpm_compare1:inst5|lpm_compare:lpm_compare_component" with the following parameter:
+    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES"
+    Info: Parameter "lpm_representation" = "UNSIGNED"
+    Info: Parameter "lpm_type" = "LPM_COMPARE"
+    Info: Parameter "lpm_width" = "8"
+Info: Elaborating entity "comptree" for hierarchy "lpm_compare1:inst5|lpm_compare:lpm_compare_component|comptree:comparator"
+Info: Elaborated megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component|comptree:comparator", which is child of megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "cmpchain" for hierarchy "lpm_compare1:inst5|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end"
+Info: Elaborated megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end", which is child of megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "comptree" for hierarchy "lpm_compare1:inst5|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp"
+Info: Elaborated megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp", which is child of megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "cmpchain" for hierarchy "lpm_compare1:inst5|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]"
+Info: Elaborated megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]", which is child of megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "comptree" for hierarchy "lpm_compare1:inst5|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree"
+Info: Elaborated megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree", which is child of megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "cmpchain" for hierarchy "lpm_compare1:inst5|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end"
+Info: Elaborated megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end", which is child of megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "altshift" for hierarchy "lpm_compare1:inst5|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs"
+Info: Elaborated megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs", which is child of megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component"
 Warning: Using design file design4TJN.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info: Found entity 1: design4TJN
 Info: Elaborating entity "design4TJN" for hierarchy "design4TJN:inst"
@@ -710,8 +766,6 @@ Info: Instantiated megafunction "design4TJN:inst|lpm_mux0:inst40|LPM_MUX:lpm_mux
     Info: Parameter "LPM_PIPELINE" = "0"
     Info: Parameter "LPM_TYPE" = "LPM_MUX"
     Info: Parameter "LPM_HINT" = "UNUSED"
-Info: Elaborating entity "altshift" for hierarchy "design4TJN:inst|lpm_mux0:inst40|LPM_MUX:lpm_mux_component|altshift:external_latency_ffs"
-Info: Elaborated megafunction instantiation "design4TJN:inst|lpm_mux0:inst40|LPM_MUX:lpm_mux_component|altshift:external_latency_ffs", which is child of megafunction instantiation "design4TJN:inst|lpm_mux0:inst40|LPM_MUX:lpm_mux_component"
 Info: Elaborating entity "muxlut" for hierarchy "design4TJN:inst|lpm_mux0:inst40|LPM_MUX:lpm_mux_component|muxlut:$00009"
 Info: Elaborated megafunction instantiation "design4TJN:inst|lpm_mux0:inst40|LPM_MUX:lpm_mux_component|muxlut:$00009", which is child of megafunction instantiation "design4TJN:inst|lpm_mux0:inst40|LPM_MUX:lpm_mux_component"
 Warning: Using design file lpm_latch1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
@@ -724,26 +778,7 @@ Info: Elaborating entity "7_Segment_Decoder" for hierarchy "design4TJN:inst|7_Se
 Warning: Block or symbol "NOT" of instance "inst9" overlaps another block or symbol
 Warning: Block or symbol "NOT" of instance "inst39" overlaps another block or symbol
 Warning: Block or symbol "NOT" of instance "inst40" overlaps another block or symbol
-Info: Elaborating entity "lpm_compare2" for hierarchy "lpm_compare2:inst6"
-Info: Elaborating entity "lpm_compare" for hierarchy "lpm_compare2:inst6|lpm_compare:lpm_compare_component"
-Info: Elaborated megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component"
-Info: Instantiated megafunction "lpm_compare2:inst6|lpm_compare:lpm_compare_component" with the following parameter:
-    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES"
-    Info: Parameter "lpm_representation" = "SIGNED"
-    Info: Parameter "lpm_type" = "LPM_COMPARE"
-    Info: Parameter "lpm_width" = "8"
-Info: Elaborating entity "comptree" for hierarchy "lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator"
-Info: Elaborated megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator", which is child of megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "cmpchain" for hierarchy "lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end"
-Info: Elaborated megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end", which is child of megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "comptree" for hierarchy "lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp"
-Info: Elaborated megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp", which is child of megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "cmpchain" for hierarchy "lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]"
-Info: Elaborated megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]", which is child of megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "comptree" for hierarchy "lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree"
-Info: Elaborated megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree", which is child of megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component"
-Info: Elaborating entity "cmpchain" for hierarchy "lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end"
-Info: Elaborated megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end", which is child of megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component"
+Info: Elaborating entity "lpm_mux2" for hierarchy "lpm_mux2:inst70"
 Info: Elaborating entity "lpm_compare0" for hierarchy "lpm_compare0:inst4"
 Info: Elaborating entity "lpm_compare" for hierarchy "lpm_compare0:inst4|lpm_compare:lpm_compare_component"
 Info: Elaborated megafunction instantiation "lpm_compare0:inst4|lpm_compare:lpm_compare_component"
@@ -752,14 +787,16 @@ Info: Instantiated megafunction "lpm_compare0:inst4|lpm_compare:lpm_compare_comp
     Info: Parameter "lpm_representation" = "UNSIGNED"
     Info: Parameter "lpm_type" = "LPM_COMPARE"
     Info: Parameter "lpm_width" = "8"
-Info: Elaborating entity "lpm_compare1" for hierarchy "lpm_compare1:inst5"
-Info: Elaborating entity "lpm_compare" for hierarchy "lpm_compare1:inst5|lpm_compare:lpm_compare_component"
-Info: Elaborated megafunction instantiation "lpm_compare1:inst5|lpm_compare:lpm_compare_component"
-Info: Instantiated megafunction "lpm_compare1:inst5|lpm_compare:lpm_compare_component" with the following parameter:
+Info: Elaborating entity "lpm_compare2" for hierarchy "lpm_compare2:inst6"
+Info: Elaborating entity "lpm_compare" for hierarchy "lpm_compare2:inst6|lpm_compare:lpm_compare_component"
+Info: Elaborated megafunction instantiation "lpm_compare2:inst6|lpm_compare:lpm_compare_component"
+Info: Instantiated megafunction "lpm_compare2:inst6|lpm_compare:lpm_compare_component" with the following parameter:
     Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES"
-    Info: Parameter "lpm_representation" = "UNSIGNED"
+    Info: Parameter "lpm_representation" = "SIGNED"
     Info: Parameter "lpm_type" = "LPM_COMPARE"
     Info: Parameter "lpm_width" = "8"
+Info: Elaborating entity "XOR3" for hierarchy "XOR3:inst56"
+Info: Elaborated megafunction instantiation "XOR3:inst56"
 Warning: Using design file lpm_counter0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: lpm_counter0-SYN
     Info: Found entity 1: lpm_counter0
@@ -811,9 +848,17 @@ Warning: Synthesized away the following node(s):
         Warning (14320): Synthesized away node "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out"
         Warning (14320): Synthesized away node "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end|aeb_out"
         Warning (14320): Synthesized away node "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]|aeb_out"
+Warning: Latch inst10 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Rst_UART
+Warning: Latch inst11 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Rst_UART
+Warning: Latch inst12 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst34
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LN3" is stuck at GND
 Warning: CASCADE primitive "lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00012|muxlut:$00020|$00012" contains fan-out to more than one destination
 Warning: CASCADE primitive "lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00020|$00012" contains fan-out to more than one destination
-Warning: Primitive "lpm_compare0:inst4|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out" of type BUF (LCELL) cannot feed CASCADE primitive "lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00012|muxlut:$00012|$00012" because the primitive already contains fan-out to one or more CASCADE primitives
+Warning: Primitive "lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00010|muxlut:$00012|result_node~synth" of type COMB (AND) cannot feed CASCADE primitive "lpm_mux1:inst9|lpm_mux:lpm_mux_component|muxlut:$00012|muxlut:$00012|$00012" because the primitive already contains fan-out to one or more CASCADE primitives
 Info: 7 registers lost all their fanouts during netlist optimizations. The first 7 are displayed below.
     Info: Register "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[6]" lost all its fanouts during netlist optimizations.
     Info: Register "lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|q[5]" lost all its fanouts during netlist optimizations.
@@ -825,14 +870,14 @@ Info: 7 registers lost all their fanouts during netlist optimizations. The first
 Warning: Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "UART_CLK_SIM"
     Warning (15610): No output dependent on input pin "Sys_CLK"
-Info: Implemented 406 device resources after synthesis - the final resource count might be different
+Info: Implemented 424 device resources after synthesis - the final resource count might be different
     Info: Implemented 5 input pins
-    Info: Implemented 30 output pins
-    Info: Implemented 371 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Implemented 35 output pins
+    Info: Implemented 384 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 40 warnings
     Info: Peak virtual memory: 240 megabytes
-    Info: Processing ended: Tue Oct 29 20:03:57 2013
+    Info: Processing ended: Tue Nov 05 02:48:10 2013
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 
