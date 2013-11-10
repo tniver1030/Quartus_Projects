@@ -1,0 +1,10 @@
+Fitter Status : Successful - Tue Oct 22 19:39:01 2013
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : design4TJN
+Top-level Entity Name : design4TJN
+Family : FLEX10K
+Device : EPF10K70RC240-4
+Timing Models : Final
+Total logic elements : 364 / 3,744 ( 10 % )
+Total pins : 29 / 189 ( 15 % )
+Total memory bits : 0 / 18,432 ( 0 % )
