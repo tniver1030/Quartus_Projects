@@ -931,10 +931,10 @@ VECTOR("C:/Github/Quartus_Projects/ENGN_3050_Project6/project5.vwf")
 VECTOR("C:/Github/Quartus_Projects/ENGN_3050_Project6/Project6.vwf")
 {
 	ZOOM{
-		ZBEGIN = 0;
-		ZEND = 20000000000;
-		NUMERATOR = 1475;
-		DENOMINATOR = 20000000000;
+		ZBEGIN = 11666929128;
+		ZEND = 15139370072;
+		NUMERATOR = 1270;
+		DENOMINATOR = 3472440944;
 		TOP_INDEX = 0;
 	}
 	CLOCK{

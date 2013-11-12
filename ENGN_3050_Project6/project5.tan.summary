@@ -5,52 +5,52 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.100 ns
-From           : Rst_UART
-To             : design4TJN:inst|inst42
+Actual Time    : 12.100 ns
+From           : UART_Recieve
+To             : design4TJN:inst|Delay_Function:inst15|inst
 From Clock     : --
-To Clock       : Sim_CLK
+To Clock       : Sys_CLK
 Failed Paths   : 0
 
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 34.700 ns
-From           : design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1]
-To             : UB
-From Clock     : UART_Recieve
+Actual Time    : 45.800 ns
+From           : design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0]
+To             : lG
+From Clock     : Sys_CLK
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -0.800 ns
+Actual Time    : 0.000 ns
 From           : Rst_UART
 To             : design4TJN:inst|inst39
 From Clock     : --
-To Clock       : Sim_CLK
+To Clock       : Sys_CLK
 Failed Paths   : 0
 
-Type           : Clock Setup: 'Sim_CLK'
+Type           : Clock Setup: 'Sys_CLK'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 30.12 MHz ( period = 33.200 ns )
-From           : design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1]
-To             : design4TJN:inst|inst2
-From Clock     : Sim_CLK
-To Clock       : Sim_CLK
+Actual Time    : 26.74 MHz ( period = 37.400 ns )
+From           : design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[0]
+To             : design4TJN:inst|inst5
+From Clock     : Sys_CLK
+To Clock       : Sys_CLK
 Failed Paths   : 0
 
-Type           : Clock Hold: 'Sim_CLK'
+Type           : Clock Hold: 'Sys_CLK'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : design4TJN:inst|inst31
-To             : design4TJN:inst|lpm_latch0:inst54|lpm_latch:lpm_latch_component|latches[1]
-From Clock     : Sim_CLK
-To Clock       : Sim_CLK
-Failed Paths   : 8
+From           : design4TJN:inst|inst34
+To             : design4TJN:inst|lpm_latch1:inst55|lpm_latch:lpm_latch_component|latches[2]
+From Clock     : Sys_CLK
+To Clock       : Sys_CLK
+Failed Paths   : 9
 
 Type           : Total number of failed paths
 Slack          : 
@@ -60,7 +60,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 8
+Failed Paths   : 9
 
 --------------------------------------------------------------------------------------
 

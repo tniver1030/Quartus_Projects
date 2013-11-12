@@ -86,3 +86,9 @@ set_global_assignment -name QIP_FILE lpm_counter2.qip
 set_global_assignment -name QIP_FILE lpm_counter3.qip
 set_global_assignment -name QIP_FILE lpm_add_sub2.qip
 set_global_assignment -name QIP_FILE lpm_add_sub3.qip
+set_location_assignment PIN_45 -to UART_Recieve
+set_location_assignment PIN_48 -to 1
+set_location_assignment PIN_50 -to 3
+set_location_assignment PIN_53 -to enable
+set_global_assignment -name MISC_FILE "C:/Github/Quartus_Projects/ENGN_3050_Project6/project5.dpf"
+set_location_assignment PIN_28 -to Rst_UART

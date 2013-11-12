@@ -743,6 +743,10 @@ data0
 3
 }
 # hierarchies {
+lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs
+lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|altshift:oflow_ext_latency_ffs
+lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|altshift:aeb_ext_lat_ffs
+lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|altshift:agb_ext_lat_ffs
 lpm_compare4:inst13|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
 lpm_compare4:inst13|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
 design4TJN:inst|lpm_mux0:inst40|lpm_mux:lpm_mux_component|altshift:external_latency_ffs
@@ -751,12 +755,8 @@ lpm_add_sub1:inst32|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency
 lpm_add_sub1:inst32|lpm_add_sub:lpm_add_sub_component|altshift:oflow_ext_latency_ffs
 lpm_compare4:inst14|lpm_compare:lpm_compare_component|altshift:aeb_ext_lat_ffs
 lpm_compare4:inst14|lpm_compare:lpm_compare_component|altshift:agb_ext_lat_ffs
-lpm_add_sub3:inst68|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs
-lpm_add_sub3:inst68|lpm_add_sub:lpm_add_sub_component|altshift:oflow_ext_latency_ffs
-lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|altshift:aeb_ext_lat_ffs
-lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|altshift:agb_ext_lat_ffs
-lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs
-lpm_add_sub0:inst2|lpm_add_sub:lpm_add_sub_component|altshift:oflow_ext_latency_ffs
+lpm_add_sub1:inst33|lpm_add_sub:lpm_add_sub_component|altshift:carry_ext_latency_ffs
+lpm_add_sub1:inst33|lpm_add_sub:lpm_add_sub_component|altshift:oflow_ext_latency_ffs
 }
 # macro_sequence
 
@@ -1644,9 +1644,9 @@ da21447b8e66c26bd34c85b6cdda8169
 99832fdf63412df51d7531202d74e75
 }
 # hierarchies {
+lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
 lpm_compare4:inst13|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
 lpm_compare4:inst14|lpm_compare:lpm_compare_component|comptree:comparator|cmpchain:cmp_end
-lpm_counter0:inst1|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|lpm_compare:$00014|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
 }
 # macro_sequence
 
@@ -5376,7 +5376,7 @@ c08f604aefba5b4f1f554e565113c6
 }
 # hierarchies {
 lpm_add_sub1:inst32|lpm_add_sub:lpm_add_sub_component
-lpm_add_sub3:inst68|lpm_add_sub:lpm_add_sub_component
+lpm_add_sub1:inst33|lpm_add_sub:lpm_add_sub_component
 }
 # macro_sequence
 
@@ -5488,7 +5488,7 @@ ff795e21e4847824c03218724f1a1252
 }
 # hierarchies {
 lpm_add_sub1:inst32|lpm_add_sub:lpm_add_sub_component|addcore:adder
-lpm_add_sub3:inst68|lpm_add_sub:lpm_add_sub_component|addcore:adder
+lpm_add_sub1:inst33|lpm_add_sub:lpm_add_sub_component|addcore:adder
 }
 # macro_sequence
 
@@ -5528,8 +5528,8 @@ sin0
 # hierarchies {
 lpm_add_sub1:inst32|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node
 lpm_add_sub1:inst32|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:cout_node
-lpm_add_sub3:inst68|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node
-lpm_add_sub3:inst68|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:cout_node
+lpm_add_sub1:inst33|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:oflow_node
+lpm_add_sub1:inst33|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:cout_node
 }
 # macro_sequence
 
@@ -5610,7 +5610,7 @@ cin0
 }
 # hierarchies {
 lpm_add_sub1:inst32|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node
-lpm_add_sub3:inst68|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node
+lpm_add_sub1:inst33|lpm_add_sub:lpm_add_sub_component|addcore:adder|a_csnbuffer:result_node
 }
 # macro_sequence
 
@@ -5663,7 +5663,7 @@ data0
 }
 # hierarchies {
 lpm_add_sub1:inst32|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs
-lpm_add_sub3:inst68|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs
+lpm_add_sub1:inst33|lpm_add_sub:lpm_add_sub_component|altshift:result_ext_latency_ffs
 }
 # macro_sequence
 
@@ -6321,6 +6321,9 @@ e61874547688138e6fc0b49ff8760
 ..|..|..|altera|90sp2|quartus|libraries|megafunctions|dffeea.inc
 55d29d20f7e852c37746bec4e2495ec
 }
+# hierarchies {
+lpm_counter3:inst53|lpm_counter:lpm_counter_component
+}
 # macro_sequence
 
 # end
@@ -6417,6 +6420,9 @@ c89a3d47968155565cd6d7fab3ae6a
 99832fdf63412df51d7531202d74e75
 ..|..|..|altera|90sp2|quartus|libraries|megafunctions|lpm_compare.inc
 aec4ea1b78f4cda1c3effe18f1abbf63
+}
+# hierarchies {
+lpm_counter3:inst53|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter
 }
 # macro_sequence
 
@@ -6703,6 +6709,7 @@ ON
 }
 # hierarchies {
 lpm_add_sub1:inst32
+lpm_add_sub1:inst33
 }
 # lmf
 ..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
@@ -6967,39 +6974,6 @@ ff795e21e4847824c03218724f1a1252
 
 # end
 # entity
-lpm_counter3
-# storage
-db|project5.(78).cnf
-db|project5.(78).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-lpm_counter3.vhd
-23302f118fcc301b1a70e81e459d95a
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-lpm_counter3:inst53
-}
-# lmf
-..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 lpm_counter
 # storage
 db|project5.(88).cnf
@@ -7129,9 +7103,6 @@ e61874547688138e6fc0b49ff8760
 ..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
 }
-# hierarchies {
-lpm_counter3:inst53|lpm_counter:lpm_counter_component
-}
 # macro_sequence
 
 # end
@@ -7232,9 +7203,39 @@ aec4ea1b78f4cda1c3effe18f1abbf63
 ..|..|..|altera|90sp2|quartus|libraries|megafunctions|aglobal90.inc
 99832fdf63412df51d7531202d74e75
 }
-# hierarchies {
-lpm_counter3:inst53|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter
+# macro_sequence
+
+# end
+# entity
+lpm_counter3
+# storage
+db|project5.(78).cnf
+db|project5.(78).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
 }
+# case_insensitive
+# source_file
+lpm_counter3.vhd
+3b1cb8c147725159331fdf85d494409b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_counter3:inst53
+}
+# lmf
+..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
 # end
@@ -7262,9 +7263,6 @@ ON
 AUTO_ROM_RECOGNITION
 ON
 }
-# hierarchies {
-lpm_add_sub3:inst68
-}
 # lmf
 ..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
@@ -7279,7 +7277,7 @@ db|project5.(0).cnf
 # case_insensitive
 # source_file
 project6.bdf
-469beedf173109394f5335e39b2f2ce
+587eac6265e7e41d9ddee6cd56a46e59
 26
 # internal_option {
 BLOCK_DESIGN_NAMING

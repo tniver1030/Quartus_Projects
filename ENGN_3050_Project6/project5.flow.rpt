@@ -1,5 +1,5 @@
 Flow report for project5
-Sun Nov 10 02:29:05 2013
+Tue Nov 12 17:16:17 2013
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Flow Summary                                                           ;
 +-------------------------+----------------------------------------------+
-; Flow Status             ; Successful - Sun Nov 10 02:29:05 2013        ;
+; Flow Status             ; Successful - Tue Nov 12 17:16:17 2013        ;
 ; Quartus II Version      ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name           ; project5                                     ;
 ; Top-level Entity Name   ; project6                                     ;
@@ -46,7 +46,7 @@ applicable agreement for further details.
 ; Device                  ; EPF10K70RC240-4                              ;
 ; Timing Models           ; Final                                        ;
 ; Met timing requirements ; No                                           ;
-; Total logic elements    ; 380 / 3,744 ( 10 % )                         ;
+; Total logic elements    ; 394 / 3,744 ( 11 % )                         ;
 ; Total pins              ; 30 / 189 ( 16 % )                            ;
 ; Total memory bits       ; 0 / 18,432 ( 0 % )                           ;
 +-------------------------+----------------------------------------------+
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/10/2013 02:28:56 ;
+; Start date & time ; 11/12/2013 17:16:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; project5            ;
 +-------------------+---------------------+
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                      ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 105788762728902.138406853606724                            ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 105788762728902.138429456104448                            ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_COMPARE                                                ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_COMPARE                                                ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_COMPARE                                                ; --            ; --          ; --             ;
@@ -140,6 +140,7 @@ applicable agreement for further details.
 ; MISC_FILE                          ; lpm_add_sub2.cmp                                           ; --            ; --          ; --             ;
 ; MISC_FILE                          ; lpm_add_sub3.bsf                                           ; --            ; --          ; --             ;
 ; MISC_FILE                          ; lpm_add_sub3.cmp                                           ; --            ; --          ; --             ;
+; MISC_FILE                          ; C:/Github/Quartus_Projects/ENGN_3050_Project6/project5.dpf ; --            ; --          ; --             ;
 ; TOP_LEVEL_ENTITY                   ; project6                                                   ; project5      ; --          ; --             ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                        ; --            ; --          ; eda_blast_fpga ;
 +------------------------------------+------------------------------------------------------------+---------------+-------------+----------------+
@@ -150,11 +151,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 240 MB              ; 00:00:02                           ;
-; Fitter                  ; 00:00:04     ; 1.0                     ; 189 MB              ; 00:00:03                           ;
-; Assembler               ; 00:00:00     ; 1.0                     ; 194 MB              ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 158 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:06     ; --                      ; --                  ; 00:00:05                           ;
+; Analysis & Synthesis    ; 00:00:06     ; 1.0                     ; 240 MB              ; 00:00:05                           ;
+; Fitter                  ; 00:00:07     ; 1.0                     ; 189 MB              ; 00:00:07                           ;
+; Assembler               ; 00:00:00     ; 1.0                     ; 194 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 159 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:14     ; --                      ; --                  ; 00:00:14                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
