@@ -4,14 +4,14 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 
-entity SEVEN_SEG_WITH_DISP is
+entity SEVEN_SEG_TONINE is
 	port(
 		D_Y: in STD_LOGIC_VECTOR (4 downto 1);
 		O_Y: out STD_LOGIC_VECTOR(8 downto 1)	
 	);
-end SEVEN_SEG_WITH_DISP;
+end SEVEN_SEG_TONINE;
 
-architecture BEHAVIORAL of SEVEN_SEG_WITH_DISP is
+architecture BEHAVIORAL of SEVEN_SEG_TONINE is
 
 begin
 	process(D_Y) --Runs when inputs change

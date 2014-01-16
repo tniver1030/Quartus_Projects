@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 32.000 ns
+From           : UP_CNT_TO_FIVE:inst11|\P1:COUNT[2]
+To             : SS2[8]
+From Clock     : SIM_CLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'SIM_CLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 45.05 MHz ( period = 22.200 ns )
+From           : CLK_GEN:inst21|CLK_1HZ_CNT_BFR[1]
+To             : CLK_GEN:inst21|CLK_1HZ_CNT_BFR[23]
+From Clock     : SIM_CLK
+To Clock       : SIM_CLK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

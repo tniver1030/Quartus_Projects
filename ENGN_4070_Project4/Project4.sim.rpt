@@ -1,0 +1,444 @@
+Simulator report for Project4
+Thu Jan 09 18:56:39 2014
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------+
+; Simulator Summary                             ;
++-----------------------------+-----------------+
+; Type                        ; Value           ;
++-----------------------------+-----------------+
+; Simulation Start Time       ; 0 ps            ;
+; Simulation End Time         ; 1.0 s           ;
+; Simulation Netlist Size     ; 130 nodes       ;
+; Simulation Coverage         ;      21.23 %    ;
+; Total Number of Transitions ; 9228            ;
+; Simulation Breakpoints      ; 0               ;
+; Family                      ; FLEX10K         ;
+; Device                      ; EPF10K70RC240-4 ;
++-----------------------------+-----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; Off        ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      21.23 % ;
+; Total nodes checked                                 ; 130          ;
+; Total output ports checked                          ; 146          ;
+; Total output ports with complete 1/0-value coverage ; 31           ;
+; Total output ports with no 1/0-value coverage       ; 114          ;
+; Total output ports with no 1-value coverage         ; 114          ;
+; Total output ports with no 0-value coverage         ; 115          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                    ;
++----------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                          ; Output Port Name                                                                                       ; Output Port Type ;
++----------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[8]                                                   ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[8]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[7]                                                   ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[7]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[6]                                                   ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[6]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|Equal0~0                                                             ; |Project4_FLEX|CLK_GEN:inst21|Equal0~0                                                                 ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[5]                                                   ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[5]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[3]                                                   ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[3]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[4]                                                   ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[4]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[2]                                                   ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[2]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|Equal0~1                                                             ; |Project4_FLEX|CLK_GEN:inst21|Equal0~1                                                                 ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[1]                                                   ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[1]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[0]                                                   ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]  ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10]     ; data_out0        ;
+; |Project4_FLEX|SIM_CLK                                                                             ; |Project4_FLEX|SIM_CLK~corein                                                                          ; dataout          ;
++----------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                        ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                          ; Output Port Name                                                                                        ; Output Port Type ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[4]                                                  ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[4]                                                       ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[3]                                                  ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[3]                                                       ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[2]                                                  ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[2]                                                       ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[3]                                                  ; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[3]                                                       ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[2]                                                  ; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[2]                                                       ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[1]                                                  ; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[1]                                                       ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:COUNT[2]                                                    ; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:COUNT[2]                                                         ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:COUNT[3]                                                    ; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:COUNT[3]                                                         ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:COUNT[4]                                                    ; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:COUNT[4]                                                         ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux0~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux0~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux1~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux1~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux2~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux2~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux3~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux3~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux4~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux4~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux5~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux5~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux6~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux6~0                                                             ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|\P1:COUNT[1]                                                  ; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|\P1:COUNT[1]                                                       ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux0~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux0~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux1~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux1~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux2~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux2~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux3~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux3~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux4~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux4~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux5~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux5~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux6~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux6~0                                                             ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_BFR                                                          ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_BFR                                                               ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Add0~0                                                        ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Add0~0                                                             ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|Equal0~4                                                             ; |Project4_FLEX|CLK_GEN:inst21|Equal0~4                                                                  ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[4]~3                                                ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[4]~3                                                     ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Add0~1                                                        ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Add0~1                                                             ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Add0~2                                                        ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Add0~2                                                             ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|Add0~0                                                        ; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|Add0~0                                                             ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:EN                                                        ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:EN                                                             ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[4]~4                                                ; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[4]~4                                                     ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|COUNT~4                                                       ; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|COUNT~4                                                            ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|Add0~0                                                          ; |Project4_FLEX|UP_CNT_TO_NINE:inst|Add0~0                                                               ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|Add0~1                                                          ; |Project4_FLEX|UP_CNT_TO_NINE:inst|Add0~1                                                               ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|Add0~2                                                          ; |Project4_FLEX|UP_CNT_TO_NINE:inst|Add0~2                                                               ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|COUNT~4                                                       ; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|COUNT~4                                                            ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|\P1:COUNT[4]~4                                                ; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|\P1:COUNT[4]~4                                                     ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|Add0~0                                                        ; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|Add0~0                                                             ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|\P1:EN                                                        ; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|\P1:EN                                                             ; data_out0        ;
+; |Project4_FLEX|inst17                                                                              ; |Project4_FLEX|inst17                                                                                   ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:EN                                                          ; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:EN                                                               ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[12]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[12]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[13]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[13]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[14]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[14]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[15]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[15]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|Equal0~11                                                            ; |Project4_FLEX|CLK_GEN:inst21|Equal0~23                                                                 ; cascout          ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[10]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[10]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[11]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[11]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|Equal0~15                                                            ; |Project4_FLEX|CLK_GEN:inst21|Equal0~15                                                                 ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[22]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[22]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[23]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[23]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[20]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[20]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[21]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[21]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|Equal0~13                                                            ; |Project4_FLEX|CLK_GEN:inst21|Equal0~26                                                                 ; cascout          ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[16]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[16]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[17]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[17]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[18]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[18]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[19]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[19]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|Equal0~16                                                            ; |Project4_FLEX|CLK_GEN:inst21|Equal0~16                                                                 ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Equal1~0                                                      ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Equal1~0                                                           ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19]~COUT ; cout             ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|Equal1~0                                                      ; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|Equal1~0                                                           ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|unreg_res_node[23]                    ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|unreg_res_node[23]                         ; data_out0        ;
+; |Project4_FLEX|RST                                                                                 ; |Project4_FLEX|RST~corein                                                                               ; dataout          ;
+; |Project4_FLEX|OUT1[3]                                                                             ; |Project4_FLEX|OUT1[3]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT1[2]                                                                             ; |Project4_FLEX|OUT1[2]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT1[1]                                                                             ; |Project4_FLEX|OUT1[1]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT1[0]                                                                             ; |Project4_FLEX|OUT1[0]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT2[3]                                                                             ; |Project4_FLEX|OUT2[3]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT2[2]                                                                             ; |Project4_FLEX|OUT2[2]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT2[1]                                                                             ; |Project4_FLEX|OUT2[1]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT2[0]                                                                             ; |Project4_FLEX|OUT2[0]                                                                                  ; padio            ;
+; |Project4_FLEX|SS1[8]                                                                              ; |Project4_FLEX|SS1[8]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[7]                                                                              ; |Project4_FLEX|SS1[7]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[6]                                                                              ; |Project4_FLEX|SS1[6]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[5]                                                                              ; |Project4_FLEX|SS1[5]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[4]                                                                              ; |Project4_FLEX|SS1[4]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[3]                                                                              ; |Project4_FLEX|SS1[3]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[2]                                                                              ; |Project4_FLEX|SS1[2]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[1]                                                                              ; |Project4_FLEX|SS1[1]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[8]                                                                              ; |Project4_FLEX|SS2[8]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[7]                                                                              ; |Project4_FLEX|SS2[7]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[6]                                                                              ; |Project4_FLEX|SS2[6]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[5]                                                                              ; |Project4_FLEX|SS2[5]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[4]                                                                              ; |Project4_FLEX|SS2[4]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[3]                                                                              ; |Project4_FLEX|SS2[3]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[2]                                                                              ; |Project4_FLEX|SS2[2]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[1]                                                                              ; |Project4_FLEX|SS2[1]                                                                                   ; padio            ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                        ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                          ; Output Port Name                                                                                        ; Output Port Type ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[4]                                                  ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[4]                                                       ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[3]                                                  ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[3]                                                       ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[2]                                                  ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[2]                                                       ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[3]                                                  ; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[3]                                                       ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[2]                                                  ; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[2]                                                       ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[1]                                                  ; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[1]                                                       ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:COUNT[2]                                                    ; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:COUNT[2]                                                         ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:COUNT[3]                                                    ; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:COUNT[3]                                                         ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:COUNT[4]                                                    ; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:COUNT[4]                                                         ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux0~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux0~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux1~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux1~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux2~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux2~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux3~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux3~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux4~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux4~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux5~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux5~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux6~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst18|Mux6~0                                                             ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|\P1:COUNT[1]                                                  ; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|\P1:COUNT[1]                                                       ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux0~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux0~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux1~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux1~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux2~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux2~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux3~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux3~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux4~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux4~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux5~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux5~0                                                             ; data_out0        ;
+; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux6~0                                                        ; |Project4_FLEX|SEVENSEGTONINE:inst19|Mux6~0                                                             ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_BFR                                                          ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_BFR                                                               ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Add0~0                                                        ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Add0~0                                                             ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[9]                                                   ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[9]                                                        ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|Equal0~4                                                             ; |Project4_FLEX|CLK_GEN:inst21|Equal0~4                                                                  ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[4]~3                                                ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:COUNT[4]~3                                                     ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Add0~1                                                        ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Add0~1                                                             ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Add0~2                                                        ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Add0~2                                                             ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|Add0~0                                                        ; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|Add0~0                                                             ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:EN                                                        ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|\P1:EN                                                             ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[4]~4                                                ; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|\P1:COUNT[4]~4                                                     ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|COUNT~4                                                       ; |Project4_FLEX|UP_CNT_TO_FIVE:inst13|COUNT~4                                                            ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|Add0~0                                                          ; |Project4_FLEX|UP_CNT_TO_NINE:inst|Add0~0                                                               ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|Add0~1                                                          ; |Project4_FLEX|UP_CNT_TO_NINE:inst|Add0~1                                                               ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|Add0~2                                                          ; |Project4_FLEX|UP_CNT_TO_NINE:inst|Add0~2                                                               ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|COUNT~4                                                       ; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|COUNT~4                                                            ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|\P1:COUNT[4]~4                                                ; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|\P1:COUNT[4]~4                                                     ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|Add0~0                                                        ; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|Add0~0                                                             ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|\P1:EN                                                        ; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|\P1:EN                                                             ; data_out0        ;
+; |Project4_FLEX|inst17                                                                              ; |Project4_FLEX|inst17                                                                                   ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:EN                                                          ; |Project4_FLEX|UP_CNT_TO_NINE:inst|\P1:EN                                                               ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[12]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[12]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[13]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[13]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[14]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[14]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[15]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[15]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|Equal0~11                                                            ; |Project4_FLEX|CLK_GEN:inst21|Equal0~23                                                                 ; cascout          ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[10]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[10]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[11]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[11]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|Equal0~15                                                            ; |Project4_FLEX|CLK_GEN:inst21|Equal0~15                                                                 ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[22]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[22]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[23]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[23]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[20]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[20]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[21]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[21]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|Equal0~13                                                            ; |Project4_FLEX|CLK_GEN:inst21|Equal0~26                                                                 ; cascout          ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[16]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[16]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[17]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[17]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[18]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[18]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[19]                                                  ; |Project4_FLEX|CLK_GEN:inst21|CLK_1HZ_CNT_BFR[19]                                                       ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|Equal0~16                                                            ; |Project4_FLEX|CLK_GEN:inst21|Equal0~16                                                                 ; data_out0        ;
+; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Equal1~0                                                      ; |Project4_FLEX|UP_CNT_TO_NINE:inst12|Equal1~0                                                           ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[15]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[22]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[20]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[21]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[16]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[17]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[18]~COUT ; cout             ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19]      ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19] ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[19]~COUT ; cout             ;
+; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|Equal1~0                                                      ; |Project4_FLEX|UP_CNT_TO_FIVE:inst11|Equal1~0                                                           ; data_out0        ;
+; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|unreg_res_node[23]                    ; |Project4_FLEX|CLK_GEN:inst21|lpm_add_sub:Add0|addcore:adder|unreg_res_node[23]                         ; data_out0        ;
+; |Project4_FLEX|RST                                                                                 ; |Project4_FLEX|RST~corein                                                                               ; dataout          ;
+; |Project4_FLEX|OUT1[3]                                                                             ; |Project4_FLEX|OUT1[3]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT1[2]                                                                             ; |Project4_FLEX|OUT1[2]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT1[1]                                                                             ; |Project4_FLEX|OUT1[1]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT1[0]                                                                             ; |Project4_FLEX|OUT1[0]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT2[3]                                                                             ; |Project4_FLEX|OUT2[3]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT2[2]                                                                             ; |Project4_FLEX|OUT2[2]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT2[1]                                                                             ; |Project4_FLEX|OUT2[1]                                                                                  ; padio            ;
+; |Project4_FLEX|OUT2[0]                                                                             ; |Project4_FLEX|OUT2[0]                                                                                  ; padio            ;
+; |Project4_FLEX|SS1[8]                                                                              ; |Project4_FLEX|SS1[8]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[7]                                                                              ; |Project4_FLEX|SS1[7]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[6]                                                                              ; |Project4_FLEX|SS1[6]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[5]                                                                              ; |Project4_FLEX|SS1[5]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[4]                                                                              ; |Project4_FLEX|SS1[4]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[3]                                                                              ; |Project4_FLEX|SS1[3]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[2]                                                                              ; |Project4_FLEX|SS1[2]                                                                                   ; padio            ;
+; |Project4_FLEX|SS1[1]                                                                              ; |Project4_FLEX|SS1[1]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[8]                                                                              ; |Project4_FLEX|SS2[8]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[7]                                                                              ; |Project4_FLEX|SS2[7]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[6]                                                                              ; |Project4_FLEX|SS2[6]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[5]                                                                              ; |Project4_FLEX|SS2[5]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[4]                                                                              ; |Project4_FLEX|SS2[4]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[3]                                                                              ; |Project4_FLEX|SS2[3]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[2]                                                                              ; |Project4_FLEX|SS2[2]                                                                                   ; padio            ;
+; |Project4_FLEX|SS2[1]                                                                              ; |Project4_FLEX|SS2[1]                                                                                   ; padio            ;
++----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Jan 09 18:56:39 2014
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Project4 -c Project4
+Info: Using vector source file "C:/Github/Quartus_Projects/ENGN_4070_Project4/Project4.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of Project4.vwf called Project4.sim_ori.vwf has been created in the db folder
+Warning: Ignored node in vector source file. Can't find corresponding node name "Sec[0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Sec[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Sec[2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Sec[3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "OUTEN" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "TENSEC[3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "TENSEC[2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "TENSEC[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "TENSEC[0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "OUT2EN" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "MIN[3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "MIN[2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "MIN[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "MIN[0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "TENMIN[3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "TENMIN[2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "TENMIN[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "TENMIN[0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "OUT3EN" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "OUT4EN" in design.
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      21.23 %
+Info: Number of transitions in simulation is 9228
+Info: Vector file Project4.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 153 megabytes
+    Info: Processing ended: Thu Jan 09 18:56:39 2014
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
