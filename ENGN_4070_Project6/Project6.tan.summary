@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.800 ns
+From           : RST
+To             : TRAFFICLIGHT_FSM2:inst11|CURRENT_STATE.YELLOW_R2G
+From Clock     : --
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 36.500 ns
+From           : TRAFFICLIGHT_FSM:inst|CURRENT_STATE.GREEN
+To             : DEBUG_RST
+From Clock     : CLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -1.500 ns
+From           : RST
+To             : TRAFFICLIGHT_FSM:inst|CURRENT_STATE.BLINKING_RED
+From Clock     : --
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 44.84 MHz ( period = 22.300 ns )
+From           : CLK_GEN:inst10|CLK_1HZ_CNT_BFR[1]
+To             : CLK_GEN:inst10|CLK_1HZ_CNT_BFR[23]
+From Clock     : CLK
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
