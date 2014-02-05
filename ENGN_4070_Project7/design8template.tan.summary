@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 22.200 ns
+From           : CLK_RST_LY
+To             : INT_CLK_GEN:INT_CLK_GEN_1|lpm_counter:\FSM_CLK:FSM_CNT[0]_rtl_3|alt_counter_f10ke:wysi_counter|counter_cell[0]
+From Clock     : --
+To Clock       : CLK_Y
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 63.900 ns
+From           : DFFE_1[2]
+To             : RGT_LZ[7]
+From Clock     : CLK_Y
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.200 ns
+From           : ADC_BYTE_Y[4]
+To             : DFFE_1[3]
+From Clock     : --
+To Clock       : CLK_Y
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK_Y'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 44.25 MHz ( period = 22.600 ns )
+From           : INT_CLK_GEN:INT_CLK_GEN_1|lpm_counter:\FSM_CLK:FSM_CNT[0]_rtl_3|alt_counter_f10ke:wysi_counter|counter_cell[5]
+To             : INT_CLK_GEN:INT_CLK_GEN_1|lpm_counter:\FSM_CLK:FSM_CNT[0]_rtl_3|alt_counter_f10ke:wysi_counter|counter_cell[0]
+From Clock     : CLK_Y
+To Clock       : CLK_Y
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
