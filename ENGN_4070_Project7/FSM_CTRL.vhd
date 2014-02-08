@@ -1,9 +1,3 @@
---  ENGN4070 Hardware Organization & Design
---  2009 Winter Day
---  Finite State Machine VHDL Template
---  Copyright Since 2004, Wai Yung
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_ARITH.all;
@@ -42,21 +36,20 @@ signal NEXT_STATE:    STATE_TYPE := ADC_START;
 
 begin
 
-P1: process (CLK_Y) -- Asynchronous reset resides in Process P1
+P1: process (CLK_Y)
     begin
         if (rising_edge(CLK_Y)) then
             CURRENT_STATE <= NEXT_STATE;
         end if;
     end process;
 
-P2: process (SYN_RST_LY, CURRENT_STATE, ADC_INTR_LY)  -- List all external inputs that affect state transitions
-                          -- Alphabetize all external inputs
+P2: process (SYN_RST_LY, CURRENT_STATE, ADC_INTR_LY)
     begin
-        if (SYN_RST_LY = '0') then  --  Synchronous reset resides in Process P2                                    
-            NEXT_STATE <= ADC_READY;  -- List reset condition
+        if (SYN_RST_LY = '0') then                               
+            NEXT_STATE <= ADC_READY;
         else
             case CURRENT_STATE is
-                 when   ADC_READY     =>  	--ADC_READY
+                 when   ADC_READY     =>  		--ADC_READY
                       NEXT_STATE <=  ADC_START;
                  when    ADC_START    =>		--ADC_START
                       NEXT_STATE <=  ADC_PROGRESS;
@@ -66,7 +59,7 @@ P2: process (SYN_RST_LY, CURRENT_STATE, ADC_INTR_LY)  -- List all external input
                     else
 						NEXT_STATE <= ADC_PROGRESS;
 					end if;
-                 when    ADC_DONE    => 	--ADC_DONE
+                 when    ADC_DONE    => 		--ADC_DONE
                       NEXT_STATE <=  ADC_LATCH;
                  when    ADC_LATCH    =>		--ADC_LATCH
                       NEXT_STATE <=	 ADC_READY;
