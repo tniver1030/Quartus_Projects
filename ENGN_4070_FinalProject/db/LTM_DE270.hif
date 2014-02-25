@@ -43,7 +43,186 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
+PULSE_EXT:inst1
+}
+# lmf
+a:|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+DE270_7SEG
+# storage
+db|LTM_DE270.(2).cnf
+db|LTM_DE270.(2).cnf
+# case_insensitive
+# source_file
+DE270_7SEG.bdf
+df85d798f3827ef5d374a60c8661c8a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+DE270_7SEG:B1
+}
+# macro_sequence
+
+# end
+# entity
+SEG7DEC
+# storage
+db|LTM_DE270.(3).cnf
+db|LTM_DE270.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+SEG7DEC.vhd
+1e866b1c6d8720ad6a96ed2481840a7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+DE270_7SEG:B1|SEG7DEC:V9
+DE270_7SEG:B1|SEG7DEC:V2
+DE270_7SEG:B1|SEG7DEC:V3
+DE270_7SEG:B1|SEG7DEC:V4
+DE270_7SEG:B1|SEG7DEC:V5
+DE270_7SEG:B1|SEG7DEC:V6
+DE270_7SEG:B1|SEG7DEC:V7
+DE270_7SEG:B1|SEG7DEC:V8
+}
+# lmf
+a:|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+LTM_FSM_MCU
+# storage
+db|LTM_DE270.(4).cnf
+db|LTM_DE270.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+LTM_FSM_MCU.vhd
+df1b49698d9136d6d7d13659973751f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+LTM_FSM_MCU:inst5
+}
+# lmf
+a:|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+CONV
+# storage
+db|LTM_DE270.(5).cnf
+db|LTM_DE270.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+CONV.vhd
+bd3425a28878fb9fa7d1a770d5491b90
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+CONV:inst7
+}
+# lmf
+a:|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+LTM_DE270
+# storage
+db|LTM_DE270.(1).cnf
+db|LTM_DE270.(1).cnf
+# case_insensitive
+# source_file
+LTM_DE270.bdf
+201b6a79ab7a6e44dad82622e7dd5e5f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+CLK_GEN
+# storage
+db|LTM_DE270.(6).cnf
+db|LTM_DE270.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+CLK_GEN.vhd
+192aeb7588825a94462a2187761e6
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+CLK_GEN:inst8
 }
 # lmf
 a:|90sp2|quartus|lmf|maxplus2.lmf

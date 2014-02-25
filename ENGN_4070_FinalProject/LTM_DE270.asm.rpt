@@ -1,5 +1,5 @@
 Assembler report for LTM_DE270
-Tue Feb 18 20:01:11 2014
+Tue Feb 25 17:39:11 2014
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,9 +38,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Feb 18 20:01:11 2014 ;
+; Assembler Status      ; Successful - Tue Feb 25 17:39:11 2014 ;
 ; Revision Name         ; LTM_DE270                             ;
-; Top-level Entity Name ; PULSE_EXT                             ;
+; Top-level Entity Name ; LTM_DE270                             ;
 ; Family                ; Cyclone II                            ;
 ; Device                ; EP2C70F896C6                          ;
 +-----------------------+---------------------------------------+
@@ -93,7 +93,7 @@ applicable agreement for further details.
 +----------------+--------------------------------------------------------------------------+
 ; Device         ; EP2C70F896C6                                                             ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                               ;
-; Checksum       ; 0x0060A2A9                                                               ;
+; Checksum       ; 0x00613A78                                                               ;
 +----------------+--------------------------------------------------------------------------+
 
 
@@ -104,7 +104,7 @@ applicable agreement for further details.
 +--------------------+----------------------------------------------------------------------+
 ; Device             ; EPCS16                                                               ;
 ; JTAG usercode      ; 0x00000000                                                           ;
-; Checksum           ; 0x187EC62B                                                           ;
+; Checksum           ; 0x187E7EAE                                                           ;
 ; Compression Ratio  ; 3                                                                    ;
 +--------------------+----------------------------------------------------------------------+
 
@@ -115,15 +115,15 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Feb 18 20:01:08 2014
+    Info: Processing started: Tue Feb 25 17:39:08 2014
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off LTM_DE270 -c LTM_DE270
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: The Active Serial/Parallel mode CONF_DONE pin error check is disabled
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 329 megabytes
-    Info: Processing ended: Tue Feb 18 20:01:11 2014
+    Info: Peak virtual memory: 330 megabytes
+    Info: Processing ended: Tue Feb 25 17:39:11 2014
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 
