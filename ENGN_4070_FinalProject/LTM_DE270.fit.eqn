@@ -1,0 +1,473 @@
+-- Copyright (C) 1991-2009 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--LTM_LCD_SDA_X is LTM_LCD_SDA_X at PIN_P30
+--operation mode is bidir
+
+LTM_LCD_SDA_X_tri_out = TRI(VCC, VCC);
+LTM_LCD_SDA_X = BIDIR(LTM_LCD_SDA_X_tri_out);
+
+
+--LTM_GRESET_LZ is LTM_GRESET_LZ at PIN_P29
+--operation mode is output
+
+LTM_GRESET_LZ = OUTPUT(VCC);
+
+
+--HEX1_DP_LZ is HEX1_DP_LZ at PIN_AF12
+--operation mode is output
+
+HEX1_DP_LZ = OUTPUT(VCC);
+
+
+--HEX2_DP_LZ is HEX2_DP_LZ at PIN_AC17
+--operation mode is output
+
+HEX2_DP_LZ = OUTPUT(VCC);
+
+
+--HEX3_DP_LZ is HEX3_DP_LZ at PIN_AC19
+--operation mode is output
+
+HEX3_DP_LZ = OUTPUT(VCC);
+
+
+--HEX4_DP_LZ is HEX4_DP_LZ at PIN_M4
+--operation mode is output
+
+HEX4_DP_LZ = OUTPUT(GND);
+
+
+--HEX5_DP_LZ is HEX5_DP_LZ at PIN_L6
+--operation mode is output
+
+HEX5_DP_LZ = OUTPUT(GND);
+
+
+--HEX6_DP_LZ is HEX6_DP_LZ at PIN_K6
+--operation mode is output
+
+HEX6_DP_LZ = OUTPUT(VCC);
+
+
+--HEX7_DP_LZ is HEX7_DP_LZ at PIN_K2
+--operation mode is output
+
+HEX7_DP_LZ = OUTPUT(VCC);
+
+
+--HEX8_DP_LZ is HEX8_DP_LZ at PIN_G2
+--operation mode is output
+
+HEX8_DP_LZ = OUTPUT(VCC);
+
+
+--LTM_ADC_DIN_Z is LTM_ADC_DIN_Z at PIN_G28
+--operation mode is output
+
+LTM_ADC_DIN_Z = OUTPUT(GND);
+
+
+--LTM_LCD_DCLK_Z is LTM_LCD_DCLK_Z at PIN_H27
+--operation mode is output
+
+LTM_LCD_DCLK_Z = OUTPUT(GND);
+
+
+--LTM_LCD_SCEN_Z is LTM_LCD_SCEN_Z at PIN_R22
+--operation mode is output
+
+LTM_LCD_SCEN_Z = OUTPUT(GND);
+
+
+--READY_IRQ_LZ is READY_IRQ_LZ at PIN_AC14
+--operation mode is output
+
+READY_IRQ_LZ = OUTPUT(GND);
+
+
+--HEX1_LZ[7] is HEX1_LZ[7] at PIN_AE8
+--operation mode is output
+
+HEX1_LZ[7] = OUTPUT(GND);
+
+
+--HEX1_LZ[6] is HEX1_LZ[6] at PIN_AF9
+--operation mode is output
+
+HEX1_LZ[6] = OUTPUT(VCC);
+
+
+--HEX1_LZ[5] is HEX1_LZ[5] at PIN_AH9
+--operation mode is output
+
+HEX1_LZ[5] = OUTPUT(VCC);
+
+
+--HEX1_LZ[4] is HEX1_LZ[4] at PIN_AD10
+--operation mode is output
+
+HEX1_LZ[4] = OUTPUT(VCC);
+
+
+--HEX1_LZ[3] is HEX1_LZ[3] at PIN_AF10
+--operation mode is output
+
+HEX1_LZ[3] = OUTPUT(GND);
+
+
+--HEX1_LZ[2] is HEX1_LZ[2] at PIN_AD11
+--operation mode is output
+
+HEX1_LZ[2] = OUTPUT(GND);
+
+
+--HEX1_LZ[1] is HEX1_LZ[1] at PIN_AD12
+--operation mode is output
+
+HEX1_LZ[1] = OUTPUT(GND);
+
+
+--HEX2_LZ[7] is HEX2_LZ[7] at PIN_AG13
+--operation mode is output
+
+HEX2_LZ[7] = OUTPUT(GND);
+
+
+--HEX2_LZ[6] is HEX2_LZ[6] at PIN_AE16
+--operation mode is output
+
+HEX2_LZ[6] = OUTPUT(VCC);
+
+
+--HEX2_LZ[5] is HEX2_LZ[5] at PIN_AF16
+--operation mode is output
+
+HEX2_LZ[5] = OUTPUT(VCC);
+
+
+--HEX2_LZ[4] is HEX2_LZ[4] at PIN_AG16
+--operation mode is output
+
+HEX2_LZ[4] = OUTPUT(VCC);
+
+
+--HEX2_LZ[3] is HEX2_LZ[3] at PIN_AE17
+--operation mode is output
+
+HEX2_LZ[3] = OUTPUT(GND);
+
+
+--HEX2_LZ[2] is HEX2_LZ[2] at PIN_AF17
+--operation mode is output
+
+HEX2_LZ[2] = OUTPUT(GND);
+
+
+--HEX2_LZ[1] is HEX2_LZ[1] at PIN_AD17
+--operation mode is output
+
+HEX2_LZ[1] = OUTPUT(GND);
+
+
+--HEX3_LZ[7] is HEX3_LZ[7] at PIN_AE7
+--operation mode is output
+
+HEX3_LZ[7] = OUTPUT(GND);
+
+
+--HEX3_LZ[6] is HEX3_LZ[6] at PIN_AF7
+--operation mode is output
+
+HEX3_LZ[6] = OUTPUT(VCC);
+
+
+--HEX3_LZ[5] is HEX3_LZ[5] at PIN_AH5
+--operation mode is output
+
+HEX3_LZ[5] = OUTPUT(VCC);
+
+
+--HEX3_LZ[4] is HEX3_LZ[4] at PIN_AG4
+--operation mode is output
+
+HEX3_LZ[4] = OUTPUT(VCC);
+
+
+--HEX3_LZ[3] is HEX3_LZ[3] at PIN_AB18
+--operation mode is output
+
+HEX3_LZ[3] = OUTPUT(GND);
+
+
+--HEX3_LZ[2] is HEX3_LZ[2] at PIN_AB19
+--operation mode is output
+
+HEX3_LZ[2] = OUTPUT(GND);
+
+
+--HEX3_LZ[1] is HEX3_LZ[1] at PIN_AE19
+--operation mode is output
+
+HEX3_LZ[1] = OUTPUT(GND);
+
+
+--HEX4_LZ[7] is HEX4_LZ[7] at PIN_P6
+--operation mode is output
+
+HEX4_LZ[7] = OUTPUT(GND);
+
+
+--HEX4_LZ[6] is HEX4_LZ[6] at PIN_P4
+--operation mode is output
+
+HEX4_LZ[6] = OUTPUT(GND);
+
+
+--HEX4_LZ[5] is HEX4_LZ[5] at PIN_N10
+--operation mode is output
+
+HEX4_LZ[5] = OUTPUT(GND);
+
+
+--HEX4_LZ[4] is HEX4_LZ[4] at PIN_N7
+--operation mode is output
+
+HEX4_LZ[4] = OUTPUT(GND);
+
+
+--HEX4_LZ[3] is HEX4_LZ[3] at PIN_M8
+--operation mode is output
+
+HEX4_LZ[3] = OUTPUT(GND);
+
+
+--HEX4_LZ[2] is HEX4_LZ[2] at PIN_M7
+--operation mode is output
+
+HEX4_LZ[2] = OUTPUT(GND);
+
+
+--HEX4_LZ[1] is HEX4_LZ[1] at PIN_M6
+--operation mode is output
+
+HEX4_LZ[1] = OUTPUT(VCC);
+
+
+--HEX5_LZ[7] is HEX5_LZ[7] at PIN_P1
+--operation mode is output
+
+HEX5_LZ[7] = OUTPUT(GND);
+
+
+--HEX5_LZ[6] is HEX5_LZ[6] at PIN_P2
+--operation mode is output
+
+HEX5_LZ[6] = OUTPUT(GND);
+
+
+--HEX5_LZ[5] is HEX5_LZ[5] at PIN_P3
+--operation mode is output
+
+HEX5_LZ[5] = OUTPUT(GND);
+
+
+--HEX5_LZ[4] is HEX5_LZ[4] at PIN_N2
+--operation mode is output
+
+HEX5_LZ[4] = OUTPUT(GND);
+
+
+--HEX5_LZ[3] is HEX5_LZ[3] at PIN_N3
+--operation mode is output
+
+HEX5_LZ[3] = OUTPUT(GND);
+
+
+--HEX5_LZ[2] is HEX5_LZ[2] at PIN_M1
+--operation mode is output
+
+HEX5_LZ[2] = OUTPUT(GND);
+
+
+--HEX5_LZ[1] is HEX5_LZ[1] at PIN_M2
+--operation mode is output
+
+HEX5_LZ[1] = OUTPUT(VCC);
+
+
+--HEX6_LZ[7] is HEX6_LZ[7] at PIN_M3
+--operation mode is output
+
+HEX6_LZ[7] = OUTPUT(GND);
+
+
+--HEX6_LZ[6] is HEX6_LZ[6] at PIN_L1
+--operation mode is output
+
+HEX6_LZ[6] = OUTPUT(VCC);
+
+
+--HEX6_LZ[5] is HEX6_LZ[5] at PIN_L2
+--operation mode is output
+
+HEX6_LZ[5] = OUTPUT(VCC);
+
+
+--HEX6_LZ[4] is HEX6_LZ[4] at PIN_L3
+--operation mode is output
+
+HEX6_LZ[4] = OUTPUT(VCC);
+
+
+--HEX6_LZ[3] is HEX6_LZ[3] at PIN_K1
+--operation mode is output
+
+HEX6_LZ[3] = OUTPUT(GND);
+
+
+--HEX6_LZ[2] is HEX6_LZ[2] at PIN_K4
+--operation mode is output
+
+HEX6_LZ[2] = OUTPUT(GND);
+
+
+--HEX6_LZ[1] is HEX6_LZ[1] at PIN_K5
+--operation mode is output
+
+HEX6_LZ[1] = OUTPUT(GND);
+
+
+--HEX7_LZ[7] is HEX7_LZ[7] at PIN_H6
+--operation mode is output
+
+HEX7_LZ[7] = OUTPUT(GND);
+
+
+--HEX7_LZ[6] is HEX7_LZ[6] at PIN_H4
+--operation mode is output
+
+HEX7_LZ[6] = OUTPUT(VCC);
+
+
+--HEX7_LZ[5] is HEX7_LZ[5] at PIN_H7
+--operation mode is output
+
+HEX7_LZ[5] = OUTPUT(VCC);
+
+
+--HEX7_LZ[4] is HEX7_LZ[4] at PIN_H8
+--operation mode is output
+
+HEX7_LZ[4] = OUTPUT(VCC);
+
+
+--HEX7_LZ[3] is HEX7_LZ[3] at PIN_G4
+--operation mode is output
+
+HEX7_LZ[3] = OUTPUT(GND);
+
+
+--HEX7_LZ[2] is HEX7_LZ[2] at PIN_F4
+--operation mode is output
+
+HEX7_LZ[2] = OUTPUT(GND);
+
+
+--HEX7_LZ[1] is HEX7_LZ[1] at PIN_E4
+--operation mode is output
+
+HEX7_LZ[1] = OUTPUT(GND);
+
+
+--HEX8_LZ[7] is HEX8_LZ[7] at PIN_K3
+--operation mode is output
+
+HEX8_LZ[7] = OUTPUT(GND);
+
+
+--HEX8_LZ[6] is HEX8_LZ[6] at PIN_J1
+--operation mode is output
+
+HEX8_LZ[6] = OUTPUT(VCC);
+
+
+--HEX8_LZ[5] is HEX8_LZ[5] at PIN_J2
+--operation mode is output
+
+HEX8_LZ[5] = OUTPUT(VCC);
+
+
+--HEX8_LZ[4] is HEX8_LZ[4] at PIN_H1
+--operation mode is output
+
+HEX8_LZ[4] = OUTPUT(VCC);
+
+
+--HEX8_LZ[3] is HEX8_LZ[3] at PIN_H2
+--operation mode is output
+
+HEX8_LZ[3] = OUTPUT(GND);
+
+
+--HEX8_LZ[2] is HEX8_LZ[2] at PIN_H3
+--operation mode is output
+
+HEX8_LZ[2] = OUTPUT(GND);
+
+
+--HEX8_LZ[1] is HEX8_LZ[1] at PIN_G1
+--operation mode is output
+
+HEX8_LZ[1] = OUTPUT(GND);
+
+
+--LTM_ADC_IRQ_LY is LTM_ADC_IRQ_LY at PIN_AH14
+--operation mode is input
+
+LTM_ADC_IRQ_LY = INPUT();
+
+
+--XTAL_50MHZ_Y1 is XTAL_50MHZ_Y1 at PIN_AD15
+--operation mode is input
+
+XTAL_50MHZ_Y1 = INPUT();
+
+
+--LTM_ADC_BUSY_Y is LTM_ADC_BUSY_Y at PIN_AG15
+--operation mode is input
+
+LTM_ADC_BUSY_Y = INPUT();
+
+
+--LTM_ADC_DOUT_Y is LTM_ADC_DOUT_Y at PIN_G27
+--operation mode is input
+
+LTM_ADC_DOUT_Y = INPUT();
+
+
+--KEY0_LY is KEY0_LY at PIN_T29
+--operation mode is input
+
+KEY0_LY = INPUT();
+
+
+--KEY1_LY is KEY1_LY at PIN_T28
+--operation mode is input
+
+KEY1_LY = INPUT();
+
+
+
+
+

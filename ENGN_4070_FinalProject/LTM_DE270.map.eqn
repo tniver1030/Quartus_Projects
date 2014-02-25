@@ -1,0 +1,332 @@
+-- Copyright (C) 1991-2009 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--LTM_GRESET_LZ is LTM_GRESET_LZ
+LTM_GRESET_LZ = OUTPUT(A1L86);
+
+
+--HEX1_DP_LZ is HEX1_DP_LZ
+HEX1_DP_LZ = OUTPUT(A1L86);
+
+
+--HEX2_DP_LZ is HEX2_DP_LZ
+HEX2_DP_LZ = OUTPUT(A1L86);
+
+
+--HEX3_DP_LZ is HEX3_DP_LZ
+HEX3_DP_LZ = OUTPUT(A1L86);
+
+
+--HEX4_DP_LZ is HEX4_DP_LZ
+HEX4_DP_LZ = OUTPUT(A1L85);
+
+
+--HEX5_DP_LZ is HEX5_DP_LZ
+HEX5_DP_LZ = OUTPUT(A1L85);
+
+
+--HEX6_DP_LZ is HEX6_DP_LZ
+HEX6_DP_LZ = OUTPUT(A1L86);
+
+
+--HEX7_DP_LZ is HEX7_DP_LZ
+HEX7_DP_LZ = OUTPUT(A1L86);
+
+
+--HEX8_DP_LZ is HEX8_DP_LZ
+HEX8_DP_LZ = OUTPUT(A1L86);
+
+
+--LTM_ADC_DIN_Z is LTM_ADC_DIN_Z
+LTM_ADC_DIN_Z = OUTPUT(A1L85);
+
+
+--LTM_LCD_DCLK_Z is LTM_LCD_DCLK_Z
+LTM_LCD_DCLK_Z = OUTPUT(A1L85);
+
+
+--LTM_LCD_SCEN_Z is LTM_LCD_SCEN_Z
+LTM_LCD_SCEN_Z = OUTPUT(A1L85);
+
+
+--READY_IRQ_LZ is READY_IRQ_LZ
+READY_IRQ_LZ = OUTPUT(A1L85);
+
+
+--HEX1_LZ[7] is HEX1_LZ[7]
+HEX1_LZ[7] = OUTPUT(A1L85);
+
+
+--HEX1_LZ[6] is HEX1_LZ[6]
+HEX1_LZ[6] = OUTPUT(A1L86);
+
+
+--HEX1_LZ[5] is HEX1_LZ[5]
+HEX1_LZ[5] = OUTPUT(A1L86);
+
+
+--HEX1_LZ[4] is HEX1_LZ[4]
+HEX1_LZ[4] = OUTPUT(A1L86);
+
+
+--HEX1_LZ[3] is HEX1_LZ[3]
+HEX1_LZ[3] = OUTPUT(A1L85);
+
+
+--HEX1_LZ[2] is HEX1_LZ[2]
+HEX1_LZ[2] = OUTPUT(A1L85);
+
+
+--HEX1_LZ[1] is HEX1_LZ[1]
+HEX1_LZ[1] = OUTPUT(A1L85);
+
+
+--HEX2_LZ[7] is HEX2_LZ[7]
+HEX2_LZ[7] = OUTPUT(A1L85);
+
+
+--HEX2_LZ[6] is HEX2_LZ[6]
+HEX2_LZ[6] = OUTPUT(A1L86);
+
+
+--HEX2_LZ[5] is HEX2_LZ[5]
+HEX2_LZ[5] = OUTPUT(A1L86);
+
+
+--HEX2_LZ[4] is HEX2_LZ[4]
+HEX2_LZ[4] = OUTPUT(A1L86);
+
+
+--HEX2_LZ[3] is HEX2_LZ[3]
+HEX2_LZ[3] = OUTPUT(A1L85);
+
+
+--HEX2_LZ[2] is HEX2_LZ[2]
+HEX2_LZ[2] = OUTPUT(A1L85);
+
+
+--HEX2_LZ[1] is HEX2_LZ[1]
+HEX2_LZ[1] = OUTPUT(A1L85);
+
+
+--HEX3_LZ[7] is HEX3_LZ[7]
+HEX3_LZ[7] = OUTPUT(A1L85);
+
+
+--HEX3_LZ[6] is HEX3_LZ[6]
+HEX3_LZ[6] = OUTPUT(A1L86);
+
+
+--HEX3_LZ[5] is HEX3_LZ[5]
+HEX3_LZ[5] = OUTPUT(A1L86);
+
+
+--HEX3_LZ[4] is HEX3_LZ[4]
+HEX3_LZ[4] = OUTPUT(A1L86);
+
+
+--HEX3_LZ[3] is HEX3_LZ[3]
+HEX3_LZ[3] = OUTPUT(A1L85);
+
+
+--HEX3_LZ[2] is HEX3_LZ[2]
+HEX3_LZ[2] = OUTPUT(A1L85);
+
+
+--HEX3_LZ[1] is HEX3_LZ[1]
+HEX3_LZ[1] = OUTPUT(A1L85);
+
+
+--HEX4_LZ[7] is HEX4_LZ[7]
+HEX4_LZ[7] = OUTPUT(A1L85);
+
+
+--HEX4_LZ[6] is HEX4_LZ[6]
+HEX4_LZ[6] = OUTPUT(A1L85);
+
+
+--HEX4_LZ[5] is HEX4_LZ[5]
+HEX4_LZ[5] = OUTPUT(A1L85);
+
+
+--HEX4_LZ[4] is HEX4_LZ[4]
+HEX4_LZ[4] = OUTPUT(A1L85);
+
+
+--HEX4_LZ[3] is HEX4_LZ[3]
+HEX4_LZ[3] = OUTPUT(A1L85);
+
+
+--HEX4_LZ[2] is HEX4_LZ[2]
+HEX4_LZ[2] = OUTPUT(A1L85);
+
+
+--HEX4_LZ[1] is HEX4_LZ[1]
+HEX4_LZ[1] = OUTPUT(A1L86);
+
+
+--HEX5_LZ[7] is HEX5_LZ[7]
+HEX5_LZ[7] = OUTPUT(A1L85);
+
+
+--HEX5_LZ[6] is HEX5_LZ[6]
+HEX5_LZ[6] = OUTPUT(A1L85);
+
+
+--HEX5_LZ[5] is HEX5_LZ[5]
+HEX5_LZ[5] = OUTPUT(A1L85);
+
+
+--HEX5_LZ[4] is HEX5_LZ[4]
+HEX5_LZ[4] = OUTPUT(A1L85);
+
+
+--HEX5_LZ[3] is HEX5_LZ[3]
+HEX5_LZ[3] = OUTPUT(A1L85);
+
+
+--HEX5_LZ[2] is HEX5_LZ[2]
+HEX5_LZ[2] = OUTPUT(A1L85);
+
+
+--HEX5_LZ[1] is HEX5_LZ[1]
+HEX5_LZ[1] = OUTPUT(A1L86);
+
+
+--HEX6_LZ[7] is HEX6_LZ[7]
+HEX6_LZ[7] = OUTPUT(A1L85);
+
+
+--HEX6_LZ[6] is HEX6_LZ[6]
+HEX6_LZ[6] = OUTPUT(A1L86);
+
+
+--HEX6_LZ[5] is HEX6_LZ[5]
+HEX6_LZ[5] = OUTPUT(A1L86);
+
+
+--HEX6_LZ[4] is HEX6_LZ[4]
+HEX6_LZ[4] = OUTPUT(A1L86);
+
+
+--HEX6_LZ[3] is HEX6_LZ[3]
+HEX6_LZ[3] = OUTPUT(A1L85);
+
+
+--HEX6_LZ[2] is HEX6_LZ[2]
+HEX6_LZ[2] = OUTPUT(A1L85);
+
+
+--HEX6_LZ[1] is HEX6_LZ[1]
+HEX6_LZ[1] = OUTPUT(A1L85);
+
+
+--HEX7_LZ[7] is HEX7_LZ[7]
+HEX7_LZ[7] = OUTPUT(A1L85);
+
+
+--HEX7_LZ[6] is HEX7_LZ[6]
+HEX7_LZ[6] = OUTPUT(A1L86);
+
+
+--HEX7_LZ[5] is HEX7_LZ[5]
+HEX7_LZ[5] = OUTPUT(A1L86);
+
+
+--HEX7_LZ[4] is HEX7_LZ[4]
+HEX7_LZ[4] = OUTPUT(A1L86);
+
+
+--HEX7_LZ[3] is HEX7_LZ[3]
+HEX7_LZ[3] = OUTPUT(A1L85);
+
+
+--HEX7_LZ[2] is HEX7_LZ[2]
+HEX7_LZ[2] = OUTPUT(A1L85);
+
+
+--HEX7_LZ[1] is HEX7_LZ[1]
+HEX7_LZ[1] = OUTPUT(A1L85);
+
+
+--HEX8_LZ[7] is HEX8_LZ[7]
+HEX8_LZ[7] = OUTPUT(A1L85);
+
+
+--HEX8_LZ[6] is HEX8_LZ[6]
+HEX8_LZ[6] = OUTPUT(A1L86);
+
+
+--HEX8_LZ[5] is HEX8_LZ[5]
+HEX8_LZ[5] = OUTPUT(A1L86);
+
+
+--HEX8_LZ[4] is HEX8_LZ[4]
+HEX8_LZ[4] = OUTPUT(A1L86);
+
+
+--HEX8_LZ[3] is HEX8_LZ[3]
+HEX8_LZ[3] = OUTPUT(A1L85);
+
+
+--HEX8_LZ[2] is HEX8_LZ[2]
+HEX8_LZ[2] = OUTPUT(A1L85);
+
+
+--HEX8_LZ[1] is HEX8_LZ[1]
+HEX8_LZ[1] = OUTPUT(A1L85);
+
+
+--LTM_ADC_IRQ_LY is LTM_ADC_IRQ_LY
+LTM_ADC_IRQ_LY = INPUT();
+
+
+--XTAL_50MHZ_Y1 is XTAL_50MHZ_Y1
+XTAL_50MHZ_Y1 = INPUT();
+
+
+--LTM_ADC_BUSY_Y is LTM_ADC_BUSY_Y
+LTM_ADC_BUSY_Y = INPUT();
+
+
+--LTM_ADC_DOUT_Y is LTM_ADC_DOUT_Y
+LTM_ADC_DOUT_Y = INPUT();
+
+
+--KEY0_LY is KEY0_LY
+KEY0_LY = INPUT();
+
+
+--KEY1_LY is KEY1_LY
+KEY1_LY = INPUT();
+
+
+--LTM_LCD_SDA_X is LTM_LCD_SDA_X
+LTM_LCD_SDA_X = BIDIR(LTM_LCD_SDA_X);
+
+
+--A1L86 is ~VCC
+A1L86 = VCC;
+
+
+--A1L85 is ~GND
+A1L85 = GND;
+
+
+--LTM_LCD_SDA_X is LTM_LCD_SDA_X
+--operation mode is bidir
+
+LTM_LCD_SDA_X_tri_out = TRI(VCC, VCC);
+LTM_LCD_SDA_X = BIDIR(LTM_LCD_SDA_X_tri_out);
+
+
